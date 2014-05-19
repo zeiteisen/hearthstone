@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ZEViewController : UIViewController
-
+@property (nonatomic, strong) NSString *hero;
 @end
