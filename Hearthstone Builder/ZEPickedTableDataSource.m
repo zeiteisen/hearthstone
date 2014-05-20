@@ -7,6 +7,7 @@
 //
 
 #import "ZEPickedTableDataSource.h"
+#import "ZEPickedTableViewCell.h"
 
 @implementation ZEPickedTableDataSource
 
@@ -16,12 +17,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"PickedCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    cell.textLabel.adjustsFontSizeToFitWidth = YES;
+    ZEPickedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     NSDictionary *card = self.dataSource[indexPath.row];
 //    NSNumber *mana = card[@"mana"];
-    cell.textLabel.text = card[@"name"];
-    cell.textLabel.frame = cell.bounds;
+    cell.label.text = card[@"name"];
     return cell;
 }
 

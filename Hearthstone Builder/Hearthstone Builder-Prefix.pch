@@ -15,4 +15,5 @@
     #import <Foundation/Foundation.h>
     #import "ViewUtils.h"
     #import "ZEDataManager.h"
+    #import "ZEUtility.h"
 #endif

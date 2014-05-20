@@ -10,8 +10,9 @@
 #import "ZECardTableViewCell.h"
 #import "ZEFilterTableDataSource.h"
 #import "ZEPickedTableDataSource.h"
+#import "JBBarChartView.h"
 
-@interface ZEViewController () <UITableViewDataSource, UITableViewDelegate, ZECardTableViewCellDelegate>
+@interface ZEViewController () <UITableViewDataSource, UITableViewDelegate, ZECardTableViewCellDelegate, JBBarChartViewDataSource, JBBarChartViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataSource;
 @property (nonatomic, strong) NSMutableArray *deckData;
@@ -20,21 +21,34 @@
 @property (weak, nonatomic) IBOutlet UITableView *pickedTableView;
 @property (nonatomic, strong) ZEFilterTableDataSource *filterTableDataSource;
 @property (nonatomic, strong) ZEPickedTableDataSource *pickedTableDataSource;
+@property (nonatomic, strong) JBBarChartView *chartView;
 @end
 
 @implementation ZEViewController
 
+- (void)dealloc {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.chartView removeFromSuperview];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar addSubview:self.chartView];
+    [self.chartView reloadData];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // test
-    self.hero = @"mage";
-    
     self.deckData = [NSMutableArray arrayWithCapacity:30];
     self.cards = [ZEDataManager sharedInstance].cards;
     NSPredicate *classPredicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
         NSString *hero = evaluatedObject[@"hero"];
-        if ([hero isEqualToString:@"mage"] || [hero isEqualToString:@"neutral"]) {
+        if ([hero isEqualToString:self.hero] || [hero isEqualToString:@"neutral"]) {
             return YES;
         }
         return NO;
@@ -48,12 +62,19 @@
     self.filterTableDataSource = [[ZEFilterTableDataSource alloc] init];
     self.filterTableView.dataSource = self.filterTableDataSource;
     self.filterTableView.delegate = self;
+    self.filterTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.filterTableView reloadData];
     
     self.pickedTableView.scrollsToTop = NO;
+    self.pickedTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.pickedTableDataSource = [[ZEPickedTableDataSource alloc] init];
     self.pickedTableDataSource.dataSource = self.deckData;
     self.pickedTableView.dataSource = self.pickedTableDataSource;
+    
+    self.chartView = [[JBBarChartView alloc] initWithFrame:CGRectMake(0, 0, 150, 30)];
+    self.chartView.x = CGRectGetMidX(self.view.bounds);
+    self.chartView.delegate = self;
+    self.chartView.dataSource = self;
 }
 
 - (void)filterCardsWithMana:(NSInteger)mana {
@@ -115,6 +136,7 @@
         NSDictionary *card = self.dataSource[indexPath.row];
         [self.deckData addObject:card];
         [self.pickedTableView reloadData];
+        [self.chartView reloadData];
     } else if (tableView == self.pickedTableView) {
         // remove card from the picked list
     } else {
@@ -133,6 +155,36 @@
 
 - (void)cardCellDidTouchedAdd:(ZECardTableViewCell *)cell {
     [self.deckData addObject:cell.cardData];
+}
+
+#pragma mark - JBBarChartViewDataSource
+
+- (NSUInteger)numberOfBarsInBarChartView:(JBBarChartView *)barChartView {
+    return 8;
+}
+
+- (CGFloat)barChartView:(JBBarChartView *)barChartView heightForBarViewAtAtIndex:(NSUInteger)index {
+    CGFloat count = 0;
+    for (NSDictionary *card in self.deckData) {
+        NSNumber *mana = card[@"mana"];
+        if (index == 7) {
+            if (mana.integerValue >= index) {
+                count++;
+            }
+        }
+        else if (mana.integerValue == index) {
+            count++;
+        }
+    }
+    return count;
+}
+
+- (void)barChartView:(JBBarChartView *)barChartView didSelectBarAtIndex:(NSUInteger)index {
+    [self filterCardsWithMana:index];
+}
+
+- (NSUInteger)barPaddingForBarChartView:(JBBarChartView *)barChartView {
+    return 0;
 }
 
 @end

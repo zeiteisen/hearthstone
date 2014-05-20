@@ -15,6 +15,12 @@
 		8FA18BFD192A3B8C00FF3F71 /* ZEFilterTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18BFC192A3B8C00FF3F71 /* ZEFilterTableDataSource.m */; };
 		8FA18C00192A3BB300FF3F71 /* ZEPickedTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18BFF192A3BB300FF3F71 /* ZEPickedTableDataSource.m */; };
 		8FA18C02192A624200FF3F71 /* hearthstone.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18C01192A624200FF3F71 /* hearthstone.ttf */; };
+		8FA18C05192B3DC400FF3F71 /* ZEPickedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C04192B3DC400FF3F71 /* ZEPickedTableViewCell.m */; };
+		8FA18C0D192B50B800FF3F71 /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C08192B50B800FF3F71 /* JBBarChartView.m */; };
+		8FA18C0E192B50B800FF3F71 /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C0A192B50B800FF3F71 /* JBChartView.m */; };
+		8FA18C0F192B50B800FF3F71 /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C0C192B50B800FF3F71 /* JBLineChartView.m */; };
+		8FA18C12192B5EA500FF3F71 /* ZEPickClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C11192B5EA500FF3F71 /* ZEPickClassViewController.m */; };
+		8FA18C15192B62EE00FF3F71 /* ZEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C14192B62EE00FF3F71 /* ZEUtility.m */; };
 		FCAB8D2C19215A640072DC59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2B19215A640072DC59 /* Foundation.framework */; };
 		FCAB8D2E19215A640072DC59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */; };
 		FCAB8D3019215A640072DC59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2F19215A640072DC59 /* UIKit.framework */; };
@@ -437,6 +443,18 @@
 		8FA18BFE192A3BB300FF3F71 /* ZEPickedTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEPickedTableDataSource.h; sourceTree = "<group>"; };
 		8FA18BFF192A3BB300FF3F71 /* ZEPickedTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPickedTableDataSource.m; sourceTree = "<group>"; };
 		8FA18C01192A624200FF3F71 /* hearthstone.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hearthstone.ttf; sourceTree = "<group>"; };
+		8FA18C03192B3DC400FF3F71 /* ZEPickedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEPickedTableViewCell.h; sourceTree = "<group>"; };
+		8FA18C04192B3DC400FF3F71 /* ZEPickedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPickedTableViewCell.m; sourceTree = "<group>"; };
+		8FA18C07192B50B800FF3F71 /* JBBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartView.h; sourceTree = "<group>"; };
+		8FA18C08192B50B800FF3F71 /* JBBarChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBarChartView.m; sourceTree = "<group>"; };
+		8FA18C09192B50B800FF3F71 /* JBChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartView.h; sourceTree = "<group>"; };
+		8FA18C0A192B50B800FF3F71 /* JBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartView.m; sourceTree = "<group>"; };
+		8FA18C0B192B50B800FF3F71 /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
+		8FA18C0C192B50B800FF3F71 /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
+		8FA18C10192B5EA500FF3F71 /* ZEPickClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEPickClassViewController.h; sourceTree = "<group>"; };
+		8FA18C11192B5EA500FF3F71 /* ZEPickClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPickClassViewController.m; sourceTree = "<group>"; };
+		8FA18C13192B62EE00FF3F71 /* ZEUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEUtility.h; sourceTree = "<group>"; };
+		8FA18C14192B62EE00FF3F71 /* ZEUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEUtility.m; sourceTree = "<group>"; };
 		FCAB8D2819215A640072DC59 /* Hearthstone Builder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hearthstone Builder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAB8D2B19215A640072DC59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -869,6 +887,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FA18C06192B50B800FF3F71 /* JBChartView */ = {
+			isa = PBXGroup;
+			children = (
+				8FA18C07192B50B800FF3F71 /* JBBarChartView.h */,
+				8FA18C08192B50B800FF3F71 /* JBBarChartView.m */,
+				8FA18C09192B50B800FF3F71 /* JBChartView.h */,
+				8FA18C0A192B50B800FF3F71 /* JBChartView.m */,
+				8FA18C0B192B50B800FF3F71 /* JBLineChartView.h */,
+				8FA18C0C192B50B800FF3F71 /* JBLineChartView.m */,
+			);
+			path = JBChartView;
+			sourceTree = "<group>";
+		};
 		FCAB8D1F19215A640072DC59 = {
 			isa = PBXGroup;
 			children = (
@@ -907,8 +938,14 @@
 				FCAB8D3A19215A640072DC59 /* ZEAppDelegate.h */,
 				FCAB8D3B19215A640072DC59 /* ZEAppDelegate.m */,
 				FCAB8D3D19215A640072DC59 /* Main.storyboard */,
+				8FA18C13192B62EE00FF3F71 /* ZEUtility.h */,
+				8FA18C14192B62EE00FF3F71 /* ZEUtility.m */,
+				8FA18C10192B5EA500FF3F71 /* ZEPickClassViewController.h */,
+				8FA18C11192B5EA500FF3F71 /* ZEPickClassViewController.m */,
 				FCAB905E1922A93A0072DC59 /* ZECardTableViewCell.h */,
 				FCAB905F1922A93A0072DC59 /* ZECardTableViewCell.m */,
+				8FA18C03192B3DC400FF3F71 /* ZEPickedTableViewCell.h */,
+				8FA18C04192B3DC400FF3F71 /* ZEPickedTableViewCell.m */,
 				FCAB8D4019215A640072DC59 /* ZEViewController.h */,
 				FCAB8D4119215A640072DC59 /* ZEViewController.m */,
 				8FA18BF8192A32B700FF3F71 /* ZEDataManager.h */,
@@ -1358,6 +1395,7 @@
 		FCAB965D1924158A0072DC59 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				8FA18C06192B50B800FF3F71 /* JBChartView */,
 				FCAB965E192415930072DC59 /* ViewUtils */,
 			);
 			name = Vendor;
@@ -1857,8 +1895,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FA18C12192B5EA500FF3F71 /* ZEPickClassViewController.m in Sources */,
+				8FA18C15192B62EE00FF3F71 /* ZEUtility.m in Sources */,
 				FCAB90601922A93A0072DC59 /* ZECardTableViewCell.m in Sources */,
+				8FA18C0F192B50B800FF3F71 /* JBLineChartView.m in Sources */,
+				8FA18C0D192B50B800FF3F71 /* JBBarChartView.m in Sources */,
 				8FA18C00192A3BB300FF3F71 /* ZEPickedTableDataSource.m in Sources */,
+				8FA18C05192B3DC400FF3F71 /* ZEPickedTableViewCell.m in Sources */,
+				8FA18C0E192B50B800FF3F71 /* JBChartView.m in Sources */,
 				FCAB9661192415930072DC59 /* ViewUtils.m in Sources */,
 				FCAB8D4219215A640072DC59 /* ZEViewController.m in Sources */,
 				8FA18BFA192A32B700FF3F71 /* ZEDataManager.m in Sources */,
