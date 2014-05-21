@@ -10,7 +10,6 @@
 
 @protocol ZECardTableViewCellDelegate <NSObject>
 
-- (void)cardCellDidTouchedAdd:(id)cell;
 - (void)cardCellDidTouchedRemove:(id)cell;
 
 @end
@@ -19,7 +18,7 @@
 
 @property (nonatomic, weak) id <ZECardTableViewCellDelegate> delegate;
 @property (nonatomic, strong) NSDictionary *cardData;
-@property (nonatomic, strong) IBOutlet UILabel *nameLabel;
 @property (nonatomic, strong) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UIButton *removeButton;
 
 @end

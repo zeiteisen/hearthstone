@@ -18,10 +18,6 @@
     return self;
 }
 
-- (IBAction)addTouched:(id)sender {
-    [self.delegate cardCellDidTouchedAdd:self];
-}
-
 - (IBAction)removeTouched:(id)sender {
     [self.delegate cardCellDidTouchedRemove:self];
 }

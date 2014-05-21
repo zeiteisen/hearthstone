@@ -21,6 +21,8 @@
 		8FA18C0F192B50B800FF3F71 /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C0C192B50B800FF3F71 /* JBLineChartView.m */; };
 		8FA18C12192B5EA500FF3F71 /* ZEPickClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C11192B5EA500FF3F71 /* ZEPickClassViewController.m */; };
 		8FA18C15192B62EE00FF3F71 /* ZEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C14192B62EE00FF3F71 /* ZEUtility.m */; };
+		8FB6EAC9192CE57E00973F8F /* NSString+Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC6192CE57E00973F8F /* NSString+Score.m */; };
+		8FB6EACA192CE57E00973F8F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC7192CE57E00973F8F /* README.md */; };
 		FCAB8D2C19215A640072DC59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2B19215A640072DC59 /* Foundation.framework */; };
 		FCAB8D2E19215A640072DC59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */; };
 		FCAB8D3019215A640072DC59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2F19215A640072DC59 /* UIKit.framework */; };
@@ -455,6 +457,9 @@
 		8FA18C11192B5EA500FF3F71 /* ZEPickClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPickClassViewController.m; sourceTree = "<group>"; };
 		8FA18C13192B62EE00FF3F71 /* ZEUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEUtility.h; sourceTree = "<group>"; };
 		8FA18C14192B62EE00FF3F71 /* ZEUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEUtility.m; sourceTree = "<group>"; };
+		8FB6EAC5192CE57E00973F8F /* NSString+Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Score.h"; sourceTree = "<group>"; };
+		8FB6EAC6192CE57E00973F8F /* NSString+Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Score.m"; sourceTree = "<group>"; };
+		8FB6EAC7192CE57E00973F8F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		FCAB8D2819215A640072DC59 /* Hearthstone Builder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hearthstone Builder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAB8D2B19215A640072DC59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -898,6 +903,16 @@
 				8FA18C0C192B50B800FF3F71 /* JBLineChartView.m */,
 			);
 			path = JBChartView;
+			sourceTree = "<group>";
+		};
+		8FB6EAC3192CE57E00973F8F /* StringScore */ = {
+			isa = PBXGroup;
+			children = (
+				8FB6EAC5192CE57E00973F8F /* NSString+Score.h */,
+				8FB6EAC6192CE57E00973F8F /* NSString+Score.m */,
+				8FB6EAC7192CE57E00973F8F /* README.md */,
+			);
+			path = StringScore;
 			sourceTree = "<group>";
 		};
 		FCAB8D1F19215A640072DC59 = {
@@ -1395,6 +1410,7 @@
 		FCAB965D1924158A0072DC59 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				8FB6EAC3192CE57E00973F8F /* StringScore */,
 				8FA18C06192B50B800FF3F71 /* JBChartView */,
 				FCAB965E192415930072DC59 /* ViewUtils */,
 			);
@@ -1749,6 +1765,7 @@
 				FCAB960D19240F610072DC59 /* SI:7 Agent.jpg in Resources */,
 				FCAB950D19240F610072DC59 /* Blessing of Might.jpg in Resources */,
 				FCAB95A619240F610072DC59 /* Leper Gnome.jpg in Resources */,
+				8FB6EACA192CE57E00973F8F /* README.md in Resources */,
 				FCAB965A19240F610072DC59 /* Ysera.jpg in Resources */,
 				8FA18BF2192A315F00FF3F71 /* card_choose_bg.png in Resources */,
 				FCAB94E419240F610072DC59 /* Alexstrasza.jpg in Resources */,
@@ -1901,6 +1918,7 @@
 				8FA18C0F192B50B800FF3F71 /* JBLineChartView.m in Sources */,
 				8FA18C0D192B50B800FF3F71 /* JBBarChartView.m in Sources */,
 				8FA18C00192A3BB300FF3F71 /* ZEPickedTableDataSource.m in Sources */,
+				8FB6EAC9192CE57E00973F8F /* NSString+Score.m in Sources */,
 				8FA18C05192B3DC400FF3F71 /* ZEPickedTableViewCell.m in Sources */,
 				8FA18C0E192B50B800FF3F71 /* JBChartView.m in Sources */,
 				FCAB9661192415930072DC59 /* ViewUtils.m in Sources */,
