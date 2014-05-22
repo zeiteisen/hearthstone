@@ -77,7 +77,10 @@
     self.pickedTableView.delegate = self;
     
     self.chartView = [[JBBarChartView alloc] initWithFrame:CGRectMake(0, 0, 150, 30)];
+    self.chartView.backgroundColor = [UIColor redColor];
     self.chartView.x = CGRectGetMidX(self.view.bounds);
+    self.chartView.maximumValue = 10;
+    self.chartView.minimumValue = 1;
     self.chartView.delegate = self;
     self.chartView.dataSource = self;
     
@@ -95,10 +98,40 @@
     text = [text lowercaseString];
     NSMutableArray *searchResult = [NSMutableArray array];
     for (NSDictionary *card in self.cards) {
+        // search for name
         NSString *name = [card[@"name"] lowercaseString];
-        CGFloat result = [name scoreAgainst:text];
-        if (result > .2) {
-            NSDictionary *evaluatedObject = @{@"value": @(result), @"card": card};
+        CGFloat nameResult = [name scoreAgainst:text];
+        
+        // search for effect
+        NSArray *effectList = card[@"effect_list"];
+        CGFloat effectResult = 0;
+        for (NSDictionary *effect in effectList) {
+            NSString *effectName = effect[@"effect"];
+            CGFloat newEffectResult = [effectName scoreAgainst:text];
+            if (newEffectResult > effectResult) {
+                effectResult = newEffectResult;
+            }
+        }
+        
+        // search for race
+        NSString *race = card[@"race"];
+        CGFloat raceResult = [race scoreAgainst:text];
+        
+        // search for quality
+        NSString *quality = card[@"quality"];
+        CGFloat qualitiyResult = [quality scoreAgainst:text];
+        
+        CGFloat resultList[4] = {nameResult, effectResult, raceResult, qualitiyResult};
+        CGFloat score = 0;
+        for (int i = 0; i < 4; i++) {
+            CGFloat value = resultList[i];
+            if (value > score) {
+                score = value;
+            }
+        }
+        
+        if (score > .2) {
+            NSDictionary *evaluatedObject = @{@"value": @(score), @"card": card};
             [searchResult addObject:evaluatedObject];
         }
     }
