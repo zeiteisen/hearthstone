@@ -12,6 +12,7 @@
 #import "ZEPickedTableDataSource.h"
 #import "JBBarChartView.h"
 #import "NSString+Score.h"
+#import "UIImage+ImageEffects.h"
 
 @interface ZEViewController () <UITableViewDataSource, UITableViewDelegate, ZECardTableViewCellDelegate, JBBarChartViewDataSource, JBBarChartViewDelegate, UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -25,6 +26,7 @@
 @property (nonatomic, strong) JBBarChartView *chartView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomContraint;
+@property (nonatomic, assign) BOOL viewDeckMode;
 @end
 
 @implementation ZEViewController
@@ -42,6 +44,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar addSubview:self.chartView];
+    self.chartView.x = CGRectGetMidX(self.view.bounds);
     [self.chartView reloadData];
 }
 
@@ -76,9 +79,7 @@
     self.pickedTableView.dataSource = self.pickedTableDataSource;
     self.pickedTableView.delegate = self;
     
-    self.chartView = [[JBBarChartView alloc] initWithFrame:CGRectMake(0, 0, 150, 30)];
-    self.chartView.backgroundColor = [UIColor redColor];
-    self.chartView.x = CGRectGetMidX(self.view.bounds);
+    self.chartView = [[JBBarChartView alloc] initWithFrame:CGRectMake(0, 0, 150, self.navigationController.navigationBar.height)];
     self.chartView.maximumValue = 10;
     self.chartView.minimumValue = 1;
     self.chartView.delegate = self;
@@ -90,9 +91,12 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
+    self.viewDeckMode = NO;
 }
 
 - (void)filterCardsWithText:(NSString *)text {
+    self.viewDeckMode = NO;
     [self removePickedSelection];
     [self removeFilterSelection];
     text = [text lowercaseString];
@@ -155,6 +159,7 @@
 }
 
 - (void)filterCardsWithMana:(NSInteger)mana {
+    self.viewDeckMode = NO;
     if (mana > 7) {
         self.dataSource = self.cards;
         [self.tableView reloadData];
@@ -198,6 +203,16 @@
     }
 }
 
+- (NSUInteger)deckContainsAmountOfCards:(NSDictionary *)searchCard {
+    NSUInteger count = 0;
+    for (NSDictionary *card in self.deckData) {
+        if (card == searchCard) {
+            count++;
+        }
+    }
+    return count;
+}
+
 - (void)scrollToTop {
     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
@@ -226,6 +241,33 @@
     }
 }
 
+- (NSUInteger)maxAllowedInDeckOfCard:(NSDictionary *)card {
+    NSUInteger maxCardsAllowed = 2;
+    if ([card[@"quality"] isEqualToString:@"legendary"]) {
+        maxCardsAllowed = 1;
+    }
+    return maxCardsAllowed;
+}
+
+- (void)updateFadedStateOnCell:(ZECardTableViewCell *)cell {
+    if (self.viewDeckMode) {
+        cell.faded = NO;
+    } else {
+        NSUInteger countInDeck = [self deckContainsAmountOfCards:cell.cardData];
+        NSUInteger maxCardsAllowed = [self maxAllowedInDeckOfCard:cell.cardData];
+        if (countInDeck >= maxCardsAllowed) {
+            cell.faded = YES;
+        } else{
+            cell.faded = NO;
+        }
+    }
+}
+
+- (void)setDataSourceToDeckDataWithoutDuplicates {
+    NSSet *set = [NSSet setWithArray:self.deckData];
+    self.dataSource = [[set allObjects] mutableCopy];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
@@ -250,6 +292,7 @@
     NSString *cardName = [NSString stringWithFormat:@"%@.jpg", card[@"name"]];
     cell.image.image = [UIImage imageNamed:cardName];
     [self updateRemoveButtonWithCard:card onCell:cell];
+    [self updateFadedStateOnCell:cell];
     return cell;
 }
 
@@ -261,16 +304,25 @@
     if (tableView == self.tableView) {
         // add card to the picked list
         NSDictionary *card = self.dataSource[indexPath.row];
-        [self.deckData addObject:card];
-        [self.pickedTableView reloadData];
-        [self.chartView reloadData];
-        ZECardTableViewCell *cardCell = (ZECardTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
-        cardCell.removeButton.hidden = NO;
+        NSUInteger countInDeck = [self deckContainsAmountOfCards:card];
+        NSUInteger maxCardsAllowed = [self maxAllowedInDeckOfCard:card];
+        if (countInDeck < maxCardsAllowed) {
+            [self.deckData addObject:card];
+            [self.pickedTableView reloadData];
+            [self.tableView reloadData];
+            [self.chartView reloadData];
+            ZECardTableViewCell *cardCell = (ZECardTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+            cardCell.removeButton.hidden = NO;
+            [self updateFadedStateOnCell:cardCell];
+        }
     } else if (tableView == self.pickedTableView) {
         // show the picked card
-        self.dataSource = self.deckData;
+        self.viewDeckMode = YES;
+        [self setDataSourceToDeckDataWithoutDuplicates];
         [self.tableView reloadData];
-        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+        NSDictionary *card = self.deckData[indexPath.row];
+        NSInteger firstOccurance = [self.dataSource indexOfObject:card];
+        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:firstOccurance inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
         [self removeFilterSelection];
     } else {
         [self filterCardsWithMana:indexPath.row];
@@ -282,12 +334,29 @@
 #pragma mark - ZECardTableViewCellDelegate
 
 - (void)cardCellDidTouchedRemove:(ZECardTableViewCell *)cell {
+    // update picked table
     NSInteger index = [self.deckData indexOfObject:cell.cardData];
     [self.deckData removeObjectAtIndex:index];
     [self.pickedTableView reloadData];
+    
+    // update main table
+    if (self.viewDeckMode) {
+        NSInteger countVisibleCards = self.dataSource.count;
+        [self setDataSourceToDeckDataWithoutDuplicates];
+        if (countVisibleCards > self.dataSource.count) {
+            NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+            [self.tableView beginUpdates];
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView endUpdates];
+        }
+    }
+    [self.tableView reloadData];
+    
+    [self updateFadedStateOnCell:cell];
     [self updateRemoveButtonWithCard:cell.cardData onCell:cell];
     [self.chartView reloadData];
-    [self.tableView reloadData];
+    
+    [self highlightPickedCard];
 }
 
 #pragma mark - JBBarChartViewDataSource

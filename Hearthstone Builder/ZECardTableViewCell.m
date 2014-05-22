@@ -18,6 +18,15 @@
     return self;
 }
 
+- (void)setFaded:(BOOL)faded {
+    _faded = faded;
+    if (faded) {
+        self.image.alpha = 0.5;
+    } else {
+        self.image.alpha = 1;
+    }
+}
+
 - (IBAction)removeTouched:(id)sender {
     [self.delegate cardCellDidTouchedRemove:self];
 }

@@ -19,7 +19,6 @@
     static NSString *identifier = @"PickedCell";
     ZEPickedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     NSDictionary *card = self.dataSource[indexPath.row];
-//    NSNumber *mana = card[@"mana"];
     cell.label.text = card[@"name"];
     return cell;
 }
