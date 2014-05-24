@@ -41,7 +41,7 @@
     ZEViewController *viewController = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"CreateViewController"];
     viewController.hero = self.dataSource[indexPath.row];
     viewController.selectedDeckNumber = -1; // new deck
-    viewController.viewDeckMode = YES;
+    viewController.viewDeckMode = NO;
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
