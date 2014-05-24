@@ -40,6 +40,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ZEViewController *viewController = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"CreateViewController"];
     viewController.hero = self.dataSource[indexPath.row];
+    viewController.selectedDeckNumber = -1; // new deck
+    viewController.viewDeckMode = YES;
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

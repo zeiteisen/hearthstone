@@ -17,3 +17,6 @@
     #import "ZEDataManager.h"
     #import "ZEUtility.h"
 #endif
+
+
+#define     USER_DECKS_KEY          @"user_deck"

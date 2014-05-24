@@ -24,6 +24,8 @@
 		8FB6EAC9192CE57E00973F8F /* NSString+Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC6192CE57E00973F8F /* NSString+Score.m */; };
 		8FB6EACA192CE57E00973F8F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC7192CE57E00973F8F /* README.md */; };
 		8FB6EBEE192E44EB00973F8F /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6EBED192E44EB00973F8F /* UIImage+ImageEffects.m */; };
+		FC409C431931153C0086215F /* ZEStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC409C421931153C0086215F /* ZEStartViewController.m */; };
+		FC409C46193116CE0086215F /* ZEMyDecksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC409C45193116CE0086215F /* ZEMyDecksViewController.m */; };
 		FCAB8D2C19215A640072DC59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2B19215A640072DC59 /* Foundation.framework */; };
 		FCAB8D2E19215A640072DC59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */; };
 		FCAB8D3019215A640072DC59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2F19215A640072DC59 /* UIKit.framework */; };
@@ -463,6 +465,10 @@
 		8FB6EAC7192CE57E00973F8F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		8FB6EBEC192E44EB00973F8F /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		8FB6EBED192E44EB00973F8F /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		FC409C411931153C0086215F /* ZEStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEStartViewController.h; sourceTree = "<group>"; };
+		FC409C421931153C0086215F /* ZEStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEStartViewController.m; sourceTree = "<group>"; };
+		FC409C44193116CE0086215F /* ZEMyDecksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEMyDecksViewController.h; sourceTree = "<group>"; };
+		FC409C45193116CE0086215F /* ZEMyDecksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEMyDecksViewController.m; sourceTree = "<group>"; };
 		FCAB8D2819215A640072DC59 /* Hearthstone Builder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hearthstone Builder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAB8D2B19215A640072DC59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -956,6 +962,10 @@
 				FCAB8D3A19215A640072DC59 /* ZEAppDelegate.h */,
 				FCAB8D3B19215A640072DC59 /* ZEAppDelegate.m */,
 				FCAB8D3D19215A640072DC59 /* Main.storyboard */,
+				FC409C411931153C0086215F /* ZEStartViewController.h */,
+				FC409C421931153C0086215F /* ZEStartViewController.m */,
+				FC409C44193116CE0086215F /* ZEMyDecksViewController.h */,
+				FC409C45193116CE0086215F /* ZEMyDecksViewController.m */,
 				8FA18C13192B62EE00FF3F71 /* ZEUtility.h */,
 				8FA18C14192B62EE00FF3F71 /* ZEUtility.m */,
 				8FA18C10192B5EA500FF3F71 /* ZEPickClassViewController.h */,
@@ -1917,6 +1927,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC409C46193116CE0086215F /* ZEMyDecksViewController.m in Sources */,
 				8FB6EBEE192E44EB00973F8F /* UIImage+ImageEffects.m in Sources */,
 				8FA18C12192B5EA500FF3F71 /* ZEPickClassViewController.m in Sources */,
 				8FA18C15192B62EE00FF3F71 /* ZEUtility.m in Sources */,
@@ -1930,6 +1941,7 @@
 				FCAB9661192415930072DC59 /* ViewUtils.m in Sources */,
 				FCAB8D4219215A640072DC59 /* ZEViewController.m in Sources */,
 				8FA18BFA192A32B700FF3F71 /* ZEDataManager.m in Sources */,
+				FC409C431931153C0086215F /* ZEStartViewController.m in Sources */,
 				8FA18BFD192A3B8C00FF3F71 /* ZEFilterTableDataSource.m in Sources */,
 				FCAB8D3819215A640072DC59 /* main.m in Sources */,
 				FCAB8D3C19215A640072DC59 /* ZEAppDelegate.m in Sources */,

@@ -10,4 +10,6 @@
 
 @interface ZEViewController : UIViewController
 @property (nonatomic, strong) NSString *hero;
+@property (nonatomic, assign) NSInteger selectedDeckNumber;
+@property (nonatomic, assign) BOOL viewDeckMode;
 @end

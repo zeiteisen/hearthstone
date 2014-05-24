@@ -26,7 +26,8 @@
 @property (nonatomic, strong) JBBarChartView *chartView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomContraint;
-@property (nonatomic, assign) BOOL viewDeckMode;
+@property (nonatomic, strong) IBOutlet UILabel *deckCountLabel;
+@property (nonatomic, strong) NSMutableArray *deckSave;
 @end
 
 @implementation ZEViewController
@@ -51,6 +52,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    BOOL viewDeckMode = self.viewDeckMode;
+    
     self.deckData = [NSMutableArray arrayWithCapacity:30];
     self.cards = [ZEDataManager sharedInstance].cards;
     NSPredicate *classPredicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
@@ -72,6 +75,8 @@
     self.filterTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.filterTableView reloadData];
     
+    self.deckCountLabel.text = @"0/30";
+    self.deckCountLabel.backgroundColor = [UIColor grayColor];
     self.pickedTableView.scrollsToTop = NO;
     self.pickedTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.pickedTableDataSource = [[ZEPickedTableDataSource alloc] init];
@@ -92,7 +97,61 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
-    self.viewDeckMode = NO;
+    if (self.selectedDeckNumber != -1) { // -1 new deck
+        // load deck
+        NSArray *userDecks = [[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY];
+        NSDictionary *deckToLoad = userDecks[self.selectedDeckNumber];
+        for (NSString *cardName in deckToLoad[@"deck"]) {
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", cardName];
+            NSArray *searchResults = [self.cards filteredArrayUsingPredicate:predicate];
+            if (searchResults.count > 0) {
+                [self.deckData addObject:searchResults[0]];
+            }
+        }
+    }
+    
+    [self updateDeckCountLabel];
+    if (viewDeckMode) {
+        [self setViewDeckMode:YES];
+    }
+}
+
+- (void)saveDeck {
+    NSMutableArray *savedDecks = [[[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY] mutableCopy];
+    if (savedDecks == nil) {
+        savedDecks = [NSMutableArray array];
+    }
+    NSMutableDictionary *saveData = [NSMutableDictionary dictionary];
+    NSMutableArray *savedDeckData = [NSMutableArray array];
+
+    [saveData setObject:self.hero forKey:@"hero"];
+    for (NSDictionary *card in self.deckData) {
+        NSString *name = card[@"name"];
+        [savedDeckData addObject:name];
+    }
+    [saveData setObject:savedDeckData forKey:@"deck"];
+    
+    if (self.selectedDeckNumber == -1) {
+        self.selectedDeckNumber = savedDecks.count;
+        [savedDecks addObject:saveData];
+    } else {
+        [savedDecks replaceObjectAtIndex:self.selectedDeckNumber withObject:saveData];
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setObject:savedDecks forKey:USER_DECKS_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)setViewDeckMode:(BOOL)viewDeckMode {
+    _viewDeckMode = viewDeckMode;
+    if (viewDeckMode) {
+        self.deckCountLabel.backgroundColor = [UIColor greenColor];
+    } else {
+        self.deckCountLabel.backgroundColor = [UIColor grayColor];
+    }
+    [self setDataSourceToDeckDataWithoutDuplicates];
+    [self.tableView reloadData];
+    [self removeFilterSelection];
 }
 
 - (void)filterCardsWithText:(NSString *)text {
@@ -213,6 +272,10 @@
     return count;
 }
 
+- (void)updateDeckCountLabel {
+    self.deckCountLabel.text = [NSString stringWithFormat:@"%i/30", self.deckData.count];
+}
+
 - (void)scrollToTop {
     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
@@ -306,7 +369,7 @@
         NSDictionary *card = self.dataSource[indexPath.row];
         NSUInteger countInDeck = [self deckContainsAmountOfCards:card];
         NSUInteger maxCardsAllowed = [self maxAllowedInDeckOfCard:card];
-        if (countInDeck < maxCardsAllowed) {
+        if (countInDeck < maxCardsAllowed && self.deckData.count < 30) {
             [self.deckData addObject:card];
             [self.pickedTableView reloadData];
             [self.tableView reloadData];
@@ -314,16 +377,15 @@
             ZECardTableViewCell *cardCell = (ZECardTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
             cardCell.removeButton.hidden = NO;
             [self updateFadedStateOnCell:cardCell];
+            [self updateDeckCountLabel];
+            [self saveDeck];
         }
     } else if (tableView == self.pickedTableView) {
         // show the picked card
-        self.viewDeckMode = YES;
-        [self setDataSourceToDeckDataWithoutDuplicates];
-        [self.tableView reloadData];
+        [self setViewDeckMode:YES];
         NSDictionary *card = self.deckData[indexPath.row];
         NSInteger firstOccurance = [self.dataSource indexOfObject:card];
         [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:firstOccurance inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
-        [self removeFilterSelection];
     } else {
         [self filterCardsWithMana:indexPath.row];
         [self scrollToTop];
@@ -355,8 +417,9 @@
     [self updateFadedStateOnCell:cell];
     [self updateRemoveButtonWithCard:cell.cardData onCell:cell];
     [self.chartView reloadData];
-    
     [self highlightPickedCard];
+    [self updateDeckCountLabel];
+    [self saveDeck];
 }
 
 #pragma mark - JBBarChartViewDataSource
