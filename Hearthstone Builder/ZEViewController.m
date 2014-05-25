@@ -13,6 +13,7 @@
 #import "JBBarChartView.h"
 #import "NSString+Score.h"
 #import "UIImage+ImageEffects.h"
+#import "ZEPublishTableViewController.h"
 
 @interface ZEViewController () <UITableViewDataSource, UITableViewDelegate, ZECardTableViewCellDelegate, JBBarChartViewDataSource, JBBarChartViewDelegate, UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -114,6 +115,7 @@
     if (viewDeckMode) {
         [self setViewDeckMode:YES];
     }
+    [self updatePublishButton];
 }
 
 - (void)saveDeck {
@@ -326,6 +328,14 @@
     }
 }
 
+- (void)updatePublishButton {
+    if (self.deckData.count >= 30) {
+        self.navigationItem.rightBarButtonItem.enabled = YES;
+    } else {
+        self.navigationItem.rightBarButtonItem.enabled = NO;
+    }
+}
+
 - (void)setDataSourceToDeckDataWithoutDuplicates {
     NSSet *set = [NSSet setWithArray:self.deckData];
     self.dataSource = [[set allObjects] mutableCopy];
@@ -378,6 +388,7 @@
             cardCell.removeButton.hidden = NO;
             [self updateFadedStateOnCell:cardCell];
             [self updateDeckCountLabel];
+            [self updatePublishButton];
             [self saveDeck];
         }
     } else if (tableView == self.pickedTableView) {
@@ -478,5 +489,13 @@
 - (void)keyboardWillHide:(NSNotification *)notification {
     self.bottomContraint.constant = 0;
 }
+
+#pragma mark - Actions 
+
+- (IBAction)publishTouched:(id)sender {
+    ZEPublishTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"PublishTableViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 @end

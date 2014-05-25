@@ -424,6 +424,17 @@
 		FCAB965A19240F610072DC59 /* Ysera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCAB94DC19240F610072DC59 /* Ysera.jpg */; };
 		FCAB965C1924108E0072DC59 /* Cards.json in Resources */ = {isa = PBXBuildFile; fileRef = FCAB965B1924108E0072DC59 /* Cards.json */; };
 		FCAB9661192415930072DC59 /* ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAB9660192415930072DC59 /* ViewUtils.m */; };
+		FCF361141931DDEC0044B85E /* ZEPublishTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF361131931DDEC0044B85E /* ZEPublishTableViewController.m */; };
+		FCF3611619322BEC0044B85E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3611519322BEC0044B85E /* Parse.framework */; };
+		FCF3611819322C0D0044B85E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3611719322C0D0044B85E /* AudioToolbox.framework */; };
+		FCF3611A19322C180044B85E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3611919322C180044B85E /* CFNetwork.framework */; };
+		FCF3611C19322C250044B85E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3611B19322C250044B85E /* CoreLocation.framework */; };
+		FCF3611E19322C2E0044B85E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3611D19322C2E0044B85E /* libz.dylib */; };
+		FCF3612019322CD70044B85E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3611F19322CD70044B85E /* MobileCoreServices.framework */; };
+		FCF3612219322CE20044B85E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3612119322CE20044B85E /* QuartzCore.framework */; };
+		FCF3612419322CEB0044B85E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3612319322CEB0044B85E /* Security.framework */; };
+		FCF3612619322CF50044B85E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3612519322CF50044B85E /* StoreKit.framework */; };
+		FCF3612819322CFF0044B85E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3612719322CFF0044B85E /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -875,6 +886,18 @@
 		FCAB965B1924108E0072DC59 /* Cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cards.json; sourceTree = "<group>"; };
 		FCAB965F192415930072DC59 /* ViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewUtils.h; sourceTree = "<group>"; };
 		FCAB9660192415930072DC59 /* ViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewUtils.m; sourceTree = "<group>"; };
+		FCF361121931DDEC0044B85E /* ZEPublishTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEPublishTableViewController.h; sourceTree = "<group>"; };
+		FCF361131931DDEC0044B85E /* ZEPublishTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPublishTableViewController.m; sourceTree = "<group>"; };
+		FCF3611519322BEC0044B85E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		FCF3611719322C0D0044B85E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FCF3611919322C180044B85E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		FCF3611B19322C250044B85E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FCF3611D19322C2E0044B85E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		FCF3611F19322CD70044B85E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FCF3612119322CE20044B85E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FCF3612319322CEB0044B85E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FCF3612519322CF50044B85E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		FCF3612719322CFF0044B85E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -882,8 +905,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCF3612819322CFF0044B85E /* SystemConfiguration.framework in Frameworks */,
+				FCF3612619322CF50044B85E /* StoreKit.framework in Frameworks */,
+				FCF3612419322CEB0044B85E /* Security.framework in Frameworks */,
+				FCF3612219322CE20044B85E /* QuartzCore.framework in Frameworks */,
+				FCF3612019322CD70044B85E /* MobileCoreServices.framework in Frameworks */,
+				FCF3611E19322C2E0044B85E /* libz.dylib in Frameworks */,
+				FCF3611C19322C250044B85E /* CoreLocation.framework in Frameworks */,
+				FCF3611A19322C180044B85E /* CFNetwork.framework in Frameworks */,
+				FCF3611819322C0D0044B85E /* AudioToolbox.framework in Frameworks */,
 				FCAB8D2E19215A640072DC59 /* CoreGraphics.framework in Frameworks */,
 				FCAB8D3019215A640072DC59 /* UIKit.framework in Frameworks */,
+				FCF3611619322BEC0044B85E /* Parse.framework in Frameworks */,
 				FCAB8D2C19215A640072DC59 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -946,6 +979,16 @@
 		FCAB8D2A19215A640072DC59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCF3612719322CFF0044B85E /* SystemConfiguration.framework */,
+				FCF3612519322CF50044B85E /* StoreKit.framework */,
+				FCF3612319322CEB0044B85E /* Security.framework */,
+				FCF3612119322CE20044B85E /* QuartzCore.framework */,
+				FCF3611F19322CD70044B85E /* MobileCoreServices.framework */,
+				FCF3611D19322C2E0044B85E /* libz.dylib */,
+				FCF3611B19322C250044B85E /* CoreLocation.framework */,
+				FCF3611919322C180044B85E /* CFNetwork.framework */,
+				FCF3611719322C0D0044B85E /* AudioToolbox.framework */,
+				FCF3611519322BEC0044B85E /* Parse.framework */,
 				FCAB8D2B19215A640072DC59 /* Foundation.framework */,
 				FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */,
 				FCAB8D2F19215A640072DC59 /* UIKit.framework */,
@@ -962,6 +1005,8 @@
 				FCAB8D3A19215A640072DC59 /* ZEAppDelegate.h */,
 				FCAB8D3B19215A640072DC59 /* ZEAppDelegate.m */,
 				FCAB8D3D19215A640072DC59 /* Main.storyboard */,
+				FCF361121931DDEC0044B85E /* ZEPublishTableViewController.h */,
+				FCF361131931DDEC0044B85E /* ZEPublishTableViewController.m */,
 				FC409C411931153C0086215F /* ZEStartViewController.h */,
 				FC409C421931153C0086215F /* ZEStartViewController.m */,
 				FC409C44193116CE0086215F /* ZEMyDecksViewController.h */,
@@ -1929,6 +1974,7 @@
 			files = (
 				FC409C46193116CE0086215F /* ZEMyDecksViewController.m in Sources */,
 				8FB6EBEE192E44EB00973F8F /* UIImage+ImageEffects.m in Sources */,
+				FCF361141931DDEC0044B85E /* ZEPublishTableViewController.m in Sources */,
 				8FA18C12192B5EA500FF3F71 /* ZEPickClassViewController.m in Sources */,
 				8FA18C15192B62EE00FF3F71 /* ZEUtility.m in Sources */,
 				FCAB90601922A93A0072DC59 /* ZECardTableViewCell.m in Sources */,
@@ -2069,6 +2115,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hearthstone Builder/Hearthstone Builder-Prefix.pch";
 				INFOPLIST_FILE = "Hearthstone Builder/Hearthstone Builder-Info.plist";
@@ -2083,6 +2133,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hearthstone Builder/Hearthstone Builder-Prefix.pch";
 				INFOPLIST_FILE = "Hearthstone Builder/Hearthstone Builder-Info.plist";

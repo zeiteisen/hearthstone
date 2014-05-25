@@ -44,7 +44,11 @@
     static NSString *identifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     NSDictionary *deck = self.dataSource[indexPath.row];
-    cell.textLabel.text = deck[@"hero"];
+    if (deck[@"title"]) {
+        cell.textLabel.text = deck[@"title"];
+    } else {
+        cell.textLabel.text = deck[@"hero"];
+    }
     return cell;
 }
 

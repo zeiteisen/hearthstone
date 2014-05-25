@@ -16,6 +16,7 @@
     #import "ViewUtils.h"
     #import "ZEDataManager.h"
     #import "ZEUtility.h"
+    #import <Parse/Parse.h>
 #endif
 
 
