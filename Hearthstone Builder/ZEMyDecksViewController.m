@@ -31,6 +31,7 @@
 
 - (IBAction)newDeckTouched:(id)sender {
     ZEPickClassViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"PickClassViewController"];
+    vc.newDeckMode = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

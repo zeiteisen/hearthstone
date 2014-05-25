@@ -435,6 +435,7 @@
 		FCF3612419322CEB0044B85E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3612319322CEB0044B85E /* Security.framework */; };
 		FCF3612619322CF50044B85E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3612519322CF50044B85E /* StoreKit.framework */; };
 		FCF3612819322CFF0044B85E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3612719322CFF0044B85E /* SystemConfiguration.framework */; };
+		FCF3612B193236D30044B85E /* ZEOtherDecksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF3612A193236D30044B85E /* ZEOtherDecksTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -898,6 +899,8 @@
 		FCF3612319322CEB0044B85E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FCF3612519322CF50044B85E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FCF3612719322CFF0044B85E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FCF36129193236D30044B85E /* ZEOtherDecksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEOtherDecksTableViewController.h; sourceTree = "<group>"; };
+		FCF3612A193236D30044B85E /* ZEOtherDecksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEOtherDecksTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1005,6 +1008,8 @@
 				FCAB8D3A19215A640072DC59 /* ZEAppDelegate.h */,
 				FCAB8D3B19215A640072DC59 /* ZEAppDelegate.m */,
 				FCAB8D3D19215A640072DC59 /* Main.storyboard */,
+				FCF36129193236D30044B85E /* ZEOtherDecksTableViewController.h */,
+				FCF3612A193236D30044B85E /* ZEOtherDecksTableViewController.m */,
 				FCF361121931DDEC0044B85E /* ZEPublishTableViewController.h */,
 				FCF361131931DDEC0044B85E /* ZEPublishTableViewController.m */,
 				FC409C411931153C0086215F /* ZEStartViewController.h */,
@@ -1978,6 +1983,7 @@
 				8FA18C12192B5EA500FF3F71 /* ZEPickClassViewController.m in Sources */,
 				8FA18C15192B62EE00FF3F71 /* ZEUtility.m in Sources */,
 				FCAB90601922A93A0072DC59 /* ZECardTableViewCell.m in Sources */,
+				FCF3612B193236D30044B85E /* ZEOtherDecksTableViewController.m in Sources */,
 				8FA18C0F192B50B800FF3F71 /* JBLineChartView.m in Sources */,
 				8FA18C0D192B50B800FF3F71 /* JBBarChartView.m in Sources */,
 				8FA18C00192A3BB300FF3F71 /* ZEPickedTableDataSource.m in Sources */,

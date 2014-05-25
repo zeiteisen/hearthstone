@@ -87,7 +87,7 @@
     
     self.chartView = [[JBBarChartView alloc] initWithFrame:CGRectMake(0, 0, 150, self.navigationController.navigationBar.height)];
     self.chartView.maximumValue = 10;
-    self.chartView.minimumValue = 1;
+    self.chartView.minimumValue = 0;
     self.chartView.delegate = self;
     self.chartView.dataSource = self;
     
@@ -98,17 +98,27 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
-    if (self.selectedDeckNumber != -1) { // -1 new deck
-        // load deck
+    // load
+    NSArray *cardsToLoad;
+    if (self.deckObject) {
+        cardsToLoad = self.deckObject[@"deck"];
+    } else if (self.selectedDeckNumber != -1) {
         NSArray *userDecks = [[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY];
         NSDictionary *deckToLoad = userDecks[self.selectedDeckNumber];
-        for (NSString *cardName in deckToLoad[@"deck"]) {
+        cardsToLoad = deckToLoad[@"deck"];
+    }
+    if (cardsToLoad) {
+        for (NSString *cardName in cardsToLoad) {
             NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", cardName];
             NSArray *searchResults = [self.cards filteredArrayUsingPredicate:predicate];
             if (searchResults.count > 0) {
                 [self.deckData addObject:searchResults[0]];
             }
         }
+    }
+    if (self.deckObject) {
+        NSSet *set = [NSSet setWithArray:self.deckData];
+        self.cards = [[set allObjects] mutableCopy];
     }
     
     [self updateDeckCountLabel];
@@ -123,8 +133,12 @@
     if (savedDecks == nil) {
         savedDecks = [NSMutableArray array];
     }
+    
     NSMutableDictionary *saveData = [NSMutableDictionary dictionary];
     NSMutableArray *savedDeckData = [NSMutableArray array];
+    if (self.selectedDeckNumber != -1) {
+        saveData = [savedDecks[self.selectedDeckNumber] mutableCopy];
+    }
 
     [saveData setObject:self.hero forKey:@"hero"];
     for (NSDictionary *card in self.deckData) {
@@ -146,7 +160,7 @@
 
 - (void)setViewDeckMode:(BOOL)viewDeckMode {
     _viewDeckMode = viewDeckMode;
-    if (viewDeckMode) {
+    if (viewDeckMode || self.deckObject) {
         self.deckCountLabel.backgroundColor = [UIColor greenColor];
     } else {
         self.deckCountLabel.backgroundColor = [UIColor grayColor];
@@ -257,7 +271,7 @@
 }
 
 - (void)updateRemoveButtonWithCard:(NSDictionary *)card onCell:(ZECardTableViewCell *)cell {
-    if ([self.deckData containsObject:card]) {
+    if ([self.deckData containsObject:card] && self.deckObject == nil) {
         cell.removeButton.hidden = NO;
     } else {
         cell.removeButton.hidden = YES;
@@ -315,7 +329,7 @@
 }
 
 - (void)updateFadedStateOnCell:(ZECardTableViewCell *)cell {
-    if (self.viewDeckMode) {
+    if (self.viewDeckMode || self.deckObject) {
         cell.faded = NO;
     } else {
         NSUInteger countInDeck = [self deckContainsAmountOfCards:cell.cardData];
@@ -329,10 +343,14 @@
 }
 
 - (void)updatePublishButton {
-    if (self.deckData.count >= 30) {
-        self.navigationItem.rightBarButtonItem.enabled = YES;
+    if (self.deckObject) {
+        self.navigationItem.rightBarButtonItem = nil;
     } else {
-        self.navigationItem.rightBarButtonItem.enabled = NO;
+        if (self.deckData.count >= 30) {
+            self.navigationItem.rightBarButtonItem.enabled = YES;
+        } else {
+            self.navigationItem.rightBarButtonItem.enabled = NO;
+        }
     }
 }
 
@@ -375,6 +393,10 @@
     }
     
     if (tableView == self.tableView) {
+        if (self.deckObject) {
+            return;
+        }
+        
         // add card to the picked list
         NSDictionary *card = self.dataSource[indexPath.row];
         NSUInteger countInDeck = [self deckContainsAmountOfCards:card];
@@ -407,6 +429,10 @@
 #pragma mark - ZECardTableViewCellDelegate
 
 - (void)cardCellDidTouchedRemove:(ZECardTableViewCell *)cell {
+    if (self.deckObject) {
+        return;
+    }
+    
     // update picked table
     NSInteger index = [self.deckData indexOfObject:cell.cardData];
     [self.deckData removeObjectAtIndex:index];

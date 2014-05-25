@@ -8,6 +8,7 @@
 
 #import "ZEPickClassViewController.h"
 #import "ZEViewController.h"
+#import "ZEOtherDecksTableViewController.h"
 
 @interface ZEPickClassViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -37,11 +38,17 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ZEViewController *viewController = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"CreateViewController"];
-    viewController.hero = self.dataSource[indexPath.row];
-    viewController.selectedDeckNumber = -1; // new deck
-    viewController.viewDeckMode = NO;
-    [self.navigationController pushViewController:viewController animated:YES];
+    if (self.newDeckMode) {
+        ZEViewController *viewController = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"CreateViewController"];
+        viewController.hero = self.dataSource[indexPath.row];
+        viewController.selectedDeckNumber = -1; // new deck
+        viewController.viewDeckMode = NO;
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else {
+        ZEOtherDecksTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"OtherDecksTableViewController"];
+        vc.hero = self.dataSource[indexPath.row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 @end

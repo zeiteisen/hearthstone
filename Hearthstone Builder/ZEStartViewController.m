@@ -8,6 +8,7 @@
 
 #import "ZEStartViewController.h"
 #import "ZEMyDecksViewController.h"
+#import "ZEPickClassViewController.h"
 
 @interface ZEStartViewController () <UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -23,7 +24,8 @@
         ZEMyDecksViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"MyDecksViewController"];
         [self.navigationController pushViewController:vc animated:YES];
     } else {
-        NSLog(@"TODO");
+        ZEPickClassViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"PickClassViewController"];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
