@@ -11,5 +11,6 @@
 @interface ZEUtility : NSObject
 
 + (id)instanciateViewControllerFromStoryboardIdentifier:(NSString *)identifier;
++ (UIFont *)myStandardFont;
 
 @end

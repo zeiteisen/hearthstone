@@ -33,6 +33,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    cell.textLabel.font = [ZEUtility myStandardFont];
     cell.textLabel.text = self.dataSource[indexPath.row];
     return cell;
 }

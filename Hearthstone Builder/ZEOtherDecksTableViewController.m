@@ -19,6 +19,8 @@
     [super viewDidLoad];
     PFQuery *query = [PFQuery queryWithClassName:@"Deck"];
     [query whereKey:@"hero" equalTo:self.hero];
+    [query orderByDescending:@"updatedAt"];
+    [query selectKeys:@[@"title", @"likes"]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.dataSource = [NSMutableArray arrayWithArray:objects];
         [self.tableView reloadData];
@@ -35,6 +37,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    cell.textLabel.font = [ZEUtility myStandardFont];
     PFObject *deck = self.dataSource[indexPath.row];
     cell.textLabel.text = deck[@"title"];
     return cell;
@@ -45,7 +48,13 @@
     vc.hero = self.hero;
     vc.viewDeckMode = YES;
     vc.deckObject = self.dataSource[indexPath.row];
-    [self.navigationController pushViewController:vc animated:YES];
+    [vc.deckObject fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        if (error) {
+            NSLog(@"error %@", error);
+        } else {
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+    }];
 }
 
 @end

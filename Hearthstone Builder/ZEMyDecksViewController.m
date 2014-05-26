@@ -44,6 +44,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    cell.textLabel.font = [ZEUtility myStandardFont];
     NSDictionary *deck = self.dataSource[indexPath.row];
     if (deck[@"title"]) {
         cell.textLabel.text = deck[@"title"];

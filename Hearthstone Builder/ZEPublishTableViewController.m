@@ -28,6 +28,8 @@
     }
     self.titleTextField.delegate = self;
     self.descriptionTextView.delegate = self;
+    self.titleTextField.font = [ZEUtility myStandardFont];
+    self.descriptionTextView.font = [ZEUtility myStandardFont];
     [super viewDidLoad];
 }
 

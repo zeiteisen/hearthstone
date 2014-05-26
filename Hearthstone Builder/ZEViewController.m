@@ -14,6 +14,9 @@
 #import "NSString+Score.h"
 #import "UIImage+ImageEffects.h"
 #import "ZEPublishTableViewController.h"
+#import "AHKActionSheet.h"
+
+#define MyLikesUserDefaultsKey      @"MyLikesKey"
 
 @interface ZEViewController () <UITableViewDataSource, UITableViewDelegate, ZECardTableViewCellDelegate, JBBarChartViewDataSource, JBBarChartViewDelegate, UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -344,7 +347,8 @@
 
 - (void)updatePublishButton {
     if (self.deckObject) {
-        self.navigationItem.rightBarButtonItem = nil;
+        self.navigationItem.rightBarButtonItem.title = NSLocalizedString(@"More", nil);
+        self.navigationItem.rightBarButtonItem.enabled = YES;
     } else {
         if (self.deckData.count >= 30) {
             self.navigationItem.rightBarButtonItem.enabled = YES;
@@ -519,8 +523,33 @@
 #pragma mark - Actions 
 
 - (IBAction)publishTouched:(id)sender {
-    ZEPublishTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"PublishTableViewController"];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (self.deckObject) {
+        
+        AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:nil];
+        NSMutableArray *myLikes = [[[NSUserDefaults standardUserDefaults] objectForKey:MyLikesUserDefaultsKey] mutableCopy];
+        if (myLikes == nil) {
+            myLikes = [NSMutableArray array];
+        }
+        if (![myLikes containsObject:self.deckObject.objectId]) {
+            [actionSheet addButtonWithTitle:NSLocalizedString(@"Like", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+                [self.deckObject incrementKey:@"likes"];
+                [self.deckObject saveInBackground];
+                [myLikes addObject:self.deckObject.objectId];
+                [[NSUserDefaults standardUserDefaults] setObject:myLikes forKey:MyLikesUserDefaultsKey];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+            }];
+        }
+        [actionSheet addButtonWithTitle:NSLocalizedString(@"Read Description", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+            NSLog(@"TODO");
+        }];
+        
+        [actionSheet show];
+        
+        [self updatePublishButton];
+    } else {
+        ZEPublishTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"PublishTableViewController"];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 

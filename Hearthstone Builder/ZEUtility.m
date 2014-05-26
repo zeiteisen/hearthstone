@@ -15,4 +15,8 @@
     return [storyBoard instantiateViewControllerWithIdentifier:identifier];
 }
 
++ (UIFont *)myStandardFont {
+    return [UIFont fontWithName:@"BelweBT-Bold" size:17];
+}
+
 @end

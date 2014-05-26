@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F6CAA0C19338A810078EE65 /* AHKActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA0519338A810078EE65 /* AHKActionSheet.m */; };
+		8F6CAA0D19338A810078EE65 /* AHKActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA0719338A810078EE65 /* AHKActionSheetViewController.m */; };
+		8F6CAA0E19338A810078EE65 /* UIImage+AHKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA0919338A810078EE65 /* UIImage+AHKAdditions.m */; };
+		8F6CAA0F19338A810078EE65 /* UIWindow+AHKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA0B19338A810078EE65 /* UIWindow+AHKAdditions.m */; };
 		8FA18BF2192A315F00FF3F71 /* card_choose_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18BF0192A315F00FF3F71 /* card_choose_bg.png */; };
 		8FA18BF3192A315F00FF3F71 /* card_choose_x2_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18BF1192A315F00FF3F71 /* card_choose_x2_bg.png */; };
 		8FA18BF5192A317A00FF3F71 /* ic_cost.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18BF4192A317A00FF3F71 /* ic_cost.png */; };
-		8FA18BF7192A324200FF3F71 /* Belwe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18BF6192A324200FF3F71 /* Belwe.ttf */; };
 		8FA18BFA192A32B700FF3F71 /* ZEDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18BF9192A32B700FF3F71 /* ZEDataManager.m */; };
 		8FA18BFD192A3B8C00FF3F71 /* ZEFilterTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18BFC192A3B8C00FF3F71 /* ZEFilterTableDataSource.m */; };
 		8FA18C00192A3BB300FF3F71 /* ZEPickedTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18BFF192A3BB300FF3F71 /* ZEPickedTableDataSource.m */; };
-		8FA18C02192A624200FF3F71 /* hearthstone.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18C01192A624200FF3F71 /* hearthstone.ttf */; };
 		8FA18C05192B3DC400FF3F71 /* ZEPickedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C04192B3DC400FF3F71 /* ZEPickedTableViewCell.m */; };
 		8FA18C0D192B50B800FF3F71 /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C08192B50B800FF3F71 /* JBBarChartView.m */; };
 		8FA18C0E192B50B800FF3F71 /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C0A192B50B800FF3F71 /* JBChartView.m */; };
@@ -449,17 +451,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F6CAA0419338A810078EE65 /* AHKActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKActionSheet.h; sourceTree = "<group>"; };
+		8F6CAA0519338A810078EE65 /* AHKActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHKActionSheet.m; sourceTree = "<group>"; };
+		8F6CAA0619338A810078EE65 /* AHKActionSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKActionSheetViewController.h; sourceTree = "<group>"; };
+		8F6CAA0719338A810078EE65 /* AHKActionSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHKActionSheetViewController.m; sourceTree = "<group>"; };
+		8F6CAA0819338A810078EE65 /* UIImage+AHKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AHKAdditions.h"; sourceTree = "<group>"; };
+		8F6CAA0919338A810078EE65 /* UIImage+AHKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AHKAdditions.m"; sourceTree = "<group>"; };
+		8F6CAA0A19338A810078EE65 /* UIWindow+AHKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AHKAdditions.h"; sourceTree = "<group>"; };
+		8F6CAA0B19338A810078EE65 /* UIWindow+AHKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AHKAdditions.m"; sourceTree = "<group>"; };
+		8F6CAA1019338FA30078EE65 /* Belwe.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Belwe.ttf; sourceTree = "<group>"; };
 		8FA18BF0192A315F00FF3F71 /* card_choose_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_choose_bg.png; sourceTree = "<group>"; };
 		8FA18BF1192A315F00FF3F71 /* card_choose_x2_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_choose_x2_bg.png; sourceTree = "<group>"; };
 		8FA18BF4192A317A00FF3F71 /* ic_cost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_cost.png; sourceTree = "<group>"; };
-		8FA18BF6192A324200FF3F71 /* Belwe.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Belwe.ttf; sourceTree = "<group>"; };
 		8FA18BF8192A32B700FF3F71 /* ZEDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEDataManager.h; sourceTree = "<group>"; };
 		8FA18BF9192A32B700FF3F71 /* ZEDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEDataManager.m; sourceTree = "<group>"; };
 		8FA18BFB192A3B8C00FF3F71 /* ZEFilterTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEFilterTableDataSource.h; sourceTree = "<group>"; };
 		8FA18BFC192A3B8C00FF3F71 /* ZEFilterTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEFilterTableDataSource.m; sourceTree = "<group>"; };
 		8FA18BFE192A3BB300FF3F71 /* ZEPickedTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEPickedTableDataSource.h; sourceTree = "<group>"; };
 		8FA18BFF192A3BB300FF3F71 /* ZEPickedTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPickedTableDataSource.m; sourceTree = "<group>"; };
-		8FA18C01192A624200FF3F71 /* hearthstone.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hearthstone.ttf; sourceTree = "<group>"; };
 		8FA18C03192B3DC400FF3F71 /* ZEPickedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEPickedTableViewCell.h; sourceTree = "<group>"; };
 		8FA18C04192B3DC400FF3F71 /* ZEPickedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPickedTableViewCell.m; sourceTree = "<group>"; };
 		8FA18C07192B50B800FF3F71 /* JBBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartView.h; sourceTree = "<group>"; };
@@ -937,6 +946,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F6CAA0319338A810078EE65 /* AHKActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				8F6CAA0419338A810078EE65 /* AHKActionSheet.h */,
+				8F6CAA0519338A810078EE65 /* AHKActionSheet.m */,
+				8F6CAA0619338A810078EE65 /* AHKActionSheetViewController.h */,
+				8F6CAA0719338A810078EE65 /* AHKActionSheetViewController.m */,
+				8F6CAA0819338A810078EE65 /* UIImage+AHKAdditions.h */,
+				8F6CAA0919338A810078EE65 /* UIImage+AHKAdditions.m */,
+				8F6CAA0A19338A810078EE65 /* UIWindow+AHKAdditions.h */,
+				8F6CAA0B19338A810078EE65 /* UIWindow+AHKAdditions.m */,
+			);
+			path = AHKActionSheet;
+			sourceTree = "<group>";
+		};
 		8FA18C06192B50B800FF3F71 /* JBChartView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1072,8 +1096,7 @@
 		FCAB8D6019215AB30072DC59 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8FA18C01192A624200FF3F71 /* hearthstone.ttf */,
-				8FA18BF6192A324200FF3F71 /* Belwe.ttf */,
+				8F6CAA1019338FA30078EE65 /* Belwe.ttf */,
 				8FA18BF4192A317A00FF3F71 /* ic_cost.png */,
 				8FA18BF0192A315F00FF3F71 /* card_choose_bg.png */,
 				8FA18BF1192A315F00FF3F71 /* card_choose_x2_bg.png */,
@@ -1475,6 +1498,7 @@
 		FCAB965D1924158A0072DC59 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				8F6CAA0319338A810078EE65 /* AHKActionSheet */,
 				8FB6EAC3192CE57E00973F8F /* StringScore */,
 				8FA18C06192B50B800FF3F71 /* JBChartView */,
 				FCAB965E192415930072DC59 /* ViewUtils */,
@@ -1652,7 +1676,6 @@
 				FCAB964519240F610072DC59 /* Venture Co. Mercenary.jpg in Resources */,
 				FCAB962619240F610072DC59 /* Stormpike Commando.jpg in Resources */,
 				FCAB961119240F610072DC59 /* Silvermoon Guardian.jpg in Resources */,
-				8FA18C02192A624200FF3F71 /* hearthstone.ttf in Resources */,
 				FCAB950C19240F610072DC59 /* Blessing of Kings.jpg in Resources */,
 				FCAB952419240F610072DC59 /* Cleave.jpg in Resources */,
 				FCAB95A919240F610072DC59 /* Lightning Storm.jpg in Resources */,
@@ -1720,7 +1743,6 @@
 				FCAB960819240F610072DC59 /* Shattered Sun Cleric.jpg in Resources */,
 				FCAB94DD19240F610072DC59 /* Abomination.jpg in Resources */,
 				FCAB964419240F610072DC59 /* Vaporize.jpg in Resources */,
-				8FA18BF7192A324200FF3F71 /* Belwe.ttf in Resources */,
 				FCAB956B19240F610072DC59 /* Frostbolt.jpg in Resources */,
 				FCAB964019240F610072DC59 /* Unbound Elemental.jpg in Resources */,
 				FCAB964219240F610072DC59 /* Upgrade!.jpg in Resources */,
@@ -1978,6 +2000,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC409C46193116CE0086215F /* ZEMyDecksViewController.m in Sources */,
+				8F6CAA0E19338A810078EE65 /* UIImage+AHKAdditions.m in Sources */,
 				8FB6EBEE192E44EB00973F8F /* UIImage+ImageEffects.m in Sources */,
 				FCF361141931DDEC0044B85E /* ZEPublishTableViewController.m in Sources */,
 				8FA18C12192B5EA500FF3F71 /* ZEPickClassViewController.m in Sources */,
@@ -1986,16 +2009,19 @@
 				FCF3612B193236D30044B85E /* ZEOtherDecksTableViewController.m in Sources */,
 				8FA18C0F192B50B800FF3F71 /* JBLineChartView.m in Sources */,
 				8FA18C0D192B50B800FF3F71 /* JBBarChartView.m in Sources */,
+				8F6CAA0C19338A810078EE65 /* AHKActionSheet.m in Sources */,
 				8FA18C00192A3BB300FF3F71 /* ZEPickedTableDataSource.m in Sources */,
 				8FB6EAC9192CE57E00973F8F /* NSString+Score.m in Sources */,
 				8FA18C05192B3DC400FF3F71 /* ZEPickedTableViewCell.m in Sources */,
 				8FA18C0E192B50B800FF3F71 /* JBChartView.m in Sources */,
 				FCAB9661192415930072DC59 /* ViewUtils.m in Sources */,
+				8F6CAA0D19338A810078EE65 /* AHKActionSheetViewController.m in Sources */,
 				FCAB8D4219215A640072DC59 /* ZEViewController.m in Sources */,
 				8FA18BFA192A32B700FF3F71 /* ZEDataManager.m in Sources */,
 				FC409C431931153C0086215F /* ZEStartViewController.m in Sources */,
 				8FA18BFD192A3B8C00FF3F71 /* ZEFilterTableDataSource.m in Sources */,
 				FCAB8D3819215A640072DC59 /* main.m in Sources */,
+				8F6CAA0F19338A810078EE65 /* UIWindow+AHKAdditions.m in Sources */,
 				FCAB8D3C19215A640072DC59 /* ZEAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,6 +17,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"FilterCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    cell.textLabel.font = [ZEUtility myStandardFont];
     cell.textLabel.text = [NSString stringWithFormat:@"%i", indexPath.row];
     return cell;
 }

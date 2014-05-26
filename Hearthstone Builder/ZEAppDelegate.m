@@ -16,6 +16,12 @@
                   clientKey:@"GaGNnHc5akAJUikiySh9IIhTAqjSzwyA9E19hn1t"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [PFUser enableAutomaticUser];
+    [[UILabel appearance] setFont:[ZEUtility myStandardFont]];
+    NSDictionary *settings = @{
+                               NSFontAttributeName: [ZEUtility myStandardFont],
+                               };
+    [[UIBarButtonItem appearance] setTitleTextAttributes:settings forState:UIControlStateNormal];
+    
     return YES;
 }
 							
@@ -38,6 +44,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    [UIApplication sharedApplication].keyWindow.tintColor = [UIColor redColor];
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
