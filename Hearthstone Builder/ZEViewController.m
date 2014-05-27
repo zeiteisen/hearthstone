@@ -548,6 +548,7 @@
         [self updatePublishButton];
     } else {
         ZEPublishTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"PublishTableViewController"];
+        vc.selectedDeckNumber = self.selectedDeckNumber;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

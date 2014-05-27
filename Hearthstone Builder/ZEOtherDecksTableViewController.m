@@ -8,6 +8,7 @@
 
 #import "ZEOtherDecksTableViewController.h"
 #import "ZEViewController.h"
+#import "Chartboost.h"
 
 @interface ZEOtherDecksTableViewController ()
 @property (nonatomic, strong) NSMutableArray *dataSource;
@@ -44,6 +45,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([[Chartboost sharedChartboost] hasCachedInterstitial:CBLocationLevelStart]) {
+        [[Chartboost sharedChartboost] showInterstitial:CBLocationLevelStart];
+    }
     ZEViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"CreateViewController"];
     vc.hero = self.hero;
     vc.viewDeckMode = YES;

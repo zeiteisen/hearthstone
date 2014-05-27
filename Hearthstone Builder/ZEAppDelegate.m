@@ -7,6 +7,11 @@
 //
 
 #import "ZEAppDelegate.h"
+#import "Chartboost.h"
+
+@interface ZEAppDelegate () <ChartboostDelegate>
+
+@end
 
 @implementation ZEAppDelegate
 
@@ -45,12 +50,23 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     [UIApplication sharedApplication].keyWindow.tintColor = [UIColor redColor];
+    
+    // Begin a user session. Must not be dependent on user actions or any prior network requests.
+    // Must be called every time your app becomes active.
+    [Chartboost startWithAppId:@"5384461ec26ee46801e11ff4" appSignature:@"d2bc16f712a2343ee958d4f41676a609a5e595bc" delegate:self];
+    [[Chartboost sharedChartboost] cacheInterstitial:CBLocationLevelStart];
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - ChartboostDelegate
+
+- (void)didDismissInterstitial:(CBLocation)location {
+    [[Chartboost sharedChartboost] cacheInterstitial:CBLocationLevelStart];
 }
 
 @end
