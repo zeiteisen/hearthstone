@@ -12,9 +12,9 @@
 #import "ZEPickedTableDataSource.h"
 #import "JBBarChartView.h"
 #import "NSString+Score.h"
-#import "UIImage+ImageEffects.h"
 #import "ZEPublishTableViewController.h"
 #import "AHKActionSheet.h"
+#import "ZEReadDescriptionViewController.h"
 
 #define MyLikesUserDefaultsKey      @"MyLikesKey"
 
@@ -131,6 +131,36 @@
     [self updatePublishButton];
 }
 
+- (NSInteger)calcDustCost {
+    NSInteger cost = 0;
+    for (NSDictionary *card in self.deckData) {
+        NSString *quality = card[@"quality"];
+        if ([quality isEqualToString:@"legendary"]) {
+            cost += 1600;
+        }
+        if ([quality isEqualToString:@"epic"]) {
+            cost += 400;
+        }
+        if ([quality isEqualToString:@"rare"]) {
+            cost += 100;
+        }
+        if ([quality isEqualToString:@"common"]) {
+            cost += 40;
+        }
+    }
+    return cost;
+}
+
+- (NSInteger)countCategory:(NSString *)category {
+    NSInteger count = 0;
+    for (NSDictionary *card in self.deckData) {
+        if ([card[@"category"] isEqualToString:category]) {
+            count++;
+        }
+    }
+    return count;
+}
+
 - (void)saveDeck {
     NSMutableArray *savedDecks = [[[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY] mutableCopy];
     if (savedDecks == nil) {
@@ -156,6 +186,11 @@
     } else {
         [savedDecks replaceObjectAtIndex:self.selectedDeckNumber withObject:saveData];
     }
+    [saveData setObject:@([self calcDustCost]) forKey:@"dust"];
+    [saveData setObject:@([self countCategory:@"minion"]) forKey:@"minions"];
+    [saveData setObject:@([self countCategory:@"spell"]) forKey:@"spells"];
+    [saveData setObject:@([self countCategory:@"weapon"]) forKey:@"weapons"];
+    
     
     [[NSUserDefaults standardUserDefaults] setObject:savedDecks forKey:USER_DECKS_KEY];
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -540,7 +575,9 @@
             }];
         }
         [actionSheet addButtonWithTitle:NSLocalizedString(@"Read Description", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
-            NSLog(@"TODO");
+            ZEReadDescriptionViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"ReadDescriptionViewController"];
+            vc.deckObject = self.deckObject;
+            [self presentViewController:vc animated:YES completion:nil];
         }];
         
         [actionSheet show];

@@ -12,6 +12,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (nonatomic, strong) NSMutableDictionary *deck;
+@property (weak, nonatomic) IBOutlet UILabel *dustCount;
+@property (weak, nonatomic) IBOutlet UILabel *minionsCount;
+@property (weak, nonatomic) IBOutlet UILabel *spellsCount;
+@property (weak, nonatomic) IBOutlet UILabel *weaponsCount;
 @end
 
 @implementation ZEPublishTableViewController
@@ -30,6 +34,12 @@
     self.descriptionTextView.delegate = self;
     self.titleTextField.font = [ZEUtility myStandardFont];
     self.descriptionTextView.font = [ZEUtility myStandardFont];
+    
+    self.dustCount.text = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Dust: ", nil), [self.deck[@"dust"] stringValue]];
+    self.minionsCount.text = [NSString stringWithFormat:@"%@ %@", [self.deck[@"minions"] stringValue], NSLocalizedString(@"Minions", nil)];
+    self.spellsCount.text = [NSString stringWithFormat:@"%@ %@", [self.deck[@"spells"] stringValue], NSLocalizedString(@"Spells", nil)];
+    self.weaponsCount.text = [NSString stringWithFormat:@"%@ %@", [self.deck[@"weapons"] stringValue], NSLocalizedString(@"Weapons", nil)];
+    
     [super viewDidLoad];
 }
 
@@ -66,6 +76,10 @@
     [deckObject setObject:self.descriptionTextView.text forKey:@"description"];
     [deckObject setObject:self.deck[@"hero"] forKey:@"hero"];
     [deckObject setObject:self.deck[@"deck"] forKey:@"deck"];
+    [deckObject setObject:self.deck[@"dust"] forKey:@"dust"];
+    [deckObject setObject:self.deck[@"weapons"] forKey:@"weapons"];
+    [deckObject setObject:self.deck[@"spells"] forKey:@"spells"];
+    [deckObject setObject:self.deck[@"minions"] forKey:@"minions"];
     [deckObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         [self.deck setObject:deckObject.objectId forKey:@"objectId"];
         [self saveDeck];
