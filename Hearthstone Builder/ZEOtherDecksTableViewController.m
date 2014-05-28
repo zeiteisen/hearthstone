@@ -9,6 +9,7 @@
 #import "ZEOtherDecksTableViewController.h"
 #import "ZEViewController.h"
 #import "Chartboost.h"
+#import "ZEOtherDeckTableViewCell.h"
 
 @interface ZEOtherDecksTableViewController ()
 @property (nonatomic, strong) NSMutableArray *dataSource;
@@ -21,7 +22,7 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Deck"];
     [query whereKey:@"hero" equalTo:self.hero];
     [query orderByDescending:@"updatedAt"];
-    [query selectKeys:@[@"title", @"likes"]];
+    [query selectKeys:@[@"title", @"likes", @"dust", @"hero", @"minions", @"spells", @"weapons"]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.dataSource = [NSMutableArray arrayWithArray:objects];
         [self.tableView reloadData];
@@ -37,10 +38,35 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    cell.textLabel.font = [ZEUtility myStandardFont];
+    ZEOtherDeckTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    cell.deckNameLabel.font = [ZEUtility myStandardFont];
+    cell.likesLabel.font = [ZEUtility myStandardFont];
+    cell.dustLabel.font = [ZEUtility myStandardFont];
+    cell.spellsLabel.font = [ZEUtility myStandardFont];
+    cell.minionsLabel.font = [ZEUtility myStandardFont];
+    cell.weaponsLabel.font = [ZEUtility myStandardFont];
+    
     PFObject *deck = self.dataSource[indexPath.row];
-    cell.textLabel.text = deck[@"title"];
+    cell.deckNameLabel.text = deck[@"title"];
+    
+    NSString *string = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Dust", nil), deck[@"dust"]];
+    cell.dustLabel.text = string;
+    
+    string = [NSString stringWithFormat:@"%@ %@", deck[@"likes"], NSLocalizedString(@"Likes", nil)];
+    cell.likesLabel.text = string;
+    
+    string = [NSString stringWithFormat:@"%@ %@", deck[@"spells"], NSLocalizedString(@"Spells", nil)];
+    cell.spellsLabel.text = string;
+    
+    string = [NSString stringWithFormat:@"%@ %@", deck[@"minions"], NSLocalizedString(@"Minions", nil)];
+    cell.minionsLabel.text = string;
+    
+    string = [NSString stringWithFormat:@"%@ %@", deck[@"weapons"], NSLocalizedString(@"Weapons", nil)];
+    cell.weaponsLabel.text = string;
+    
+    NSString *imageName = [NSString stringWithFormat:@"ico_%@", deck[@"hero"]];
+    cell.iconImage.image = [UIImage imageNamed:imageName];
+    
     return cell;
 }
 

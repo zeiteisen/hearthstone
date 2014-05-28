@@ -21,9 +21,9 @@
 		8F6CAA3C1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA3B1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m */; };
 		8F6CAA3E1935D1280078EE65 /* mana.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA3D1935D1280078EE65 /* mana.png */; };
 		8F6CAA4419360E620078EE65 /* deletered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4319360E620078EE65 /* deletered.png */; };
-		8F6CAA5819363DD90078EE65 /* Anduin Wrynn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4519363DD90078EE65 /* Anduin Wrynn.jpg */; };
-		8F6CAA5919363DD90078EE65 /* Garrosh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4619363DD90078EE65 /* Garrosh.jpg */; };
-		8F6CAA5A19363DD90078EE65 /* Guldan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4719363DD90078EE65 /* Guldan.jpg */; };
+		8F6CAA5819363DD90078EE65 /* priest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4519363DD90078EE65 /* priest.jpg */; };
+		8F6CAA5919363DD90078EE65 /* warrior.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4619363DD90078EE65 /* warrior.jpg */; };
+		8F6CAA5A19363DD90078EE65 /* warlock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4719363DD90078EE65 /* warlock.jpg */; };
 		8F6CAA5B19363DD90078EE65 /* ico_deathknight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4819363DD90078EE65 /* ico_deathknight.png */; };
 		8F6CAA5C19363DD90078EE65 /* ico_druid.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4919363DD90078EE65 /* ico_druid.png */; };
 		8F6CAA5D19363DD90078EE65 /* ico_hunter.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4A19363DD90078EE65 /* ico_hunter.png */; };
@@ -34,12 +34,12 @@
 		8F6CAA6219363DD90078EE65 /* ico_shaman.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4F19363DD90078EE65 /* ico_shaman.png */; };
 		8F6CAA6319363DD90078EE65 /* ico_warlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5019363DD90078EE65 /* ico_warlock.png */; };
 		8F6CAA6419363DD90078EE65 /* ico_warrior.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5119363DD90078EE65 /* ico_warrior.png */; };
-		8F6CAA6519363DD90078EE65 /* Jaina Proudmoore.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5219363DD90078EE65 /* Jaina Proudmoore.jpg */; };
-		8F6CAA6619363DD90078EE65 /* Malfurion Stormrage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5319363DD90078EE65 /* Malfurion Stormrage.jpg */; };
-		8F6CAA6719363DD90078EE65 /* Rexxar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5419363DD90078EE65 /* Rexxar.jpg */; };
-		8F6CAA6819363DD90078EE65 /* Thrall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5519363DD90078EE65 /* Thrall.jpg */; };
-		8F6CAA6919363DD90078EE65 /* Uther.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5619363DD90078EE65 /* Uther.jpg */; };
-		8F6CAA6A19363DD90078EE65 /* Valeera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5719363DD90078EE65 /* Valeera.jpg */; };
+		8F6CAA6519363DD90078EE65 /* mage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5219363DD90078EE65 /* mage.jpg */; };
+		8F6CAA6619363DD90078EE65 /* druid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5319363DD90078EE65 /* druid.jpg */; };
+		8F6CAA6719363DD90078EE65 /* hunter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5419363DD90078EE65 /* hunter.jpg */; };
+		8F6CAA6819363DD90078EE65 /* shaman.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5519363DD90078EE65 /* shaman.jpg */; };
+		8F6CAA6919363DD90078EE65 /* paladin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5619363DD90078EE65 /* paladin.jpg */; };
+		8F6CAA6A19363DD90078EE65 /* rogue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5719363DD90078EE65 /* rogue.jpg */; };
 		8FA18BF2192A315F00FF3F71 /* card_choose_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18BF0192A315F00FF3F71 /* card_choose_bg.png */; };
 		8FA18BF3192A315F00FF3F71 /* card_choose_x2_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18BF1192A315F00FF3F71 /* card_choose_x2_bg.png */; };
 		8FA18BFA192A32B700FF3F71 /* ZEDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18BF9192A32B700FF3F71 /* ZEDataManager.m */; };
@@ -55,6 +55,9 @@
 		8FB6EACA192CE57E00973F8F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC7192CE57E00973F8F /* README.md */; };
 		FC409C431931153C0086215F /* ZEStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC409C421931153C0086215F /* ZEStartViewController.m */; };
 		FC409C46193116CE0086215F /* ZEMyDecksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC409C45193116CE0086215F /* ZEMyDecksViewController.m */; };
+		FC717264193659F50062B3E1 /* ZEMyDecksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC717263193659F50062B3E1 /* ZEMyDecksTableViewCell.m */; };
+		FC71726719365CF30062B3E1 /* ZEPickClassTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC71726619365CF30062B3E1 /* ZEPickClassTableViewCell.m */; };
+		FC71726A19366D110062B3E1 /* ZEOtherDeckTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC71726919366D110062B3E1 /* ZEOtherDeckTableViewCell.m */; };
 		FCAB8D2C19215A640072DC59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2B19215A640072DC59 /* Foundation.framework */; };
 		FCAB8D2E19215A640072DC59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */; };
 		FCAB8D3019215A640072DC59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2F19215A640072DC59 /* UIKit.framework */; };
@@ -502,9 +505,9 @@
 		8F6CAA3B1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZELeftFilterTableViewCell.m; sourceTree = "<group>"; };
 		8F6CAA3D1935D1280078EE65 /* mana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana.png; sourceTree = "<group>"; };
 		8F6CAA4319360E620078EE65 /* deletered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deletered.png; sourceTree = "<group>"; };
-		8F6CAA4519363DD90078EE65 /* Anduin Wrynn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Anduin Wrynn.jpg"; sourceTree = "<group>"; };
-		8F6CAA4619363DD90078EE65 /* Garrosh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Garrosh.jpg; sourceTree = "<group>"; };
-		8F6CAA4719363DD90078EE65 /* Guldan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Guldan.jpg; sourceTree = "<group>"; };
+		8F6CAA4519363DD90078EE65 /* priest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = priest.jpg; sourceTree = "<group>"; };
+		8F6CAA4619363DD90078EE65 /* warrior.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = warrior.jpg; sourceTree = "<group>"; };
+		8F6CAA4719363DD90078EE65 /* warlock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = warlock.jpg; sourceTree = "<group>"; };
 		8F6CAA4819363DD90078EE65 /* ico_deathknight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_deathknight.png; sourceTree = "<group>"; };
 		8F6CAA4919363DD90078EE65 /* ico_druid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_druid.png; sourceTree = "<group>"; };
 		8F6CAA4A19363DD90078EE65 /* ico_hunter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_hunter.png; sourceTree = "<group>"; };
@@ -515,12 +518,12 @@
 		8F6CAA4F19363DD90078EE65 /* ico_shaman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_shaman.png; sourceTree = "<group>"; };
 		8F6CAA5019363DD90078EE65 /* ico_warlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_warlock.png; sourceTree = "<group>"; };
 		8F6CAA5119363DD90078EE65 /* ico_warrior.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_warrior.png; sourceTree = "<group>"; };
-		8F6CAA5219363DD90078EE65 /* Jaina Proudmoore.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Jaina Proudmoore.jpg"; sourceTree = "<group>"; };
-		8F6CAA5319363DD90078EE65 /* Malfurion Stormrage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Malfurion Stormrage.jpg"; sourceTree = "<group>"; };
-		8F6CAA5419363DD90078EE65 /* Rexxar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rexxar.jpg; sourceTree = "<group>"; };
-		8F6CAA5519363DD90078EE65 /* Thrall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thrall.jpg; sourceTree = "<group>"; };
-		8F6CAA5619363DD90078EE65 /* Uther.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Uther.jpg; sourceTree = "<group>"; };
-		8F6CAA5719363DD90078EE65 /* Valeera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Valeera.jpg; sourceTree = "<group>"; };
+		8F6CAA5219363DD90078EE65 /* mage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mage.jpg; sourceTree = "<group>"; };
+		8F6CAA5319363DD90078EE65 /* druid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = druid.jpg; sourceTree = "<group>"; };
+		8F6CAA5419363DD90078EE65 /* hunter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hunter.jpg; sourceTree = "<group>"; };
+		8F6CAA5519363DD90078EE65 /* shaman.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shaman.jpg; sourceTree = "<group>"; };
+		8F6CAA5619363DD90078EE65 /* paladin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paladin.jpg; sourceTree = "<group>"; };
+		8F6CAA5719363DD90078EE65 /* rogue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rogue.jpg; sourceTree = "<group>"; };
 		8FA18BF0192A315F00FF3F71 /* card_choose_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_choose_bg.png; sourceTree = "<group>"; };
 		8FA18BF1192A315F00FF3F71 /* card_choose_x2_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_choose_x2_bg.png; sourceTree = "<group>"; };
 		8FA18BF8192A32B700FF3F71 /* ZEDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEDataManager.h; sourceTree = "<group>"; };
@@ -548,6 +551,12 @@
 		FC409C421931153C0086215F /* ZEStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEStartViewController.m; sourceTree = "<group>"; };
 		FC409C44193116CE0086215F /* ZEMyDecksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEMyDecksViewController.h; sourceTree = "<group>"; };
 		FC409C45193116CE0086215F /* ZEMyDecksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEMyDecksViewController.m; sourceTree = "<group>"; };
+		FC717262193659F50062B3E1 /* ZEMyDecksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEMyDecksTableViewCell.h; sourceTree = "<group>"; };
+		FC717263193659F50062B3E1 /* ZEMyDecksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEMyDecksTableViewCell.m; sourceTree = "<group>"; };
+		FC71726519365CF30062B3E1 /* ZEPickClassTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEPickClassTableViewCell.h; sourceTree = "<group>"; };
+		FC71726619365CF30062B3E1 /* ZEPickClassTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPickClassTableViewCell.m; sourceTree = "<group>"; };
+		FC71726819366D110062B3E1 /* ZEOtherDeckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEOtherDeckTableViewCell.h; sourceTree = "<group>"; };
+		FC71726919366D110062B3E1 /* ZEOtherDeckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEOtherDeckTableViewCell.m; sourceTree = "<group>"; };
 		FCAB8D2819215A640072DC59 /* Hearthstone Builder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hearthstone Builder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAB8D2B19215A640072DC59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1111,6 +1120,12 @@
 				FCAB8D3A19215A640072DC59 /* ZEAppDelegate.h */,
 				FCAB8D3B19215A640072DC59 /* ZEAppDelegate.m */,
 				FCAB8D3D19215A640072DC59 /* Main.storyboard */,
+				FC71726519365CF30062B3E1 /* ZEPickClassTableViewCell.h */,
+				FC71726619365CF30062B3E1 /* ZEPickClassTableViewCell.m */,
+				FC71726819366D110062B3E1 /* ZEOtherDeckTableViewCell.h */,
+				FC71726919366D110062B3E1 /* ZEOtherDeckTableViewCell.m */,
+				FC717262193659F50062B3E1 /* ZEMyDecksTableViewCell.h */,
+				FC717263193659F50062B3E1 /* ZEMyDecksTableViewCell.m */,
 				FCF36129193236D30044B85E /* ZEOtherDecksTableViewController.h */,
 				FCF3612A193236D30044B85E /* ZEOtherDecksTableViewController.m */,
 				FCF361121931DDEC0044B85E /* ZEPublishTableViewController.h */,
@@ -1177,9 +1192,9 @@
 		FCAB8D6019215AB30072DC59 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8F6CAA4519363DD90078EE65 /* Anduin Wrynn.jpg */,
-				8F6CAA4619363DD90078EE65 /* Garrosh.jpg */,
-				8F6CAA4719363DD90078EE65 /* Guldan.jpg */,
+				8F6CAA4519363DD90078EE65 /* priest.jpg */,
+				8F6CAA4619363DD90078EE65 /* warrior.jpg */,
+				8F6CAA4719363DD90078EE65 /* warlock.jpg */,
 				8F6CAA4819363DD90078EE65 /* ico_deathknight.png */,
 				8F6CAA4919363DD90078EE65 /* ico_druid.png */,
 				8F6CAA4A19363DD90078EE65 /* ico_hunter.png */,
@@ -1190,12 +1205,12 @@
 				8F6CAA4F19363DD90078EE65 /* ico_shaman.png */,
 				8F6CAA5019363DD90078EE65 /* ico_warlock.png */,
 				8F6CAA5119363DD90078EE65 /* ico_warrior.png */,
-				8F6CAA5219363DD90078EE65 /* Jaina Proudmoore.jpg */,
-				8F6CAA5319363DD90078EE65 /* Malfurion Stormrage.jpg */,
-				8F6CAA5419363DD90078EE65 /* Rexxar.jpg */,
-				8F6CAA5519363DD90078EE65 /* Thrall.jpg */,
-				8F6CAA5619363DD90078EE65 /* Uther.jpg */,
-				8F6CAA5719363DD90078EE65 /* Valeera.jpg */,
+				8F6CAA5219363DD90078EE65 /* mage.jpg */,
+				8F6CAA5319363DD90078EE65 /* druid.jpg */,
+				8F6CAA5419363DD90078EE65 /* hunter.jpg */,
+				8F6CAA5519363DD90078EE65 /* shaman.jpg */,
+				8F6CAA5619363DD90078EE65 /* paladin.jpg */,
+				8F6CAA5719363DD90078EE65 /* rogue.jpg */,
 				8F6CAA4319360E620078EE65 /* deletered.png */,
 				8F6CAA3D1935D1280078EE65 /* mana.png */,
 				8F6CAA1019338FA30078EE65 /* Belwe.ttf */,
@@ -1806,7 +1821,7 @@
 				FCAB94E919240F610072DC59 /* Ancient Brewmaster.jpg in Resources */,
 				FCAB962A19240F610072DC59 /* Succubus.jpg in Resources */,
 				FCAB958919240F610072DC59 /* Humility.jpg in Resources */,
-				8F6CAA6819363DD90078EE65 /* Thrall.jpg in Resources */,
+				8F6CAA6819363DD90078EE65 /* shaman.jpg in Resources */,
 				FCAB960419240F610072DC59 /* Shadow Word: Pain.jpg in Resources */,
 				FCAB955119240F610072DC59 /* Eviscerate.jpg in Resources */,
 				FCAB94EA19240F610072DC59 /* Ancient Mage.jpg in Resources */,
@@ -1872,7 +1887,7 @@
 				8F6CAA6219363DD90078EE65 /* ico_shaman.png in Resources */,
 				FCAB95B019240F610072DC59 /* Lorewalker Cho.jpg in Resources */,
 				FCAB94FA19240F610072DC59 /* Argent Protector.jpg in Resources */,
-				8F6CAA5819363DD90078EE65 /* Anduin Wrynn.jpg in Resources */,
+				8F6CAA5819363DD90078EE65 /* priest.jpg in Resources */,
 				FCAB953A19240F610072DC59 /* Demolisher.jpg in Resources */,
 				FCAB956D19240F610072DC59 /* Frostwolf Warlord.jpg in Resources */,
 				FCAB94DF19240F610072DC59 /* Acidic Swamp Ooze.jpg in Resources */,
@@ -1908,7 +1923,7 @@
 				FCAB954119240F610072DC59 /* Doomsayer.jpg in Resources */,
 				FCAB957119240F610072DC59 /* Gnomish Inventor.jpg in Resources */,
 				FCAB95EB19240F610072DC59 /* Ragnaros the Firelord.jpg in Resources */,
-				8F6CAA5919363DD90078EE65 /* Garrosh.jpg in Resources */,
+				8F6CAA5919363DD90078EE65 /* warrior.jpg in Resources */,
 				FCAB94DE19240F610072DC59 /* Abusive Sergeant.jpg in Resources */,
 				FCAB964919240F610072DC59 /* Voodoo Doctor.jpg in Resources */,
 				FCAB959B19240F610072DC59 /* Kidnapper.jpg in Resources */,
@@ -1929,12 +1944,12 @@
 				FCAB95D419240F610072DC59 /* Noble Sacrifice.jpg in Resources */,
 				FCAB958E19240F610072DC59 /* Ice Lance.jpg in Resources */,
 				FCAB954819240F610072DC59 /* Eaglehorn Bow.jpg in Resources */,
-				8F6CAA5A19363DD90078EE65 /* Guldan.jpg in Resources */,
+				8F6CAA5A19363DD90078EE65 /* warlock.jpg in Resources */,
 				FCAB957B19240F610072DC59 /* Harrison Jones.jpg in Resources */,
 				FCAB956719240F610072DC59 /* Freezing Trap.jpg in Resources */,
 				FCAB957519240F610072DC59 /* Grommash Hellscream.jpg in Resources */,
 				FCAB963A19240F610072DC59 /* Totemic Might.jpg in Resources */,
-				8F6CAA6619363DD90078EE65 /* Malfurion Stormrage.jpg in Resources */,
+				8F6CAA6619363DD90078EE65 /* druid.jpg in Resources */,
 				FCAB962719240F610072DC59 /* Stormwind Champion.jpg in Resources */,
 				FCAB950619240F610072DC59 /* Bestial Wrath.jpg in Resources */,
 				FCAB954F19240F610072DC59 /* Equality.jpg in Resources */,
@@ -1953,7 +1968,7 @@
 				FCAB956F19240F610072DC59 /* Gadgetzan Auctioneer.jpg in Resources */,
 				FCAB953519240F610072DC59 /* Deadly Poison.jpg in Resources */,
 				FCAB958619240F610072DC59 /* Holy Smite.jpg in Resources */,
-				8F6CAA6519363DD90078EE65 /* Jaina Proudmoore.jpg in Resources */,
+				8F6CAA6519363DD90078EE65 /* mage.jpg in Resources */,
 				FCAB958B19240F610072DC59 /* Hunter's Mark.jpg in Resources */,
 				8F6CAA5B19363DD90078EE65 /* ico_deathknight.png in Resources */,
 				FCAB965819240F610072DC59 /* Young Priestess.jpg in Resources */,
@@ -1968,7 +1983,7 @@
 				FCAB951419240F610072DC59 /* Bloodmage Thalnos.jpg in Resources */,
 				FCAB960D19240F610072DC59 /* SI:7 Agent.jpg in Resources */,
 				FCAB950D19240F610072DC59 /* Blessing of Might.jpg in Resources */,
-				8F6CAA6A19363DD90078EE65 /* Valeera.jpg in Resources */,
+				8F6CAA6A19363DD90078EE65 /* rogue.jpg in Resources */,
 				FCAB95A619240F610072DC59 /* Leper Gnome.jpg in Resources */,
 				8FB6EACA192CE57E00973F8F /* README.md in Resources */,
 				FCAB965A19240F610072DC59 /* Ysera.jpg in Resources */,
@@ -2031,12 +2046,12 @@
 				FCAB957619240F610072DC59 /* Gruul.jpg in Resources */,
 				FCAB95ED19240F610072DC59 /* Rampage.jpg in Resources */,
 				FCAB95FB19240F610072DC59 /* Scarlet Crusader.jpg in Resources */,
-				8F6CAA6919363DD90078EE65 /* Uther.jpg in Resources */,
+				8F6CAA6919363DD90078EE65 /* paladin.jpg in Resources */,
 				FCAB951519240F610072DC59 /* Bloodsail Corsair.jpg in Resources */,
 				FCAB964F19240F610072DC59 /* Wild Pyromancer.jpg in Resources */,
 				FCAB95C819240F610072DC59 /* Moonfire.jpg in Resources */,
 				FCAB950E19240F610072DC59 /* Blessing of Wisdom.jpg in Resources */,
-				8F6CAA6719363DD90078EE65 /* Rexxar.jpg in Resources */,
+				8F6CAA6719363DD90078EE65 /* hunter.jpg in Resources */,
 				FCAB954919240F610072DC59 /* Earth Elemental.jpg in Resources */,
 				FCAB94F619240F610072DC59 /* Arcanite Reaper.jpg in Resources */,
 				FCAB95C019240F610072DC59 /* Mind Control.jpg in Resources */,
@@ -2123,10 +2138,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC409C46193116CE0086215F /* ZEMyDecksViewController.m in Sources */,
+				FC71726719365CF30062B3E1 /* ZEPickClassTableViewCell.m in Sources */,
 				8F6CAA0E19338A810078EE65 /* UIImage+AHKAdditions.m in Sources */,
 				FCF361141931DDEC0044B85E /* ZEPublishTableViewController.m in Sources */,
 				8FA18C12192B5EA500FF3F71 /* ZEPickClassViewController.m in Sources */,
 				8FA18C15192B62EE00FF3F71 /* ZEUtility.m in Sources */,
+				FC717264193659F50062B3E1 /* ZEMyDecksTableViewCell.m in Sources */,
 				FCAB90601922A93A0072DC59 /* ZECardTableViewCell.m in Sources */,
 				FCF3612B193236D30044B85E /* ZEOtherDecksTableViewController.m in Sources */,
 				8FA18C0F192B50B800FF3F71 /* JBLineChartView.m in Sources */,
@@ -2140,6 +2157,7 @@
 				8F6CAA0D19338A810078EE65 /* AHKActionSheetViewController.m in Sources */,
 				FCAB8D4219215A640072DC59 /* ZEViewController.m in Sources */,
 				8FA18BFA192A32B700FF3F71 /* ZEDataManager.m in Sources */,
+				FC71726A19366D110062B3E1 /* ZEOtherDeckTableViewCell.m in Sources */,
 				FC409C431931153C0086215F /* ZEStartViewController.m in Sources */,
 				8FA18BFD192A3B8C00FF3F71 /* ZEFilterTableDataSource.m in Sources */,
 				FCAB8D3819215A640072DC59 /* main.m in Sources */,

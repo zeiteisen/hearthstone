@@ -1,5 +1,5 @@
 //
-//  ZELeftFilterTableViewCell.h
+//  ZEMyDecksTableViewCell.h
 //  Hearthstone Builder
 //
 //  Created by Hanno Bruns on 28.05.14.
@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZELeftFilterTableViewCell : UITableViewCell
+@interface ZEMyDecksTableViewCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UILabel *label;
+@property (nonatomic, weak) IBOutlet UIImageView *image;
 @end

@@ -9,6 +9,7 @@
 #import "ZEPickClassViewController.h"
 #import "ZEViewController.h"
 #import "ZEOtherDecksTableViewController.h"
+#import "ZEPickClassTableViewCell.h"
 
 @interface ZEPickClassViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -32,9 +33,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    cell.textLabel.font = [ZEUtility myStandardFont];
-    cell.textLabel.text = self.dataSource[indexPath.row];
+    ZEPickClassTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    cell.label.font = [ZEUtility myStandardFont];
+    cell.label.text = self.dataSource[indexPath.row];
+    NSString *imageName = [NSString stringWithFormat:@"%@.jpg", self.dataSource[indexPath.row]];
+    cell.image.image = [UIImage imageNamed:imageName];
     return cell;
 }
 

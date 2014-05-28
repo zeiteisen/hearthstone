@@ -9,6 +9,7 @@
 #import "ZEMyDecksViewController.h"
 #import "ZEViewController.h"
 #import "ZEPickClassViewController.h"
+#import "ZEMyDecksTableViewCell.h"
 
 @interface ZEMyDecksViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -43,14 +44,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    cell.textLabel.font = [ZEUtility myStandardFont];
+    ZEMyDecksTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    cell.label.font = [ZEUtility myStandardFont];
     NSDictionary *deck = self.dataSource[indexPath.row];
     if (deck[@"title"]) {
-        cell.textLabel.text = deck[@"title"];
+        cell.label.text = deck[@"title"];
     } else {
-        cell.textLabel.text = deck[@"hero"];
+        cell.label.text = deck[@"hero"];
     }
+    NSString *imageName = [NSString stringWithFormat:@"ico_%@", deck[@"hero"]];
+    cell.image.image = [UIImage imageNamed:imageName];
     return cell;
 }
 

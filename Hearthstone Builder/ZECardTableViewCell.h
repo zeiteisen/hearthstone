@@ -18,7 +18,7 @@
 
 @property (nonatomic, weak) id <ZECardTableViewCellDelegate> delegate;
 @property (nonatomic, strong) NSDictionary *cardData;
-@property (nonatomic, strong) IBOutlet UIImageView *image;
+@property (nonatomic, weak) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UIButton *removeButton;
 @property (nonatomic, assign) BOOL faded;
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
