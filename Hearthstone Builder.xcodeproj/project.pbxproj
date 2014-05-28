@@ -21,6 +21,25 @@
 		8F6CAA3C1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA3B1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m */; };
 		8F6CAA3E1935D1280078EE65 /* mana.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA3D1935D1280078EE65 /* mana.png */; };
 		8F6CAA4419360E620078EE65 /* deletered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4319360E620078EE65 /* deletered.png */; };
+		8F6CAA5819363DD90078EE65 /* Anduin Wrynn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4519363DD90078EE65 /* Anduin Wrynn.jpg */; };
+		8F6CAA5919363DD90078EE65 /* Garrosh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4619363DD90078EE65 /* Garrosh.jpg */; };
+		8F6CAA5A19363DD90078EE65 /* Guldan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4719363DD90078EE65 /* Guldan.jpg */; };
+		8F6CAA5B19363DD90078EE65 /* ico_deathknight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4819363DD90078EE65 /* ico_deathknight.png */; };
+		8F6CAA5C19363DD90078EE65 /* ico_druid.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4919363DD90078EE65 /* ico_druid.png */; };
+		8F6CAA5D19363DD90078EE65 /* ico_hunter.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4A19363DD90078EE65 /* ico_hunter.png */; };
+		8F6CAA5E19363DD90078EE65 /* ico_mage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4B19363DD90078EE65 /* ico_mage.png */; };
+		8F6CAA5F19363DD90078EE65 /* ico_paladin.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4C19363DD90078EE65 /* ico_paladin.png */; };
+		8F6CAA6019363DD90078EE65 /* ico_priest.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4D19363DD90078EE65 /* ico_priest.png */; };
+		8F6CAA6119363DD90078EE65 /* ico_rogue.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4E19363DD90078EE65 /* ico_rogue.png */; };
+		8F6CAA6219363DD90078EE65 /* ico_shaman.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4F19363DD90078EE65 /* ico_shaman.png */; };
+		8F6CAA6319363DD90078EE65 /* ico_warlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5019363DD90078EE65 /* ico_warlock.png */; };
+		8F6CAA6419363DD90078EE65 /* ico_warrior.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5119363DD90078EE65 /* ico_warrior.png */; };
+		8F6CAA6519363DD90078EE65 /* Jaina Proudmoore.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5219363DD90078EE65 /* Jaina Proudmoore.jpg */; };
+		8F6CAA6619363DD90078EE65 /* Malfurion Stormrage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5319363DD90078EE65 /* Malfurion Stormrage.jpg */; };
+		8F6CAA6719363DD90078EE65 /* Rexxar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5419363DD90078EE65 /* Rexxar.jpg */; };
+		8F6CAA6819363DD90078EE65 /* Thrall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5519363DD90078EE65 /* Thrall.jpg */; };
+		8F6CAA6919363DD90078EE65 /* Uther.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5619363DD90078EE65 /* Uther.jpg */; };
+		8F6CAA6A19363DD90078EE65 /* Valeera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5719363DD90078EE65 /* Valeera.jpg */; };
 		8FA18BF2192A315F00FF3F71 /* card_choose_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18BF0192A315F00FF3F71 /* card_choose_bg.png */; };
 		8FA18BF3192A315F00FF3F71 /* card_choose_x2_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18BF1192A315F00FF3F71 /* card_choose_x2_bg.png */; };
 		8FA18BFA192A32B700FF3F71 /* ZEDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18BF9192A32B700FF3F71 /* ZEDataManager.m */; };
@@ -483,6 +502,25 @@
 		8F6CAA3B1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZELeftFilterTableViewCell.m; sourceTree = "<group>"; };
 		8F6CAA3D1935D1280078EE65 /* mana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana.png; sourceTree = "<group>"; };
 		8F6CAA4319360E620078EE65 /* deletered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deletered.png; sourceTree = "<group>"; };
+		8F6CAA4519363DD90078EE65 /* Anduin Wrynn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Anduin Wrynn.jpg"; sourceTree = "<group>"; };
+		8F6CAA4619363DD90078EE65 /* Garrosh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Garrosh.jpg; sourceTree = "<group>"; };
+		8F6CAA4719363DD90078EE65 /* Guldan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Guldan.jpg; sourceTree = "<group>"; };
+		8F6CAA4819363DD90078EE65 /* ico_deathknight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_deathknight.png; sourceTree = "<group>"; };
+		8F6CAA4919363DD90078EE65 /* ico_druid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_druid.png; sourceTree = "<group>"; };
+		8F6CAA4A19363DD90078EE65 /* ico_hunter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_hunter.png; sourceTree = "<group>"; };
+		8F6CAA4B19363DD90078EE65 /* ico_mage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_mage.png; sourceTree = "<group>"; };
+		8F6CAA4C19363DD90078EE65 /* ico_paladin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_paladin.png; sourceTree = "<group>"; };
+		8F6CAA4D19363DD90078EE65 /* ico_priest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_priest.png; sourceTree = "<group>"; };
+		8F6CAA4E19363DD90078EE65 /* ico_rogue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_rogue.png; sourceTree = "<group>"; };
+		8F6CAA4F19363DD90078EE65 /* ico_shaman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_shaman.png; sourceTree = "<group>"; };
+		8F6CAA5019363DD90078EE65 /* ico_warlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_warlock.png; sourceTree = "<group>"; };
+		8F6CAA5119363DD90078EE65 /* ico_warrior.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_warrior.png; sourceTree = "<group>"; };
+		8F6CAA5219363DD90078EE65 /* Jaina Proudmoore.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Jaina Proudmoore.jpg"; sourceTree = "<group>"; };
+		8F6CAA5319363DD90078EE65 /* Malfurion Stormrage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Malfurion Stormrage.jpg"; sourceTree = "<group>"; };
+		8F6CAA5419363DD90078EE65 /* Rexxar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rexxar.jpg; sourceTree = "<group>"; };
+		8F6CAA5519363DD90078EE65 /* Thrall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thrall.jpg; sourceTree = "<group>"; };
+		8F6CAA5619363DD90078EE65 /* Uther.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Uther.jpg; sourceTree = "<group>"; };
+		8F6CAA5719363DD90078EE65 /* Valeera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Valeera.jpg; sourceTree = "<group>"; };
 		8FA18BF0192A315F00FF3F71 /* card_choose_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_choose_bg.png; sourceTree = "<group>"; };
 		8FA18BF1192A315F00FF3F71 /* card_choose_x2_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_choose_x2_bg.png; sourceTree = "<group>"; };
 		8FA18BF8192A32B700FF3F71 /* ZEDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEDataManager.h; sourceTree = "<group>"; };
@@ -1139,6 +1177,25 @@
 		FCAB8D6019215AB30072DC59 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8F6CAA4519363DD90078EE65 /* Anduin Wrynn.jpg */,
+				8F6CAA4619363DD90078EE65 /* Garrosh.jpg */,
+				8F6CAA4719363DD90078EE65 /* Guldan.jpg */,
+				8F6CAA4819363DD90078EE65 /* ico_deathknight.png */,
+				8F6CAA4919363DD90078EE65 /* ico_druid.png */,
+				8F6CAA4A19363DD90078EE65 /* ico_hunter.png */,
+				8F6CAA4B19363DD90078EE65 /* ico_mage.png */,
+				8F6CAA4C19363DD90078EE65 /* ico_paladin.png */,
+				8F6CAA4D19363DD90078EE65 /* ico_priest.png */,
+				8F6CAA4E19363DD90078EE65 /* ico_rogue.png */,
+				8F6CAA4F19363DD90078EE65 /* ico_shaman.png */,
+				8F6CAA5019363DD90078EE65 /* ico_warlock.png */,
+				8F6CAA5119363DD90078EE65 /* ico_warrior.png */,
+				8F6CAA5219363DD90078EE65 /* Jaina Proudmoore.jpg */,
+				8F6CAA5319363DD90078EE65 /* Malfurion Stormrage.jpg */,
+				8F6CAA5419363DD90078EE65 /* Rexxar.jpg */,
+				8F6CAA5519363DD90078EE65 /* Thrall.jpg */,
+				8F6CAA5619363DD90078EE65 /* Uther.jpg */,
+				8F6CAA5719363DD90078EE65 /* Valeera.jpg */,
 				8F6CAA4319360E620078EE65 /* deletered.png */,
 				8F6CAA3D1935D1280078EE65 /* mana.png */,
 				8F6CAA1019338FA30078EE65 /* Belwe.ttf */,
@@ -1687,9 +1744,11 @@
 				FCAB95D519240F610072DC59 /* Northshire Cleric.jpg in Resources */,
 				FCAB95B419240F610072DC59 /* Mana Addict.jpg in Resources */,
 				FCAB95A119240F610072DC59 /* Kobold Geomancer.jpg in Resources */,
+				8F6CAA5C19363DD90078EE65 /* ico_druid.png in Resources */,
 				FCAB95FA19240F610072DC59 /* Savannah Highmane.jpg in Resources */,
 				FCAB965119240F610072DC59 /* Windfury.jpg in Resources */,
 				FCAB95BD19240F610072DC59 /* Millhouse Manastorm.jpg in Resources */,
+				8F6CAA6419363DD90078EE65 /* ico_warrior.png in Resources */,
 				FCAB953419240F610072DC59 /* Darkscale Healer.jpg in Resources */,
 				FCAB95EF19240F610072DC59 /* Razorfen Hunter.jpg in Resources */,
 				FCAB954619240F610072DC59 /* Druid of the Claw.jpg in Resources */,
@@ -1703,6 +1762,7 @@
 				FCAB95F019240F610072DC59 /* Reckless Rocketeer.jpg in Resources */,
 				FCAB953919240F610072DC59 /* Defias Ringleader.jpg in Resources */,
 				FCAB962B19240F610072DC59 /* Summoning Portal.jpg in Resources */,
+				8F6CAA5E19363DD90078EE65 /* ico_mage.png in Resources */,
 				FCAB950A19240F610072DC59 /* Blade Flurry.jpg in Resources */,
 				FCAB953319240F610072DC59 /* Dark Iron Dwarf.jpg in Resources */,
 				FCAB956619240F610072DC59 /* Forked Lightning.jpg in Resources */,
@@ -1746,6 +1806,7 @@
 				FCAB94E919240F610072DC59 /* Ancient Brewmaster.jpg in Resources */,
 				FCAB962A19240F610072DC59 /* Succubus.jpg in Resources */,
 				FCAB958919240F610072DC59 /* Humility.jpg in Resources */,
+				8F6CAA6819363DD90078EE65 /* Thrall.jpg in Resources */,
 				FCAB960419240F610072DC59 /* Shadow Word: Pain.jpg in Resources */,
 				FCAB955119240F610072DC59 /* Eviscerate.jpg in Resources */,
 				FCAB94EA19240F610072DC59 /* Ancient Mage.jpg in Resources */,
@@ -1764,6 +1825,7 @@
 				FCAB951D19240F610072DC59 /* Captain Greenskin.jpg in Resources */,
 				FCAB961619240F610072DC59 /* Snipe.jpg in Resources */,
 				FCAB95E919240F610072DC59 /* Questing Adventurer.jpg in Resources */,
+				8F6CAA5D19363DD90078EE65 /* ico_hunter.png in Resources */,
 				FCAB953019240F610072DC59 /* Cruel Taskmaster.jpg in Resources */,
 				FCAB95CB19240F610072DC59 /* Mountain Giant.jpg in Resources */,
 				FCAB95E319240F610072DC59 /* Power Overwhelming.jpg in Resources */,
@@ -1807,8 +1869,10 @@
 				FCAB962919240F610072DC59 /* Stranglethorn Tiger.jpg in Resources */,
 				FCAB950B19240F610072DC59 /* Blessed Champion.jpg in Resources */,
 				FCAB955019240F610072DC59 /* Ethereal Arcanist.jpg in Resources */,
+				8F6CAA6219363DD90078EE65 /* ico_shaman.png in Resources */,
 				FCAB95B019240F610072DC59 /* Lorewalker Cho.jpg in Resources */,
 				FCAB94FA19240F610072DC59 /* Argent Protector.jpg in Resources */,
+				8F6CAA5819363DD90078EE65 /* Anduin Wrynn.jpg in Resources */,
 				FCAB953A19240F610072DC59 /* Demolisher.jpg in Resources */,
 				FCAB956D19240F610072DC59 /* Frostwolf Warlord.jpg in Resources */,
 				FCAB94DF19240F610072DC59 /* Acidic Swamp Ooze.jpg in Resources */,
@@ -1827,6 +1891,7 @@
 				FCAB965319240F610072DC59 /* Wisp.jpg in Resources */,
 				FCAB959319240F610072DC59 /* Inner Rage.jpg in Resources */,
 				FCAB95D019240F610072DC59 /* Murloc Warleader.jpg in Resources */,
+				8F6CAA6019363DD90078EE65 /* ico_priest.png in Resources */,
 				FCAB950319240F610072DC59 /* Bane of Doom.jpg in Resources */,
 				FCAB951219240F610072DC59 /* Bloodfen Raptor.jpg in Resources */,
 				FCAB961C19240F610072DC59 /* Spellbender.jpg in Resources */,
@@ -1843,6 +1908,7 @@
 				FCAB954119240F610072DC59 /* Doomsayer.jpg in Resources */,
 				FCAB957119240F610072DC59 /* Gnomish Inventor.jpg in Resources */,
 				FCAB95EB19240F610072DC59 /* Ragnaros the Firelord.jpg in Resources */,
+				8F6CAA5919363DD90078EE65 /* Garrosh.jpg in Resources */,
 				FCAB94DE19240F610072DC59 /* Abusive Sergeant.jpg in Resources */,
 				FCAB964919240F610072DC59 /* Voodoo Doctor.jpg in Resources */,
 				FCAB959B19240F610072DC59 /* Kidnapper.jpg in Resources */,
@@ -1863,10 +1929,12 @@
 				FCAB95D419240F610072DC59 /* Noble Sacrifice.jpg in Resources */,
 				FCAB958E19240F610072DC59 /* Ice Lance.jpg in Resources */,
 				FCAB954819240F610072DC59 /* Eaglehorn Bow.jpg in Resources */,
+				8F6CAA5A19363DD90078EE65 /* Guldan.jpg in Resources */,
 				FCAB957B19240F610072DC59 /* Harrison Jones.jpg in Resources */,
 				FCAB956719240F610072DC59 /* Freezing Trap.jpg in Resources */,
 				FCAB957519240F610072DC59 /* Grommash Hellscream.jpg in Resources */,
 				FCAB963A19240F610072DC59 /* Totemic Might.jpg in Resources */,
+				8F6CAA6619363DD90078EE65 /* Malfurion Stormrage.jpg in Resources */,
 				FCAB962719240F610072DC59 /* Stormwind Champion.jpg in Resources */,
 				FCAB950619240F610072DC59 /* Bestial Wrath.jpg in Resources */,
 				FCAB954F19240F610072DC59 /* Equality.jpg in Resources */,
@@ -1876,6 +1944,7 @@
 				FCAB951019240F610072DC59 /* Blood Imp.jpg in Resources */,
 				FCAB94E119240F610072DC59 /* Al'Akir the Windlord.jpg in Resources */,
 				FCAB94FC19240F610072DC59 /* Armorsmith.jpg in Resources */,
+				8F6CAA6319363DD90078EE65 /* ico_warlock.png in Resources */,
 				FCAB959619240F610072DC59 /* Ironbeak Owl.jpg in Resources */,
 				FCAB958519240F610072DC59 /* Holy Nova.jpg in Resources */,
 				FCAB95DA19240F610072DC59 /* Ogre Magi.jpg in Resources */,
@@ -1884,7 +1953,9 @@
 				FCAB956F19240F610072DC59 /* Gadgetzan Auctioneer.jpg in Resources */,
 				FCAB953519240F610072DC59 /* Deadly Poison.jpg in Resources */,
 				FCAB958619240F610072DC59 /* Holy Smite.jpg in Resources */,
+				8F6CAA6519363DD90078EE65 /* Jaina Proudmoore.jpg in Resources */,
 				FCAB958B19240F610072DC59 /* Hunter's Mark.jpg in Resources */,
+				8F6CAA5B19363DD90078EE65 /* ico_deathknight.png in Resources */,
 				FCAB965819240F610072DC59 /* Young Priestess.jpg in Resources */,
 				FCAB950419240F610072DC59 /* Baron Geddon.jpg in Resources */,
 				FCAB95F319240F610072DC59 /* Repentance.jpg in Resources */,
@@ -1897,6 +1968,7 @@
 				FCAB951419240F610072DC59 /* Bloodmage Thalnos.jpg in Resources */,
 				FCAB960D19240F610072DC59 /* SI:7 Agent.jpg in Resources */,
 				FCAB950D19240F610072DC59 /* Blessing of Might.jpg in Resources */,
+				8F6CAA6A19363DD90078EE65 /* Valeera.jpg in Resources */,
 				FCAB95A619240F610072DC59 /* Leper Gnome.jpg in Resources */,
 				8FB6EACA192CE57E00973F8F /* README.md in Resources */,
 				FCAB965A19240F610072DC59 /* Ysera.jpg in Resources */,
@@ -1959,15 +2031,18 @@
 				FCAB957619240F610072DC59 /* Gruul.jpg in Resources */,
 				FCAB95ED19240F610072DC59 /* Rampage.jpg in Resources */,
 				FCAB95FB19240F610072DC59 /* Scarlet Crusader.jpg in Resources */,
+				8F6CAA6919363DD90078EE65 /* Uther.jpg in Resources */,
 				FCAB951519240F610072DC59 /* Bloodsail Corsair.jpg in Resources */,
 				FCAB964F19240F610072DC59 /* Wild Pyromancer.jpg in Resources */,
 				FCAB95C819240F610072DC59 /* Moonfire.jpg in Resources */,
 				FCAB950E19240F610072DC59 /* Blessing of Wisdom.jpg in Resources */,
+				8F6CAA6719363DD90078EE65 /* Rexxar.jpg in Resources */,
 				FCAB954919240F610072DC59 /* Earth Elemental.jpg in Resources */,
 				FCAB94F619240F610072DC59 /* Arcanite Reaper.jpg in Resources */,
 				FCAB95C019240F610072DC59 /* Mind Control.jpg in Resources */,
 				FCAB94F919240F610072DC59 /* Argent Commander.jpg in Resources */,
 				FCAB95A519240F610072DC59 /* Leeroy Jenkins.jpg in Resources */,
+				8F6CAA6119363DD90078EE65 /* ico_rogue.png in Resources */,
 				FCAB952619240F610072DC59 /* Coldlight Oracle.jpg in Resources */,
 				FCAB95EC19240F610072DC59 /* Raid Leader.jpg in Resources */,
 				FCAB95E119240F610072DC59 /* Polymorph.jpg in Resources */,
@@ -2002,6 +2077,7 @@
 				FCAB959E19240F610072DC59 /* King Mukla.jpg in Resources */,
 				FCAB958D19240F610072DC59 /* Ice Block.jpg in Resources */,
 				FCAB95FD19240F610072DC59 /* Sea Giant.jpg in Resources */,
+				8F6CAA5F19363DD90078EE65 /* ico_paladin.png in Resources */,
 				FCAB95D619240F610072DC59 /* Nourish.jpg in Resources */,
 				FCAB950F19240F610072DC59 /* Blizzard.jpg in Resources */,
 				FCAB962119240F610072DC59 /* Starfall.jpg in Resources */,
