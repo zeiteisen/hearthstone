@@ -15,12 +15,13 @@
 		8F6CAA1719347DDE0078EE65 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6CAA1619347DDE0078EE65 /* CoreMedia.framework */; };
 		8F6CAA1919347DE60078EE65 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6CAA1819347DE60078EE65 /* AVFoundation.framework */; };
 		8F6CAA1B19347DED0078EE65 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6CAA1A19347DED0078EE65 /* CoreData.framework */; };
-		8F6CAA2219347E800078EE65 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA1E19347E800078EE65 /* CHANGELOG.md */; };
-		8F6CAA2319347E800078EE65 /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6CAA2019347E800078EE65 /* libChartboost.a */; };
 		8F6CAA2719348C090078EE65 /* ZEReadDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA2619348C090078EE65 /* ZEReadDescriptionViewController.m */; };
+		8F6CAA371935CC3E0078EE65 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA331935CC3E0078EE65 /* CHANGELOG.md */; };
+		8F6CAA381935CC3E0078EE65 /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6CAA351935CC3E0078EE65 /* libChartboost.a */; };
+		8F6CAA3C1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA3B1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m */; };
+		8F6CAA3E1935D1280078EE65 /* mana.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA3D1935D1280078EE65 /* mana.png */; };
 		8FA18BF2192A315F00FF3F71 /* card_choose_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18BF0192A315F00FF3F71 /* card_choose_bg.png */; };
 		8FA18BF3192A315F00FF3F71 /* card_choose_x2_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18BF1192A315F00FF3F71 /* card_choose_x2_bg.png */; };
-		8FA18BF5192A317A00FF3F71 /* ic_cost.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18BF4192A317A00FF3F71 /* ic_cost.png */; };
 		8FA18BFA192A32B700FF3F71 /* ZEDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18BF9192A32B700FF3F71 /* ZEDataManager.m */; };
 		8FA18BFD192A3B8C00FF3F71 /* ZEFilterTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18BFC192A3B8C00FF3F71 /* ZEFilterTableDataSource.m */; };
 		8FA18C00192A3BB300FF3F71 /* ZEPickedTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18BFF192A3BB300FF3F71 /* ZEPickedTableDataSource.m */; };
@@ -470,16 +471,18 @@
 		8F6CAA1619347DDE0078EE65 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		8F6CAA1819347DE60078EE65 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8F6CAA1A19347DED0078EE65 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		8F6CAA1D19347E800078EE65 /* CBMoreAppsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMoreAppsButton.h; sourceTree = "<group>"; };
-		8F6CAA1E19347E800078EE65 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
-		8F6CAA1F19347E800078EE65 /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
-		8F6CAA2019347E800078EE65 /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
-		8F6CAA2119347E800078EE65 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		8F6CAA2519348C090078EE65 /* ZEReadDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEReadDescriptionViewController.h; sourceTree = "<group>"; };
 		8F6CAA2619348C090078EE65 /* ZEReadDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEReadDescriptionViewController.m; sourceTree = "<group>"; };
+		8F6CAA321935CC3E0078EE65 /* CBMoreAppsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMoreAppsButton.h; sourceTree = "<group>"; };
+		8F6CAA331935CC3E0078EE65 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
+		8F6CAA341935CC3E0078EE65 /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
+		8F6CAA351935CC3E0078EE65 /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
+		8F6CAA361935CC3E0078EE65 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		8F6CAA3A1935CEDF0078EE65 /* ZELeftFilterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZELeftFilterTableViewCell.h; sourceTree = "<group>"; };
+		8F6CAA3B1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZELeftFilterTableViewCell.m; sourceTree = "<group>"; };
+		8F6CAA3D1935D1280078EE65 /* mana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana.png; sourceTree = "<group>"; };
 		8FA18BF0192A315F00FF3F71 /* card_choose_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_choose_bg.png; sourceTree = "<group>"; };
 		8FA18BF1192A315F00FF3F71 /* card_choose_x2_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_choose_x2_bg.png; sourceTree = "<group>"; };
-		8FA18BF4192A317A00FF3F71 /* ic_cost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_cost.png; sourceTree = "<group>"; };
 		8FA18BF8192A32B700FF3F71 /* ZEDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEDataManager.h; sourceTree = "<group>"; };
 		8FA18BF9192A32B700FF3F71 /* ZEDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEDataManager.m; sourceTree = "<group>"; };
 		8FA18BFB192A3B8C00FF3F71 /* ZEFilterTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEFilterTableDataSource.h; sourceTree = "<group>"; };
@@ -948,7 +951,7 @@
 				FCAB8D2E19215A640072DC59 /* CoreGraphics.framework in Frameworks */,
 				FCAB8D3019215A640072DC59 /* UIKit.framework in Frameworks */,
 				FCF3611619322BEC0044B85E /* Parse.framework in Frameworks */,
-				8F6CAA2319347E800078EE65 /* libChartboost.a in Frameworks */,
+				8F6CAA381935CC3E0078EE65 /* libChartboost.a in Frameworks */,
 				FCAB8D2C19215A640072DC59 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -981,14 +984,14 @@
 			path = AHKActionSheet;
 			sourceTree = "<group>";
 		};
-		8F6CAA1C19347E800078EE65 /* Chartboost */ = {
+		8F6CAA311935CC3E0078EE65 /* Chartboost */ = {
 			isa = PBXGroup;
 			children = (
-				8F6CAA1D19347E800078EE65 /* CBMoreAppsButton.h */,
-				8F6CAA1E19347E800078EE65 /* CHANGELOG.md */,
-				8F6CAA1F19347E800078EE65 /* Chartboost.h */,
-				8F6CAA2019347E800078EE65 /* libChartboost.a */,
-				8F6CAA2119347E800078EE65 /* README.md */,
+				8F6CAA321935CC3E0078EE65 /* CBMoreAppsButton.h */,
+				8F6CAA331935CC3E0078EE65 /* CHANGELOG.md */,
+				8F6CAA341935CC3E0078EE65 /* Chartboost.h */,
+				8F6CAA351935CC3E0078EE65 /* libChartboost.a */,
+				8F6CAA361935CC3E0078EE65 /* README.md */,
 			);
 			path = Chartboost;
 			sourceTree = "<group>";
@@ -1094,6 +1097,8 @@
 				8FA18BFF192A3BB300FF3F71 /* ZEPickedTableDataSource.m */,
 				8F6CAA2519348C090078EE65 /* ZEReadDescriptionViewController.h */,
 				8F6CAA2619348C090078EE65 /* ZEReadDescriptionViewController.m */,
+				8F6CAA3A1935CEDF0078EE65 /* ZELeftFilterTableViewCell.h */,
+				8F6CAA3B1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m */,
 				FCAB8D4319215A640072DC59 /* Images.xcassets */,
 				FCAB8D3219215A640072DC59 /* Supporting Files */,
 			);
@@ -1132,8 +1137,8 @@
 		FCAB8D6019215AB30072DC59 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8F6CAA3D1935D1280078EE65 /* mana.png */,
 				8F6CAA1019338FA30078EE65 /* Belwe.ttf */,
-				8FA18BF4192A317A00FF3F71 /* ic_cost.png */,
 				8FA18BF0192A315F00FF3F71 /* card_choose_bg.png */,
 				8FA18BF1192A315F00FF3F71 /* card_choose_x2_bg.png */,
 				FCAB935E19240F5F0072DC59 /* Cards */,
@@ -1534,7 +1539,7 @@
 		FCAB965D1924158A0072DC59 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				8F6CAA1C19347E800078EE65 /* Chartboost */,
+				8F6CAA311935CC3E0078EE65 /* Chartboost */,
 				8F6CAA0319338A810078EE65 /* AHKActionSheet */,
 				8FB6EAC3192CE57E00973F8F /* StringScore */,
 				8FA18C06192B50B800FF3F71 /* JBChartView */,
@@ -1690,7 +1695,7 @@
 				FCAB955619240F610072DC59 /* Faceless Manipulator.jpg in Resources */,
 				FCAB956519240F610072DC59 /* Force of Nature.jpg in Resources */,
 				FCAB94F019240F610072DC59 /* Arathi Weaponsmith.jpg in Resources */,
-				8F6CAA2219347E800078EE65 /* CHANGELOG.md in Resources */,
+				8F6CAA371935CC3E0078EE65 /* CHANGELOG.md in Resources */,
 				FCAB950819240F610072DC59 /* Big Game Hunter.jpg in Resources */,
 				FCAB95F019240F610072DC59 /* Reckless Rocketeer.jpg in Resources */,
 				FCAB953919240F610072DC59 /* Defias Ringleader.jpg in Resources */,
@@ -1772,7 +1777,6 @@
 				FCAB957719240F610072DC59 /* Guardian of Kings.jpg in Resources */,
 				FCAB950519240F610072DC59 /* Battle Rage.jpg in Resources */,
 				FCAB962419240F610072DC59 /* Stonetusk Boar.jpg in Resources */,
-				8FA18BF5192A317A00FF3F71 /* ic_cost.png in Resources */,
 				FCAB958019240F610072DC59 /* Heroic Strike.jpg in Resources */,
 				FCAB95B619240F610072DC59 /* Mana Wraith.jpg in Resources */,
 				FCAB952B19240F610072DC59 /* Consecration.jpg in Resources */,
@@ -1826,6 +1830,7 @@
 				FCAB953219240F610072DC59 /* Dalaran Mage.jpg in Resources */,
 				FCAB94F419240F610072DC59 /* Arcane Missiles.jpg in Resources */,
 				FCAB957C19240F610072DC59 /* Harvest Golem.jpg in Resources */,
+				8F6CAA3E1935D1280078EE65 /* mana.png in Resources */,
 				FCAB951719240F610072DC59 /* Bluegill Warrior.jpg in Resources */,
 				FCAB95C919240F610072DC59 /* Mortal Coil.jpg in Resources */,
 				FCAB964A19240F610072DC59 /* War Golem.jpg in Resources */,
@@ -2058,6 +2063,7 @@
 				FC409C431931153C0086215F /* ZEStartViewController.m in Sources */,
 				8FA18BFD192A3B8C00FF3F71 /* ZEFilterTableDataSource.m in Sources */,
 				FCAB8D3819215A640072DC59 /* main.m in Sources */,
+				8F6CAA3C1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m in Sources */,
 				8F6CAA0F19338A810078EE65 /* UIWindow+AHKAdditions.m in Sources */,
 				8F6CAA2719348C090078EE65 /* ZEReadDescriptionViewController.m in Sources */,
 				FCAB8D3C19215A640072DC59 /* ZEAppDelegate.m in Sources */,
@@ -2193,11 +2199,7 @@
 				GCC_PREFIX_HEADER = "Hearthstone Builder/Hearthstone Builder-Prefix.pch";
 				INFOPLIST_FILE = "Hearthstone Builder/Hearthstone Builder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Hearthstone",
-					Builder/Chartboost,
-				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Hearthstone Builder/Chartboost\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2216,11 +2218,7 @@
 				GCC_PREFIX_HEADER = "Hearthstone Builder/Hearthstone Builder-Prefix.pch";
 				INFOPLIST_FILE = "Hearthstone Builder/Hearthstone Builder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Hearthstone",
-					Builder/Chartboost,
-				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Hearthstone Builder/Chartboost\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

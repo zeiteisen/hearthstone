@@ -7,6 +7,7 @@
 //
 
 #import "ZEFilterTableDataSource.h"
+#import "ZELeftFilterTableViewCell.h"
 
 @implementation ZEFilterTableDataSource
 
@@ -16,9 +17,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"FilterCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    cell.textLabel.font = [ZEUtility myStandardFont];
-    cell.textLabel.text = [NSString stringWithFormat:@"%i", indexPath.row];
+    ZELeftFilterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    cell.label.font = [ZEUtility myStandardFont];
+    cell.label.font = [UIFont fontWithName:cell.label.font.fontName size:20];
+    if (indexPath.row > 7) {
+        cell.label.text = @"A";
+    } else {
+        cell.label.text = [NSString stringWithFormat:@"%i", indexPath.row];
+    }
     return cell;
 }
 

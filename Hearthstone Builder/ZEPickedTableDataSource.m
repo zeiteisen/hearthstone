@@ -18,6 +18,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"PickedCell";
     ZEPickedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    cell.label.font = [UIFont fontWithName:cell.label.font.fontName size:8];
     NSDictionary *card = self.dataSource[indexPath.row];
     cell.label.text = card[@"name"];
     return cell;

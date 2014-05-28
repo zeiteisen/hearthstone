@@ -49,7 +49,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar addSubview:self.chartView];
-    self.chartView.x = CGRectGetMidX(self.view.bounds);
+    self.chartView.x = CGRectGetMidX(self.view.bounds) - 3;
     [self.chartView reloadData];
 }
 
@@ -80,6 +80,7 @@
     [self.filterTableView reloadData];
     
     self.deckCountLabel.text = @"0/30";
+    self.deckCountLabel.textAlignment = NSTextAlignmentCenter;
     self.deckCountLabel.backgroundColor = [UIColor grayColor];
     self.pickedTableView.scrollsToTop = NO;
     self.pickedTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -135,17 +136,20 @@
     NSInteger cost = 0;
     for (NSDictionary *card in self.deckData) {
         NSString *quality = card[@"quality"];
-        if ([quality isEqualToString:@"legendary"]) {
-            cost += 1600;
-        }
-        if ([quality isEqualToString:@"epic"]) {
-            cost += 400;
-        }
-        if ([quality isEqualToString:@"rare"]) {
-            cost += 100;
-        }
-        if ([quality isEqualToString:@"common"]) {
-            cost += 40;
+        NSString *set = card[@"set"];
+        if (![set isEqualToString:@"basic"]) {
+            if ([quality isEqualToString:@"legendary"]) {
+                cost += 1600;
+            }
+            if ([quality isEqualToString:@"epic"]) {
+                cost += 400;
+            }
+            if ([quality isEqualToString:@"rare"]) {
+                cost += 100;
+            }
+            if ([quality isEqualToString:@"common"]) {
+                cost += 40;
+            }
         }
     }
     return cost;
@@ -327,7 +331,7 @@
 }
 
 - (void)updateDeckCountLabel {
-    self.deckCountLabel.text = [NSString stringWithFormat:@"%i/30", self.deckData.count];
+    self.deckCountLabel.text = [NSString stringWithFormat:@"%lu/30", (unsigned long)self.deckData.count];
 }
 
 - (void)scrollToTop {
@@ -442,7 +446,12 @@
         NSUInteger maxCardsAllowed = [self maxAllowedInDeckOfCard:card];
         if (countInDeck < maxCardsAllowed && self.deckData.count < 30) {
             [self.deckData addObject:card];
-            [self.pickedTableView reloadData];
+            
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.deckData.count-1 inSection:0];
+            [self.pickedTableView beginUpdates];
+            [self.pickedTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+            [self.pickedTableView endUpdates];
+            
             [self.tableView reloadData];
             [self.chartView reloadData];
             ZECardTableViewCell *cardCell = (ZECardTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
@@ -460,7 +469,9 @@
         [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:firstOccurance inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
     } else {
         [self filterCardsWithMana:indexPath.row];
-        [self scrollToTop];
+        if (self.dataSource.count > 0) {
+            [self scrollToTop];
+        }
         [self removePickedSelection];
     }
 }
@@ -475,7 +486,11 @@
     // update picked table
     NSInteger index = [self.deckData indexOfObject:cell.cardData];
     [self.deckData removeObjectAtIndex:index];
-    [self.pickedTableView reloadData];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+    [self.pickedTableView beginUpdates];
+    [self.pickedTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+    [self.pickedTableView endUpdates];
     
     // update main table
     if (self.viewDeckMode) {
@@ -495,6 +510,7 @@
     [self.chartView reloadData];
     [self highlightPickedCard];
     [self updateDeckCountLabel];
+    [self updatePublishButton];
     [self saveDeck];
 }
 
