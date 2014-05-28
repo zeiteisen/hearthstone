@@ -20,12 +20,14 @@
 
 @implementation ZEPublishTableViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
+    [super viewDidLoad];
     NSArray *decks = [[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY];
     self.deck = [decks[self.selectedDeckNumber] mutableCopy];
     if (self.deck[@"title"]) {
         self.titleTextField.text = self.deck[@"title"];
+    } else {
+        self.titleTextField.text = self.deck[@"hero"];
     }
     if (self.deck[@"description"]) {
         self.descriptionTextView.text = self.deck[@"description"];
@@ -40,7 +42,9 @@
     self.spellsCount.text = [NSString stringWithFormat:@"%@ %@", [self.deck[@"spells"] stringValue], NSLocalizedString(@"Spells", nil)];
     self.weaponsCount.text = [NSString stringWithFormat:@"%@ %@", [self.deck[@"weapons"] stringValue], NSLocalizedString(@"Weapons", nil)];
     
-    [super viewDidLoad];
+    if (self.deck.count < 30) {
+        self.navigationItem.rightBarButtonItem.enabled = NO;
+    }
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

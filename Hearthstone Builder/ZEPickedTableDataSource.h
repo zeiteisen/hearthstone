@@ -10,6 +10,7 @@
 
 @interface ZEPickedTableDataSource : NSObject <UITableViewDataSource>
 
-@property (nonatomic, strong) NSArray *dataSource;
+@property (nonatomic, strong) NSCountedSet *countedDataSource;
+@property (nonatomic, strong) NSArray *deckDataWithoutDuplicates;
 
 @end

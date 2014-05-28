@@ -22,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataSource;
 @property (nonatomic, strong) NSMutableArray *deckData;
+@property (nonatomic, strong) NSCountedSet *countedDeckData;
+@property (nonatomic, strong) NSMutableArray *deckDataWithoutDuplicates;
 @property (nonatomic, strong) NSArray *cards;
 @property (weak, nonatomic) IBOutlet UITableView *filterTableView;
 @property (weak, nonatomic) IBOutlet UITableView *pickedTableView;
@@ -58,7 +60,10 @@
     [super viewDidLoad];
     BOOL viewDeckMode = self.viewDeckMode;
     
-    self.deckData = [NSMutableArray arrayWithCapacity:30];
+    self.deckData = [NSMutableArray array];
+    self.countedDeckData = [NSCountedSet setWithCapacity:30];
+    self.deckDataWithoutDuplicates = [NSMutableArray array];
+    
     self.cards = [ZEDataManager sharedInstance].cards;
     NSPredicate *classPredicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
         NSString *hero = evaluatedObject[@"hero"];
@@ -85,7 +90,8 @@
     self.pickedTableView.scrollsToTop = NO;
     self.pickedTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.pickedTableDataSource = [[ZEPickedTableDataSource alloc] init];
-    self.pickedTableDataSource.dataSource = self.deckData;
+    self.pickedTableDataSource.countedDataSource = self.countedDeckData;
+    self.pickedTableDataSource.deckDataWithoutDuplicates = self.deckDataWithoutDuplicates;
     self.pickedTableView.dataSource = self.pickedTableDataSource;
     self.pickedTableView.delegate = self;
     
@@ -119,15 +125,17 @@
                 [self.deckData addObject:searchResults[0]];
             }
         }
+        [self updateDeckDataArrays];
+        if (self.deckObject) {
+            self.cards = self.deckDataWithoutDuplicates;
+        }
     }
-    if (self.deckObject) {
-        NSSet *set = [NSSet setWithArray:self.deckData];
-        self.cards = [[set allObjects] mutableCopy];
-    }
-    
+    [self.pickedTableView reloadData];
     [self updateDeckCountLabel];
     if (viewDeckMode) {
         [self setViewDeckMode:YES];
+    } else {
+        [self setViewDeckMode:NO];
     }
     [self updatePublishButton];
 }
@@ -203,11 +211,12 @@
 - (void)setViewDeckMode:(BOOL)viewDeckMode {
     _viewDeckMode = viewDeckMode;
     if (viewDeckMode || self.deckObject) {
-        self.deckCountLabel.backgroundColor = [UIColor greenColor];
-    } else {
         self.deckCountLabel.backgroundColor = [UIColor grayColor];
+        self.dataSource = self.deckDataWithoutDuplicates;
+    } else {
+        self.deckCountLabel.backgroundColor = [UIColor redColor];
+        self.dataSource = self.cards;
     }
-    [self setDataSourceToDeckDataWithoutDuplicates];
     [self.tableView reloadData];
     [self removeFilterSelection];
 }
@@ -312,6 +321,15 @@
     [self.tableView reloadData];
 }
 
+- (void)updateDeckDataArrays {
+    self.countedDeckData = [NSCountedSet setWithArray:self.deckData];
+    self.deckDataWithoutDuplicates = [[self.countedDeckData allObjects] mutableCopy];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    [self.deckDataWithoutDuplicates sortUsingDescriptors:@[sort]];
+    self.pickedTableDataSource.countedDataSource = self.countedDeckData;
+    self.pickedTableDataSource.deckDataWithoutDuplicates = self.deckDataWithoutDuplicates;
+}
+
 - (void)updateRemoveButtonWithCard:(NSDictionary *)card onCell:(ZECardTableViewCell *)cell {
     if ([self.deckData containsObject:card] && self.deckObject == nil) {
         cell.removeButton.hidden = NO;
@@ -354,10 +372,10 @@
 
 - (void)highlightPickedCard {
     NSIndexPath *centerTableCellIndexPath = [self centerTableCellIndexPath];
-    ZECardTableViewCell *cardCell = (ZECardTableViewCell *)[self.tableView cellForRowAtIndexPath:centerTableCellIndexPath];;
+    ZECardTableViewCell *cardCell = (ZECardTableViewCell *)[self.tableView cellForRowAtIndexPath:centerTableCellIndexPath];
     NSDictionary *pickedCard = cardCell.cardData;
-    if ([self.deckData containsObject:pickedCard]) {
-        NSInteger index = [self.deckData indexOfObject:pickedCard];
+    if ([self.deckDataWithoutDuplicates containsObject:pickedCard]) {
+        NSInteger index = [self.deckDataWithoutDuplicates indexOfObject:pickedCard];
         [self.pickedTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0] animated:YES scrollPosition:UITableViewScrollPositionMiddle];
     }
 }
@@ -388,18 +406,7 @@
     if (self.deckObject) {
         self.navigationItem.rightBarButtonItem.title = NSLocalizedString(@"More", nil);
         self.navigationItem.rightBarButtonItem.enabled = YES;
-    } else {
-        if (self.deckData.count >= 30) {
-            self.navigationItem.rightBarButtonItem.enabled = YES;
-        } else {
-            self.navigationItem.rightBarButtonItem.enabled = NO;
-        }
     }
-}
-
-- (void)setDataSourceToDeckDataWithoutDuplicates {
-    NSSet *set = [NSSet setWithArray:self.deckData];
-    self.dataSource = [[set allObjects] mutableCopy];
 }
 
 #pragma mark - UITableViewDataSource
@@ -425,6 +432,12 @@
     cell.cardData = card;
     NSString *cardName = [NSString stringWithFormat:@"%@.jpg", card[@"name"]];
     cell.image.image = [UIImage imageNamed:cardName];
+    NSInteger count = [self.countedDeckData containsObject:card];
+    if (count > 0) {
+         cell.countLabel.text = [NSString stringWithFormat:@"%i", [self.countedDeckData countForObject:card]];
+    } else {
+        cell.countLabel.text = @"";
+    }
     [self updateRemoveButtonWithCard:card onCell:cell];
     [self updateFadedStateOnCell:cell];
     return cell;
@@ -447,10 +460,18 @@
         if (countInDeck < maxCardsAllowed && self.deckData.count < 30) {
             [self.deckData addObject:card];
             
-            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.deckData.count-1 inSection:0];
-            [self.pickedTableView beginUpdates];
-            [self.pickedTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
-            [self.pickedTableView endUpdates];
+            NSInteger count = self.deckDataWithoutDuplicates.count;
+            [self updateDeckDataArrays];
+            
+            if (self.deckDataWithoutDuplicates.count == count) {
+                [self.pickedTableView reloadData];
+            } else {
+                NSInteger index = [self.deckDataWithoutDuplicates indexOfObject:card];
+                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+                [self.pickedTableView beginUpdates];
+                [self.pickedTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+                [self.pickedTableView endUpdates];
+            }
             
             [self.tableView reloadData];
             [self.chartView reloadData];
@@ -464,7 +485,7 @@
     } else if (tableView == self.pickedTableView) {
         // show the picked card
         [self setViewDeckMode:YES];
-        NSDictionary *card = self.deckData[indexPath.row];
+        NSDictionary *card = self.deckDataWithoutDuplicates[indexPath.row];
         NSInteger firstOccurance = [self.dataSource indexOfObject:card];
         [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:firstOccurance inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
     } else {
@@ -486,16 +507,22 @@
     // update picked table
     NSInteger index = [self.deckData indexOfObject:cell.cardData];
     [self.deckData removeObjectAtIndex:index];
-    
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-    [self.pickedTableView beginUpdates];
-    [self.pickedTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
-    [self.pickedTableView endUpdates];
+    NSInteger count = self.deckDataWithoutDuplicates.count; // grap count before the array is updated
+    index = [self.deckDataWithoutDuplicates indexOfObject:cell.cardData]; // grap the index of the cell before the array is updated
+    [self updateDeckDataArrays];
+    if (count == self.deckDataWithoutDuplicates.count) {
+        [self.pickedTableView reloadData];
+    } else {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+        [self.pickedTableView beginUpdates];
+        [self.pickedTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+        [self.pickedTableView endUpdates];
+    }
     
     // update main table
     if (self.viewDeckMode) {
         NSInteger countVisibleCards = self.dataSource.count;
-        [self setDataSourceToDeckDataWithoutDuplicates];
+        self.dataSource = self.deckDataWithoutDuplicates;
         if (countVisibleCards > self.dataSource.count) {
             NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
             [self.tableView beginUpdates];

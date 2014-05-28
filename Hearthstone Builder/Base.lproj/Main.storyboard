@@ -207,16 +207,22 @@
                                                     <rect key="frame" x="1" y="5" width="199" height="278"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CU-kh-waK">
-                                                    <rect key="frame" x="154" y="0.0" width="46" height="46"/>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CU-kh-waK">
+                                                    <rect key="frame" x="151" y="6" width="46" height="37"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="X">
+                                                    <state key="normal" image="deletered.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="removeTouched:" destination="fMe-Tg-0Ra" eventType="touchUpInside" id="Gux-vR-zMD"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fT5-sZ-vQ5">
+                                                    <rect key="frame" x="0.0" y="267" width="200" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="g7y-0k-dlu" firstAttribute="top" secondItem="piS-5o-qci" secondAttribute="top" constant="5" id="3xA-kM-9LO"/>
@@ -226,6 +232,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="countLabel" destination="fT5-sZ-vQ5" id="7WT-TC-fiK"/>
                                             <outlet property="image" destination="g7y-0k-dlu" id="kc2-xa-dR8"/>
                                             <outlet property="removeButton" destination="6CU-kh-waK" id="DU3-Am-dBe"/>
                                         </connections>
@@ -236,7 +243,7 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="Iam-0o-WZZ"/>
                                 </connections>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lSJ-5i-xQl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lSJ-5i-xQl">
                                 <rect key="frame" x="0.0" y="65" width="34" height="415"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <constraints>
@@ -247,11 +254,11 @@
                                         <rect key="frame" x="0.0" y="22" width="34" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rWO-ZX-eBk" id="Tnj-q2-4NB">
-                                            <rect key="frame" x="0.0" y="0.0" width="34" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="34" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mana.png" translatesAutoresizingMaskIntoConstraints="NO" id="XbG-nR-3zB">
-                                                    <rect key="frame" x="0.0" y="0.0" width="34" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="34" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAp-CE-sgM">
@@ -443,7 +450,7 @@
                         <barButtonItem title="Item" id="qAd-KH-UJA"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="xcw-Hx-87x">
-                        <barButtonItem key="rightBarButtonItem" title="Publish" id="dgL-zn-Fpq">
+                        <barButtonItem key="rightBarButtonItem" title="Upload" id="dgL-zn-Fpq">
                             <connections>
                                 <action selector="publishTouched:" destination="O1q-ze-7oD" id="81C-xy-gl0"/>
                             </connections>
@@ -541,6 +548,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="deletered.png" width="128" height="128"/>
         <image name="mana.png" width="100" height="100"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

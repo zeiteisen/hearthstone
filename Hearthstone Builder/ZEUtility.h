@@ -12,5 +12,6 @@
 
 + (id)instanciateViewControllerFromStoryboardIdentifier:(NSString *)identifier;
 + (UIFont *)myStandardFont;
++ (NSMutableArray *)removeDuplicatesFrom:(NSArray *)duplicates;
 
 @end

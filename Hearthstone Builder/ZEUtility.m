@@ -19,4 +19,9 @@
     return [UIFont fontWithName:@"BelweBT-Bold" size:17];
 }
 
++ (NSMutableArray *)removeDuplicatesFrom:(NSArray *)duplicates {
+    NSSet *set = [NSSet setWithArray:duplicates];
+    return [[set allObjects] mutableCopy];
+}
+
 @end

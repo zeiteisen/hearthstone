@@ -12,14 +12,19 @@
 @implementation ZEPickedTableDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataSource.count;
+    return self.deckDataWithoutDuplicates.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"PickedCell";
     ZEPickedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     cell.label.font = [UIFont fontWithName:cell.label.font.fontName size:8];
-    NSDictionary *card = self.dataSource[indexPath.row];
+    NSDictionary *card = self.deckDataWithoutDuplicates[indexPath.row];
+    if ([self.countedDataSource countForObject:card] > 1) {
+        cell.label.textColor = [UIColor redColor];
+    } else {
+        cell.label.textColor = [UIColor blackColor];
+    }
     cell.label.text = card[@"name"];
     return cell;
 }
