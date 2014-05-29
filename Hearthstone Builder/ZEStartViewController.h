@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZEStartViewController : UITableViewController
+@interface ZEStartViewController : UIViewController
 
 @end

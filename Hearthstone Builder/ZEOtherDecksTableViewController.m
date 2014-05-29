@@ -24,8 +24,12 @@
     [query orderByDescending:@"updatedAt"];
     [query selectKeys:@[@"title", @"likes", @"dust", @"hero", @"minions", @"spells", @"weapons"]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        self.dataSource = [NSMutableArray arrayWithArray:objects];
-        [self.tableView reloadData];
+        if (error) {
+            [ZEUtility showAlertWithTitle:NSLocalizedString(@"Error", nil) message:error.localizedDescription];
+        } else {
+            self.dataSource = [NSMutableArray arrayWithArray:objects];
+            [self.tableView reloadData];
+        }
     }];
 }
 
@@ -52,7 +56,11 @@
     NSString *string = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Dust", nil), deck[@"dust"]];
     cell.dustLabel.text = string;
     
-    string = [NSString stringWithFormat:@"%@ %@", deck[@"likes"], NSLocalizedString(@"Likes", nil)];
+    if (deck[@"likes"]) {
+        string = [NSString stringWithFormat:@"%@ %@", deck[@"likes"], NSLocalizedString(@"Likes", nil)];
+    } else {
+        string = @"";
+    }
     cell.likesLabel.text = string;
     
     string = [NSString stringWithFormat:@"%@ %@", deck[@"spells"], NSLocalizedString(@"Spells", nil)];
@@ -80,7 +88,7 @@
     vc.deckObject = self.dataSource[indexPath.row];
     [vc.deckObject fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         if (error) {
-            NSLog(@"error %@", error);
+            [ZEUtility showAlertWithTitle:NSLocalizedString(@"Error", nil) message:error.localizedDescription];
         } else {
             [self.navigationController pushViewController:vc animated:YES];
         }

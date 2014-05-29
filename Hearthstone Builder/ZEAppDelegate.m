@@ -8,6 +8,7 @@
 
 #import "ZEAppDelegate.h"
 #import "Chartboost.h"
+#import "iRate.h"
 
 @interface ZEAppDelegate () <ChartboostDelegate>
 
@@ -15,15 +16,21 @@
 
 @implementation ZEAppDelegate
 
++ (void)initialize {
+    [iRate sharedInstance].appStoreID = 882681595;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [Parse setApplicationId:@"z7byvGtx1x90ufW3Ee2bJQKMv7AVr8HEMMepLPtH"
                   clientKey:@"GaGNnHc5akAJUikiySh9IIhTAqjSzwyA9E19hn1t"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [PFUser enableAutomaticUser];
-    [[UILabel appearance] setFont:[ZEUtility myStandardFont]];
+    
+    UIFont *font = [ZEUtility myStandardFont];
+    [[UILabel appearance] setFont:font];
     NSDictionary *settings = @{
-                               NSFontAttributeName: [ZEUtility myStandardFont],
+                               NSFontAttributeName: font,
                                };
     [[UIBarButtonItem appearance] setTitleTextAttributes:settings forState:UIControlStateNormal];
     

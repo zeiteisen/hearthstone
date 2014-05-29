@@ -22,5 +22,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *removeButton;
 @property (nonatomic, assign) BOOL faded;
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
+@property (weak, nonatomic) IBOutlet UIView *countView;
 
 @end

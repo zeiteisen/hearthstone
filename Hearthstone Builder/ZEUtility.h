@@ -11,7 +11,13 @@
 @interface ZEUtility : NSObject
 
 + (id)instanciateViewControllerFromStoryboardIdentifier:(NSString *)identifier;
++ (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
 + (UIFont *)myStandardFont;
 + (NSMutableArray *)removeDuplicatesFrom:(NSArray *)duplicates;
++ (UIColor *)legendaryColor;
++ (UIColor *)epicColor;
++ (UIColor *)rareColor;
++ (UIColor *)commonColor;
++ (UIColor *)basicColor;
 
 @end

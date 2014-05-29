@@ -53,8 +53,12 @@
 		8FA18C15192B62EE00FF3F71 /* ZEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C14192B62EE00FF3F71 /* ZEUtility.m */; };
 		8FB6EAC9192CE57E00973F8F /* NSString+Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC6192CE57E00973F8F /* NSString+Score.m */; };
 		8FB6EACA192CE57E00973F8F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC7192CE57E00973F8F /* README.md */; };
+		FC33F269193775CE008FDB87 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC33F266193775CD008FDB87 /* iRate.bundle */; };
+		FC33F26A193775CE008FDB87 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC33F268193775CD008FDB87 /* iRate.m */; };
+		FC33F26E1937857F008FDB87 /* JBKenBurnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC33F26D1937857F008FDB87 /* JBKenBurnsView.m */; };
 		FC409C431931153C0086215F /* ZEStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC409C421931153C0086215F /* ZEStartViewController.m */; };
 		FC409C46193116CE0086215F /* ZEMyDecksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC409C45193116CE0086215F /* ZEMyDecksViewController.m */; };
+		FC609B921937316B001806A6 /* number_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FC609B911937316B001806A6 /* number_bg.png */; };
 		FC717264193659F50062B3E1 /* ZEMyDecksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC717263193659F50062B3E1 /* ZEMyDecksTableViewCell.m */; };
 		FC71726719365CF30062B3E1 /* ZEPickClassTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC71726619365CF30062B3E1 /* ZEPickClassTableViewCell.m */; };
 		FC71726A19366D110062B3E1 /* ZEOtherDeckTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC71726919366D110062B3E1 /* ZEOtherDeckTableViewCell.m */; };
@@ -456,6 +460,16 @@
 		FCAB965A19240F610072DC59 /* Ysera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCAB94DC19240F610072DC59 /* Ysera.jpg */; };
 		FCAB965C1924108E0072DC59 /* Cards.json in Resources */ = {isa = PBXBuildFile; fileRef = FCAB965B1924108E0072DC59 /* Cards.json */; };
 		FCAB9661192415930072DC59 /* ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAB9660192415930072DC59 /* ViewUtils.m */; };
+		FCE006F31937960900645355 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE006F21937960900645355 /* NSMutableArray+Shuffle.m */; };
+		FCE006FF1937A10F00645355 /* hero_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE006FE1937A10F00645355 /* hero_frame.png */; };
+		FCE007011937A5AA00645355 /* bg0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCE007001937A5AA00645355 /* bg0.jpg */; };
+		FCE007071937AA7300645355 /* bg5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCE007021937AA7300645355 /* bg5.jpg */; };
+		FCE007081937AA7300645355 /* bg4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCE007031937AA7300645355 /* bg4.jpg */; };
+		FCE007091937AA7300645355 /* bg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCE007041937AA7300645355 /* bg3.jpg */; };
+		FCE0070A1937AA7300645355 /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCE007051937AA7300645355 /* bg2.jpg */; };
+		FCE0070B1937AA7300645355 /* bg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCE007061937AA7300645355 /* bg1.jpg */; };
+		FCE0070E1937B52800645355 /* ZELegalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE0070D1937B52700645355 /* ZELegalViewController.m */; };
+		FCE0070F1937BC1A00645355 /* Belwe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA1019338FA30078EE65 /* Belwe.ttf */; };
 		FCF361141931DDEC0044B85E /* ZEPublishTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF361131931DDEC0044B85E /* ZEPublishTableViewController.m */; };
 		FCF3611619322BEC0044B85E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3611519322BEC0044B85E /* Parse.framework */; };
 		FCF3611819322C0D0044B85E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3611719322C0D0044B85E /* AudioToolbox.framework */; };
@@ -547,10 +561,16 @@
 		8FB6EAC5192CE57E00973F8F /* NSString+Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Score.h"; sourceTree = "<group>"; };
 		8FB6EAC6192CE57E00973F8F /* NSString+Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Score.m"; sourceTree = "<group>"; };
 		8FB6EAC7192CE57E00973F8F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		FC33F266193775CD008FDB87 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
+		FC33F267193775CD008FDB87 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
+		FC33F268193775CD008FDB87 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
+		FC33F26C1937857F008FDB87 /* JBKenBurnsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBKenBurnsView.h; sourceTree = "<group>"; };
+		FC33F26D1937857F008FDB87 /* JBKenBurnsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBKenBurnsView.m; sourceTree = "<group>"; };
 		FC409C411931153C0086215F /* ZEStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEStartViewController.h; sourceTree = "<group>"; };
 		FC409C421931153C0086215F /* ZEStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEStartViewController.m; sourceTree = "<group>"; };
 		FC409C44193116CE0086215F /* ZEMyDecksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEMyDecksViewController.h; sourceTree = "<group>"; };
 		FC409C45193116CE0086215F /* ZEMyDecksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEMyDecksViewController.m; sourceTree = "<group>"; };
+		FC609B911937316B001806A6 /* number_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = number_bg.png; sourceTree = "<group>"; };
 		FC717262193659F50062B3E1 /* ZEMyDecksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEMyDecksTableViewCell.h; sourceTree = "<group>"; };
 		FC717263193659F50062B3E1 /* ZEMyDecksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEMyDecksTableViewCell.m; sourceTree = "<group>"; };
 		FC71726519365CF30062B3E1 /* ZEPickClassTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEPickClassTableViewCell.h; sourceTree = "<group>"; };
@@ -963,6 +983,17 @@
 		FCAB965B1924108E0072DC59 /* Cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cards.json; sourceTree = "<group>"; };
 		FCAB965F192415930072DC59 /* ViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewUtils.h; sourceTree = "<group>"; };
 		FCAB9660192415930072DC59 /* ViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewUtils.m; sourceTree = "<group>"; };
+		FCE006F11937960900645355 /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
+		FCE006F21937960900645355 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
+		FCE006FE1937A10F00645355 /* hero_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hero_frame.png; sourceTree = "<group>"; };
+		FCE007001937A5AA00645355 /* bg0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg0.jpg; sourceTree = "<group>"; };
+		FCE007021937AA7300645355 /* bg5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg5.jpg; sourceTree = "<group>"; };
+		FCE007031937AA7300645355 /* bg4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg4.jpg; sourceTree = "<group>"; };
+		FCE007041937AA7300645355 /* bg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg3.jpg; sourceTree = "<group>"; };
+		FCE007051937AA7300645355 /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg2.jpg; sourceTree = "<group>"; };
+		FCE007061937AA7300645355 /* bg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1.jpg; sourceTree = "<group>"; };
+		FCE0070C1937B52700645355 /* ZELegalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZELegalViewController.h; sourceTree = "<group>"; };
+		FCE0070D1937B52700645355 /* ZELegalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZELegalViewController.m; sourceTree = "<group>"; };
 		FCF361121931DDEC0044B85E /* ZEPublishTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEPublishTableViewController.h; sourceTree = "<group>"; };
 		FCF361131931DDEC0044B85E /* ZEPublishTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPublishTableViewController.m; sourceTree = "<group>"; };
 		FCF3611519322BEC0044B85E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -1068,6 +1099,25 @@
 			path = StringScore;
 			sourceTree = "<group>";
 		};
+		FC33F265193775CD008FDB87 /* iRate */ = {
+			isa = PBXGroup;
+			children = (
+				FC33F266193775CD008FDB87 /* iRate.bundle */,
+				FC33F267193775CD008FDB87 /* iRate.h */,
+				FC33F268193775CD008FDB87 /* iRate.m */,
+			);
+			path = iRate;
+			sourceTree = "<group>";
+		};
+		FC33F26B1937857F008FDB87 /* KenBurns */ = {
+			isa = PBXGroup;
+			children = (
+				FC33F26C1937857F008FDB87 /* JBKenBurnsView.h */,
+				FC33F26D1937857F008FDB87 /* JBKenBurnsView.m */,
+			);
+			path = KenBurns;
+			sourceTree = "<group>";
+		};
 		FCAB8D1F19215A640072DC59 = {
 			isa = PBXGroup;
 			children = (
@@ -1120,8 +1170,12 @@
 				FCAB8D3A19215A640072DC59 /* ZEAppDelegate.h */,
 				FCAB8D3B19215A640072DC59 /* ZEAppDelegate.m */,
 				FCAB8D3D19215A640072DC59 /* Main.storyboard */,
+				FCE0070C1937B52700645355 /* ZELegalViewController.h */,
+				FCE0070D1937B52700645355 /* ZELegalViewController.m */,
 				FC71726519365CF30062B3E1 /* ZEPickClassTableViewCell.h */,
 				FC71726619365CF30062B3E1 /* ZEPickClassTableViewCell.m */,
+				FCE006F11937960900645355 /* NSMutableArray+Shuffle.h */,
+				FCE006F21937960900645355 /* NSMutableArray+Shuffle.m */,
 				FC71726819366D110062B3E1 /* ZEOtherDeckTableViewCell.h */,
 				FC71726919366D110062B3E1 /* ZEOtherDeckTableViewCell.m */,
 				FC717262193659F50062B3E1 /* ZEMyDecksTableViewCell.h */,
@@ -1192,6 +1246,14 @@
 		FCAB8D6019215AB30072DC59 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FCE007001937A5AA00645355 /* bg0.jpg */,
+				FCE007021937AA7300645355 /* bg5.jpg */,
+				FCE007031937AA7300645355 /* bg4.jpg */,
+				FCE007041937AA7300645355 /* bg3.jpg */,
+				FCE007051937AA7300645355 /* bg2.jpg */,
+				FCE007061937AA7300645355 /* bg1.jpg */,
+				FCE006FE1937A10F00645355 /* hero_frame.png */,
+				FC609B911937316B001806A6 /* number_bg.png */,
 				8F6CAA4519363DD90078EE65 /* priest.jpg */,
 				8F6CAA4619363DD90078EE65 /* warrior.jpg */,
 				8F6CAA4719363DD90078EE65 /* warlock.jpg */,
@@ -1614,6 +1676,8 @@
 		FCAB965D1924158A0072DC59 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FC33F26B1937857F008FDB87 /* KenBurns */,
+				FC33F265193775CD008FDB87 /* iRate */,
 				8F6CAA311935CC3E0078EE65 /* Chartboost */,
 				8F6CAA0319338A810078EE65 /* AHKActionSheet */,
 				8FB6EAC3192CE57E00973F8F /* StringScore */,
@@ -1692,6 +1756,37 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
+				ca,
+				cs,
+				da,
+				de,
+				el,
+				es,
+				fi,
+				fr,
+				he,
+				hu,
+				id,
+				it,
+				ja,
+				ko,
+				ms,
+				nb,
+				nl,
+				pl,
+				"pt-BR",
+				pt,
+				ro,
+				ru,
+				sk,
+				sv,
+				th,
+				tr,
+				uk,
+				vi,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = FCAB8D1F19215A640072DC59;
 			productRefGroup = FCAB8D2919215A640072DC59 /* Products */;
@@ -1782,6 +1877,7 @@
 				FCAB953319240F610072DC59 /* Dark Iron Dwarf.jpg in Resources */,
 				FCAB956619240F610072DC59 /* Forked Lightning.jpg in Resources */,
 				FCAB961E19240F610072DC59 /* Spiteful Smith.jpg in Resources */,
+				FCE007011937A5AA00645355 /* bg0.jpg in Resources */,
 				FCAB960119240F610072DC59 /* Shadow Bolt.jpg in Resources */,
 				FCAB951619240F610072DC59 /* Bloodsail Raider.jpg in Resources */,
 				FCAB961D19240F610072DC59 /* Spellbreaker.jpg in Resources */,
@@ -1803,6 +1899,7 @@
 				FCAB961919240F610072DC59 /* Soulfire.jpg in Resources */,
 				FCAB961F19240F610072DC59 /* Sprint.jpg in Resources */,
 				FCAB95F919240F610072DC59 /* Savagery.jpg in Resources */,
+				FCE007071937AA7300645355 /* bg5.jpg in Resources */,
 				FCAB958819240F610072DC59 /* Houndmaster.jpg in Resources */,
 				FCAB95B819240F610072DC59 /* Mark of Nature.jpg in Resources */,
 				FCAB955219240F610072DC59 /* Execute.jpg in Resources */,
@@ -1887,6 +1984,7 @@
 				8F6CAA6219363DD90078EE65 /* ico_shaman.png in Resources */,
 				FCAB95B019240F610072DC59 /* Lorewalker Cho.jpg in Resources */,
 				FCAB94FA19240F610072DC59 /* Argent Protector.jpg in Resources */,
+				FCE007091937AA7300645355 /* bg3.jpg in Resources */,
 				8F6CAA5819363DD90078EE65 /* priest.jpg in Resources */,
 				FCAB953A19240F610072DC59 /* Demolisher.jpg in Resources */,
 				FCAB956D19240F610072DC59 /* Frostwolf Warlord.jpg in Resources */,
@@ -1895,6 +1993,7 @@
 				FCAB95BC19240F610072DC59 /* Master Swordsmith.jpg in Resources */,
 				FCAB950219240F610072DC59 /* Backstab.jpg in Resources */,
 				FCAB95BE19240F610072DC59 /* Mind Blast.jpg in Resources */,
+				FCE0070B1937AA7300645355 /* bg1.jpg in Resources */,
 				FCAB95D919240F610072DC59 /* Oasis Snapjaw.jpg in Resources */,
 				FCAB95D319240F610072DC59 /* Nightblade.jpg in Resources */,
 				FCAB964619240F610072DC59 /* Violet Teacher.jpg in Resources */,
@@ -1985,6 +2084,8 @@
 				FCAB950D19240F610072DC59 /* Blessing of Might.jpg in Resources */,
 				8F6CAA6A19363DD90078EE65 /* rogue.jpg in Resources */,
 				FCAB95A619240F610072DC59 /* Leper Gnome.jpg in Resources */,
+				FCE0070F1937BC1A00645355 /* Belwe.ttf in Resources */,
+				FCE006FF1937A10F00645355 /* hero_frame.png in Resources */,
 				8FB6EACA192CE57E00973F8F /* README.md in Resources */,
 				FCAB965A19240F610072DC59 /* Ysera.jpg in Resources */,
 				8FA18BF2192A315F00FF3F71 /* card_choose_bg.png in Resources */,
@@ -2006,12 +2107,14 @@
 				FCAB960619240F610072DC59 /* Shadowform.jpg in Resources */,
 				8F6CAA4419360E620078EE65 /* deletered.png in Resources */,
 				FCAB94FF19240F610072DC59 /* Auchenai Soulpriest.jpg in Resources */,
+				FC609B921937316B001806A6 /* number_bg.png in Resources */,
 				FCAB95C219240F610072DC59 /* Mindgames.jpg in Resources */,
 				FCAB95DC19240F610072DC59 /* Onyxia.jpg in Resources */,
 				FCAB953819240F610072DC59 /* Defender of Argus.jpg in Resources */,
 				FCAB961319240F610072DC59 /* Siphon Soul.jpg in Resources */,
 				FCAB95DD19240F610072DC59 /* Patient Assassin.jpg in Resources */,
 				FCAB955419240F610072DC59 /* Explosive Trap.jpg in Resources */,
+				FCE007081937AA7300645355 /* bg4.jpg in Resources */,
 				FCAB962519240F610072DC59 /* Stormforged Axe.jpg in Resources */,
 				FCAB965019240F610072DC59 /* Windfury Harpy.jpg in Resources */,
 				FCAB951A19240F610072DC59 /* Brawl.jpg in Resources */,
@@ -2053,6 +2156,7 @@
 				FCAB950E19240F610072DC59 /* Blessing of Wisdom.jpg in Resources */,
 				8F6CAA6719363DD90078EE65 /* hunter.jpg in Resources */,
 				FCAB954919240F610072DC59 /* Earth Elemental.jpg in Resources */,
+				FC33F269193775CE008FDB87 /* iRate.bundle in Resources */,
 				FCAB94F619240F610072DC59 /* Arcanite Reaper.jpg in Resources */,
 				FCAB95C019240F610072DC59 /* Mind Control.jpg in Resources */,
 				FCAB94F919240F610072DC59 /* Argent Commander.jpg in Resources */,
@@ -2093,6 +2197,7 @@
 				FCAB958D19240F610072DC59 /* Ice Block.jpg in Resources */,
 				FCAB95FD19240F610072DC59 /* Sea Giant.jpg in Resources */,
 				8F6CAA5F19363DD90078EE65 /* ico_paladin.png in Resources */,
+				FCE0070A1937AA7300645355 /* bg2.jpg in Resources */,
 				FCAB95D619240F610072DC59 /* Nourish.jpg in Resources */,
 				FCAB950F19240F610072DC59 /* Blizzard.jpg in Resources */,
 				FCAB962119240F610072DC59 /* Starfall.jpg in Resources */,
@@ -2146,15 +2251,19 @@
 				FC717264193659F50062B3E1 /* ZEMyDecksTableViewCell.m in Sources */,
 				FCAB90601922A93A0072DC59 /* ZECardTableViewCell.m in Sources */,
 				FCF3612B193236D30044B85E /* ZEOtherDecksTableViewController.m in Sources */,
+				FCE006F31937960900645355 /* NSMutableArray+Shuffle.m in Sources */,
 				8FA18C0F192B50B800FF3F71 /* JBLineChartView.m in Sources */,
 				8FA18C0D192B50B800FF3F71 /* JBBarChartView.m in Sources */,
 				8F6CAA0C19338A810078EE65 /* AHKActionSheet.m in Sources */,
+				FC33F26A193775CE008FDB87 /* iRate.m in Sources */,
 				8FA18C00192A3BB300FF3F71 /* ZEPickedTableDataSource.m in Sources */,
+				FC33F26E1937857F008FDB87 /* JBKenBurnsView.m in Sources */,
 				8FB6EAC9192CE57E00973F8F /* NSString+Score.m in Sources */,
 				8FA18C05192B3DC400FF3F71 /* ZEPickedTableViewCell.m in Sources */,
 				8FA18C0E192B50B800FF3F71 /* JBChartView.m in Sources */,
 				FCAB9661192415930072DC59 /* ViewUtils.m in Sources */,
 				8F6CAA0D19338A810078EE65 /* AHKActionSheetViewController.m in Sources */,
+				FCE0070E1937B52800645355 /* ZELegalViewController.m in Sources */,
 				FCAB8D4219215A640072DC59 /* ZEViewController.m in Sources */,
 				8FA18BFA192A32B700FF3F71 /* ZEDataManager.m in Sources */,
 				FC71726A19366D110062B3E1 /* ZEOtherDeckTableViewCell.m in Sources */,

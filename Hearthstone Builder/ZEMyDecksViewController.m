@@ -13,7 +13,7 @@
 
 @interface ZEMyDecksViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray *dataSource;
+@property (nonatomic, strong) NSMutableArray *dataSource;
 @end
 
 @implementation ZEMyDecksViewController
@@ -26,8 +26,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.dataSource = [NSArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY]];
+    [self updateDataSource];
     [self.tableView reloadData];
+}
+
+- (void)updateDataSource {
+    self.dataSource = [[NSArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY]] mutableCopy];
 }
 
 - (IBAction)newDeckTouched:(id)sender {
@@ -64,6 +68,17 @@
     vc.selectedDeckNumber = indexPath.row;
     vc.viewDeckMode = YES;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.dataSource removeObjectAtIndex:indexPath.row];
+        [[NSUserDefaults standardUserDefaults] setObject:self.dataSource forKey:USER_DECKS_KEY];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [tableView beginUpdates];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [tableView endUpdates];
+    }
 }
 
 @end

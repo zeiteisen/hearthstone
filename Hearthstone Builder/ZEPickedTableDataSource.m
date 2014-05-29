@@ -20,12 +20,29 @@
     ZEPickedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     cell.label.font = [UIFont fontWithName:cell.label.font.fontName size:8];
     NSDictionary *card = self.deckDataWithoutDuplicates[indexPath.row];
+    NSString *cardName = card[@"name"];
     if ([self.countedDataSource countForObject:card] > 1) {
-        cell.label.textColor = [UIColor redColor];
+        cell.label.text = [NSString stringWithFormat:@"%@ x2", cardName];
     } else {
-        cell.label.textColor = [UIColor blackColor];
+        cell.label.text = cardName;
     }
-    cell.label.text = card[@"name"];
+    NSString *set = card[@"set"];
+    if ([set isEqualToString:@"basic"]) {
+        cell.label.textColor = [ZEUtility basicColor];
+    } else {
+        NSString *cardQuality = card[@"quality"];
+        if ([cardQuality isEqualToString:@"legendary"]) {
+            cell.label.textColor = [ZEUtility legendaryColor];
+        } else if ([cardQuality isEqualToString:@"epic"]) {
+            cell.label.textColor = [ZEUtility epicColor];
+        } else if ([cardQuality isEqualToString:@"rare"]) {
+            cell.label.textColor = [ZEUtility rareColor];
+        } else if ([cardQuality isEqualToString:@"common"]) {
+            cell.label.textColor = [ZEUtility commonColor];
+        } else {
+            cell.label.textColor = [ZEUtility basicColor];
+        }
+    }
     return cell;
 }
 

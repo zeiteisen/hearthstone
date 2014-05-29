@@ -15,6 +15,7 @@
 #import "ZEPublishTableViewController.h"
 #import "AHKActionSheet.h"
 #import "ZEReadDescriptionViewController.h"
+#import "iRate.h"
 
 #define MyLikesUserDefaultsKey      @"MyLikesKey"
 
@@ -406,6 +407,10 @@
     if (self.deckObject) {
         self.navigationItem.rightBarButtonItem.title = NSLocalizedString(@"More", nil);
         self.navigationItem.rightBarButtonItem.enabled = YES;
+    } else if (self.selectedDeckNumber == -1) {
+        self.navigationItem.rightBarButtonItem.enabled = NO;
+    } else {
+        self.navigationItem.rightBarButtonItem.enabled = YES;
     }
 }
 
@@ -432,11 +437,12 @@
     cell.cardData = card;
     NSString *cardName = [NSString stringWithFormat:@"%@.jpg", card[@"name"]];
     cell.image.image = [UIImage imageNamed:cardName];
-    NSInteger count = [self.countedDeckData containsObject:card];
-    if (count > 0) {
-         cell.countLabel.text = [NSString stringWithFormat:@"%i", [self.countedDeckData countForObject:card]];
+    NSInteger count = [self.countedDeckData countForObject:card];
+    if (count > 1) {
+        cell.countView.hidden = NO;
+         cell.countLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)[self.countedDeckData countForObject:card]];
     } else {
-        cell.countLabel.text = @"";
+        cell.countView.hidden = YES;
     }
     [self updateRemoveButtonWithCard:card onCell:cell];
     [self updateFadedStateOnCell:cell];
@@ -479,8 +485,8 @@
             cardCell.removeButton.hidden = NO;
             [self updateFadedStateOnCell:cardCell];
             [self updateDeckCountLabel];
-            [self updatePublishButton];
             [self saveDeck];
+            [self updatePublishButton];
         }
     } else if (tableView == self.pickedTableView) {
         // show the picked card
@@ -615,6 +621,7 @@
                 [myLikes addObject:self.deckObject.objectId];
                 [[NSUserDefaults standardUserDefaults] setObject:myLikes forKey:MyLikesUserDefaultsKey];
                 [[NSUserDefaults standardUserDefaults] synchronize];
+                [[iRate sharedInstance] promptIfNetworkAvailable];
             }];
         }
         [actionSheet addButtonWithTitle:NSLocalizedString(@"Read Description", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {

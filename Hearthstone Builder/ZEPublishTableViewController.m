@@ -42,9 +42,12 @@
     self.spellsCount.text = [NSString stringWithFormat:@"%@ %@", [self.deck[@"spells"] stringValue], NSLocalizedString(@"Spells", nil)];
     self.weaponsCount.text = [NSString stringWithFormat:@"%@ %@", [self.deck[@"weapons"] stringValue], NSLocalizedString(@"Weapons", nil)];
     
-    if (self.deck.count < 30) {
+    NSArray *deckCardNames = self.deck[@"deck"];
+    if (deckCardNames.count < 30) {
         self.navigationItem.rightBarButtonItem.enabled = NO;
     }
+    self.descriptionTextView.layer.borderColor = [UIColor grayColor].CGColor;
+    self.descriptionTextView.layer.borderWidth = 1.0;
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -85,8 +88,13 @@
     [deckObject setObject:self.deck[@"spells"] forKey:@"spells"];
     [deckObject setObject:self.deck[@"minions"] forKey:@"minions"];
     [deckObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        [self.deck setObject:deckObject.objectId forKey:@"objectId"];
-        [self saveDeck];
+        if (error) {
+            [ZEUtility showAlertWithTitle:NSLocalizedString(@"Error", nil) message:error.localizedDescription];
+        } else {
+            [ZEUtility showAlertWithTitle:NSLocalizedString(@"Success", nil) message:NSLocalizedString(@"Upload succeeded", nil)];
+            [self.deck setObject:deckObject.objectId forKey:@"objectId"];
+            [self saveDeck];
+        }
     }];
 }
 

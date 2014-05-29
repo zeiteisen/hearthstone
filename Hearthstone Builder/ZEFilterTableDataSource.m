@@ -23,7 +23,7 @@
     if (indexPath.row > 7) {
         cell.label.text = @"A";
     } else {
-        cell.label.text = [NSString stringWithFormat:@"%i", indexPath.row];
+        cell.label.text = [NSString stringWithFormat:@"%li", (long)indexPath.row];
     }
     return cell;
 }
