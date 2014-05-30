@@ -38,7 +38,7 @@
 
 - (void)loadGoodCheap {
     PFQuery *query = [self defaultQuery];
-    [query whereKey:@"likes" greaterThan:@10];
+    [query whereKey:@"likes" greaterThan:@3];
     [query whereKey:@"dust" lessThan:@500];
     [query orderByDescending:@"likes"];
     [self loadDecksWithQuery:query];

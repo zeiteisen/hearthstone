@@ -2494,6 +2494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hanno Bruns (4J9U9M79Y8)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2504,6 +2505,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Hearthstone Builder/Chartboost\"";
 				PRODUCT_NAME = Hearthdeck;
+				PROVISIONING_PROFILE = "4240F2CE-8A57-457C-A95D-8C052737A143";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
