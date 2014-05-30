@@ -58,7 +58,6 @@
 		8FB6EACA192CE57E00973F8F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC7192CE57E00973F8F /* README.md */; };
 		FC33F269193775CE008FDB87 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC33F266193775CD008FDB87 /* iRate.bundle */; };
 		FC33F26A193775CE008FDB87 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC33F268193775CD008FDB87 /* iRate.m */; };
-		FC33F26E1937857F008FDB87 /* JBKenBurnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC33F26D1937857F008FDB87 /* JBKenBurnsView.m */; };
 		FC409C431931153C0086215F /* ZEStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC409C421931153C0086215F /* ZEStartViewController.m */; };
 		FC409C46193116CE0086215F /* ZEMyDecksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC409C45193116CE0086215F /* ZEMyDecksViewController.m */; };
 		FC609B921937316B001806A6 /* number_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FC609B911937316B001806A6 /* number_bg.png */; };
@@ -571,8 +570,6 @@
 		FC33F266193775CD008FDB87 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
 		FC33F267193775CD008FDB87 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
 		FC33F268193775CD008FDB87 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
-		FC33F26C1937857F008FDB87 /* JBKenBurnsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBKenBurnsView.h; sourceTree = "<group>"; };
-		FC33F26D1937857F008FDB87 /* JBKenBurnsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBKenBurnsView.m; sourceTree = "<group>"; };
 		FC409C411931153C0086215F /* ZEStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEStartViewController.h; sourceTree = "<group>"; };
 		FC409C421931153C0086215F /* ZEStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEStartViewController.m; sourceTree = "<group>"; };
 		FC409C44193116CE0086215F /* ZEMyDecksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEMyDecksViewController.h; sourceTree = "<group>"; };
@@ -1123,15 +1120,6 @@
 				FC33F268193775CD008FDB87 /* iRate.m */,
 			);
 			path = iRate;
-			sourceTree = "<group>";
-		};
-		FC33F26B1937857F008FDB87 /* KenBurns */ = {
-			isa = PBXGroup;
-			children = (
-				FC33F26C1937857F008FDB87 /* JBKenBurnsView.h */,
-				FC33F26D1937857F008FDB87 /* JBKenBurnsView.m */,
-			);
-			path = KenBurns;
 			sourceTree = "<group>";
 		};
 		FCAB8D1F19215A640072DC59 = {
@@ -1695,7 +1683,6 @@
 			isa = PBXGroup;
 			children = (
 				8F0A69DD19387EDC009AC664 /* NavigationController */,
-				FC33F26B1937857F008FDB87 /* KenBurns */,
 				FC33F265193775CD008FDB87 /* iRate */,
 				8F6CAA311935CC3E0078EE65 /* Chartboost */,
 				8F6CAA0319338A810078EE65 /* AHKActionSheet */,
@@ -2279,7 +2266,6 @@
 				8F6CAA0C19338A810078EE65 /* AHKActionSheet.m in Sources */,
 				FC33F26A193775CE008FDB87 /* iRate.m in Sources */,
 				8FA18C00192A3BB300FF3F71 /* ZEPickedTableDataSource.m in Sources */,
-				FC33F26E1937857F008FDB87 /* JBKenBurnsView.m in Sources */,
 				8FB6EAC9192CE57E00973F8F /* NSString+Score.m in Sources */,
 				8FA18C05192B3DC400FF3F71 /* ZEPickedTableViewCell.m in Sources */,
 				8FA18C0E192B50B800FF3F71 /* JBChartView.m in Sources */,
