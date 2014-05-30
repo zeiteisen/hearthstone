@@ -48,6 +48,7 @@
 		8F6CAA6819363DD90078EE65 /* shaman.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5519363DD90078EE65 /* shaman.jpg */; };
 		8F6CAA6919363DD90078EE65 /* paladin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5619363DD90078EE65 /* paladin.jpg */; };
 		8F6CAA6A19363DD90078EE65 /* rogue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5719363DD90078EE65 /* rogue.jpg */; };
+		8F995B621938C9D8009EB207 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F995B611938C9D8009EB207 /* Crashlytics.framework */; };
 		8FA18BF2192A315F00FF3F71 /* card_choose_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18BF0192A315F00FF3F71 /* card_choose_bg.png */; };
 		8FA18BF3192A315F00FF3F71 /* card_choose_x2_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18BF1192A315F00FF3F71 /* card_choose_x2_bg.png */; };
 		8FA18BFA192A32B700FF3F71 /* ZEDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18BF9192A32B700FF3F71 /* ZEDataManager.m */; };
@@ -561,6 +562,7 @@
 		8F6CAA5519363DD90078EE65 /* shaman.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shaman.jpg; sourceTree = "<group>"; };
 		8F6CAA5619363DD90078EE65 /* paladin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paladin.jpg; sourceTree = "<group>"; };
 		8F6CAA5719363DD90078EE65 /* rogue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rogue.jpg; sourceTree = "<group>"; };
+		8F995B611938C9D8009EB207 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8FA18BF0192A315F00FF3F71 /* card_choose_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_choose_bg.png; sourceTree = "<group>"; };
 		8FA18BF1192A315F00FF3F71 /* card_choose_x2_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_choose_x2_bg.png; sourceTree = "<group>"; };
 		8FA18BF8192A32B700FF3F71 /* ZEDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEDataManager.h; sourceTree = "<group>"; };
@@ -1038,6 +1040,7 @@
 			files = (
 				8F6CAA1B19347DED0078EE65 /* CoreData.framework in Frameworks */,
 				8F6CAA1919347DE60078EE65 /* AVFoundation.framework in Frameworks */,
+				8F995B621938C9D8009EB207 /* Crashlytics.framework in Frameworks */,
 				8F6CAA1719347DDE0078EE65 /* CoreMedia.framework in Frameworks */,
 				8F6CAA1519347DD20078EE65 /* AdSupport.framework in Frameworks */,
 				FCF3612819322CFF0044B85E /* SystemConfiguration.framework in Frameworks */,
@@ -1180,6 +1183,7 @@
 		FCAB8D2A19215A640072DC59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F995B611938C9D8009EB207 /* Crashlytics.framework */,
 				8F6CAA1A19347DED0078EE65 /* CoreData.framework */,
 				8F6CAA1819347DE60078EE65 /* AVFoundation.framework */,
 				8F6CAA1619347DDE0078EE65 /* CoreMedia.framework */,
@@ -1749,6 +1753,7 @@
 				FCAB8D2419215A640072DC59 /* Sources */,
 				FCAB8D2519215A640072DC59 /* Frameworks */,
 				FCAB8D2619215A640072DC59 /* Resources */,
+				8F995B601938C9B0009EB207 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -2281,6 +2286,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8F995B601938C9B0009EB207 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 40327ff403daba0aa092e0b236cedc55fd536d77 2e1c5260b70a5a1fbde2fe3f4dc74c306849a64228a2646907a25dfed8aea2cb";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FCAB8D2419215A640072DC59 /* Sources */ = {

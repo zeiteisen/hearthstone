@@ -10,6 +10,7 @@
 #import "Chartboost.h"
 #import "iRate.h"
 #import "AHKActionSheet.h"
+#import <Crashlytics/Crashlytics.h>
 
 @interface ZEAppDelegate () <ChartboostDelegate>
 
@@ -23,6 +24,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Crashlytics startWithAPIKey:@"40327ff403daba0aa092e0b236cedc55fd536d77"];
     [Parse setApplicationId:@"z7byvGtx1x90ufW3Ee2bJQKMv7AVr8HEMMepLPtH"
                   clientKey:@"GaGNnHc5akAJUikiySh9IIhTAqjSzwyA9E19hn1t"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
