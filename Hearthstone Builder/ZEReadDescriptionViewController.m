@@ -7,8 +7,9 @@
 //
 
 #import "ZEReadDescriptionViewController.h"
+#import "ZEWebViewController.h"
 
-@interface ZEReadDescriptionViewController ()
+@interface ZEReadDescriptionViewController () <UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 
 @end
@@ -18,6 +19,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.descriptionTextView.text = self.deckObject[@"description"];
+    self.descriptionTextView.font = [ZEUtility myStandardFont];
+    self.descriptionTextView.delegate = self;
+}
+
+- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange {
+    ZEWebViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"WebViewController"];
+    vc.url = URL;
+    [self.navigationController pushViewController:vc animated:YES];
+    return NO;
 }
 
 @end

@@ -49,6 +49,7 @@
 		8F6CAA6919363DD90078EE65 /* paladin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5619363DD90078EE65 /* paladin.jpg */; };
 		8F6CAA6A19363DD90078EE65 /* rogue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA5719363DD90078EE65 /* rogue.jpg */; };
 		8F995B621938C9D8009EB207 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F995B611938C9D8009EB207 /* Crashlytics.framework */; };
+		8F995B651938CEE2009EB207 /* ZEWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F995B641938CEE2009EB207 /* ZEWebViewController.m */; };
 		8FA18BF2192A315F00FF3F71 /* card_choose_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18BF0192A315F00FF3F71 /* card_choose_bg.png */; };
 		8FA18BF3192A315F00FF3F71 /* card_choose_x2_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18BF1192A315F00FF3F71 /* card_choose_x2_bg.png */; };
 		8FA18BFA192A32B700FF3F71 /* ZEDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18BF9192A32B700FF3F71 /* ZEDataManager.m */; };
@@ -563,6 +564,8 @@
 		8F6CAA5619363DD90078EE65 /* paladin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paladin.jpg; sourceTree = "<group>"; };
 		8F6CAA5719363DD90078EE65 /* rogue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rogue.jpg; sourceTree = "<group>"; };
 		8F995B611938C9D8009EB207 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		8F995B631938CEE2009EB207 /* ZEWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEWebViewController.h; sourceTree = "<group>"; };
+		8F995B641938CEE2009EB207 /* ZEWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEWebViewController.m; sourceTree = "<group>"; };
 		8FA18BF0192A315F00FF3F71 /* card_choose_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_choose_bg.png; sourceTree = "<group>"; };
 		8FA18BF1192A315F00FF3F71 /* card_choose_x2_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_choose_x2_bg.png; sourceTree = "<group>"; };
 		8FA18BF8192A32B700FF3F71 /* ZEDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEDataManager.h; sourceTree = "<group>"; };
@@ -1252,6 +1255,8 @@
 				8F6CAA2619348C090078EE65 /* ZEReadDescriptionViewController.m */,
 				8F6CAA3A1935CEDF0078EE65 /* ZELeftFilterTableViewCell.h */,
 				8F6CAA3B1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m */,
+				8F995B631938CEE2009EB207 /* ZEWebViewController.h */,
+				8F995B641938CEE2009EB207 /* ZEWebViewController.m */,
 				FCAB8D4319215A640072DC59 /* Images.xcassets */,
 				FCAB8D3219215A640072DC59 /* Supporting Files */,
 			);
@@ -2322,6 +2327,7 @@
 				8FA18C0F192B50B800FF3F71 /* JBLineChartView.m in Sources */,
 				8FA18C0D192B50B800FF3F71 /* JBBarChartView.m in Sources */,
 				8F0A69E019387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m in Sources */,
+				8F995B651938CEE2009EB207 /* ZEWebViewController.m in Sources */,
 				8F6CAA0C19338A810078EE65 /* AHKActionSheet.m in Sources */,
 				8F0A69F61938B09F009AC664 /* NSObject+Properties.m in Sources */,
 				FC33F26A193775CE008FDB87 /* iRate.m in Sources */,
