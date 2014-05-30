@@ -123,7 +123,7 @@
         if (views.integerValue > 100) {
             cell.viewsView.hidden = NO;
         } else {
-            cell.viewsView.hidden = NO;
+            cell.viewsView.hidden = YES;
         }
     } else {
         cell.viewsView.hidden = YES;
