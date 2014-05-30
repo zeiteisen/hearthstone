@@ -17,8 +17,6 @@
 #import "ZEReadDescriptionViewController.h"
 #import "iRate.h"
 
-#define MyLikesUserDefaultsKey      @"MyLikesKey"
-
 @interface ZEViewController () <UITableViewDataSource, UITableViewDelegate, ZECardTableViewCellDelegate, JBBarChartViewDataSource, JBBarChartViewDelegate, UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataSource;
@@ -503,6 +501,16 @@
     }
 }
 
+- (BOOL)myLikes:(NSArray *)myLikes containsObjectId:(NSString *)objectId {
+    for (NSData *deckData in myLikes) {
+        PFObject *deck = [NSKeyedUnarchiver unarchiveObjectWithData:deckData];
+        if ([deck.objectId isEqualToString:objectId]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
 #pragma mark - ZECardTableViewCellDelegate
 
 - (void)cardCellDidTouchedRemove:(ZECardTableViewCell *)cell {
@@ -608,17 +616,18 @@
 
 - (IBAction)publishTouched:(id)sender {
     if (self.deckObject) {
-        
         AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:nil];
         NSMutableArray *myLikes = [[[NSUserDefaults standardUserDefaults] objectForKey:MyLikesUserDefaultsKey] mutableCopy];
         if (myLikes == nil) {
             myLikes = [NSMutableArray array];
         }
-        if (![myLikes containsObject:self.deckObject.objectId]) {
-            [actionSheet addButtonWithTitle:NSLocalizedString(@"Like", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+        if (![self myLikes:myLikes containsObjectId:self.deckObject.objectId]) {
+            [actionSheet addButtonWithTitle:NSLocalizedString(@"Like and save", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
                 [self.deckObject incrementKey:@"likes"];
                 [self.deckObject saveInBackground];
-                [myLikes addObject:self.deckObject.objectId];
+                
+                NSData *deckData = [NSKeyedArchiver archivedDataWithRootObject:self.deckObject];
+                [myLikes addObject:deckData];
                 [[NSUserDefaults standardUserDefaults] setObject:myLikes forKey:MyLikesUserDefaultsKey];
                 [[NSUserDefaults standardUserDefaults] synchronize];
                 [[iRate sharedInstance] promptIfNetworkAvailable];

@@ -21,3 +21,4 @@
 
 
 #define     USER_DECKS_KEY          @"user_deck"
+#define MyLikesUserDefaultsKey      @"MyLikesKey"

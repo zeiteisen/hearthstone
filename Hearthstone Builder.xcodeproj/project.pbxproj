@@ -10,6 +10,11 @@
 		8F0A69E019387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A69DF19387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		8F0A69E219388DC9009AC664 /* Dark_Green_Arrow_Up.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0A69E119388DC9009AC664 /* Dark_Green_Arrow_Up.png */; };
 		8F0A69E419389E9A009AC664 /* view-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0A69E319389E9A009AC664 /* view-512.png */; };
+		8F0A69F61938B09F009AC664 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A69E91938B09F009AC664 /* NSObject+Properties.m */; };
+		8F0A69F81938B09F009AC664 /* PFACL+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A69EC1938B09F009AC664 /* PFACL+NSCoding.m */; };
+		8F0A69F91938B09F009AC664 /* PFFile+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A69EE1938B09F009AC664 /* PFFile+NSCoding.m */; };
+		8F0A69FA1938B09F009AC664 /* PFGeoPoint+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A69F01938B09F009AC664 /* PFGeoPoint+NSCoding.m */; };
+		8F0A69FB1938B09F009AC664 /* PFObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A69F21938B09F009AC664 /* PFObject+NSCoding.m */; };
 		8F6CAA0C19338A810078EE65 /* AHKActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA0519338A810078EE65 /* AHKActionSheet.m */; };
 		8F6CAA0D19338A810078EE65 /* AHKActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA0719338A810078EE65 /* AHKActionSheetViewController.m */; };
 		8F6CAA0E19338A810078EE65 /* UIImage+AHKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA0919338A810078EE65 /* UIImage+AHKAdditions.m */; };
@@ -501,6 +506,18 @@
 		8F0A69DF19387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+M13ProgressViewBar.m"; sourceTree = "<group>"; };
 		8F0A69E119388DC9009AC664 /* Dark_Green_Arrow_Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dark_Green_Arrow_Up.png; sourceTree = "<group>"; };
 		8F0A69E319389E9A009AC664 /* view-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "view-512.png"; sourceTree = "<group>"; };
+		8F0A69E71938B09F009AC664 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		8F0A69E81938B09F009AC664 /* NSObject+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Properties.h"; sourceTree = "<group>"; };
+		8F0A69E91938B09F009AC664 /* NSObject+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Properties.m"; sourceTree = "<group>"; };
+		8F0A69EB1938B09F009AC664 /* PFACL+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFACL+NSCoding.h"; sourceTree = "<group>"; };
+		8F0A69EC1938B09F009AC664 /* PFACL+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFACL+NSCoding.m"; sourceTree = "<group>"; };
+		8F0A69ED1938B09F009AC664 /* PFFile+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFFile+NSCoding.h"; sourceTree = "<group>"; };
+		8F0A69EE1938B09F009AC664 /* PFFile+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFFile+NSCoding.m"; sourceTree = "<group>"; };
+		8F0A69EF1938B09F009AC664 /* PFGeoPoint+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFGeoPoint+NSCoding.h"; sourceTree = "<group>"; };
+		8F0A69F01938B09F009AC664 /* PFGeoPoint+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFGeoPoint+NSCoding.m"; sourceTree = "<group>"; };
+		8F0A69F11938B09F009AC664 /* PFObject+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFObject+NSCoding.h"; sourceTree = "<group>"; };
+		8F0A69F21938B09F009AC664 /* PFObject+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFObject+NSCoding.m"; sourceTree = "<group>"; };
+		8F0A69F31938B09F009AC664 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		8F6CAA0419338A810078EE65 /* AHKActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKActionSheet.h; sourceTree = "<group>"; };
 		8F6CAA0519338A810078EE65 /* AHKActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHKActionSheet.m; sourceTree = "<group>"; };
 		8F6CAA0619338A810078EE65 /* AHKActionSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKActionSheetViewController.h; sourceTree = "<group>"; };
@@ -1060,6 +1077,25 @@
 				8F0A69DF19387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m */,
 			);
 			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		8F0A69E51938B09F009AC664 /* Parse-NSCoding */ = {
+			isa = PBXGroup;
+			children = (
+				8F0A69E71938B09F009AC664 /* LICENSE */,
+				8F0A69E81938B09F009AC664 /* NSObject+Properties.h */,
+				8F0A69E91938B09F009AC664 /* NSObject+Properties.m */,
+				8F0A69EB1938B09F009AC664 /* PFACL+NSCoding.h */,
+				8F0A69EC1938B09F009AC664 /* PFACL+NSCoding.m */,
+				8F0A69ED1938B09F009AC664 /* PFFile+NSCoding.h */,
+				8F0A69EE1938B09F009AC664 /* PFFile+NSCoding.m */,
+				8F0A69EF1938B09F009AC664 /* PFGeoPoint+NSCoding.h */,
+				8F0A69F01938B09F009AC664 /* PFGeoPoint+NSCoding.m */,
+				8F0A69F11938B09F009AC664 /* PFObject+NSCoding.h */,
+				8F0A69F21938B09F009AC664 /* PFObject+NSCoding.m */,
+				8F0A69F31938B09F009AC664 /* README.md */,
+			);
+			path = "Parse-NSCoding";
 			sourceTree = "<group>";
 		};
 		8F6CAA0319338A810078EE65 /* AHKActionSheet */ = {
@@ -1682,6 +1718,7 @@
 		FCAB965D1924158A0072DC59 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				8F0A69E51938B09F009AC664 /* Parse-NSCoding */,
 				8F0A69DD19387EDC009AC664 /* NavigationController */,
 				FC33F265193775CD008FDB87 /* iRate */,
 				8F6CAA311935CC3E0078EE65 /* Chartboost */,
@@ -2252,6 +2289,7 @@
 			files = (
 				FC409C46193116CE0086215F /* ZEMyDecksViewController.m in Sources */,
 				FC71726719365CF30062B3E1 /* ZEPickClassTableViewCell.m in Sources */,
+				8F0A69FB1938B09F009AC664 /* PFObject+NSCoding.m in Sources */,
 				8F6CAA0E19338A810078EE65 /* UIImage+AHKAdditions.m in Sources */,
 				FCF361141931DDEC0044B85E /* ZEPublishTableViewController.m in Sources */,
 				8FA18C12192B5EA500FF3F71 /* ZEPickClassViewController.m in Sources */,
@@ -2264,11 +2302,13 @@
 				8FA18C0D192B50B800FF3F71 /* JBBarChartView.m in Sources */,
 				8F0A69E019387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m in Sources */,
 				8F6CAA0C19338A810078EE65 /* AHKActionSheet.m in Sources */,
+				8F0A69F61938B09F009AC664 /* NSObject+Properties.m in Sources */,
 				FC33F26A193775CE008FDB87 /* iRate.m in Sources */,
 				8FA18C00192A3BB300FF3F71 /* ZEPickedTableDataSource.m in Sources */,
 				8FB6EAC9192CE57E00973F8F /* NSString+Score.m in Sources */,
 				8FA18C05192B3DC400FF3F71 /* ZEPickedTableViewCell.m in Sources */,
 				8FA18C0E192B50B800FF3F71 /* JBChartView.m in Sources */,
+				8F0A69F91938B09F009AC664 /* PFFile+NSCoding.m in Sources */,
 				FCAB9661192415930072DC59 /* ViewUtils.m in Sources */,
 				8F6CAA0D19338A810078EE65 /* AHKActionSheetViewController.m in Sources */,
 				FCE0070E1937B52800645355 /* ZELegalViewController.m in Sources */,
@@ -2279,7 +2319,9 @@
 				8FA18BFD192A3B8C00FF3F71 /* ZEFilterTableDataSource.m in Sources */,
 				FCAB8D3819215A640072DC59 /* main.m in Sources */,
 				8F6CAA3C1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m in Sources */,
+				8F0A69FA1938B09F009AC664 /* PFGeoPoint+NSCoding.m in Sources */,
 				8F6CAA0F19338A810078EE65 /* UIWindow+AHKAdditions.m in Sources */,
+				8F0A69F81938B09F009AC664 /* PFACL+NSCoding.m in Sources */,
 				8F6CAA2719348C090078EE65 /* ZEReadDescriptionViewController.m in Sources */,
 				FCAB8D3C19215A640072DC59 /* ZEAppDelegate.m in Sources */,
 			);

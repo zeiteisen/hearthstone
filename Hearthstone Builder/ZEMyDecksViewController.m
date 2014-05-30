@@ -14,6 +14,7 @@
 @interface ZEMyDecksViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
+@property (weak, nonatomic) IBOutlet UISwitch *likesSwitch;
 @end
 
 @implementation ZEMyDecksViewController
@@ -31,7 +32,16 @@
 }
 
 - (void)updateDataSource {
-    self.dataSource = [[NSArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY]] mutableCopy];
+    self.dataSource = [NSMutableArray array];
+    NSMutableArray *myDecks = [[NSArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY]] mutableCopy];
+    NSMutableArray *likedDecks = [NSMutableArray array];
+    NSArray *likedDecksData = [[NSUserDefaults standardUserDefaults] objectForKey:MyLikesUserDefaultsKey];
+    for (NSData *deckData in likedDecksData) {
+        PFObject *deckObject = [NSKeyedUnarchiver unarchiveObjectWithData:deckData];
+        [likedDecks addObject:deckObject];
+    }
+    [self.dataSource addObject:myDecks];
+    [self.dataSource addObject:likedDecks];
 }
 
 - (IBAction)newDeckTouched:(id)sender {
@@ -42,39 +52,79 @@
 
 #pragma mark - UITableViewDelgate
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.dataSource.count;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSArray *sectionData = self.dataSource[section];
+    return sectionData.count;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identifier = @"Cell";
-    ZEMyDecksTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    cell.label.font = [ZEUtility myStandardFont];
-    NSDictionary *deck = self.dataSource[indexPath.row];
-    if (deck[@"title"]) {
-        cell.label.text = deck[@"title"];
+    static NSString *myIdentifier = @"MyDeckCell";
+    NSArray *data = self.dataSource[indexPath.section];
+    NSString *title = @"";
+    NSString *heroName = @"";
+    if (indexPath.section == 0) {
+        NSDictionary *deck = data[indexPath.row];
+        if (deck[@"title"]) {
+            title = deck[@"title"];
+        } else {
+            title = deck[@"hero"];
+        }
+        heroName = deck[@"hero"];
     } else {
-        cell.label.text = deck[@"hero"];
+        PFObject *deckObject = data[indexPath.row];
+        title = deckObject[@"title"];
+        heroName = deckObject[@"hero"];
     }
-    NSString *imageName = [NSString stringWithFormat:@"ico_%@", deck[@"hero"]];
+    ZEMyDecksTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:myIdentifier];
+    cell.label.font = [ZEUtility myStandardFont];
+    cell.label.text = title;
+    NSString *imageName = [NSString stringWithFormat:@"ico_%@", heroName];
     cell.image.image = [UIImage imageNamed:imageName];
     return cell;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return NSLocalizedString(@"My Decks", nil);
+    } else {
+        return NSLocalizedString(@"Liked Decks", nil);
+    }
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *deck = self.dataSource[indexPath.row];
+    NSArray *data = self.dataSource[indexPath.section];
     ZEViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"CreateViewController"];
-    vc.hero = deck[@"hero"];
-    vc.selectedDeckNumber = indexPath.row;
-    vc.viewDeckMode = YES;
+    if (indexPath.section == 0) {
+        NSDictionary *deck = data[indexPath.row];
+        vc.hero = deck[@"hero"];
+        vc.selectedDeckNumber = indexPath.row;
+        vc.viewDeckMode = YES;
+    } else {
+        PFObject *likedDeck = data[indexPath.row];
+        vc.hero = likedDeck[@"hero"];
+        vc.viewDeckMode = YES;
+        vc.deckObject = likedDeck;
+    }
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.dataSource removeObjectAtIndex:indexPath.row];
-        [[NSUserDefaults standardUserDefaults] setObject:self.dataSource forKey:USER_DECKS_KEY];
+        NSMutableArray *data = self.dataSource[indexPath.section];
+        [data removeObjectAtIndex:indexPath.row];
+        if (indexPath.section == 0) {
+            [[NSUserDefaults standardUserDefaults] setObject:data forKey:USER_DECKS_KEY];
+        } else {
+            NSMutableArray *likedDecks = [[[NSUserDefaults standardUserDefaults] objectForKey:MyLikesUserDefaultsKey] mutableCopy];
+            [likedDecks removeObjectAtIndex:indexPath.row];
+            [[NSUserDefaults standardUserDefaults] setObject:likedDecks forKey:MyLikesUserDefaultsKey];
+        }
         [[NSUserDefaults standardUserDefaults] synchronize];
+        
         [tableView beginUpdates];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         [tableView endUpdates];
