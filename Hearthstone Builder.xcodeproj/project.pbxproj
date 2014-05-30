@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F0A69E019387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A69DF19387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8F0A69E219388DC9009AC664 /* Dark_Green_Arrow_Up.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0A69E119388DC9009AC664 /* Dark_Green_Arrow_Up.png */; };
+		8F0A69E419389E9A009AC664 /* view-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0A69E319389E9A009AC664 /* view-512.png */; };
 		8F6CAA0C19338A810078EE65 /* AHKActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA0519338A810078EE65 /* AHKActionSheet.m */; };
 		8F6CAA0D19338A810078EE65 /* AHKActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA0719338A810078EE65 /* AHKActionSheetViewController.m */; };
 		8F6CAA0E19338A810078EE65 /* UIImage+AHKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA0919338A810078EE65 /* UIImage+AHKAdditions.m */; };
@@ -495,6 +498,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F0A69DE19387EDD009AC664 /* UINavigationController+M13ProgressViewBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+M13ProgressViewBar.h"; sourceTree = "<group>"; };
+		8F0A69DF19387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+M13ProgressViewBar.m"; sourceTree = "<group>"; };
+		8F0A69E119388DC9009AC664 /* Dark_Green_Arrow_Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dark_Green_Arrow_Up.png; sourceTree = "<group>"; };
+		8F0A69E319389E9A009AC664 /* view-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "view-512.png"; sourceTree = "<group>"; };
 		8F6CAA0419338A810078EE65 /* AHKActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKActionSheet.h; sourceTree = "<group>"; };
 		8F6CAA0519338A810078EE65 /* AHKActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHKActionSheet.m; sourceTree = "<group>"; };
 		8F6CAA0619338A810078EE65 /* AHKActionSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKActionSheetViewController.h; sourceTree = "<group>"; };
@@ -577,7 +584,7 @@
 		FC71726619365CF30062B3E1 /* ZEPickClassTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPickClassTableViewCell.m; sourceTree = "<group>"; };
 		FC71726819366D110062B3E1 /* ZEOtherDeckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEOtherDeckTableViewCell.h; sourceTree = "<group>"; };
 		FC71726919366D110062B3E1 /* ZEOtherDeckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEOtherDeckTableViewCell.m; sourceTree = "<group>"; };
-		FCAB8D2819215A640072DC59 /* Hearthstone Builder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hearthstone Builder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCAB8D2819215A640072DC59 /* Hearthdeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hearthdeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAB8D2B19215A640072DC59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		FCAB8D2F19215A640072DC59 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -1049,6 +1056,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F0A69DD19387EDC009AC664 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				8F0A69DE19387EDD009AC664 /* UINavigationController+M13ProgressViewBar.h */,
+				8F0A69DF19387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
 		8F6CAA0319338A810078EE65 /* AHKActionSheet */ = {
 			isa = PBXGroup;
 			children = (
@@ -1131,7 +1147,7 @@
 		FCAB8D2919215A640072DC59 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FCAB8D2819215A640072DC59 /* Hearthstone Builder.app */,
+				FCAB8D2819215A640072DC59 /* Hearthdeck.app */,
 				FCAB8D4919215A640072DC59 /* Hearthstone BuilderTests.xctest */,
 			);
 			name = Products;
@@ -1246,6 +1262,8 @@
 		FCAB8D6019215AB30072DC59 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8F0A69E319389E9A009AC664 /* view-512.png */,
+				8F0A69E119388DC9009AC664 /* Dark_Green_Arrow_Up.png */,
 				FCE007001937A5AA00645355 /* bg0.jpg */,
 				FCE007021937AA7300645355 /* bg5.jpg */,
 				FCE007031937AA7300645355 /* bg4.jpg */,
@@ -1676,6 +1694,7 @@
 		FCAB965D1924158A0072DC59 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				8F0A69DD19387EDC009AC664 /* NavigationController */,
 				FC33F26B1937857F008FDB87 /* KenBurns */,
 				FC33F265193775CD008FDB87 /* iRate */,
 				8F6CAA311935CC3E0078EE65 /* Chartboost */,
@@ -1713,7 +1732,7 @@
 			);
 			name = "Hearthstone Builder";
 			productName = "Hearthstone Builder";
-			productReference = FCAB8D2819215A640072DC59 /* Hearthstone Builder.app */;
+			productReference = FCAB8D2819215A640072DC59 /* Hearthdeck.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FCAB8D4819215A640072DC59 /* Hearthstone BuilderTests */ = {
@@ -1821,6 +1840,7 @@
 				FCAB94FB19240F610072DC59 /* Argent Squire.jpg in Resources */,
 				FCAB95C419240F610072DC59 /* Mirror Image.jpg in Resources */,
 				FCAB957019240F610072DC59 /* Gladiator's Longbow.jpg in Resources */,
+				8F0A69E419389E9A009AC664 /* view-512.png in Resources */,
 				FCAB952D19240F610072DC59 /* Corruption.jpg in Resources */,
 				FCAB952819240F610072DC59 /* Commanding Shout.jpg in Resources */,
 				FCAB961819240F610072DC59 /* Soul of the Forest.jpg in Resources */,
@@ -1966,6 +1986,7 @@
 				FCAB964019240F610072DC59 /* Unbound Elemental.jpg in Resources */,
 				FCAB964219240F610072DC59 /* Upgrade!.jpg in Resources */,
 				8FA18BF3192A315F00FF3F71 /* card_choose_x2_bg.png in Resources */,
+				8F0A69E219388DC9009AC664 /* Dark_Green_Arrow_Up.png in Resources */,
 				FCAB94F319240F610072DC59 /* Arcane Intellect.jpg in Resources */,
 				FCAB94EC19240F610072DC59 /* Ancient of War.jpg in Resources */,
 				FCAB955919240F610072DC59 /* Far Sight.jpg in Resources */,
@@ -2254,6 +2275,7 @@
 				FCE006F31937960900645355 /* NSMutableArray+Shuffle.m in Sources */,
 				8FA18C0F192B50B800FF3F71 /* JBLineChartView.m in Sources */,
 				8FA18C0D192B50B800FF3F71 /* JBBarChartView.m in Sources */,
+				8F0A69E019387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m in Sources */,
 				8F6CAA0C19338A810078EE65 /* AHKActionSheet.m in Sources */,
 				FC33F26A193775CE008FDB87 /* iRate.m in Sources */,
 				8FA18C00192A3BB300FF3F71 /* ZEPickedTableDataSource.m in Sources */,
@@ -2407,7 +2429,7 @@
 				INFOPLIST_FILE = "Hearthstone Builder/Hearthstone Builder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Hearthstone Builder/Chartboost\"";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Hearthdeck;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2426,7 +2448,7 @@
 				INFOPLIST_FILE = "Hearthstone Builder/Hearthstone Builder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Hearthstone Builder/Chartboost\"";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Hearthdeck;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

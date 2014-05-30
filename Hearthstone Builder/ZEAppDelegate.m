@@ -9,6 +9,7 @@
 #import "ZEAppDelegate.h"
 #import "Chartboost.h"
 #import "iRate.h"
+#import "AHKActionSheet.h"
 
 @interface ZEAppDelegate () <ChartboostDelegate>
 
@@ -29,11 +30,12 @@
     
     UIFont *font = [ZEUtility myStandardFont];
     [[UILabel appearance] setFont:font];
-    NSDictionary *settings = @{
-                               NSFontAttributeName: font,
-                               };
+    NSDictionary *settings = @{NSFontAttributeName: font};
+    [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setDefaultTextAttributes:settings];
     [[UIBarButtonItem appearance] setTitleTextAttributes:settings forState:UIControlStateNormal];
-    
+    [[AHKActionSheet appearance] setButtonTextAttributes:settings];
+    NSDictionary *cancelButtonSettings = @{NSFontAttributeName: font, NSForegroundColorAttributeName: [UIColor redColor]};
+    [[AHKActionSheet appearance] setCancelButtonTextAttributes:cancelButtonSettings];
     return YES;
 }
 							

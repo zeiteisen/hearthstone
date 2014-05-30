@@ -9,7 +9,6 @@
 #import "ZEReadDescriptionViewController.h"
 
 @interface ZEReadDescriptionViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 
 @end
@@ -18,12 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.titleLabel.text = self.deckObject[@"title"];
     self.descriptionTextView.text = self.deckObject[@"description"];
-}
-
-- (IBAction)closeTouched:(id)sender {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

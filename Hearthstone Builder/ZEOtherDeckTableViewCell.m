@@ -14,21 +14,22 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        [self customize];
     }
     return self;
 }
 
-- (void)awakeFromNib
-{
-    // Initialization code
+- (void)awakeFromNib {
+    [self customize];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)customize {
+    self.deckNameLabel.font = [ZEUtility myStandardFont];
+    self.likesLabel.font = [ZEUtility myStandardFont];
+    self.dustLabel.textColor = [ZEUtility rareColor];
+    self.minionsLabel.textColor = [ZEUtility legendaryColor];
+    self.spellsLabel.textColor = [ZEUtility commonColor];
+    self.weaponsLabel.textColor = [ZEUtility epicColor];
 }
 
 @end

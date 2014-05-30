@@ -627,7 +627,7 @@
         [actionSheet addButtonWithTitle:NSLocalizedString(@"Read Description", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
             ZEReadDescriptionViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"ReadDescriptionViewController"];
             vc.deckObject = self.deckObject;
-            [self presentViewController:vc animated:YES completion:nil];
+            [self.navigationController pushViewController:vc animated:YES];
         }];
         
         [actionSheet show];

@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *minionsCount;
 @property (weak, nonatomic) IBOutlet UILabel *spellsCount;
 @property (weak, nonatomic) IBOutlet UILabel *weaponsCount;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @end
 
 @implementation ZEPublishTableViewController
@@ -38,16 +40,22 @@
     self.descriptionTextView.font = [ZEUtility myStandardFont];
     
     self.dustCount.text = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Dust: ", nil), [self.deck[@"dust"] stringValue]];
+    self.dustCount.textColor = [ZEUtility rareColor];
     self.minionsCount.text = [NSString stringWithFormat:@"%@ %@", [self.deck[@"minions"] stringValue], NSLocalizedString(@"Minions", nil)];
+    self.minionsCount.textColor = [ZEUtility legendaryColor];
     self.spellsCount.text = [NSString stringWithFormat:@"%@ %@", [self.deck[@"spells"] stringValue], NSLocalizedString(@"Spells", nil)];
+    self.spellsCount.textColor = [ZEUtility commonColor];
     self.weaponsCount.text = [NSString stringWithFormat:@"%@ %@", [self.deck[@"weapons"] stringValue], NSLocalizedString(@"Weapons", nil)];
+    self.weaponsCount.textColor = [ZEUtility epicColor];
     
     NSArray *deckCardNames = self.deck[@"deck"];
     if (deckCardNames.count < 30) {
         self.navigationItem.rightBarButtonItem.enabled = NO;
     }
     self.descriptionTextView.layer.borderColor = [UIColor grayColor].CGColor;
+    self.titleTextField.textColor = [ZEUtility rareColor];
     self.descriptionTextView.layer.borderWidth = 1.0;
+    self.descriptionTextView.textColor = [ZEUtility rareColor];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -84,6 +92,7 @@
     [deckObject setObject:self.deck[@"hero"] forKey:@"hero"];
     [deckObject setObject:self.deck[@"deck"] forKey:@"deck"];
     [deckObject setObject:self.deck[@"dust"] forKey:@"dust"];
+    [deckObject setObject:@1 forKey:@"views"];
     [deckObject setObject:self.deck[@"weapons"] forKey:@"weapons"];
     [deckObject setObject:self.deck[@"spells"] forKey:@"spells"];
     [deckObject setObject:self.deck[@"minions"] forKey:@"minions"];
@@ -93,9 +102,12 @@
         } else {
             [ZEUtility showAlertWithTitle:NSLocalizedString(@"Success", nil) message:NSLocalizedString(@"Upload succeeded", nil)];
             [self.deck setObject:deckObject.objectId forKey:@"objectId"];
+            NSArray *array = [self.navigationController viewControllers];
+            [self.navigationController popToViewController:[array objectAtIndex:1] animated:YES];
             [self saveDeck];
         }
     }];
+    [self saveDeck];
 }
 
 @end
