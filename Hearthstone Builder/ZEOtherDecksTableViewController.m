@@ -9,7 +9,7 @@
 #import "ZEOtherDecksTableViewController.h"
 #import "ZEViewController.h"
 #import "ZEOtherDeckTableViewCell.h"
-#import "UINavigationController+M13ProgressViewBar.h"
+#import "UINavigationController+Progress.h"
 #import "AHKActionSheet.h"
 #import <iAd/iAd.h>
 
@@ -64,9 +64,9 @@
 }
 
 - (void)loadDecksWithQuery:(PFQuery *)query {
-    [self showProgress];
+    [self.navigationController hb_showProgress];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        [self hideProgress];
+        [self.navigationController hb_hideProgress];
         if (error) {
             [ZEUtility showAlertWithTitle:NSLocalizedString(@"Error", nil) message:error.localizedDescription];
         } else {
@@ -74,15 +74,6 @@
             [self.tableView reloadData];
         }
     }];
-}
-
-- (void)showProgress {
-    [self.navigationController showProgress];
-    [self.navigationController setIndeterminate:YES];
-}
-
-- (void)hideProgress {
-    [self.navigationController finishProgress];
 }
 
 #pragma mark - Table view data source
@@ -147,9 +138,9 @@
     vc.hero = self.hero;
     vc.viewDeckMode = YES;
     vc.deckObject = self.dataSource[indexPath.row];
-    [self showProgress];
+    [self.navigationController hb_showProgress];
     [vc.deckObject fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        [self hideProgress];
+        [self.navigationController hb_hideProgress];
         if (error) {
             [ZEUtility showAlertWithTitle:NSLocalizedString(@"Error", nil) message:error.localizedDescription];
         } else {

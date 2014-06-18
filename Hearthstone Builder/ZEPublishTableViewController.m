@@ -7,6 +7,7 @@
 //
 
 #import "ZEPublishTableViewController.h"
+#import "UINavigationController+Progress.h"
 
 @interface ZEPublishTableViewController () <UITextFieldDelegate, UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
@@ -17,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *spellsCount;
 @property (weak, nonatomic) IBOutlet UILabel *weaponsCount;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *uploadButton;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @end
 
@@ -26,10 +28,13 @@
     [super viewDidLoad];
     NSArray *decks = [[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY];
     self.deck = [decks[self.selectedDeckNumber] mutableCopy];
-    if (self.deck[@"title"]) {
+    NSString *title = self.deck[@"title"];
+    NSString *hero = self.deck[@"hero"];
+    if (title.length != 0 && ![title isEqualToString:hero]) {
         self.titleTextField.text = self.deck[@"title"];
     } else {
-        self.titleTextField.text = self.deck[@"hero"];
+        self.titleTextField.placeholder = NSLocalizedString(@"Your fancy deck name", nil);
+        self.uploadButton.enabled = NO;
     }
     if (self.deck[@"description"]) {
         self.descriptionTextView.text = self.deck[@"description"];
@@ -56,10 +61,16 @@
     self.titleTextField.textColor = [ZEUtility rareColor];
     self.descriptionTextView.layer.borderWidth = 1.0;
     self.descriptionTextView.textColor = [ZEUtility rareColor];
+    
+    [self.titleTextField addTarget:self action:@selector(titleTextFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+    NSString *title = self.deck[@"title"];
+    if (title.length == 0) {
+        self.deck[@"title"] = self.deck[@"hero"];
+    }
     [self saveDeck];
 }
 
@@ -73,6 +84,21 @@
 - (void)textViewDidEndEditing:(UITextView *)textView {
     [self.deck setValue:textView.text forKey:@"description"];
     [textView resignFirstResponder];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (void)titleTextFieldDidChange:(UITextField *)sender {
+    if (sender.text.length > 0) {
+        self.uploadButton.enabled = YES;
+    } else {
+        self.uploadButton.enabled = NO;
+    }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
@@ -96,7 +122,11 @@
     [deckObject setObject:self.deck[@"weapons"] forKey:@"weapons"];
     [deckObject setObject:self.deck[@"spells"] forKey:@"spells"];
     [deckObject setObject:self.deck[@"minions"] forKey:@"minions"];
+    [self.navigationController hb_showProgress];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     [deckObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+        [self.navigationController hb_hideProgress];
         if (error) {
             [ZEUtility showAlertWithTitle:NSLocalizedString(@"Error", nil) message:error.localizedDescription];
         } else {

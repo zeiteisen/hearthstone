@@ -324,7 +324,7 @@
 - (void)updateDeckDataArrays {
     self.countedDeckData = [NSCountedSet setWithArray:self.deckData];
     self.deckDataWithoutDuplicates = [[self.countedDeckData allObjects] mutableCopy];
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"mana" ascending:YES];
     [self.deckDataWithoutDuplicates sortUsingDescriptors:@[sort]];
     self.pickedTableDataSource.countedDataSource = self.countedDeckData;
     self.pickedTableDataSource.deckDataWithoutDuplicates = self.deckDataWithoutDuplicates;

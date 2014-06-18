@@ -478,6 +478,7 @@
 		FCE0070E1937B52800645355 /* ZELegalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE0070D1937B52700645355 /* ZELegalViewController.m */; };
 		FCE0070F1937BC1A00645355 /* Belwe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA1019338FA30078EE65 /* Belwe.ttf */; };
 		FCEDD26719520396001758C0 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCEDD26619520396001758C0 /* iAd.framework */; };
+		FCEDD26A195211F1001758C0 /* UINavigationController+Progress.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEDD269195211F1001758C0 /* UINavigationController+Progress.m */; };
 		FCF361141931DDEC0044B85E /* ZEPublishTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF361131931DDEC0044B85E /* ZEPublishTableViewController.m */; };
 		FCF3611619322BEC0044B85E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3611519322BEC0044B85E /* Parse.framework */; };
 		FCF3611819322C0D0044B85E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3611719322C0D0044B85E /* AudioToolbox.framework */; };
@@ -597,7 +598,7 @@
 		FC71726619365CF30062B3E1 /* ZEPickClassTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPickClassTableViewCell.m; sourceTree = "<group>"; };
 		FC71726819366D110062B3E1 /* ZEOtherDeckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEOtherDeckTableViewCell.h; sourceTree = "<group>"; };
 		FC71726919366D110062B3E1 /* ZEOtherDeckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEOtherDeckTableViewCell.m; sourceTree = "<group>"; };
-		FCAB8D2819215A640072DC59 /* Hearthdeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hearthdeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCAB8D2819215A640072DC59 /* Decks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Decks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAB8D2B19215A640072DC59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		FCAB8D2F19215A640072DC59 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -1015,6 +1016,8 @@
 		FCE0070C1937B52700645355 /* ZELegalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZELegalViewController.h; sourceTree = "<group>"; };
 		FCE0070D1937B52700645355 /* ZELegalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZELegalViewController.m; sourceTree = "<group>"; };
 		FCEDD26619520396001758C0 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		FCEDD268195211F1001758C0 /* UINavigationController+Progress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Progress.h"; path = "../UINavigationController+Progress.h"; sourceTree = "<group>"; };
+		FCEDD269195211F1001758C0 /* UINavigationController+Progress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Progress.m"; path = "../UINavigationController+Progress.m"; sourceTree = "<group>"; };
 		FCF361121931DDEC0044B85E /* ZEPublishTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEPublishTableViewController.h; sourceTree = "<group>"; };
 		FCF361131931DDEC0044B85E /* ZEPublishTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPublishTableViewController.m; sourceTree = "<group>"; };
 		FCF3611519322BEC0044B85E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -1160,7 +1163,7 @@
 		FCAB8D2919215A640072DC59 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FCAB8D2819215A640072DC59 /* Hearthdeck.app */,
+				FCAB8D2819215A640072DC59 /* Decks.app */,
 				FCAB8D4919215A640072DC59 /* Hearthstone BuilderTests.xctest */,
 			);
 			name = Products;
@@ -1207,6 +1210,8 @@
 				FC71726619365CF30062B3E1 /* ZEPickClassTableViewCell.m */,
 				FCE006F11937960900645355 /* NSMutableArray+Shuffle.h */,
 				FCE006F21937960900645355 /* NSMutableArray+Shuffle.m */,
+				FCEDD268195211F1001758C0 /* UINavigationController+Progress.h */,
+				FCEDD269195211F1001758C0 /* UINavigationController+Progress.m */,
 				FC71726819366D110062B3E1 /* ZEOtherDeckTableViewCell.h */,
 				FC71726919366D110062B3E1 /* ZEOtherDeckTableViewCell.m */,
 				FC717262193659F50062B3E1 /* ZEMyDecksTableViewCell.h */,
@@ -1749,7 +1754,7 @@
 			);
 			name = "Hearthstone Builder";
 			productName = "Hearthstone Builder";
-			productReference = FCAB8D2819215A640072DC59 /* Hearthdeck.app */;
+			productReference = FCAB8D2819215A640072DC59 /* Decks.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FCAB8D4819215A640072DC59 /* Hearthstone BuilderTests */ = {
@@ -2305,6 +2310,7 @@
 				FC717264193659F50062B3E1 /* ZEMyDecksTableViewCell.m in Sources */,
 				FCAB90601922A93A0072DC59 /* ZECardTableViewCell.m in Sources */,
 				FCF3612B193236D30044B85E /* ZEOtherDecksTableViewController.m in Sources */,
+				FCEDD26A195211F1001758C0 /* UINavigationController+Progress.m in Sources */,
 				FCE006F31937960900645355 /* NSMutableArray+Shuffle.m in Sources */,
 				8FA18C0F192B50B800FF3F71 /* JBLineChartView.m in Sources */,
 				8FA18C0D192B50B800FF3F71 /* JBBarChartView.m in Sources */,
@@ -2466,7 +2472,7 @@
 				INFOPLIST_FILE = "Hearthstone Builder/Hearthstone Builder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "";
-				PRODUCT_NAME = Hearthdeck;
+				PRODUCT_NAME = Decks;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2486,7 +2492,7 @@
 				INFOPLIST_FILE = "Hearthstone Builder/Hearthstone Builder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "";
-				PRODUCT_NAME = Hearthdeck;
+				PRODUCT_NAME = Decks;
 				PROVISIONING_PROFILE = "4240F2CE-8A57-457C-A95D-8C052737A143";
 				WRAPPER_EXTENSION = app;
 			};
