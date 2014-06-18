@@ -101,6 +101,7 @@
     self.chartView.dataSource = self;
     
     self.searchBar.delegate = self;
+    self.searchBar.placeholder = NSLocalizedString(@"eg. taunt, onyxia", nil);
     
     [self scrollToTop];
     
@@ -404,12 +405,49 @@
 - (void)updatePublishButton {
     if (self.deckObject) {
         self.navigationItem.rightBarButtonItem.title = NSLocalizedString(@"More", nil);
-        self.navigationItem.rightBarButtonItem.enabled = YES;
+        if ([self shouldShowMoreButton]) {
+            self.navigationItem.rightBarButtonItem.enabled = YES;
+        } else {
+            self.navigationItem.rightBarButtonItem.enabled = NO;
+        }
     } else if (self.selectedDeckNumber == -1) {
         self.navigationItem.rightBarButtonItem.enabled = NO;
     } else {
         self.navigationItem.rightBarButtonItem.enabled = YES;
     }
+}
+
+- (BOOL)liked {
+    return [self myLikes:[self persistentLikes] containsObjectId:self.deckObject.objectId];
+}
+
+- (BOOL)hasDescription {
+    NSString *description = self.deckObject[@"description"];
+    if (description.length != 0) {
+        return YES;
+    } else {
+        return NO;
+    }
+//    return self.deckObject[@"description"] != nil;
+}
+
+- (BOOL)shouldShowMoreButton {
+    BOOL shouldShow = NO;
+    if (![self liked]) {
+        shouldShow = YES;
+    }
+    if ([self hasDescription]) {
+        shouldShow = YES;
+    }
+    return shouldShow;
+}
+
+- (NSMutableArray *)persistentLikes {
+    NSMutableArray *myLikes = [[[NSUserDefaults standardUserDefaults] objectForKey:MyLikesUserDefaultsKey] mutableCopy];
+    if (myLikes == nil) {
+        myLikes = [NSMutableArray array];
+    }
+    return myLikes;
 }
 
 #pragma mark - UITableViewDataSource
@@ -617,31 +655,31 @@
 - (IBAction)publishTouched:(id)sender {
     if (self.deckObject) {
         AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:nil];
-        NSMutableArray *myLikes = [[[NSUserDefaults standardUserDefaults] objectForKey:MyLikesUserDefaultsKey] mutableCopy];
-        if (myLikes == nil) {
-            myLikes = [NSMutableArray array];
-        }
-        if (![self myLikes:myLikes containsObjectId:self.deckObject.objectId]) {
+        if (![self liked]) {
             [actionSheet addButtonWithTitle:NSLocalizedString(@"Like and save", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
                 [self.deckObject incrementKey:@"likes"];
                 [self.deckObject saveInBackground];
                 
                 NSData *deckData = [NSKeyedArchiver archivedDataWithRootObject:self.deckObject];
+                NSMutableArray *myLikes = [self persistentLikes];
                 [myLikes addObject:deckData];
                 [[NSUserDefaults standardUserDefaults] setObject:myLikes forKey:MyLikesUserDefaultsKey];
                 [[NSUserDefaults standardUserDefaults] synchronize];
-                [[iRate sharedInstance] promptIfNetworkAvailable];
+                if ([[iRate sharedInstance] shouldPromptForRating]) {
+                    [[iRate sharedInstance] promptIfNetworkAvailable];
+                }
+                [self updatePublishButton];
             }];
         }
-        [actionSheet addButtonWithTitle:NSLocalizedString(@"Read Description", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
-            ZEReadDescriptionViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"ReadDescriptionViewController"];
-            vc.deckObject = self.deckObject;
-            [self.navigationController pushViewController:vc animated:YES];
-        }];
-        
+        if ([self hasDescription]) {
+            [actionSheet addButtonWithTitle:NSLocalizedString(@"Read Description", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+                ZEReadDescriptionViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"ReadDescriptionViewController"];
+                vc.deckObject = self.deckObject;
+                [self.navigationController pushViewController:vc animated:YES];
+                [self updatePublishButton];
+            }];
+        }
         [actionSheet show];
-        
-        [self updatePublishButton];
     } else {
         ZEPublishTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"PublishTableViewController"];
         vc.selectedDeckNumber = self.selectedDeckNumber;

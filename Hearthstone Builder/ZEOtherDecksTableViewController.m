@@ -8,10 +8,10 @@
 
 #import "ZEOtherDecksTableViewController.h"
 #import "ZEViewController.h"
-#import "Chartboost.h"
 #import "ZEOtherDeckTableViewCell.h"
 #import "UINavigationController+M13ProgressViewBar.h"
 #import "AHKActionSheet.h"
+#import <iAd/iAd.h>
 
 @interface ZEOtherDecksTableViewController ()
 @property (nonatomic, strong) NSMutableArray *dataSource;
@@ -142,10 +142,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([[Chartboost sharedChartboost] hasCachedInterstitial:CBLocationLevelStart]) {
-        [[Chartboost sharedChartboost] showInterstitial:CBLocationLevelStart];
-    }
     ZEViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"CreateViewController"];
+    vc.interstitialPresentationPolicy = ADInterstitialPresentationPolicyAutomatic;
     vc.hero = self.hero;
     vc.viewDeckMode = YES;
     vc.deckObject = self.dataSource[indexPath.row];

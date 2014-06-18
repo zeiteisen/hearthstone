@@ -24,8 +24,6 @@
 		8F6CAA1919347DE60078EE65 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6CAA1819347DE60078EE65 /* AVFoundation.framework */; };
 		8F6CAA1B19347DED0078EE65 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6CAA1A19347DED0078EE65 /* CoreData.framework */; };
 		8F6CAA2719348C090078EE65 /* ZEReadDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA2619348C090078EE65 /* ZEReadDescriptionViewController.m */; };
-		8F6CAA371935CC3E0078EE65 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA331935CC3E0078EE65 /* CHANGELOG.md */; };
-		8F6CAA381935CC3E0078EE65 /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6CAA351935CC3E0078EE65 /* libChartboost.a */; };
 		8F6CAA3C1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA3B1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m */; };
 		8F6CAA3E1935D1280078EE65 /* mana.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA3D1935D1280078EE65 /* mana.png */; };
 		8F6CAA4419360E620078EE65 /* deletered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA4319360E620078EE65 /* deletered.png */; };
@@ -479,6 +477,7 @@
 		FCE0070B1937AA7300645355 /* bg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCE007061937AA7300645355 /* bg1.jpg */; };
 		FCE0070E1937B52800645355 /* ZELegalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE0070D1937B52700645355 /* ZELegalViewController.m */; };
 		FCE0070F1937BC1A00645355 /* Belwe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA1019338FA30078EE65 /* Belwe.ttf */; };
+		FCEDD26719520396001758C0 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCEDD26619520396001758C0 /* iAd.framework */; };
 		FCF361141931DDEC0044B85E /* ZEPublishTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF361131931DDEC0044B85E /* ZEPublishTableViewController.m */; };
 		FCF3611619322BEC0044B85E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3611519322BEC0044B85E /* Parse.framework */; };
 		FCF3611819322C0D0044B85E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3611719322C0D0044B85E /* AudioToolbox.framework */; };
@@ -535,11 +534,6 @@
 		8F6CAA1A19347DED0078EE65 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8F6CAA2519348C090078EE65 /* ZEReadDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEReadDescriptionViewController.h; sourceTree = "<group>"; };
 		8F6CAA2619348C090078EE65 /* ZEReadDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEReadDescriptionViewController.m; sourceTree = "<group>"; };
-		8F6CAA321935CC3E0078EE65 /* CBMoreAppsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMoreAppsButton.h; sourceTree = "<group>"; };
-		8F6CAA331935CC3E0078EE65 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
-		8F6CAA341935CC3E0078EE65 /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
-		8F6CAA351935CC3E0078EE65 /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
-		8F6CAA361935CC3E0078EE65 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		8F6CAA3A1935CEDF0078EE65 /* ZELeftFilterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZELeftFilterTableViewCell.h; sourceTree = "<group>"; };
 		8F6CAA3B1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZELeftFilterTableViewCell.m; sourceTree = "<group>"; };
 		8F6CAA3D1935D1280078EE65 /* mana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana.png; sourceTree = "<group>"; };
@@ -1020,6 +1014,7 @@
 		FCE007061937AA7300645355 /* bg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1.jpg; sourceTree = "<group>"; };
 		FCE0070C1937B52700645355 /* ZELegalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZELegalViewController.h; sourceTree = "<group>"; };
 		FCE0070D1937B52700645355 /* ZELegalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZELegalViewController.m; sourceTree = "<group>"; };
+		FCEDD26619520396001758C0 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		FCF361121931DDEC0044B85E /* ZEPublishTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEPublishTableViewController.h; sourceTree = "<group>"; };
 		FCF361131931DDEC0044B85E /* ZEPublishTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPublishTableViewController.m; sourceTree = "<group>"; };
 		FCF3611519322BEC0044B85E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -1041,6 +1036,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCEDD26719520396001758C0 /* iAd.framework in Frameworks */,
 				8F6CAA1B19347DED0078EE65 /* CoreData.framework in Frameworks */,
 				8F6CAA1919347DE60078EE65 /* AVFoundation.framework in Frameworks */,
 				8F995B621938C9D8009EB207 /* Crashlytics.framework in Frameworks */,
@@ -1058,7 +1054,6 @@
 				FCAB8D2E19215A640072DC59 /* CoreGraphics.framework in Frameworks */,
 				FCAB8D3019215A640072DC59 /* UIKit.framework in Frameworks */,
 				FCF3611619322BEC0044B85E /* Parse.framework in Frameworks */,
-				8F6CAA381935CC3E0078EE65 /* libChartboost.a in Frameworks */,
 				FCAB8D2C19215A640072DC59 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1119,18 +1114,6 @@
 			path = AHKActionSheet;
 			sourceTree = "<group>";
 		};
-		8F6CAA311935CC3E0078EE65 /* Chartboost */ = {
-			isa = PBXGroup;
-			children = (
-				8F6CAA321935CC3E0078EE65 /* CBMoreAppsButton.h */,
-				8F6CAA331935CC3E0078EE65 /* CHANGELOG.md */,
-				8F6CAA341935CC3E0078EE65 /* Chartboost.h */,
-				8F6CAA351935CC3E0078EE65 /* libChartboost.a */,
-				8F6CAA361935CC3E0078EE65 /* README.md */,
-			);
-			path = Chartboost;
-			sourceTree = "<group>";
-		};
 		8FA18C06192B50B800FF3F71 /* JBChartView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1186,6 +1169,7 @@
 		FCAB8D2A19215A640072DC59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCEDD26619520396001758C0 /* iAd.framework */,
 				8F995B611938C9D8009EB207 /* Crashlytics.framework */,
 				8F6CAA1A19347DED0078EE65 /* CoreData.framework */,
 				8F6CAA1819347DE60078EE65 /* AVFoundation.framework */,
@@ -1730,7 +1714,6 @@
 				8F0A69E51938B09F009AC664 /* Parse-NSCoding */,
 				8F0A69DD19387EDC009AC664 /* NavigationController */,
 				FC33F265193775CD008FDB87 /* iRate */,
-				8F6CAA311935CC3E0078EE65 /* Chartboost */,
 				8F6CAA0319338A810078EE65 /* AHKActionSheet */,
 				8FB6EAC3192CE57E00973F8F /* StringScore */,
 				8FA18C06192B50B800FF3F71 /* JBChartView */,
@@ -1921,7 +1904,6 @@
 				FCAB955619240F610072DC59 /* Faceless Manipulator.jpg in Resources */,
 				FCAB956519240F610072DC59 /* Force of Nature.jpg in Resources */,
 				FCAB94F019240F610072DC59 /* Arathi Weaponsmith.jpg in Resources */,
-				8F6CAA371935CC3E0078EE65 /* CHANGELOG.md in Resources */,
 				FCAB950819240F610072DC59 /* Big Game Hunter.jpg in Resources */,
 				FCAB95F019240F610072DC59 /* Reckless Rocketeer.jpg in Resources */,
 				FCAB953919240F610072DC59 /* Defias Ringleader.jpg in Resources */,
@@ -2483,7 +2465,7 @@
 				GCC_PREFIX_HEADER = "Hearthstone Builder/Hearthstone Builder-Prefix.pch";
 				INFOPLIST_FILE = "Hearthstone Builder/Hearthstone Builder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Hearthstone Builder/Chartboost\"";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = Hearthdeck;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2503,7 +2485,7 @@
 				GCC_PREFIX_HEADER = "Hearthstone Builder/Hearthstone Builder-Prefix.pch";
 				INFOPLIST_FILE = "Hearthstone Builder/Hearthstone Builder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Hearthstone Builder/Chartboost\"";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = Hearthdeck;
 				PROVISIONING_PROFILE = "4240F2CE-8A57-457C-A95D-8C052737A143";
 				WRAPPER_EXTENSION = app;
