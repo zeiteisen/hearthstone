@@ -113,8 +113,7 @@
     if (self.deckObject) {
         cardsToLoad = self.deckObject[@"deck"];
     } else if (self.selectedDeckNumber != -1) {
-        NSArray *userDecks = [[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY];
-        NSDictionary *deckToLoad = userDecks[self.selectedDeckNumber];
+        NSDictionary *deckToLoad = [self getUserDeck];
         cardsToLoad = deckToLoad[@"deck"];
     }
     if (cardsToLoad) {
@@ -138,6 +137,11 @@
         [self setViewDeckMode:NO];
     }
     [self updatePublishButton];
+}
+
+- (NSDictionary *)getUserDeck {
+    NSArray *userDecks = [[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY];
+    return userDecks[self.selectedDeckNumber];
 }
 
 - (NSInteger)calcDustCost {
@@ -414,6 +418,12 @@
         self.navigationItem.rightBarButtonItem.enabled = NO;
     } else {
         self.navigationItem.rightBarButtonItem.enabled = YES;
+        NSDictionary *userDeck = [self getUserDeck];
+        if (userDeck[@"objectId"]) {
+            self.navigationItem.rightBarButtonItem.title = NSLocalizedString(@"Update", nil);
+        } else {
+            self.navigationItem.rightBarButtonItem.title = NSLocalizedString(@"Publish", nil);
+        }
     }
 }
 

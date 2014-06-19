@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FCAB8D2719215A640072DC59"
-               BuildableName = "Hearthdeck.app"
+               BuildableName = "Decks.app"
                BlueprintName = "Hearthstone Builder"
                ReferencedContainer = "container:Hearthstone Builder.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FCAB8D2719215A640072DC59"
-            BuildableName = "Hearthdeck.app"
+            BuildableName = "Decks.app"
             BlueprintName = "Hearthstone Builder"
             ReferencedContainer = "container:Hearthstone Builder.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FCAB8D2719215A640072DC59"
-            BuildableName = "Hearthdeck.app"
+            BuildableName = "Decks.app"
             BlueprintName = "Hearthstone Builder"
             ReferencedContainer = "container:Hearthstone Builder.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FCAB8D2719215A640072DC59"
-            BuildableName = "Hearthdeck.app"
+            BuildableName = "Decks.app"
             BlueprintName = "Hearthstone Builder"
             ReferencedContainer = "container:Hearthstone Builder.xcodeproj">
          </BuildableReference>

@@ -69,6 +69,9 @@
 		FC717264193659F50062B3E1 /* ZEMyDecksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC717263193659F50062B3E1 /* ZEMyDecksTableViewCell.m */; };
 		FC71726719365CF30062B3E1 /* ZEPickClassTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC71726619365CF30062B3E1 /* ZEPickClassTableViewCell.m */; };
 		FC71726A19366D110062B3E1 /* ZEOtherDeckTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC71726919366D110062B3E1 /* ZEOtherDeckTableViewCell.m */; };
+		FC90BA301953049C00AD5262 /* ZEPublishTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC90BA2F1953049C00AD5262 /* ZEPublishTitleTableViewCell.m */; };
+		FC90BA33195304AB00AD5262 /* ZEPublishCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC90BA32195304AB00AD5262 /* ZEPublishCardTableViewCell.m */; };
+		FC90BA3D195358BE00AD5262 /* SZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC90BA3C195358BE00AD5262 /* SZTextView.m */; };
 		FCAB8D2C19215A640072DC59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2B19215A640072DC59 /* Foundation.framework */; };
 		FCAB8D2E19215A640072DC59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */; };
 		FCAB8D3019215A640072DC59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2F19215A640072DC59 /* UIKit.framework */; };
@@ -598,6 +601,13 @@
 		FC71726619365CF30062B3E1 /* ZEPickClassTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPickClassTableViewCell.m; sourceTree = "<group>"; };
 		FC71726819366D110062B3E1 /* ZEOtherDeckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEOtherDeckTableViewCell.h; sourceTree = "<group>"; };
 		FC71726919366D110062B3E1 /* ZEOtherDeckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEOtherDeckTableViewCell.m; sourceTree = "<group>"; };
+		FC90BA2E1953049C00AD5262 /* ZEPublishTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEPublishTitleTableViewCell.h; sourceTree = "<group>"; };
+		FC90BA2F1953049C00AD5262 /* ZEPublishTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPublishTitleTableViewCell.m; sourceTree = "<group>"; };
+		FC90BA31195304AB00AD5262 /* ZEPublishCardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEPublishCardTableViewCell.h; sourceTree = "<group>"; };
+		FC90BA32195304AB00AD5262 /* ZEPublishCardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPublishCardTableViewCell.m; sourceTree = "<group>"; };
+		FC90BA35195346B200AD5262 /* ZEUpdateCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZEUpdateCellProtocol.h; sourceTree = "<group>"; };
+		FC90BA3B195358BE00AD5262 /* SZTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTextView.h; sourceTree = "<group>"; };
+		FC90BA3C195358BE00AD5262 /* SZTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTextView.m; sourceTree = "<group>"; };
 		FCAB8D2819215A640072DC59 /* Decks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Decks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAB8D2B19215A640072DC59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1150,6 +1160,39 @@
 			path = iRate;
 			sourceTree = "<group>";
 		};
+		FC90BA341953051F00AD5262 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FC71726819366D110062B3E1 /* ZEOtherDeckTableViewCell.h */,
+				FC71726919366D110062B3E1 /* ZEOtherDeckTableViewCell.m */,
+				FC717262193659F50062B3E1 /* ZEMyDecksTableViewCell.h */,
+				FC717263193659F50062B3E1 /* ZEMyDecksTableViewCell.m */,
+				FC71726519365CF30062B3E1 /* ZEPickClassTableViewCell.h */,
+				FC71726619365CF30062B3E1 /* ZEPickClassTableViewCell.m */,
+				FCAB905E1922A93A0072DC59 /* ZECardTableViewCell.h */,
+				FCAB905F1922A93A0072DC59 /* ZECardTableViewCell.m */,
+				8FA18C03192B3DC400FF3F71 /* ZEPickedTableViewCell.h */,
+				8FA18C04192B3DC400FF3F71 /* ZEPickedTableViewCell.m */,
+				8F6CAA3A1935CEDF0078EE65 /* ZELeftFilterTableViewCell.h */,
+				8F6CAA3B1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m */,
+				FC90BA2E1953049C00AD5262 /* ZEPublishTitleTableViewCell.h */,
+				FC90BA2F1953049C00AD5262 /* ZEPublishTitleTableViewCell.m */,
+				FC90BA31195304AB00AD5262 /* ZEPublishCardTableViewCell.h */,
+				FC90BA32195304AB00AD5262 /* ZEPublishCardTableViewCell.m */,
+				FC90BA35195346B200AD5262 /* ZEUpdateCellProtocol.h */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		FC90BA3A195358BE00AD5262 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FC90BA3B195358BE00AD5262 /* SZTextView.h */,
+				FC90BA3C195358BE00AD5262 /* SZTextView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		FCAB8D1F19215A640072DC59 = {
 			isa = PBXGroup;
 			children = (
@@ -1199,23 +1242,18 @@
 		FCAB8D3119215A640072DC59 /* Hearthstone Builder */ = {
 			isa = PBXGroup;
 			children = (
+				FC90BA341953051F00AD5262 /* TableViewCells */,
 				FCAB965D1924158A0072DC59 /* Vendor */,
 				FCAB8D6019215AB30072DC59 /* Resources */,
+				FCAB8D3D19215A640072DC59 /* Main.storyboard */,
 				FCAB8D3A19215A640072DC59 /* ZEAppDelegate.h */,
 				FCAB8D3B19215A640072DC59 /* ZEAppDelegate.m */,
-				FCAB8D3D19215A640072DC59 /* Main.storyboard */,
 				FCE0070C1937B52700645355 /* ZELegalViewController.h */,
 				FCE0070D1937B52700645355 /* ZELegalViewController.m */,
-				FC71726519365CF30062B3E1 /* ZEPickClassTableViewCell.h */,
-				FC71726619365CF30062B3E1 /* ZEPickClassTableViewCell.m */,
 				FCE006F11937960900645355 /* NSMutableArray+Shuffle.h */,
 				FCE006F21937960900645355 /* NSMutableArray+Shuffle.m */,
 				FCEDD268195211F1001758C0 /* UINavigationController+Progress.h */,
 				FCEDD269195211F1001758C0 /* UINavigationController+Progress.m */,
-				FC71726819366D110062B3E1 /* ZEOtherDeckTableViewCell.h */,
-				FC71726919366D110062B3E1 /* ZEOtherDeckTableViewCell.m */,
-				FC717262193659F50062B3E1 /* ZEMyDecksTableViewCell.h */,
-				FC717263193659F50062B3E1 /* ZEMyDecksTableViewCell.m */,
 				FCF36129193236D30044B85E /* ZEOtherDecksTableViewController.h */,
 				FCF3612A193236D30044B85E /* ZEOtherDecksTableViewController.m */,
 				FCF361121931DDEC0044B85E /* ZEPublishTableViewController.h */,
@@ -1228,10 +1266,6 @@
 				8FA18C14192B62EE00FF3F71 /* ZEUtility.m */,
 				8FA18C10192B5EA500FF3F71 /* ZEPickClassViewController.h */,
 				8FA18C11192B5EA500FF3F71 /* ZEPickClassViewController.m */,
-				FCAB905E1922A93A0072DC59 /* ZECardTableViewCell.h */,
-				FCAB905F1922A93A0072DC59 /* ZECardTableViewCell.m */,
-				8FA18C03192B3DC400FF3F71 /* ZEPickedTableViewCell.h */,
-				8FA18C04192B3DC400FF3F71 /* ZEPickedTableViewCell.m */,
 				FCAB8D4019215A640072DC59 /* ZEViewController.h */,
 				FCAB8D4119215A640072DC59 /* ZEViewController.m */,
 				8FA18BF8192A32B700FF3F71 /* ZEDataManager.h */,
@@ -1242,8 +1276,6 @@
 				8FA18BFF192A3BB300FF3F71 /* ZEPickedTableDataSource.m */,
 				8F6CAA2519348C090078EE65 /* ZEReadDescriptionViewController.h */,
 				8F6CAA2619348C090078EE65 /* ZEReadDescriptionViewController.m */,
-				8F6CAA3A1935CEDF0078EE65 /* ZELeftFilterTableViewCell.h */,
-				8F6CAA3B1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m */,
 				8F995B631938CEE2009EB207 /* ZEWebViewController.h */,
 				8F995B641938CEE2009EB207 /* ZEWebViewController.m */,
 				FCAB8D4319215A640072DC59 /* Images.xcassets */,
@@ -1716,6 +1748,7 @@
 		FCAB965D1924158A0072DC59 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FC90BA3A195358BE00AD5262 /* Classes */,
 				8F0A69E51938B09F009AC664 /* Parse-NSCoding */,
 				8F0A69DD19387EDC009AC664 /* NavigationController */,
 				FC33F265193775CD008FDB87 /* iRate */,
@@ -1785,6 +1818,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = zeiteisens;
 				TargetAttributes = {
+					FCAB8D2719215A640072DC59 = {
+						DevelopmentTeam = 4J9U9M79Y8;
+					};
 					FCAB8D4819215A640072DC59 = {
 						TestTargetID = FCAB8D2719215A640072DC59;
 					};
@@ -2303,6 +2339,7 @@
 				FC409C46193116CE0086215F /* ZEMyDecksViewController.m in Sources */,
 				FC71726719365CF30062B3E1 /* ZEPickClassTableViewCell.m in Sources */,
 				8F0A69FB1938B09F009AC664 /* PFObject+NSCoding.m in Sources */,
+				FC90BA301953049C00AD5262 /* ZEPublishTitleTableViewCell.m in Sources */,
 				8F6CAA0E19338A810078EE65 /* UIImage+AHKAdditions.m in Sources */,
 				FCF361141931DDEC0044B85E /* ZEPublishTableViewController.m in Sources */,
 				8FA18C12192B5EA500FF3F71 /* ZEPickClassViewController.m in Sources */,
@@ -2331,6 +2368,8 @@
 				8FA18BFA192A32B700FF3F71 /* ZEDataManager.m in Sources */,
 				FC71726A19366D110062B3E1 /* ZEOtherDeckTableViewCell.m in Sources */,
 				FC409C431931153C0086215F /* ZEStartViewController.m in Sources */,
+				FC90BA3D195358BE00AD5262 /* SZTextView.m in Sources */,
+				FC90BA33195304AB00AD5262 /* ZEPublishCardTableViewCell.m in Sources */,
 				8FA18BFD192A3B8C00FF3F71 /* ZEFilterTableDataSource.m in Sources */,
 				FCAB8D3819215A640072DC59 /* main.m in Sources */,
 				8F6CAA3C1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m in Sources */,
@@ -2463,6 +2502,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hanno Bruns (DSV2Z26HZM)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2473,6 +2514,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = Decks;
+				PROVISIONING_PROFILE = "C0650A81-EB61-4561-86B0-E0BD8DC46A94";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2482,6 +2524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hanno Bruns (4J9U9M79Y8)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
