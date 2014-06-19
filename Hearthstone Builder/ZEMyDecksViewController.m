@@ -52,6 +52,10 @@
 
 #pragma mark - UITableViewDelgate
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44.;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.dataSource.count;
 }
