@@ -12,7 +12,7 @@
 #import "ZEPublishCardTableViewCell.h"
 #import "ZEPublishTextTableViewCell.h"
 
-@interface ZEPublishTableViewController () <UITextFieldDelegate, ZEPublishCardTableViewCellDelegate, ZEPublishTextTableViewCellDelegate>
+@interface ZEPublishTableViewController () <UITextFieldDelegate, ZEPublishCardTableViewCellDelegate, ZEPublishTextTableViewCellDelegate, UIAlertViewDelegate>
 @property (nonatomic, strong) NSMutableDictionary *deck; // for persistent saving
 @property (nonatomic, strong) NSMutableArray *dataSource; // for the tableview
 @end
@@ -137,6 +137,16 @@
         if (deckCardNames.count < 30) {
             self.navigationItem.rightBarButtonItem.enabled = NO;
         }
+    }
+}
+
+- (BOOL)remoteNotificationEnabled {
+    if (SYSTEM_VERSION_LESS_THAN(@"8.0")) {
+        UIRemoteNotificationType types = [[UIApplication sharedApplication] enabledRemoteNotificationTypes];
+        return types != UIRemoteNotificationTypeNone;
+    } else {
+        UIUserNotificationSettings *notificationSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
+        return notificationSettings.types != UIUserNotificationTypeNone;
     }
 }
 
@@ -288,6 +298,7 @@
     [deckObject setObject:self.deck[@"weapons"] forKey:@"weapons"];
     [deckObject setObject:self.deck[@"spells"] forKey:@"spells"];
     [deckObject setObject:self.deck[@"minions"] forKey:@"minions"];
+    [deckObject setObject:[PFInstallation currentInstallation].installationId forKey:@"installation"];
     NSMutableArray *cardDescriptionsWithContent = [NSMutableArray array];
     NSArray *cardDescriptionData = self.deck[@"cardDescriptions"];
     for (NSDictionary *cardDescription in cardDescriptionData) {
@@ -305,14 +316,37 @@
         if (error) {
             [ZEUtility showAlertWithTitle:NSLocalizedString(@"Error", nil) message:error.localizedDescription];
         } else {
-            [ZEUtility showAlertWithTitle:NSLocalizedString(@"Success", nil) message:NSLocalizedString(@"Upload succeeded", nil)];
+            if ([self remoteNotificationEnabled]) {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Success", nil) message:NSLocalizedString(@"Upload succeeded", nil) delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+            } else {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Success", nil) message:NSLocalizedString(@"Upload succeeded", nil) delegate:self cancelButtonTitle:@"OK" otherButtonTitles:NSLocalizedString(@"Notifiy me if someone likes my deck", nil), nil];
+                [alert show];
+            }
             [self.deck setObject:deckObject.objectId forKey:@"objectId"];
-            NSArray *array = [self.navigationController viewControllers];
-            [self.navigationController popToViewController:[array objectAtIndex:1] animated:YES];
-            [self saveDeck];
         }
     }];
     [self saveDeck];
+}
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self saveDeck];
+    if (buttonIndex == 1) {
+        if (SYSTEM_VERSION_LESS_THAN(@"8.0")) {
+            [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+             UIRemoteNotificationTypeBadge |
+             UIRemoteNotificationTypeAlert |
+             UIRemoteNotificationTypeSound];
+        } else {
+            UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+            UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+            [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
+        }
+    }
+    NSArray *array = [self.navigationController viewControllers];
+    [self.navigationController popToViewController:[array objectAtIndex:1] animated:YES];
 }
 
 @end

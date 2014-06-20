@@ -681,6 +681,19 @@
                     [[iRate sharedInstance] promptIfNetworkAvailable];
                 }
                 [self updatePublishButton];
+                NSString *installationId = self.deckObject[@"installation"];
+                if (installationId.length != 0) {
+                    PFQuery *query = [PFInstallation query];
+                    [query whereKey:@"installationId" equalTo:installationId];
+                    PFPush *push = [PFPush new];
+                    [push setQuery:query];
+                    [push setMessage:[NSString stringWithFormat:@"Someone liked: %@", self.deckObject[@"title"]]];
+                    [push sendPushInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                        if (error) {
+                            NSLog(@"push error %@", error);
+                        }
+                    }];
+                }
             }];
         }
         if ([self hasDescription]) {
@@ -688,10 +701,6 @@
                 ZEPublishTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"PublishTableViewController"];
                 vc.deckObject = self.deckObject;
                 [self.navigationController pushViewController:vc animated:YES];
-//                
-//                ZEReadDescriptionViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"ReadDescriptionViewController"];
-//                vc.deckObject = self.deckObject;
-//                [self.navigationController pushViewController:vc animated:YES];
                 [self updatePublishButton];
             }];
         }
