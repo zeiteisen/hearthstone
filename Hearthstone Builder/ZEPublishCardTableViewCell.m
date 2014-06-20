@@ -15,10 +15,24 @@
 
 @implementation ZEPublishCardTableViewCell
 
+- (void)editingMode:(BOOL)editingMode {
+    if (editingMode) {
+        self.descriptionTextView.layer.borderColor = [UIColor colorWithWhite:0 alpha:.2].CGColor;
+        self.descriptionTextView.layer.borderWidth = 0.5;
+        self.descriptionTextView.layer.cornerRadius = 10;
+        self.descriptionTextView.userInteractionEnabled = YES;
+    } else {
+        self.descriptionTextView.layer.borderColor = [UIColor whiteColor].CGColor;
+        self.descriptionTextView.layer.borderWidth = 0;
+        self.descriptionTextView.layer.cornerRadius = 0;
+        self.descriptionTextView.userInteractionEnabled = NO;
+    }
+}
+
 - (void)updateWithDict:(NSDictionary *)dict {
     NSString *imageName = dict[@"name"];
     NSString *description = dict[@"description"];
-    self.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", imageName]];
+    self.cardImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", imageName]];
     if (description.length == 0) {
         self.descriptionTextView.text = @"";
         self.descriptionTextView.placeholder = [self getFlavourTextFromCardName:imageName];

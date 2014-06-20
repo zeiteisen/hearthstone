@@ -433,12 +433,15 @@
 
 - (BOOL)hasDescription {
     NSString *description = self.deckObject[@"description"];
+    NSArray *cardDescriptions = self.deckObject[@"cardDescriptions"];
+    BOOL hasDescriptions = NO;
     if (description.length != 0) {
-        return YES;
-    } else {
-        return NO;
+        hasDescriptions = YES;
     }
-//    return self.deckObject[@"description"] != nil;
+    if (cardDescriptions.count > 0) {
+        hasDescriptions = YES;
+    }
+    return hasDescriptions;
 }
 
 - (BOOL)shouldShowMoreButton {
@@ -683,9 +686,13 @@
         }
         if ([self hasDescription]) {
             [actionSheet addButtonWithTitle:NSLocalizedString(@"Read Description", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
-                ZEReadDescriptionViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"ReadDescriptionViewController"];
+                ZEPublishTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"PublishTableViewController"];
                 vc.deckObject = self.deckObject;
                 [self.navigationController pushViewController:vc animated:YES];
+//                
+//                ZEReadDescriptionViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"ReadDescriptionViewController"];
+//                vc.deckObject = self.deckObject;
+//                [self.navigationController pushViewController:vc animated:YES];
                 [self updatePublishButton];
             }];
         }

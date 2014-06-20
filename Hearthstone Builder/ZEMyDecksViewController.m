@@ -14,7 +14,6 @@
 @interface ZEMyDecksViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
-@property (weak, nonatomic) IBOutlet UISwitch *likesSwitch;
 @end
 
 @implementation ZEMyDecksViewController

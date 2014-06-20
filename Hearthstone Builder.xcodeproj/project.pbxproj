@@ -61,6 +61,7 @@
 		8FA18C15192B62EE00FF3F71 /* ZEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C14192B62EE00FF3F71 /* ZEUtility.m */; };
 		8FB6EAC9192CE57E00973F8F /* NSString+Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC6192CE57E00973F8F /* NSString+Score.m */; };
 		8FB6EACA192CE57E00973F8F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC7192CE57E00973F8F /* README.md */; };
+		FC22119E195424D5001D7251 /* ZEPublishTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC22119D195424D5001D7251 /* ZEPublishTextTableViewCell.m */; };
 		FC33F269193775CE008FDB87 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC33F266193775CD008FDB87 /* iRate.bundle */; };
 		FC33F26A193775CE008FDB87 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC33F268193775CD008FDB87 /* iRate.m */; };
 		FC409C431931153C0086215F /* ZEStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC409C421931153C0086215F /* ZEStartViewController.m */; };
@@ -587,6 +588,8 @@
 		8FB6EAC5192CE57E00973F8F /* NSString+Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Score.h"; sourceTree = "<group>"; };
 		8FB6EAC6192CE57E00973F8F /* NSString+Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Score.m"; sourceTree = "<group>"; };
 		8FB6EAC7192CE57E00973F8F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		FC22119C195424D5001D7251 /* ZEPublishTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEPublishTextTableViewCell.h; sourceTree = "<group>"; };
+		FC22119D195424D5001D7251 /* ZEPublishTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPublishTextTableViewCell.m; sourceTree = "<group>"; };
 		FC33F266193775CD008FDB87 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
 		FC33F267193775CD008FDB87 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
 		FC33F268193775CD008FDB87 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
@@ -1180,6 +1183,8 @@
 				FC90BA31195304AB00AD5262 /* ZEPublishCardTableViewCell.h */,
 				FC90BA32195304AB00AD5262 /* ZEPublishCardTableViewCell.m */,
 				FC90BA35195346B200AD5262 /* ZEUpdateCellProtocol.h */,
+				FC22119C195424D5001D7251 /* ZEPublishTextTableViewCell.h */,
+				FC22119D195424D5001D7251 /* ZEPublishTextTableViewCell.m */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -2372,6 +2377,7 @@
 				FC90BA33195304AB00AD5262 /* ZEPublishCardTableViewCell.m in Sources */,
 				8FA18BFD192A3B8C00FF3F71 /* ZEFilterTableDataSource.m in Sources */,
 				FCAB8D3819215A640072DC59 /* main.m in Sources */,
+				FC22119E195424D5001D7251 /* ZEPublishTextTableViewCell.m in Sources */,
 				8F6CAA3C1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m in Sources */,
 				8F0A69FA1938B09F009AC664 /* PFGeoPoint+NSCoding.m in Sources */,
 				8F6CAA0F19338A810078EE65 /* UIWindow+AHKAdditions.m in Sources */,

@@ -11,5 +11,6 @@
 @protocol ZEUpdateCellProtocol <NSObject>
 
 - (void)updateWithDict:(NSDictionary *)dict;
+- (void)editingMode:(BOOL)editingMode;
 
 @end

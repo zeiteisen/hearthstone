@@ -22,6 +22,18 @@
     }
 }
 
+- (void)editingMode:(BOOL)editingMode {
+    if (editingMode) {
+        [self.titleTextField setBorderStyle:UITextBorderStyleRoundedRect];
+        [self.titleTextField setNeedsDisplay];
+        self.titleTextField.userInteractionEnabled = YES;
+    } else {
+        [self.titleTextField setBorderStyle:UITextBorderStyleNone];
+        [self.titleTextField setNeedsDisplay];
+        self.titleTextField.userInteractionEnabled = NO;
+    }
+}
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -36,25 +48,12 @@
 }
 
 - (void)setup {
-//    self.titleTextField.delegate = self;
-//    self.descriptionTextView.delegate = self;
     self.titleTextField.font = [ZEUtility myStandardFont];
     self.minionsCount.textColor = [ZEUtility legendaryColor];
     self.dustCount.textColor = [ZEUtility rareColor];
     self.spellsCount.textColor = [ZEUtility commonColor];
     self.weaponsCount.textColor = [ZEUtility epicColor];
     self.titleTextField.textColor = [ZEUtility rareColor];
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
-- (void)updateContentWithDict:(NSDictionary *)dict {
-    
 }
 
 @end

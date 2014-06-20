@@ -11,5 +11,6 @@
 @interface ZEPublishTableViewController : UITableViewController
 
 @property (nonatomic, assign) NSInteger selectedDeckNumber;
+@property (nonatomic, strong) PFObject *deckObject;
 
 @end
