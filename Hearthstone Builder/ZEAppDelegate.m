@@ -39,6 +39,9 @@
     [[AHKActionSheet appearance] setButtonTextAttributes:settings];
     NSDictionary *cancelButtonSettings = @{NSFontAttributeName: font, NSForegroundColorAttributeName: [UIColor redColor]};
     [[AHKActionSheet appearance] setCancelButtonTextAttributes:cancelButtonSettings];
+    if ([ZEUtility remoteNotificationEnabled]) {
+        [ZEUtility registerForRemoteNotifications];
+    }
     
     return YES;
 }
@@ -47,9 +50,11 @@
     NSLog(@"did fail to register for remote notifications %@", error);
 }
 
+#ifdef __IPHONE_8_0
 - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
     [application registerForRemoteNotifications];
 }
+#endif
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];

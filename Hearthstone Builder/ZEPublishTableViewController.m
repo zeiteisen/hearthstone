@@ -62,6 +62,7 @@
         if (self.deckObject == nil) {
             [descriptionDict setObject:@"" forKey:@"description"];
             [descriptionData addObject:descriptionDict];
+            self.deck[@"description"] = @"";
         }
     }
     
@@ -137,16 +138,6 @@
         if (deckCardNames.count < 30) {
             self.navigationItem.rightBarButtonItem.enabled = NO;
         }
-    }
-}
-
-- (BOOL)remoteNotificationEnabled {
-    if (SYSTEM_VERSION_LESS_THAN(@"8.0")) {
-        UIRemoteNotificationType types = [[UIApplication sharedApplication] enabledRemoteNotificationTypes];
-        return types != UIRemoteNotificationTypeNone;
-    } else {
-        UIUserNotificationSettings *notificationSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
-        return notificationSettings.types != UIUserNotificationTypeNone;
     }
 }
 
@@ -316,11 +307,11 @@
         if (error) {
             [ZEUtility showAlertWithTitle:NSLocalizedString(@"Error", nil) message:error.localizedDescription];
         } else {
-            if ([self remoteNotificationEnabled]) {
+            if ([ZEUtility remoteNotificationEnabled]) {
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Success", nil) message:NSLocalizedString(@"Upload succeeded", nil) delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alert show];
             } else {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Success", nil) message:NSLocalizedString(@"Upload succeeded", nil) delegate:self cancelButtonTitle:@"OK" otherButtonTitles:NSLocalizedString(@"Notifiy me if someone likes my deck", nil), nil];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Success", nil) message:NSLocalizedString(@"Upload succeeded", nil) delegate:self cancelButtonTitle:@"OK" otherButtonTitles:NSLocalizedString(@"Notifiy me on like", nil), nil];
                 [alert show];
             }
             [self.deck setObject:deckObject.objectId forKey:@"objectId"];
@@ -334,16 +325,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     [self saveDeck];
     if (buttonIndex == 1) {
-        if (SYSTEM_VERSION_LESS_THAN(@"8.0")) {
-            [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
-             UIRemoteNotificationTypeBadge |
-             UIRemoteNotificationTypeAlert |
-             UIRemoteNotificationTypeSound];
-        } else {
-            UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
-            UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
-            [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
-        }
+        [ZEUtility registerForRemoteNotifications];
     }
     NSArray *array = [self.navigationController viewControllers];
     [self.navigationController popToViewController:[array objectAtIndex:1] animated:YES];

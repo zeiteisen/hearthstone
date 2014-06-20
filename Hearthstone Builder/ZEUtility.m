@@ -51,4 +51,27 @@
     [alert show];
 }
 
++ (BOOL)remoteNotificationEnabled {
+#ifdef __IPHONE_8_0
+    UIUserNotificationSettings *notificationSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
+    return notificationSettings.types != UIUserNotificationTypeNone;
+#else
+    UIRemoteNotificationType types = [[UIApplication sharedApplication] enabledRemoteNotificationTypes];
+    return types != UIRemoteNotificationTypeNone;
+#endif
+}
+
++ (void)registerForRemoteNotifications {
+#ifdef __IPHONE_8_0
+    UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+    UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
+#else
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+     UIRemoteNotificationTypeBadge |
+     UIRemoteNotificationTypeAlert |
+     UIRemoteNotificationTypeSound];
+#endif
+}
+
 @end

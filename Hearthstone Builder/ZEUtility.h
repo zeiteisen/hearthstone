@@ -19,5 +19,7 @@
 + (UIColor *)rareColor;
 + (UIColor *)commonColor;
 + (UIColor *)basicColor;
++ (BOOL)remoteNotificationEnabled;
++ (void)registerForRemoteNotifications;
 
 @end
