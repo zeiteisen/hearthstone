@@ -40,11 +40,19 @@
     }
     NSString *title = self.deck[@"title"];
     NSString *hero = self.deck[@"hero"];
-    if (title.length != 0 && ![title isEqualToString:hero]) {
-        [titleDict setObject:title forKey:@"title"];
+    if (self.deckObject) {
+        if (title.length == 0) {
+            [titleDict setObject:hero forKey:@"title"];
+        } else {
+            [titleDict setObject:title forKey:@"title"];
+        }
     } else {
-        [titleDict setObject:NSLocalizedString(@"Your fancy deck name", nil) forKey:@"titlePlaceholder"];
-        self.navigationItem.rightBarButtonItem.enabled = NO;
+        if (title.length != 0 && ![title isEqualToString:hero]) {
+            [titleDict setObject:title forKey:@"title"];
+        } else {
+            [titleDict setObject:NSLocalizedString(@"Your fancy deck name", nil) forKey:@"titlePlaceholder"];
+            self.navigationItem.rightBarButtonItem.enabled = NO;
+        }
     }
     [titleDict setObject:self.deck[@"dust"] forKey:@"dust"];
     [titleDict setObject:self.deck[@"minions"] forKey:@"minions"];
