@@ -14,7 +14,6 @@
 #import "NSString+Score.h"
 #import "ZEPublishTableViewController.h"
 #import "AHKActionSheet.h"
-#import "ZEReadDescriptionViewController.h"
 #import "iRate.h"
 
 @interface ZEViewController () <UITableViewDataSource, UITableViewDelegate, ZECardTableViewCellDelegate, JBBarChartViewDataSource, JBBarChartViewDelegate, UISearchBarDelegate>

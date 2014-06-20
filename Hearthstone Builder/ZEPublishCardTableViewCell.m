@@ -20,12 +20,12 @@
         self.descriptionTextView.layer.borderColor = [UIColor colorWithWhite:0 alpha:.2].CGColor;
         self.descriptionTextView.layer.borderWidth = 0.5;
         self.descriptionTextView.layer.cornerRadius = 10;
-        self.descriptionTextView.userInteractionEnabled = YES;
+        self.descriptionTextView.editable = YES;
     } else {
         self.descriptionTextView.layer.borderColor = [UIColor whiteColor].CGColor;
         self.descriptionTextView.layer.borderWidth = 0;
         self.descriptionTextView.layer.cornerRadius = 0;
-        self.descriptionTextView.userInteractionEnabled = NO;
+        self.descriptionTextView.editable = NO;
     }
 }
 
