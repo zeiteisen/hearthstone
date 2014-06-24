@@ -8,10 +8,14 @@
 
 #import "ZEDrawSimulatorViewController.h"
 #import "ZECardCollectionViewCell.h"
+#import "NSMutableArray+Shuffle.h"
 
 @interface ZEDrawSimulatorViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@property (weak, nonatomic) IBOutlet UIButton *drawButton;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-
+@property (nonatomic, strong) NSMutableArray *dataSource;
+@property (nonatomic, strong) NSMutableArray *internalDeck;
+@property (nonatomic, assign) BOOL mulligan;
 @end
 
 @implementation ZEDrawSimulatorViewController
@@ -19,32 +23,106 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"deck %@", self.deck);
+    self.dataSource = [NSMutableArray array];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self start];
+}
+
+- (void)start {
+    self.mulligan = YES;
+    self.drawButton.titleLabel.text = NSLocalizedString(@"Pick", nil);
+    [self.dataSource removeAllObjects];
+    self.internalDeck = [NSMutableArray arrayWithArray:self.deck];
+    NSMutableArray *indexPaths = [NSMutableArray array];
+    [self.internalDeck shuffle];
+    for (int i = 0; i < 3; i++) {
+        [self addCard];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+        [indexPaths addObject:indexPath];
+    }
     [self.collectionView reloadData];
-    // Do any additional setup after loading the view.
+}
+
+- (void)addCard {
+    if (self.internalDeck.count > 0) {
+        NSDictionary *card = [self.internalDeck lastObject];
+        [self.internalDeck removeLastObject];
+        [self.dataSource addObject:card];
+    }
 }
 
 #pragma mark - Actions
 
-- (IBAction)drawTouched:(id)sender {
+- (IBAction)drawTouched:(UIButton *)sender {
+    if (self.mulligan) {
+        self.mulligan = NO;
+        sender.titleLabel.text = NSLocalizedString(@"Draw", nil);
+        NSArray *cells = [self.collectionView visibleCells];
+        NSMutableArray *replaceIndexPaths = [NSMutableArray array];
+        for (ZECardCollectionViewCell *cell in cells) {
+            if (cell.imageView.alpha <= .9) {
+                NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+                cell.imageView.alpha = 1;
+                [replaceIndexPaths addObject:indexPath];
+                NSDictionary *card = self.dataSource[indexPath.row];
+                [self.dataSource removeObject:card];
+                [self.internalDeck addObject:card];
+            }
+        }
+        [self.internalDeck shuffle];
+        
+        for (NSIndexPath *indexPath in replaceIndexPaths) {
+            NSDictionary *newCard = [self.internalDeck lastObject];
+            [self.internalDeck removeLastObject];
+            [self.dataSource insertObject:newCard atIndex:indexPath.row];
+        }
+        [self.collectionView reloadItemsAtIndexPaths:replaceIndexPaths];
+        
+        
+    } else {
+        [self addCard];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.dataSource.count - 1 inSection:0];
+        [self.collectionView insertItemsAtIndexPaths:@[indexPath]];
+        [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionBottom animated:YES];
+        if (self.internalDeck.count <= 0) {
+            sender.enabled = NO;
+        }
+    }
 }
 
 - (IBAction)restartTouched:(id)sender {
+    [self start];
+    self.drawButton.enabled = YES;
 }
 
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.deck.count;
+    return self.dataSource.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"Cell";
     ZECardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    NSDictionary *card = self.deck[indexPath.row];
+    NSDictionary *card = self.dataSource[indexPath.row];
     NSString *imageName = [NSString stringWithFormat:@"%@.jpg", card[@"name"]];
     UIImage *image = [UIImage imageNamed:imageName];
     cell.imageView.image = image;
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.mulligan) {
+        ZECardCollectionViewCell *cell = (ZECardCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+        if (cell.imageView.alpha == 1) {
+            cell.imageView.alpha = 0.5;
+        } else {
+            cell.imageView.alpha = 1;
+        }
+    }
 }
 
 @end
