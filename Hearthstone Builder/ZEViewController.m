@@ -15,6 +15,7 @@
 #import "ZEPublishTableViewController.h"
 #import "AHKActionSheet.h"
 #import "iRate.h"
+#import "ZEDrawSimulatorViewController.h"
 
 @interface ZEViewController () <UITableViewDataSource, UITableViewDelegate, ZECardTableViewCellDelegate, JBBarChartViewDataSource, JBBarChartViewDelegate, UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -443,12 +444,19 @@
     return hasDescriptions;
 }
 
+- (BOOL)deckComplete {
+    return  self.deckData.count >= 30;
+}
+
 - (BOOL)shouldShowMoreButton {
     BOOL shouldShow = NO;
     if (![self liked]) {
         shouldShow = YES;
     }
     if ([self hasDescription]) {
+        shouldShow = YES;
+    }
+    if ([self deckComplete]) {
         shouldShow = YES;
     }
     return shouldShow;
@@ -667,6 +675,13 @@
 - (IBAction)publishTouched:(id)sender {
     if (self.deckObject) {
         AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:nil];
+        if ([self deckComplete]) {
+            [actionSheet addButtonWithTitle:NSLocalizedString(@"Draw Card Simulator", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+                ZEDrawSimulatorViewController *drawSimulator = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"DrawSimulatorViewController"];
+                drawSimulator.deck = self.deckData;
+                [self.navigationController pushViewController:drawSimulator animated:YES];
+            }];
+        }
         if (![self liked]) {
             [actionSheet addButtonWithTitle:NSLocalizedString(@"Like and save", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
                 [self.deckObject incrementKey:@"likes"];
@@ -677,9 +692,7 @@
                 [myLikes addObject:deckData];
                 [[NSUserDefaults standardUserDefaults] setObject:myLikes forKey:MyLikesUserDefaultsKey];
                 [[NSUserDefaults standardUserDefaults] synchronize];
-                if ([[iRate sharedInstance] shouldPromptForRating]) {
-                    [[iRate sharedInstance] promptIfNetworkAvailable];
-                }
+                [[iRate sharedInstance] logEvent:NO];
                 [self updatePublishButton];
                 NSString *installationId = self.deckObject[@"installation"];
                 if (installationId.length != 0) {

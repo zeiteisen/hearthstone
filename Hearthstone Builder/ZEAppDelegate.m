@@ -20,6 +20,10 @@
 
 + (void)initialize {
     [iRate sharedInstance].appStoreID = 882681595;
+    [iRate sharedInstance].eventsUntilPrompt = 1;
+    [iRate sharedInstance].daysUntilPrompt = 0;
+    [iRate sharedInstance].usesUntilPrompt = 2;
+    [iRate sharedInstance].message = NSLocalizedString(@"Please take a moment to rate this app. Every feedback is well appreciated", nil);
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
