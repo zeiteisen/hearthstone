@@ -735,35 +735,33 @@ ALL OTHER TRADEMARKS ARE THE PROPERTY OF THEIR RESPECTIVE OWNERS.
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WwQ-Ov-8AZ">
-                                <rect key="frame" x="0.0" y="64" width="320" height="363"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="371"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yEU-gE-6fc">
-                                    <size key="itemSize" width="100" height="141"/>
+                                    <size key="itemSize" width="154" height="217"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Xa3-FW-kOr" customClass="ZECardCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="64" width="100" height="141"/>
+                                        <rect key="frame" x="0.0" y="64" width="154" height="217"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="141"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="154" height="217"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R7M-nm-vyl">
-                                                    <rect key="frame" x="3" y="10" width="93" height="131"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <rect key="frame" x="3" y="5" width="147" height="207"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="R7M-nm-vyl" secondAttribute="bottom" id="ArG-Wb-MUz"/>
+                                            <constraint firstAttribute="bottom" secondItem="R7M-nm-vyl" secondAttribute="bottom" constant="5" id="ArG-Wb-MUz"/>
                                             <constraint firstAttribute="trailing" secondItem="R7M-nm-vyl" secondAttribute="trailing" constant="4" id="Ibh-ZQ-xnB"/>
                                             <constraint firstItem="R7M-nm-vyl" firstAttribute="leading" secondItem="Xa3-FW-kOr" secondAttribute="leading" constant="3" id="Ii6-6k-xkg"/>
-                                            <constraint firstItem="R7M-nm-vyl" firstAttribute="top" secondItem="Xa3-FW-kOr" secondAttribute="top" constant="10" id="d4G-c3-O3c"/>
+                                            <constraint firstItem="R7M-nm-vyl" firstAttribute="top" secondItem="Xa3-FW-kOr" secondAttribute="top" constant="5" id="d4G-c3-O3c"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="R7M-nm-vyl" id="FBQ-4X-AlE"/>
@@ -775,51 +773,45 @@ ALL OTHER TRADEMARKS ARE THE PROPERTY OF THEIR RESPECTIVE OWNERS.
                                     <outlet property="delegate" destination="9mo-fA-Yxh" id="uM4-Ij-wJF"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gs-vH-K8u">
-                                <rect key="frame" x="20" y="435" width="61" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="eXQ-KF-SWJ"/>
-                                    <constraint firstAttribute="width" constant="61" id="nBt-jF-a26"/>
-                                </constraints>
-                                <state key="normal" title="Draw1">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="drawTouched:" destination="9mo-fA-Yxh" eventType="touchUpInside" id="Rpa-vW-BEg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZ2-Ik-sAk">
-                                <rect key="frame" x="239" y="435" width="61" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="61" id="kac-ow-DgT"/>
-                                </constraints>
-                                <state key="normal" title="Restart">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="restartTouched:" destination="9mo-fA-Yxh" eventType="touchUpInside" id="KGo-Ib-SWD"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lI-jU-nYY">
+                                <rect key="frame" x="0.0" y="435" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Draw" id="mx6-xG-aSU">
+                                        <connections>
+                                            <action selector="drawTouched:" destination="9mo-fA-Yxh" id="tPq-3B-woA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="FfU-8p-2dL"/>
+                                    <barButtonItem title="Restart 3" id="wtO-iH-dnn">
+                                        <connections>
+                                            <action selector="restartTouched:" destination="9mo-fA-Yxh" id="ngb-Kx-fVu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="zYs-m7-sn2"/>
+                                    <barButtonItem title="Restart 4" id="nx1-CS-ydc">
+                                        <connections>
+                                            <action selector="restart4Touched:" destination="9mo-fA-Yxh" id="ahX-OT-tdj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="8Gs-vH-K8u" secondAttribute="bottom" id="3bI-KV-0CA"/>
-                            <constraint firstAttribute="trailing" secondItem="WwQ-Ov-8AZ" secondAttribute="trailing" id="9Dx-Km-xHb"/>
-                            <constraint firstItem="WwQ-Ov-8AZ" firstAttribute="top" secondItem="LGn-Vl-lu7" secondAttribute="bottom" id="CiB-mz-g9n"/>
-                            <constraint firstItem="WwQ-Ov-8AZ" firstAttribute="leading" secondItem="jod-GM-bQe" secondAttribute="leading" id="Xyh-2K-2vR"/>
-                            <constraint firstAttribute="trailing" secondItem="eZ2-Ik-sAk" secondAttribute="trailing" constant="20" symbolic="YES" id="aEm-Pk-DZK"/>
-                            <constraint firstItem="eZ2-Ik-sAk" firstAttribute="top" secondItem="WwQ-Ov-8AZ" secondAttribute="bottom" constant="8" symbolic="YES" id="h4P-P7-dby"/>
-                            <constraint firstItem="8Gs-vH-K8u" firstAttribute="leading" secondItem="jod-GM-bQe" secondAttribute="leading" constant="20" symbolic="YES" id="hSq-I7-Ygu"/>
-                            <constraint firstItem="8Gs-vH-K8u" firstAttribute="top" secondItem="WwQ-Ov-8AZ" secondAttribute="bottom" constant="8" symbolic="YES" id="nCG-Ny-Sii"/>
-                            <constraint firstItem="eZ2-Ik-sAk" firstAttribute="bottom" secondItem="8Gs-vH-K8u" secondAttribute="bottom" id="qmH-S0-7iw"/>
+                            <constraint firstItem="WwQ-Ov-8AZ" firstAttribute="leading" secondItem="jod-GM-bQe" secondAttribute="leading" id="VVO-NZ-qSM"/>
+                            <constraint firstItem="WwQ-Ov-8AZ" firstAttribute="trailing" secondItem="1lI-jU-nYY" secondAttribute="trailing" id="VsO-WT-KAu"/>
+                            <constraint firstItem="WwQ-Ov-8AZ" firstAttribute="leading" secondItem="1lI-jU-nYY" secondAttribute="leading" id="agp-Af-iZa"/>
+                            <constraint firstAttribute="trailing" secondItem="1lI-jU-nYY" secondAttribute="trailing" id="fbL-FC-WSq"/>
+                            <constraint firstItem="1lI-jU-nYY" firstAttribute="top" secondItem="WwQ-Ov-8AZ" secondAttribute="bottom" id="g1t-we-FLm"/>
+                            <constraint firstItem="WwQ-Ov-8AZ" firstAttribute="top" secondItem="LGn-Vl-lu7" secondAttribute="bottom" id="m9H-ay-WgJ"/>
+                            <constraint firstItem="TlV-Er-fhv" firstAttribute="top" secondItem="1lI-jU-nYY" secondAttribute="bottom" constant="1" id="vdu-j0-Jcl"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="collectionView" destination="WwQ-Ov-8AZ" id="qR4-lH-BHQ"/>
-                        <outlet property="drawButton" destination="8Gs-vH-K8u" id="I3X-5X-RfR"/>
+                        <outlet property="drawButton" destination="mx6-xG-aSU" id="o98-5P-VLg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRm-bW-Cgs" userLabel="First Responder" sceneMemberID="firstResponder"/>

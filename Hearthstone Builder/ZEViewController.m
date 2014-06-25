@@ -692,7 +692,9 @@
                 [myLikes addObject:deckData];
                 [[NSUserDefaults standardUserDefaults] setObject:myLikes forKey:MyLikesUserDefaultsKey];
                 [[NSUserDefaults standardUserDefaults] synchronize];
-                [[iRate sharedInstance] logEvent:NO];
+                if (![iRate sharedInstance].declinedThisVersion && ![iRate sharedInstance].ratedThisVersion) {
+                    [[iRate sharedInstance] promptIfNetworkAvailable];
+                }
                 [self updatePublishButton];
                 NSString *installationId = self.deckObject[@"installation"];
                 if (installationId.length != 0) {

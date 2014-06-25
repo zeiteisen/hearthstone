@@ -1185,6 +1185,8 @@
 				FC90BA35195346B200AD5262 /* ZEUpdateCellProtocol.h */,
 				FC22119C195424D5001D7251 /* ZEPublishTextTableViewCell.h */,
 				FC22119D195424D5001D7251 /* ZEPublishTextTableViewCell.m */,
+				FCEA53F21958B72000BF8CD4 /* ZECardCollectionViewCell.h */,
+				FCEA53F31958B72000BF8CD4 /* ZECardCollectionViewCell.m */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -1251,8 +1253,6 @@
 				FCAB965D1924158A0072DC59 /* Vendor */,
 				FCAB8D6019215AB30072DC59 /* Resources */,
 				FCAB8D3D19215A640072DC59 /* Main.storyboard */,
-				FCEA53F21958B72000BF8CD4 /* ZECardCollectionViewCell.h */,
-				FCEA53F31958B72000BF8CD4 /* ZECardCollectionViewCell.m */,
 				FCEA53EF1958A08800BF8CD4 /* ZEDrawSimulatorViewController.h */,
 				FCEA53F01958A08800BF8CD4 /* ZEDrawSimulatorViewController.m */,
 				FCAB8D3A19215A640072DC59 /* ZEAppDelegate.h */,

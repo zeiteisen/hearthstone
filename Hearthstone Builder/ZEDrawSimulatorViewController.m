@@ -11,7 +11,7 @@
 #import "NSMutableArray+Shuffle.h"
 
 @interface ZEDrawSimulatorViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
-@property (weak, nonatomic) IBOutlet UIButton *drawButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *drawButton;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
 @property (nonatomic, strong) NSMutableArray *internalDeck;
@@ -24,20 +24,20 @@
     [super viewDidLoad];
     self.dataSource = [NSMutableArray array];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    [self start];
+    [self startWithCountCards:3];
 }
 
-- (void)start {
+- (void)startWithCountCards:(NSInteger)countCards {
     for (ZECardCollectionViewCell *cell in [self.collectionView visibleCells]) {
         cell.imageView.alpha = 1.;
     }
     self.mulligan = YES;
-    [self.drawButton setTitle:NSLocalizedString(@"Pick", nil) forState:UIControlStateNormal];
+    self.drawButton.title = NSLocalizedString(@"Pick", nil);
     self.navigationItem.title = NSLocalizedString(@"Mulligan", nil);
     [self.dataSource removeAllObjects];
     self.internalDeck = [NSMutableArray arrayWithArray:self.deck];
     [self.internalDeck shuffle];
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < countCards; i++) {
         [self addCard];
     }
     [self.collectionView reloadData];
@@ -52,11 +52,10 @@
 }
 
 #pragma mark - Actions
-
-- (IBAction)drawTouched:(UIButton *)sender {
+- (IBAction)drawTouched:(UIBarButtonItem *)sender {
     if (self.mulligan) {
         self.mulligan = NO;
-        [self.drawButton setTitle:NSLocalizedString(@"Draw", nil) forState:UIControlStateNormal];
+        self.drawButton.title = NSLocalizedString(@"Draw", nil);
         self.navigationItem.title = NSLocalizedString(@"Draw", nil);
         NSArray *cells = [self.collectionView visibleCells];
         NSMutableArray *replaceIndexPaths = [NSMutableArray array];
@@ -91,10 +90,15 @@
 }
 
 - (IBAction)restartTouched:(id)sender {
-    [self start];
+    [self startWithCountCards:3];
     self.drawButton.enabled = YES;
 }
 
+- (IBAction)restart4Touched:(id)sender {
+    [self startWithCountCards:4];
+    self.drawButton.enabled = YES;
+    
+}
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -119,6 +123,8 @@
         } else {
             cell.imageView.alpha = 1;
         }
+    } else {
+        [self drawTouched:self.drawButton];
     }
 }
 
