@@ -71,6 +71,20 @@
 		FC90BA301953049C00AD5262 /* ZEPublishTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC90BA2F1953049C00AD5262 /* ZEPublishTitleTableViewCell.m */; };
 		FC90BA33195304AB00AD5262 /* ZEPublishCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC90BA32195304AB00AD5262 /* ZEPublishCardTableViewCell.m */; };
 		FC90BA3D195358BE00AD5262 /* SZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC90BA3C195358BE00AD5262 /* SZTextView.m */; };
+		FC98AFAA195B24E200CBCC65 /* Webspinner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AF9C195B24E200CBCC65 /* Webspinner.jpg */; };
+		FC98AFAB195B24E200CBCC65 /* Voidcaller.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AF9D195B24E200CBCC65 /* Voidcaller.jpg */; };
+		FC98AFAC195B24E200CBCC65 /* Undertaker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AF9E195B24E200CBCC65 /* Undertaker.jpg */; };
+		FC98AFAD195B24E200CBCC65 /* Shade of Naxxramas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AF9F195B24E200CBCC65 /* Shade of Naxxramas.jpg */; };
+		FC98AFAE195B24E200CBCC65 /* Rebirth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA0195B24E200CBCC65 /* Rebirth.jpg */; };
+		FC98AFAF195B24E200CBCC65 /* Poison Seeds.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA1195B24E200CBCC65 /* Poison Seeds.jpg */; };
+		FC98AFB0195B24E200CBCC65 /* Nerubian Egg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA2195B24E200CBCC65 /* Nerubian Egg.jpg */; };
+		FC98AFB1195B24E200CBCC65 /* Duplicate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA3195B24E200CBCC65 /* Duplicate.jpg */; };
+		FC98AFB2195B24E200CBCC65 /* Death's Bite.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA4195B24E200CBCC65 /* Death's Bite.jpg */; };
+		FC98AFB3195B24E200CBCC65 /* Dark Cultist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA5195B24E200CBCC65 /* Dark Cultist.jpg */; };
+		FC98AFB4195B24E200CBCC65 /* Dancing Swords.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA6195B24E200CBCC65 /* Dancing Swords.jpg */; };
+		FC98AFB5195B24E200CBCC65 /* Baron Rivendare.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA7195B24E200CBCC65 /* Baron Rivendare.jpg */; };
+		FC98AFB6195B24E200CBCC65 /* Avenge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA8195B24E200CBCC65 /* Avenge.jpg */; };
+		FC98AFB7195B24E200CBCC65 /* Anub'ar Ambusher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA9195B24E200CBCC65 /* Anub'ar Ambusher.jpg */; };
 		FCAB8D2C19215A640072DC59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2B19215A640072DC59 /* Foundation.framework */; };
 		FCAB8D2E19215A640072DC59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */; };
 		FCAB8D3019215A640072DC59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2F19215A640072DC59 /* UIKit.framework */; };
@@ -607,6 +621,20 @@
 		FC90BA35195346B200AD5262 /* ZEUpdateCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZEUpdateCellProtocol.h; sourceTree = "<group>"; };
 		FC90BA3B195358BE00AD5262 /* SZTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTextView.h; sourceTree = "<group>"; };
 		FC90BA3C195358BE00AD5262 /* SZTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTextView.m; sourceTree = "<group>"; };
+		FC98AF9C195B24E200CBCC65 /* Webspinner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Webspinner.jpg; sourceTree = "<group>"; };
+		FC98AF9D195B24E200CBCC65 /* Voidcaller.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Voidcaller.jpg; sourceTree = "<group>"; };
+		FC98AF9E195B24E200CBCC65 /* Undertaker.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Undertaker.jpg; sourceTree = "<group>"; };
+		FC98AF9F195B24E200CBCC65 /* Shade of Naxxramas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Shade of Naxxramas.jpg"; sourceTree = "<group>"; };
+		FC98AFA0195B24E200CBCC65 /* Rebirth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rebirth.jpg; sourceTree = "<group>"; };
+		FC98AFA1195B24E200CBCC65 /* Poison Seeds.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Poison Seeds.jpg"; sourceTree = "<group>"; };
+		FC98AFA2195B24E200CBCC65 /* Nerubian Egg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Nerubian Egg.jpg"; sourceTree = "<group>"; };
+		FC98AFA3195B24E200CBCC65 /* Duplicate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Duplicate.jpg; sourceTree = "<group>"; };
+		FC98AFA4195B24E200CBCC65 /* Death's Bite.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Death's Bite.jpg"; sourceTree = "<group>"; };
+		FC98AFA5195B24E200CBCC65 /* Dark Cultist.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dark Cultist.jpg"; sourceTree = "<group>"; };
+		FC98AFA6195B24E200CBCC65 /* Dancing Swords.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dancing Swords.jpg"; sourceTree = "<group>"; };
+		FC98AFA7195B24E200CBCC65 /* Baron Rivendare.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Baron Rivendare.jpg"; sourceTree = "<group>"; };
+		FC98AFA8195B24E200CBCC65 /* Avenge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Avenge.jpg; sourceTree = "<group>"; };
+		FC98AFA9195B24E200CBCC65 /* Anub'ar Ambusher.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Anub'ar Ambusher.jpg"; sourceTree = "<group>"; };
 		FCAB8D2819215A640072DC59 /* Decks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Decks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAB8D2B19215A640072DC59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1363,6 +1391,20 @@
 		FCAB935E19240F5F0072DC59 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				FC98AF9C195B24E200CBCC65 /* Webspinner.jpg */,
+				FC98AF9D195B24E200CBCC65 /* Voidcaller.jpg */,
+				FC98AF9E195B24E200CBCC65 /* Undertaker.jpg */,
+				FC98AF9F195B24E200CBCC65 /* Shade of Naxxramas.jpg */,
+				FC98AFA0195B24E200CBCC65 /* Rebirth.jpg */,
+				FC98AFA1195B24E200CBCC65 /* Poison Seeds.jpg */,
+				FC98AFA2195B24E200CBCC65 /* Nerubian Egg.jpg */,
+				FC98AFA3195B24E200CBCC65 /* Duplicate.jpg */,
+				FC98AFA4195B24E200CBCC65 /* Death's Bite.jpg */,
+				FC98AFA5195B24E200CBCC65 /* Dark Cultist.jpg */,
+				FC98AFA6195B24E200CBCC65 /* Dancing Swords.jpg */,
+				FC98AFA7195B24E200CBCC65 /* Baron Rivendare.jpg */,
+				FC98AFA8195B24E200CBCC65 /* Avenge.jpg */,
+				FC98AFA9195B24E200CBCC65 /* Anub'ar Ambusher.jpg */,
 				FCAB965B1924108E0072DC59 /* Cards.json */,
 				FCAB936719240F5F0072DC59 /* all-collectibles.json */,
 				FCAB935F19240F5F0072DC59 /* Abomination.jpg */,
@@ -1912,6 +1954,7 @@
 				FCAB960319240F610072DC59 /* Shadow Word: Death.jpg in Resources */,
 				FCAB960919240F610072DC59 /* Shield Block.jpg in Resources */,
 				FCAB95CE19240F610072DC59 /* Murloc Tidecaller.jpg in Resources */,
+				FC98AFB0195B24E200CBCC65 /* Nerubian Egg.jpg in Resources */,
 				FCAB95DB19240F610072DC59 /* Old Murk-Eye.jpg in Resources */,
 				FCAB959219240F610072DC59 /* Inner Fire.jpg in Resources */,
 				FCAB963419240F610072DC59 /* The Black Knight.jpg in Resources */,
@@ -1958,12 +2001,14 @@
 				FCAB950A19240F610072DC59 /* Blade Flurry.jpg in Resources */,
 				FCAB953319240F610072DC59 /* Dark Iron Dwarf.jpg in Resources */,
 				FCAB956619240F610072DC59 /* Forked Lightning.jpg in Resources */,
+				FC98AFB3195B24E200CBCC65 /* Dark Cultist.jpg in Resources */,
 				FCAB961E19240F610072DC59 /* Spiteful Smith.jpg in Resources */,
 				FCE007011937A5AA00645355 /* bg0.jpg in Resources */,
 				FCAB960119240F610072DC59 /* Shadow Bolt.jpg in Resources */,
 				FCAB951619240F610072DC59 /* Bloodsail Raider.jpg in Resources */,
 				FCAB961D19240F610072DC59 /* Spellbreaker.jpg in Resources */,
 				FCAB8D4419215A640072DC59 /* Images.xcassets in Resources */,
+				FC98AFB7195B24E200CBCC65 /* Anub'ar Ambusher.jpg in Resources */,
 				FCAB953719240F610072DC59 /* Deathwing.jpg in Resources */,
 				FCAB959019240F610072DC59 /* Imp Master.jpg in Resources */,
 				FCAB965C1924108E0072DC59 /* Cards.json in Resources */,
@@ -1974,6 +2019,8 @@
 				FCAB962819240F610072DC59 /* Stormwind Knight.jpg in Resources */,
 				FCAB964519240F610072DC59 /* Venture Co. Mercenary.jpg in Resources */,
 				FCAB962619240F610072DC59 /* Stormpike Commando.jpg in Resources */,
+				FC98AFAD195B24E200CBCC65 /* Shade of Naxxramas.jpg in Resources */,
+				FC98AFB6195B24E200CBCC65 /* Avenge.jpg in Resources */,
 				FCAB961119240F610072DC59 /* Silvermoon Guardian.jpg in Resources */,
 				FCAB950C19240F610072DC59 /* Blessing of Kings.jpg in Resources */,
 				FCAB952419240F610072DC59 /* Cleave.jpg in Resources */,
@@ -2004,6 +2051,7 @@
 				FCAB960419240F610072DC59 /* Shadow Word: Pain.jpg in Resources */,
 				FCAB955119240F610072DC59 /* Eviscerate.jpg in Resources */,
 				FCAB94EA19240F610072DC59 /* Ancient Mage.jpg in Resources */,
+				FC98AFB5195B24E200CBCC65 /* Baron Rivendare.jpg in Resources */,
 				FCAB95D219240F610072DC59 /* Naturalize.jpg in Resources */,
 				FCAB964D19240F610072DC59 /* Whirlwind.jpg in Resources */,
 				FCAB952E19240F610072DC59 /* Counterspell.jpg in Resources */,
@@ -2011,6 +2059,7 @@
 				FCAB950919240F610072DC59 /* Bite.jpg in Resources */,
 				FCAB94ED19240F610072DC59 /* Ancient Watcher.jpg in Resources */,
 				FCAB965219240F610072DC59 /* Windspeaker.jpg in Resources */,
+				FC98AFB2195B24E200CBCC65 /* Death's Bite.jpg in Resources */,
 				FCAB952019240F610072DC59 /* Charge.jpg in Resources */,
 				FCAB95AC19240F610072DC59 /* Lightwell.jpg in Resources */,
 				FCAB95D719240F610072DC59 /* Novice Engineer.jpg in Resources */,
@@ -2020,6 +2069,7 @@
 				FCAB961619240F610072DC59 /* Snipe.jpg in Resources */,
 				FCAB95E919240F610072DC59 /* Questing Adventurer.jpg in Resources */,
 				8F6CAA5D19363DD90078EE65 /* ico_hunter.png in Resources */,
+				FC98AFAF195B24E200CBCC65 /* Poison Seeds.jpg in Resources */,
 				FCAB953019240F610072DC59 /* Cruel Taskmaster.jpg in Resources */,
 				FCAB95CB19240F610072DC59 /* Mountain Giant.jpg in Resources */,
 				FCAB95E319240F610072DC59 /* Power Overwhelming.jpg in Resources */,
@@ -2152,6 +2202,7 @@
 				FCAB958619240F610072DC59 /* Holy Smite.jpg in Resources */,
 				8F6CAA6519363DD90078EE65 /* mage.jpg in Resources */,
 				FCAB958B19240F610072DC59 /* Hunter's Mark.jpg in Resources */,
+				FC98AFAB195B24E200CBCC65 /* Voidcaller.jpg in Resources */,
 				8F6CAA5B19363DD90078EE65 /* ico_deathknight.png in Resources */,
 				FCAB965819240F610072DC59 /* Young Priestess.jpg in Resources */,
 				FCAB950419240F610072DC59 /* Baron Geddon.jpg in Resources */,
@@ -2202,10 +2253,12 @@
 				FCAB965019240F610072DC59 /* Windfury Harpy.jpg in Resources */,
 				FCAB951A19240F610072DC59 /* Brawl.jpg in Resources */,
 				FCAB960019240F610072DC59 /* Sense Demons.jpg in Resources */,
+				FC98AFAE195B24E200CBCC65 /* Rebirth.jpg in Resources */,
 				FCAB952C19240F610072DC59 /* Core Hound.jpg in Resources */,
 				FCAB962019240F610072DC59 /* Stampeding Kodo.jpg in Resources */,
 				FCAB94E819240F610072DC59 /* Ancestral Spirit.jpg in Resources */,
 				FCAB961A19240F610072DC59 /* Southsea Captain.jpg in Resources */,
+				FC98AFB4195B24E200CBCC65 /* Dancing Swords.jpg in Resources */,
 				FCAB955819240F610072DC59 /* Fan of Knives.jpg in Resources */,
 				FCAB95D819240F610072DC59 /* Nozdormu.jpg in Resources */,
 				FCAB951119240F610072DC59 /* Blood Knight.jpg in Resources */,
@@ -2255,6 +2308,7 @@
 				FCAB960C19240F610072DC59 /* Shiv.jpg in Resources */,
 				FCAB94FD19240F610072DC59 /* Assassin's Blade.jpg in Resources */,
 				FCAB953E19240F610072DC59 /* Divine Spirit.jpg in Resources */,
+				FC98AFAC195B24E200CBCC65 /* Undertaker.jpg in Resources */,
 				FCAB956819240F610072DC59 /* Frost Elemental.jpg in Resources */,
 				FCAB94EE19240F610072DC59 /* Angry Chicken.jpg in Resources */,
 				FCAB95BF19240F610072DC59 /* Mind Control Tech.jpg in Resources */,
@@ -2278,10 +2332,12 @@
 				FCAB955D19240F610072DC59 /* Fiery War Axe.jpg in Resources */,
 				FCAB959E19240F610072DC59 /* King Mukla.jpg in Resources */,
 				FCAB958D19240F610072DC59 /* Ice Block.jpg in Resources */,
+				FC98AFAA195B24E200CBCC65 /* Webspinner.jpg in Resources */,
 				FCAB95FD19240F610072DC59 /* Sea Giant.jpg in Resources */,
 				8F6CAA5F19363DD90078EE65 /* ico_paladin.png in Resources */,
 				FCE0070A1937AA7300645355 /* bg2.jpg in Resources */,
 				FCAB95D619240F610072DC59 /* Nourish.jpg in Resources */,
+				FC98AFB1195B24E200CBCC65 /* Duplicate.jpg in Resources */,
 				FCAB950F19240F610072DC59 /* Blizzard.jpg in Resources */,
 				FCAB962119240F610072DC59 /* Starfall.jpg in Resources */,
 				FCAB954D19240F610072DC59 /* Elven Archer.jpg in Resources */,
