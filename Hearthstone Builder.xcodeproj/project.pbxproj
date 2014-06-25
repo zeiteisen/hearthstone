@@ -495,6 +495,7 @@
 		FCE0070F1937BC1A00645355 /* Belwe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA1019338FA30078EE65 /* Belwe.ttf */; };
 		FCEA53F11958A08800BF8CD4 /* ZEDrawSimulatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEA53F01958A08800BF8CD4 /* ZEDrawSimulatorViewController.m */; };
 		FCEA53F41958B72000BF8CD4 /* ZECardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEA53F31958B72000BF8CD4 /* ZECardCollectionViewCell.m */; };
+		FCEAB176195B7047002D1874 /* CRToast.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEAB175195B7047002D1874 /* CRToast.m */; };
 		FCEDD26719520396001758C0 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCEDD26619520396001758C0 /* iAd.framework */; };
 		FCEDD26A195211F1001758C0 /* UINavigationController+Progress.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEDD269195211F1001758C0 /* UINavigationController+Progress.m */; };
 		FCF361141931DDEC0044B85E /* ZEPublishTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF361131931DDEC0044B85E /* ZEPublishTableViewController.m */; };
@@ -1056,6 +1057,8 @@
 		FCEA53F01958A08800BF8CD4 /* ZEDrawSimulatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEDrawSimulatorViewController.m; sourceTree = "<group>"; };
 		FCEA53F21958B72000BF8CD4 /* ZECardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZECardCollectionViewCell.h; sourceTree = "<group>"; };
 		FCEA53F31958B72000BF8CD4 /* ZECardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZECardCollectionViewCell.m; sourceTree = "<group>"; };
+		FCEAB174195B7047002D1874 /* CRToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRToast.h; sourceTree = "<group>"; };
+		FCEAB175195B7047002D1874 /* CRToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRToast.m; sourceTree = "<group>"; };
 		FCEDD26619520396001758C0 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		FCEDD268195211F1001758C0 /* UINavigationController+Progress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Progress.h"; path = "../UINavigationController+Progress.h"; sourceTree = "<group>"; };
 		FCEDD269195211F1001758C0 /* UINavigationController+Progress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Progress.m"; path = "../UINavigationController+Progress.m"; sourceTree = "<group>"; };
@@ -1795,6 +1798,7 @@
 		FCAB965D1924158A0072DC59 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FCEAB173195B7047002D1874 /* CRToast */,
 				FC90BA3A195358BE00AD5262 /* Classes */,
 				8F0A69E51938B09F009AC664 /* Parse-NSCoding */,
 				8F0A69DD19387EDC009AC664 /* NavigationController */,
@@ -1814,6 +1818,15 @@
 				FCAB9660192415930072DC59 /* ViewUtils.m */,
 			);
 			path = ViewUtils;
+			sourceTree = "<group>";
+		};
+		FCEAB173195B7047002D1874 /* CRToast */ = {
+			isa = PBXGroup;
+			children = (
+				FCEAB174195B7047002D1874 /* CRToast.h */,
+				FCEAB175195B7047002D1874 /* CRToast.m */,
+			);
+			path = CRToast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2433,6 +2446,7 @@
 				FC90BA3D195358BE00AD5262 /* SZTextView.m in Sources */,
 				FC90BA33195304AB00AD5262 /* ZEPublishCardTableViewCell.m in Sources */,
 				8FA18BFD192A3B8C00FF3F71 /* ZEFilterTableDataSource.m in Sources */,
+				FCEAB176195B7047002D1874 /* CRToast.m in Sources */,
 				FCAB8D3819215A640072DC59 /* main.m in Sources */,
 				FC22119E195424D5001D7251 /* ZEPublishTextTableViewCell.m in Sources */,
 				8F6CAA3C1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m in Sources */,

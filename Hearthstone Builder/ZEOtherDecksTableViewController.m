@@ -137,6 +137,7 @@
     vc.interstitialPresentationPolicy = ADInterstitialPresentationPolicyAutomatic;
     vc.hero = self.hero;
     vc.viewDeckMode = YES;
+    vc.editable = NO;
     vc.deckObject = self.dataSource[indexPath.row];
     [self.navigationController hb_showProgress];
     [vc.deckObject fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {

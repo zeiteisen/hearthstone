@@ -106,10 +106,12 @@
         vc.hero = deck[@"hero"];
         vc.selectedDeckNumber = indexPath.row;
         vc.viewDeckMode = YES;
+        vc.editable = YES;
     } else {
         PFObject *likedDeck = data[indexPath.row];
         vc.hero = likedDeck[@"hero"];
         vc.viewDeckMode = YES;
+        vc.editable = YES;
         vc.deckObject = likedDeck;
     }
     [self.navigationController pushViewController:vc animated:YES];

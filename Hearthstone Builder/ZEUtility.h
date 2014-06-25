@@ -21,5 +21,6 @@
 + (UIColor *)basicColor;
 + (BOOL)remoteNotificationEnabled;
 + (void)registerForRemoteNotifications;
++ (NSDictionary *)toastOptionsWithText:(NSString *)saveText;
 
 @end

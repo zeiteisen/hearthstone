@@ -16,6 +16,7 @@
 #import "AHKActionSheet.h"
 #import "iRate.h"
 #import "ZEDrawSimulatorViewController.h"
+#import "CRToast.h"
 
 @interface ZEViewController () <UITableViewDataSource, UITableViewDelegate, ZECardTableViewCellDelegate, JBBarChartViewDataSource, JBBarChartViewDelegate, UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -33,6 +34,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomContraint;
 @property (nonatomic, strong) IBOutlet UILabel *deckCountLabel;
 @property (nonatomic, strong) NSMutableArray *deckSave;
+@property (nonatomic, assign) BOOL toastVisible;
 @end
 
 @implementation ZEViewController
@@ -58,6 +60,7 @@
 {
     [super viewDidLoad];
     BOOL viewDeckMode = self.viewDeckMode;
+    self.toastVisible = NO;
     
     self.deckData = [NSMutableArray array];
     self.countedDeckData = [NSCountedSet setWithCapacity:30];
@@ -185,6 +188,22 @@
         savedDecks = [NSMutableArray array];
     }
     
+    NSString *saveText = @"";
+    if (self.deckObject && self.editable && self.selectedDeckNumber == 0) { // copy a liked deck
+        saveText = NSLocalizedString(@"Deck copied and saved", nil);
+        self.selectedDeckNumber = savedDecks.count;
+        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+        dict[@"title"] = [NSString stringWithFormat:@"Copy: %@", self.deckObject[@"title"]];
+        dict[@"description"] = self.deckObject[@"description"];
+        if (self.deckObject[@"cardDescriptions"]) {
+            dict[@"cardDescriptions"] = self.deckObject[@"cardDescriptions"];
+        }
+        dict[@"hero"] = self.deckObject[@"hero"];
+        [savedDecks addObject:dict];
+    } else {
+        saveText = NSLocalizedString(@"Deck saved", nil);
+    }
+    
     NSMutableDictionary *saveData = [NSMutableDictionary dictionary];
     NSMutableArray *savedDeckData = [NSMutableArray array];
     if (self.selectedDeckNumber != -1) {
@@ -212,11 +231,18 @@
     
     [[NSUserDefaults standardUserDefaults] setObject:savedDecks forKey:USER_DECKS_KEY];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    if (!self.toastVisible) {
+        self.toastVisible = YES;
+        [CRToastManager showNotificationWithOptions:[ZEUtility toastOptionsWithText:saveText] completionBlock:^{
+            self.toastVisible = NO;
+        }];
+    }
 }
 
 - (void)setViewDeckMode:(BOOL)viewDeckMode {
     _viewDeckMode = viewDeckMode;
-    if (viewDeckMode || self.deckObject) {
+    if (viewDeckMode || !self.editable) {
         self.deckCountLabel.backgroundColor = [UIColor grayColor];
         self.dataSource = self.deckDataWithoutDuplicates;
     } else {
@@ -337,7 +363,7 @@
 }
 
 - (void)updateRemoveButtonWithCard:(NSDictionary *)card onCell:(ZECardTableViewCell *)cell {
-    if ([self.deckData containsObject:card] && self.deckObject == nil) {
+    if ([self.deckData containsObject:card] && self.editable) {
         cell.removeButton.hidden = NO;
     } else {
         cell.removeButton.hidden = YES;
@@ -395,7 +421,7 @@
 }
 
 - (void)updateFadedStateOnCell:(ZECardTableViewCell *)cell {
-    if (self.viewDeckMode || self.deckObject) {
+    if (self.viewDeckMode || !self.editable) {
         cell.faded = NO;
     } else {
         NSUInteger countInDeck = [self deckContainsAmountOfCards:cell.cardData];
@@ -492,7 +518,7 @@
     }
     
     if (tableView == self.tableView) {
-        if (self.deckObject) {
+        if (!self.editable) {
             return;
         }
         
@@ -553,7 +579,7 @@
 #pragma mark - ZECardTableViewCellDelegate
 
 - (void)cardCellDidTouchedRemove:(ZECardTableViewCell *)cell {
-    if (self.deckObject) {
+    if (!self.editable) {
         return;
     }
     
@@ -661,7 +687,7 @@
             [self.navigationController pushViewController:drawSimulator animated:YES];
         }];
     }
-    if (![self liked] && self.deckObject) {
+    if (![self liked] && !self.editable) {
         [actionSheet addButtonWithTitle:NSLocalizedString(@"Like and save", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
             [self.deckObject incrementKey:@"likes"];
             [self.deckObject saveInBackground];
@@ -689,13 +715,13 @@
             }
         }];
     }
-    if ([self hasDescription] && self.deckObject) {
+    if (([self hasDescription] && !self.editable) || (self.deckObject && [self hasDescription] && self.selectedDeckNumber == 0)) {
         [actionSheet addButtonWithTitle:NSLocalizedString(@"Read Description", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
             ZEPublishTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"PublishTableViewController"];
             vc.deckObject = self.deckObject;
             [self.navigationController pushViewController:vc animated:YES];
         }];
-    } else if (self.deckObject == nil) {
+    } else if (self.editable) {
         NSString *title;
         NSDictionary *userDeck = [self getUserDeck];
         if (userDeck[@"objectId"]) {

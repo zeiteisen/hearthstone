@@ -11,10 +11,12 @@
 #import "ZEPublishTitleTableViewCell.h"
 #import "ZEPublishCardTableViewCell.h"
 #import "ZEPublishTextTableViewCell.h"
+#import "CRToast.h"
 
 @interface ZEPublishTableViewController () <UITextFieldDelegate, ZEPublishCardTableViewCellDelegate, ZEPublishTextTableViewCellDelegate, UIAlertViewDelegate>
 @property (nonatomic, strong) NSMutableDictionary *deck; // for persistent saving
 @property (nonatomic, strong) NSMutableArray *dataSource; // for the tableview
+@property (nonatomic, assign) BOOL toastVisible;
 @end
 
 @implementation ZEPublishTableViewController
@@ -22,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.allowsSelection = NO;
+    self.toastVisible = NO;
     self.dataSource = [NSMutableArray array];
     NSMutableArray *titleData = [NSMutableArray array];
     NSMutableArray *descriptionData = [NSMutableArray array];
@@ -117,6 +120,7 @@
 
 - (void)dismissKeyboard {
     [self.view endEditing:YES];
+    [self saveDeck];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -135,6 +139,12 @@
         [decks replaceObjectAtIndex:self.selectedDeckNumber withObject:self.deck];
         [[NSUserDefaults standardUserDefaults] setObject:decks forKey:USER_DECKS_KEY];
         [[NSUserDefaults standardUserDefaults] synchronize];
+        if (!self.toastVisible) {
+            self.toastVisible = YES;
+            [CRToastManager showNotificationWithOptions:[ZEUtility toastOptionsWithText:NSLocalizedString(@"Setting saved", nil)] completionBlock:^{
+                self.toastVisible = NO;
+            }];
+        }
     }
 }
 

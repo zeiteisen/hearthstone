@@ -12,5 +12,6 @@
 @property (nonatomic, strong) NSString *hero;
 @property (nonatomic, assign) NSInteger selectedDeckNumber;
 @property (nonatomic, assign) BOOL viewDeckMode;
+@property (nonatomic, assign) BOOL editable;
 @property (nonatomic, strong) PFObject *deckObject;
 @end

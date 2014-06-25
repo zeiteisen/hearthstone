@@ -7,6 +7,7 @@
 //
 
 #import "ZEUtility.h"
+#import "CRToast.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -72,6 +73,22 @@
      UIRemoteNotificationTypeAlert |
      UIRemoteNotificationTypeSound];
 #endif
+}
+
++ (NSDictionary *)toastOptionsWithText:(NSString *)saveText {
+    NSDictionary *options = @{
+                              kCRToastTextKey : saveText,
+                              kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                              kCRToastBackgroundColorKey : [UIColor grayColor],
+                              kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                              kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+                              kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionBottom),
+                              kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionTop),
+                              kCRToastFontKey : [ZEUtility myStandardFont],
+                              kCRToastTimeIntervalKey : @(0.3),
+                              kCRToastTextColorKey : [UIColor blackColor]
+                              };
+    return options;
 }
 
 @end
