@@ -37,6 +37,7 @@
     NSDictionary *settings = @{NSFontAttributeName: font};
     [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setDefaultTextAttributes:settings];
     [[UIBarButtonItem appearance] setTitleTextAttributes:settings forState:UIControlStateNormal];
+    [[UINavigationBar appearance] setTitleTextAttributes:settings];
     [[AHKActionSheet appearance] setButtonTextAttributes:settings];
     NSDictionary *cancelButtonSettings = @{NSFontAttributeName: font, NSForegroundColorAttributeName: [UIColor redColor]};
     [[AHKActionSheet appearance] setCancelButtonTextAttributes:cancelButtonSettings];

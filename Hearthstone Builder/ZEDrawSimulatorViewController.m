@@ -9,6 +9,7 @@
 #import "ZEDrawSimulatorViewController.h"
 #import "ZECardCollectionViewCell.h"
 #import "NSMutableArray+Shuffle.h"
+#import "AHKActionSheet.h"
 
 @interface ZEDrawSimulatorViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *drawButton;
@@ -16,6 +17,9 @@
 @property (nonatomic, strong) NSMutableArray *dataSource;
 @property (nonatomic, strong) NSMutableArray *internalDeck;
 @property (nonatomic, assign) BOOL mulligan;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *manaButton;
+@property (nonatomic, strong) UIButton *customViewManaButton;
+@property (nonatomic, assign) NSInteger mana;
 @end
 
 @implementation ZEDrawSimulatorViewController
@@ -25,9 +29,21 @@
     self.dataSource = [NSMutableArray array];
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self startWithCountCards:3];
+    self.customViewManaButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.customViewManaButton setBackgroundImage:[UIImage imageNamed:@"mana"] forState:UIControlStateNormal];
+    [self.customViewManaButton setTitle:@"" forState:UIControlStateNormal];
+    self.customViewManaButton.frame = (CGRect) {
+        .size.width = 35,
+        .size.height = 35,
+    };
+    self.customViewManaButton.titleLabel.font = [ZEUtility myStandardFont];
+    self.manaButton.customView = self.customViewManaButton;
 }
 
 - (void)startWithCountCards:(NSInteger)countCards {
+    self.drawButton.enabled = YES;
+    self.mana = 0;
+    [self updateManaButtonText];
     for (ZECardCollectionViewCell *cell in [self.collectionView visibleCells]) {
         cell.imageView.alpha = 1.;
     }
@@ -69,7 +85,6 @@
             }
         }
         [self.internalDeck shuffle];
-        
         for (NSIndexPath *indexPath in replaceIndexPaths) {
             NSDictionary *newCard = [self.internalDeck lastObject];
             [self.internalDeck removeLastObject];
@@ -80,6 +95,12 @@
         
     } else {
         [self addCard];
+        if (self.mana >= 10) {
+            self.mana = 10;
+        } else {
+            self.mana++;
+        }
+        [self updateManaButtonText];
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.dataSource.count - 1 inSection:0];
         [self.collectionView insertItemsAtIndexPaths:@[indexPath]];
         [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionBottom animated:YES];
@@ -89,16 +110,25 @@
     }
 }
 
-- (IBAction)restartTouched:(id)sender {
-    [self startWithCountCards:3];
-    self.drawButton.enabled = YES;
+- (void)updateManaButtonText {
+    if (self.mana == 0) {
+        [self.customViewManaButton setTitle:@"" forState:UIControlStateNormal];
+    } else {
+        [self.customViewManaButton setTitle:[NSString stringWithFormat:@"%li", (long)self.mana] forState:UIControlStateNormal];
+    }
 }
 
-- (IBAction)restart4Touched:(id)sender {
-    [self startWithCountCards:4];
-    self.drawButton.enabled = YES;
-    
+- (IBAction)restartTouched:(id)sender {
+    AHKActionSheet *sheet = [[AHKActionSheet alloc] initWithTitle:nil];
+    [sheet addButtonWithTitle:NSLocalizedString(@"Restart with 3 cards", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+        [self startWithCountCards:3];
+    }];
+    [sheet addButtonWithTitle:NSLocalizedString(@"Restart with 4 cards", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+        [self startWithCountCards:4];
+    }];
+    [sheet show];
 }
+
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {

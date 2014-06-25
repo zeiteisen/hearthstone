@@ -136,7 +136,9 @@
     } else {
         [self setViewDeckMode:NO];
     }
-    [self updatePublishButton];
+    if (self.deckData.count == 0) {
+        self.navigationItem.rightBarButtonItem.enabled = NO;
+    }
 }
 
 - (NSDictionary *)getUserDeck {
@@ -406,27 +408,6 @@
     }
 }
 
-- (void)updatePublishButton {
-    if (self.deckObject) {
-        self.navigationItem.rightBarButtonItem.title = NSLocalizedString(@"More", nil);
-        if ([self shouldShowMoreButton]) {
-            self.navigationItem.rightBarButtonItem.enabled = YES;
-        } else {
-            self.navigationItem.rightBarButtonItem.enabled = NO;
-        }
-    } else if (self.selectedDeckNumber == -1) {
-        self.navigationItem.rightBarButtonItem.enabled = NO;
-    } else {
-        self.navigationItem.rightBarButtonItem.enabled = YES;
-        NSDictionary *userDeck = [self getUserDeck];
-        if (userDeck[@"objectId"]) {
-            self.navigationItem.rightBarButtonItem.title = NSLocalizedString(@"Update", nil);
-        } else {
-            self.navigationItem.rightBarButtonItem.title = NSLocalizedString(@"Publish", nil);
-        }
-    }
-}
-
 - (BOOL)liked {
     return [self myLikes:[self persistentLikes] containsObjectId:self.deckObject.objectId];
 }
@@ -521,6 +502,7 @@
         NSUInteger maxCardsAllowed = [self maxAllowedInDeckOfCard:card];
         if (countInDeck < maxCardsAllowed && self.deckData.count < 30) {
             [self.deckData addObject:card];
+            self.navigationItem.rightBarButtonItem.enabled = YES;
             
             NSInteger count = self.deckDataWithoutDuplicates.count;
             [self updateDeckDataArrays];
@@ -542,7 +524,6 @@
             [self updateFadedStateOnCell:cardCell];
             [self updateDeckCountLabel];
             [self saveDeck];
-            [self updatePublishButton];
         }
     } else if (tableView == self.pickedTableView) {
         // show the picked card
@@ -609,7 +590,6 @@
     [self.chartView reloadData];
     [self highlightPickedCard];
     [self updateDeckCountLabel];
-    [self updatePublishButton];
     [self saveDeck];
 }
 
@@ -673,58 +653,64 @@
 #pragma mark - Actions 
 
 - (IBAction)publishTouched:(id)sender {
-    if (self.deckObject) {
-        AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:nil];
-        if ([self deckComplete]) {
-            [actionSheet addButtonWithTitle:NSLocalizedString(@"Draw Card Simulator", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
-                ZEDrawSimulatorViewController *drawSimulator = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"DrawSimulatorViewController"];
-                drawSimulator.deck = self.deckData;
-                [self.navigationController pushViewController:drawSimulator animated:YES];
-            }];
-        }
-        if (![self liked]) {
-            [actionSheet addButtonWithTitle:NSLocalizedString(@"Like and save", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
-                [self.deckObject incrementKey:@"likes"];
-                [self.deckObject saveInBackground];
-                
-                NSData *deckData = [NSKeyedArchiver archivedDataWithRootObject:self.deckObject];
-                NSMutableArray *myLikes = [self persistentLikes];
-                [myLikes addObject:deckData];
-                [[NSUserDefaults standardUserDefaults] setObject:myLikes forKey:MyLikesUserDefaultsKey];
-                [[NSUserDefaults standardUserDefaults] synchronize];
-                if (![iRate sharedInstance].declinedThisVersion && ![iRate sharedInstance].ratedThisVersion) {
-                    [[iRate sharedInstance] promptIfNetworkAvailable];
-                }
-                [self updatePublishButton];
-                NSString *installationId = self.deckObject[@"installation"];
-                if (installationId.length != 0) {
-                    PFQuery *query = [PFInstallation query];
-                    [query whereKey:@"installationId" equalTo:installationId];
-                    PFPush *push = [PFPush new];
-                    [push setQuery:query];
-                    [push setMessage:[NSString stringWithFormat:@"Someone liked: %@", self.deckObject[@"title"]]];
-                    [push sendPushInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                        if (error) {
-                            NSLog(@"push error %@", error);
-                        }
-                    }];
-                }
-            }];
-        }
-        if ([self hasDescription]) {
-            [actionSheet addButtonWithTitle:NSLocalizedString(@"Read Description", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
-                ZEPublishTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"PublishTableViewController"];
-                vc.deckObject = self.deckObject;
-                [self.navigationController pushViewController:vc animated:YES];
-                [self updatePublishButton];
-            }];
-        }
-        [actionSheet show];
-    } else {
-        ZEPublishTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"PublishTableViewController"];
-        vc.selectedDeckNumber = self.selectedDeckNumber;
-        [self.navigationController pushViewController:vc animated:YES];
+    AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:nil];
+    if ([self deckComplete]) {
+        [actionSheet addButtonWithTitle:NSLocalizedString(@"Draw Card Simulator", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+            ZEDrawSimulatorViewController *drawSimulator = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"DrawSimulatorViewController"];
+            drawSimulator.deck = self.deckData;
+            [self.navigationController pushViewController:drawSimulator animated:YES];
+        }];
     }
+    if (![self liked] && self.deckObject) {
+        [actionSheet addButtonWithTitle:NSLocalizedString(@"Like and save", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+            [self.deckObject incrementKey:@"likes"];
+            [self.deckObject saveInBackground];
+            
+            NSData *deckData = [NSKeyedArchiver archivedDataWithRootObject:self.deckObject];
+            NSMutableArray *myLikes = [self persistentLikes];
+            [myLikes addObject:deckData];
+            [[NSUserDefaults standardUserDefaults] setObject:myLikes forKey:MyLikesUserDefaultsKey];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            if (![iRate sharedInstance].declinedThisVersion && ![iRate sharedInstance].ratedThisVersion) {
+                [[iRate sharedInstance] promptIfNetworkAvailable];
+            }
+            NSString *installationId = self.deckObject[@"installation"];
+            if (installationId.length != 0) {
+                PFQuery *query = [PFInstallation query];
+                [query whereKey:@"installationId" equalTo:installationId];
+                PFPush *push = [PFPush new];
+                [push setQuery:query];
+                [push setMessage:[NSString stringWithFormat:@"Someone liked: %@", self.deckObject[@"title"]]];
+                [push sendPushInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if (error) {
+                        NSLog(@"push error %@", error);
+                    }
+                }];
+            }
+        }];
+    }
+    if ([self hasDescription] && self.deckObject) {
+        [actionSheet addButtonWithTitle:NSLocalizedString(@"Read Description", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+            ZEPublishTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"PublishTableViewController"];
+            vc.deckObject = self.deckObject;
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
+    } else if (self.deckObject == nil) {
+        NSString *title;
+        NSDictionary *userDeck = [self getUserDeck];
+        if (userDeck[@"objectId"]) {
+            title = NSLocalizedString(@"Update the deck on the server", nil);
+        } else {
+            title = NSLocalizedString(@"Set deckname or publish", nil);
+        }
+        [actionSheet addButtonWithTitle:title type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+            ZEPublishTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"PublishTableViewController"];
+            vc.selectedDeckNumber = self.selectedDeckNumber;
+            [self.navigationController pushViewController:vc animated:YES];
+
+        }];
+    }
+    [actionSheet show];
 }
 
 

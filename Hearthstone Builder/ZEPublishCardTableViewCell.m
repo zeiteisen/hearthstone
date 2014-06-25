@@ -32,7 +32,8 @@
 - (void)updateWithDict:(NSDictionary *)dict {
     NSString *imageName = dict[@"name"];
     NSString *description = dict[@"description"];
-    self.cardImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", imageName]];
+    NSString *cardName = [NSString stringWithFormat:@"%@.jpg", imageName];
+    self.cardImageView.image = [UIImage imageNamed:cardName];
     if (description.length == 0) {
         self.descriptionTextView.text = @"";
         self.descriptionTextView.placeholder = [self getFlavourTextFromCardName:imageName];
