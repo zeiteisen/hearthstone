@@ -22,26 +22,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"deck %@", self.deck);
     self.dataSource = [NSMutableArray array];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self start];
 }
 
 - (void)start {
+    for (ZECardCollectionViewCell *cell in [self.collectionView visibleCells]) {
+        cell.imageView.alpha = 1.;
+    }
     self.mulligan = YES;
-    self.drawButton.titleLabel.text = NSLocalizedString(@"Pick", nil);
+    [self.drawButton setTitle:NSLocalizedString(@"Pick", nil) forState:UIControlStateNormal];
+    self.navigationItem.title = NSLocalizedString(@"Mulligan", nil);
     [self.dataSource removeAllObjects];
     self.internalDeck = [NSMutableArray arrayWithArray:self.deck];
-    NSMutableArray *indexPaths = [NSMutableArray array];
     [self.internalDeck shuffle];
     for (int i = 0; i < 3; i++) {
         [self addCard];
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
-        [indexPaths addObject:indexPath];
     }
     [self.collectionView reloadData];
 }
@@ -59,7 +56,8 @@
 - (IBAction)drawTouched:(UIButton *)sender {
     if (self.mulligan) {
         self.mulligan = NO;
-        sender.titleLabel.text = NSLocalizedString(@"Draw", nil);
+        [self.drawButton setTitle:NSLocalizedString(@"Draw", nil) forState:UIControlStateNormal];
+        self.navigationItem.title = NSLocalizedString(@"Draw", nil);
         NSArray *cells = [self.collectionView visibleCells];
         NSMutableArray *replaceIndexPaths = [NSMutableArray array];
         for (ZECardCollectionViewCell *cell in cells) {
@@ -68,7 +66,6 @@
                 cell.imageView.alpha = 1;
                 [replaceIndexPaths addObject:indexPath];
                 NSDictionary *card = self.dataSource[indexPath.row];
-                [self.dataSource removeObject:card];
                 [self.internalDeck addObject:card];
             }
         }
@@ -77,7 +74,7 @@
         for (NSIndexPath *indexPath in replaceIndexPaths) {
             NSDictionary *newCard = [self.internalDeck lastObject];
             [self.internalDeck removeLastObject];
-            [self.dataSource insertObject:newCard atIndex:indexPath.row];
+            [self.dataSource replaceObjectAtIndex:indexPath.row withObject:newCard];
         }
         [self.collectionView reloadItemsAtIndexPaths:replaceIndexPaths];
         
