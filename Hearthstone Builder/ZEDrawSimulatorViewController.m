@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *manaButton;
 @property (nonatomic, strong) UIButton *customViewManaButton;
 @property (nonatomic, assign) NSInteger mana;
+@property (nonatomic, assign) BOOL allCardsAreAddedToCollectionView;
 @end
 
 @implementation ZEDrawSimulatorViewController
@@ -41,6 +42,7 @@
 }
 
 - (void)startWithCountCards:(NSInteger)countCards {
+    self.allCardsAreAddedToCollectionView = NO;
     self.drawButton.enabled = YES;
     self.mana = 0;
     [self updateManaButtonText];
@@ -64,6 +66,8 @@
         NSDictionary *card = [self.internalDeck lastObject];
         [self.internalDeck removeLastObject];
         [self.dataSource addObject:card];
+    } else {
+        self.allCardsAreAddedToCollectionView = YES;
     }
 }
 
@@ -102,8 +106,10 @@
         }
         [self updateManaButtonText];
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.dataSource.count - 1 inSection:0];
-        [self.collectionView insertItemsAtIndexPaths:@[indexPath]];
-        [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionBottom animated:YES];
+        if (!self.allCardsAreAddedToCollectionView) {
+            [self.collectionView insertItemsAtIndexPaths:@[indexPath]];
+            [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionBottom animated:YES];
+        }
         if (self.internalDeck.count <= 0) {
             sender.enabled = NO;
         }
