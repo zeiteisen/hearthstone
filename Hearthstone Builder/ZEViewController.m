@@ -17,6 +17,7 @@
 #import "iRate.h"
 #import "ZEDrawSimulatorViewController.h"
 #import "CRToast.h"
+#import "ZETrackTableViewController.h"
 
 @interface ZEViewController () <UITableViewDataSource, UITableViewDelegate, ZECardTableViewCellDelegate, JBBarChartViewDataSource, JBBarChartViewDelegate, UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -200,6 +201,7 @@
         }
         dict[@"hero"] = self.deckObject[@"hero"];
         [savedDecks addObject:dict];
+        self.deckObject = nil; // switch the datamodel from a liked deck to a new local one
     } else {
         saveText = NSLocalizedString(@"Deck saved", nil);
     }
@@ -686,9 +688,15 @@
             drawSimulator.deck = self.deckData;
             [self.navigationController pushViewController:drawSimulator animated:YES];
         }];
+        
+        [actionSheet addButtonWithTitle:NSLocalizedString(@"Card Tracker", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+            ZETrackTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"TrackTableViewController"];
+            vc.deck = self.countedDeckData;
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
     }
     if (![self liked] && !self.editable) {
-        [actionSheet addButtonWithTitle:NSLocalizedString(@"Like and save", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+        [actionSheet addButtonWithTitle:NSLocalizedString(@"Like and Save", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
             [self.deckObject incrementKey:@"likes"];
             [self.deckObject saveInBackground];
             
@@ -721,13 +729,13 @@
             vc.deckObject = self.deckObject;
             [self.navigationController pushViewController:vc animated:YES];
         }];
-    } else if (self.editable) {
+    } else if (self.editable && !(![self hasDescription] && self.deckObject)) { // wenn keine description da ist aber das deck aus dem liked array kommt, dann zeige nichts an
         NSString *title;
         NSDictionary *userDeck = [self getUserDeck];
         if (userDeck[@"objectId"]) {
-            title = NSLocalizedString(@"Update the deck on the server", nil);
+            title = NSLocalizedString(@"Update the Deck on the Server", nil);
         } else {
-            title = NSLocalizedString(@"Set deckname or publish", nil);
+            title = NSLocalizedString(@"Set Deckname or Publish", nil);
         }
         [actionSheet addButtonWithTitle:title type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
             ZEPublishTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"PublishTableViewController"];

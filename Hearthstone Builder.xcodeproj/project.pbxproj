@@ -496,6 +496,8 @@
 		FCEA53F11958A08800BF8CD4 /* ZEDrawSimulatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEA53F01958A08800BF8CD4 /* ZEDrawSimulatorViewController.m */; };
 		FCEA53F41958B72000BF8CD4 /* ZECardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEA53F31958B72000BF8CD4 /* ZECardCollectionViewCell.m */; };
 		FCEAB176195B7047002D1874 /* CRToast.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEAB175195B7047002D1874 /* CRToast.m */; };
+		FCED4D2A195C070600A33DF6 /* ZETrackTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCED4D29195C070600A33DF6 /* ZETrackTableViewController.m */; };
+		FCED4D2D195C15EC00A33DF6 /* ZETrackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCED4D2C195C15EC00A33DF6 /* ZETrackTableViewCell.m */; };
 		FCEDD26719520396001758C0 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCEDD26619520396001758C0 /* iAd.framework */; };
 		FCEDD26A195211F1001758C0 /* UINavigationController+Progress.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEDD269195211F1001758C0 /* UINavigationController+Progress.m */; };
 		FCF361141931DDEC0044B85E /* ZEPublishTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF361131931DDEC0044B85E /* ZEPublishTableViewController.m */; };
@@ -1059,6 +1061,10 @@
 		FCEA53F31958B72000BF8CD4 /* ZECardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZECardCollectionViewCell.m; sourceTree = "<group>"; };
 		FCEAB174195B7047002D1874 /* CRToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRToast.h; sourceTree = "<group>"; };
 		FCEAB175195B7047002D1874 /* CRToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRToast.m; sourceTree = "<group>"; };
+		FCED4D28195C070600A33DF6 /* ZETrackTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZETrackTableViewController.h; sourceTree = "<group>"; };
+		FCED4D29195C070600A33DF6 /* ZETrackTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZETrackTableViewController.m; sourceTree = "<group>"; };
+		FCED4D2B195C15EC00A33DF6 /* ZETrackTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZETrackTableViewCell.h; sourceTree = "<group>"; };
+		FCED4D2C195C15EC00A33DF6 /* ZETrackTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZETrackTableViewCell.m; sourceTree = "<group>"; };
 		FCEDD26619520396001758C0 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		FCEDD268195211F1001758C0 /* UINavigationController+Progress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Progress.h"; path = "../UINavigationController+Progress.h"; sourceTree = "<group>"; };
 		FCEDD269195211F1001758C0 /* UINavigationController+Progress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Progress.m"; path = "../UINavigationController+Progress.m"; sourceTree = "<group>"; };
@@ -1218,6 +1224,8 @@
 				FC22119D195424D5001D7251 /* ZEPublishTextTableViewCell.m */,
 				FCEA53F21958B72000BF8CD4 /* ZECardCollectionViewCell.h */,
 				FCEA53F31958B72000BF8CD4 /* ZECardCollectionViewCell.m */,
+				FCED4D2B195C15EC00A33DF6 /* ZETrackTableViewCell.h */,
+				FCED4D2C195C15EC00A33DF6 /* ZETrackTableViewCell.m */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -1284,6 +1292,8 @@
 				FCAB965D1924158A0072DC59 /* Vendor */,
 				FCAB8D6019215AB30072DC59 /* Resources */,
 				FCAB8D3D19215A640072DC59 /* Main.storyboard */,
+				FCED4D28195C070600A33DF6 /* ZETrackTableViewController.h */,
+				FCED4D29195C070600A33DF6 /* ZETrackTableViewController.m */,
 				FCEA53EF1958A08800BF8CD4 /* ZEDrawSimulatorViewController.h */,
 				FCEA53F01958A08800BF8CD4 /* ZEDrawSimulatorViewController.m */,
 				FCAB8D3A19215A640072DC59 /* ZEAppDelegate.h */,
@@ -2438,6 +2448,7 @@
 				8F6CAA0D19338A810078EE65 /* AHKActionSheetViewController.m in Sources */,
 				FCE0070E1937B52800645355 /* ZELegalViewController.m in Sources */,
 				FCAB8D4219215A640072DC59 /* ZEViewController.m in Sources */,
+				FCED4D2A195C070600A33DF6 /* ZETrackTableViewController.m in Sources */,
 				FCEA53F11958A08800BF8CD4 /* ZEDrawSimulatorViewController.m in Sources */,
 				8FA18BFA192A32B700FF3F71 /* ZEDataManager.m in Sources */,
 				FC71726A19366D110062B3E1 /* ZEOtherDeckTableViewCell.m in Sources */,
@@ -2451,6 +2462,7 @@
 				FC22119E195424D5001D7251 /* ZEPublishTextTableViewCell.m in Sources */,
 				8F6CAA3C1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m in Sources */,
 				8F0A69FA1938B09F009AC664 /* PFGeoPoint+NSCoding.m in Sources */,
+				FCED4D2D195C15EC00A33DF6 /* ZETrackTableViewCell.m in Sources */,
 				8F6CAA0F19338A810078EE65 /* UIWindow+AHKAdditions.m in Sources */,
 				8F0A69F81938B09F009AC664 /* PFACL+NSCoding.m in Sources */,
 				FCAB8D3C19215A640072DC59 /* ZEAppDelegate.m in Sources */,
