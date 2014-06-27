@@ -30,18 +30,7 @@
     if ([set isEqualToString:@"basic"]) {
         cell.label.textColor = [ZEUtility basicColor];
     } else {
-        NSString *cardQuality = card[@"quality"];
-        if ([cardQuality isEqualToString:@"legendary"]) {
-            cell.label.textColor = [ZEUtility legendaryColor];
-        } else if ([cardQuality isEqualToString:@"epic"]) {
-            cell.label.textColor = [ZEUtility epicColor];
-        } else if ([cardQuality isEqualToString:@"rare"]) {
-            cell.label.textColor = [ZEUtility rareColor];
-        } else if ([cardQuality isEqualToString:@"common"]) {
-            cell.label.textColor = [ZEUtility commonColor];
-        } else {
-            cell.label.textColor = [ZEUtility basicColor];
-        }
+        cell.label.textColor = [ZEUtility colorForQuality:card[@"quality"]];
     }
     return cell;
 }

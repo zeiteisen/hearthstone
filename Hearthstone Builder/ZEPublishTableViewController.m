@@ -16,15 +16,15 @@
 @interface ZEPublishTableViewController () <UITextFieldDelegate, ZEPublishCardTableViewCellDelegate, ZEPublishTextTableViewCellDelegate, UIAlertViewDelegate>
 @property (nonatomic, strong) NSMutableDictionary *deck; // for persistent saving
 @property (nonatomic, strong) NSMutableArray *dataSource; // for the tableview
-@property (nonatomic, assign) BOOL toastVisible;
+@property (nonatomic, assign) BOOL titleSet;
 @end
 
 @implementation ZEPublishTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = NSLocalizedString(@"Description", nil);
     self.tableView.allowsSelection = NO;
-    self.toastVisible = NO;
     self.dataSource = [NSMutableArray array];
     NSMutableArray *titleData = [NSMutableArray array];
     NSMutableArray *descriptionData = [NSMutableArray array];
@@ -43,9 +43,11 @@
     }
     NSString *title = self.deck[@"title"];
     NSString *hero = self.deck[@"hero"];
+    self.titleSet = YES;
     if (self.deckObject) {
         if (title.length == 0) {
             [titleDict setObject:hero forKey:@"title"];
+            self.titleSet = NO;
         } else {
             [titleDict setObject:title forKey:@"title"];
         }
@@ -54,7 +56,7 @@
             [titleDict setObject:title forKey:@"title"];
         } else {
             [titleDict setObject:NSLocalizedString(@"Your fancy deck name", nil) forKey:@"titlePlaceholder"];
-            self.navigationItem.rightBarButtonItem.enabled = NO;
+            self.titleSet = NO;
         }
     }
     [titleDict setObject:self.deck[@"dust"] forKey:@"dust"];
@@ -135,27 +137,14 @@
 - (void)saveDeck {
 //    self.deck[@"objectId"] = @"M1tbZ5xe8u";
     if (!self.deckObject) {
-        NSMutableArray *decks = [[[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY] mutableCopy];
-        [decks replaceObjectAtIndex:self.selectedDeckNumber withObject:self.deck];
-        [[NSUserDefaults standardUserDefaults] setObject:decks forKey:USER_DECKS_KEY];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        if (!self.toastVisible) {
-            self.toastVisible = YES;
-            [CRToastManager showNotificationWithOptions:[ZEUtility toastOptionsWithText:NSLocalizedString(@"Setting saved", nil)] completionBlock:^{
-                self.toastVisible = NO;
-            }];
-        }
+        [ZEUtility updateDeckUserDefaults:self.deck atIndex:self.selectedDeckNumber];
+        [ZEUtility showToastWithText:NSLocalizedString(@"Setting saved", nil) duration:0.3];
     }
 }
 
 - (void)checkDeckCountToEnableUploadButton {
     if (self.deckObject) {
         self.navigationItem.rightBarButtonItem = nil;
-    } else {
-        NSArray *deckCardNames = self.deck[@"deck"];
-        if (deckCardNames.count < 30) {
-            self.navigationItem.rightBarButtonItem.enabled = NO;
-        }
     }
 }
 
@@ -173,22 +162,34 @@
 #pragma mark - ZEPublishCardTableViewCellDelegate
 
 - (void)publishCardTableViewDidEndEditing:(ZEPublishCardTableViewCell *)sender {
+    
+    // update datasource
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    NSArray *data = self.dataSource[indexPath.section];
-    NSMutableDictionary *dict = data[indexPath.row];
+    NSArray *cardDescriptions = self.dataSource[indexPath.section];
+    NSMutableDictionary *dict = cardDescriptions[indexPath.row];
     [dict setObject:sender.descriptionTextView.text forKey:@"description"];
     [sender.descriptionTextView resignFirstResponder];
     
-    [self.deck setObject:data forKey:@"cardDescriptions"];
+    // update persistent deck data source
+    NSMutableArray *cardDescriptionsWithValue = [NSMutableArray array];
+    for (NSDictionary *cardDescription in cardDescriptions) {
+        if (cardDescription[@"description"]) {
+            NSString *text = cardDescription[@"description"];
+            if (text.length != 0) {
+                [cardDescriptionsWithValue addObject:cardDescription];
+            }
+        }
+    }
+    [self.deck setObject:cardDescriptionsWithValue forKey:@"cardDescriptions"];
 }
 
 #pragma mark - UITextFieldDelegate
 
 - (void)titleTextFieldDidChange:(UITextField *)sender {
     if (sender.text.length > 0) {
-        self.navigationItem.rightBarButtonItem.enabled = YES;
+        self.titleSet = YES;
     } else {
-        self.navigationItem.rightBarButtonItem.enabled = NO;
+        self.titleSet = NO;
     }
     [self checkDeckCountToEnableUploadButton];
 }
@@ -293,6 +294,15 @@
 
 - (IBAction)publishTouched:(id)sender {
     [self dismissKeyboard];
+    
+    NSArray *deckCardNames = self.deck[@"deck"];
+    if (deckCardNames.count < 30) {
+        [ZEUtility showAlertWithTitle:NSLocalizedString(@"Hint", nil) message:NSLocalizedString(@"The Deck need 30 cards", nil)];
+        return;
+    }
+    if (!self.titleSet) {
+        [ZEUtility showAlertWithTitle:NSLocalizedString(@"Hint", nil) message:NSLocalizedString(@"Please add a deck title", nil)];
+    }
     
     PFObject *deckObject = [PFObject objectWithClassName:@"Deck"];
     if (self.deck[@"objectId"]) {

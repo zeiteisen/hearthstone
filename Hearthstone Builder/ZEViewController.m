@@ -17,7 +17,6 @@
 #import "iRate.h"
 #import "ZEDrawSimulatorViewController.h"
 #import "CRToast.h"
-#import "ZETrackTableViewController.h"
 
 @interface ZEViewController () <UITableViewDataSource, UITableViewDelegate, ZECardTableViewCellDelegate, JBBarChartViewDataSource, JBBarChartViewDelegate, UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -35,7 +34,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomContraint;
 @property (nonatomic, strong) IBOutlet UILabel *deckCountLabel;
 @property (nonatomic, strong) NSMutableArray *deckSave;
-@property (nonatomic, assign) BOOL toastVisible;
 @end
 
 @implementation ZEViewController
@@ -61,7 +59,6 @@
 {
     [super viewDidLoad];
     BOOL viewDeckMode = self.viewDeckMode;
-    self.toastVisible = NO;
     
     self.deckData = [NSMutableArray array];
     self.countedDeckData = [NSCountedSet setWithCapacity:30];
@@ -113,21 +110,15 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
     // load
-    NSArray *cardsToLoad;
+    NSArray *cardNamesToLoad;
     if (self.deckObject) {
-        cardsToLoad = self.deckObject[@"deck"];
+        cardNamesToLoad = self.deckObject[@"deck"];
     } else if (self.selectedDeckNumber != -1) {
         NSDictionary *deckToLoad = [self getUserDeck];
-        cardsToLoad = deckToLoad[@"deck"];
+        cardNamesToLoad = deckToLoad[@"deck"];
     }
-    if (cardsToLoad) {
-        for (NSString *cardName in cardsToLoad) {
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", cardName];
-            NSArray *searchResults = [self.cards filteredArrayUsingPredicate:predicate];
-            if (searchResults.count > 0) {
-                [self.deckData addObject:searchResults[0]];
-            }
-        }
+    if (cardNamesToLoad) {
+        self.deckData = [ZEUtility cardDataFromCardNames:cardNamesToLoad fromDataBase:self.cards];
         [self updateDeckDataArrays];
         if (self.deckObject) {
             self.cards = self.deckDataWithoutDuplicates;
@@ -184,62 +175,35 @@
 }
 
 - (void)saveDeck {
-    NSMutableArray *savedDecks = [[[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY] mutableCopy];
-    if (savedDecks == nil) {
-        savedDecks = [NSMutableArray array];
+    if (self.deckObject) { // for safety.
+        return;
     }
     
-    NSString *saveText = @"";
-    if (self.deckObject && self.editable && self.selectedDeckNumber == 0) { // copy a liked deck
-        saveText = NSLocalizedString(@"Deck copied and saved", nil);
-        self.selectedDeckNumber = savedDecks.count;
-        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-        dict[@"title"] = [NSString stringWithFormat:@"Copy: %@", self.deckObject[@"title"]];
-        dict[@"description"] = self.deckObject[@"description"];
-        if (self.deckObject[@"cardDescriptions"]) {
-            dict[@"cardDescriptions"] = self.deckObject[@"cardDescriptions"];
-        }
-        dict[@"hero"] = self.deckObject[@"hero"];
-        [savedDecks addObject:dict];
-        self.deckObject = nil; // switch the datamodel from a liked deck to a new local one
-    } else {
-        saveText = NSLocalizedString(@"Deck saved", nil);
-    }
-    
-    NSMutableDictionary *saveData = [NSMutableDictionary dictionary];
-    NSMutableArray *savedDeckData = [NSMutableArray array];
+    NSMutableDictionary *saveDeck;
     if (self.selectedDeckNumber != -1) {
-        saveData = [savedDecks[self.selectedDeckNumber] mutableCopy];
+        saveDeck = [ZEUtility readDeckFromUserDefaultsAtIndex:self.selectedDeckNumber];
+    } else {
+        saveDeck = [NSMutableDictionary dictionary];
     }
-
-    [saveData setObject:self.hero forKey:@"hero"];
+    
+    NSMutableArray *saveCardNames = [NSMutableArray array];
     for (NSDictionary *card in self.deckData) {
         NSString *name = card[@"name"];
-        [savedDeckData addObject:name];
+        [saveCardNames addObject:name];
     }
-    [saveData setObject:savedDeckData forKey:@"deck"];
+    [saveDeck setObject:saveCardNames forKey:@"deck"];
+    [saveDeck setObject:self.hero forKey:@"hero"];
+    [saveDeck setObject:@([self calcDustCost]) forKey:@"dust"];
+    [saveDeck setObject:@([self countCategory:@"minion"]) forKey:@"minions"];
+    [saveDeck setObject:@([self countCategory:@"spell"]) forKey:@"spells"];
+    [saveDeck setObject:@([self countCategory:@"weapon"]) forKey:@"weapons"];
     
     if (self.selectedDeckNumber == -1) {
-        self.selectedDeckNumber = savedDecks.count;
-        [savedDecks addObject:saveData];
+        self.selectedDeckNumber = [ZEUtility createDeckToUserDefaults:saveDeck];
     } else {
-        [savedDecks replaceObjectAtIndex:self.selectedDeckNumber withObject:saveData];
+        [ZEUtility updateDeckUserDefaults:saveDeck atIndex:self.selectedDeckNumber];
     }
-    [saveData setObject:@([self calcDustCost]) forKey:@"dust"];
-    [saveData setObject:@([self countCategory:@"minion"]) forKey:@"minions"];
-    [saveData setObject:@([self countCategory:@"spell"]) forKey:@"spells"];
-    [saveData setObject:@([self countCategory:@"weapon"]) forKey:@"weapons"];
-    
-    
-    [[NSUserDefaults standardUserDefaults] setObject:savedDecks forKey:USER_DECKS_KEY];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    if (!self.toastVisible) {
-        self.toastVisible = YES;
-        [CRToastManager showNotificationWithOptions:[ZEUtility toastOptionsWithText:saveText] completionBlock:^{
-            self.toastVisible = NO;
-        }];
-    }
+    [ZEUtility showToastWithText:NSLocalizedString(@"Deck saved", nil) duration:0.3];
 }
 
 - (void)setViewDeckMode:(BOOL)viewDeckMode {
@@ -688,15 +652,9 @@
             drawSimulator.deck = self.deckData;
             [self.navigationController pushViewController:drawSimulator animated:YES];
         }];
-        
-        [actionSheet addButtonWithTitle:NSLocalizedString(@"Card Tracker", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
-            ZETrackTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"TrackTableViewController"];
-            vc.deck = self.countedDeckData;
-            [self.navigationController pushViewController:vc animated:YES];
-        }];
     }
     if (![self liked] && !self.editable) {
-        [actionSheet addButtonWithTitle:NSLocalizedString(@"Like and Save", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+        [actionSheet addButtonWithTitle:NSLocalizedString(@"Like and Save to My Decks", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
             [self.deckObject incrementKey:@"likes"];
             [self.deckObject saveInBackground];
             
@@ -705,6 +663,10 @@
             [myLikes addObject:deckData];
             [[NSUserDefaults standardUserDefaults] setObject:myLikes forKey:MyLikesUserDefaultsKey];
             [[NSUserDefaults standardUserDefaults] synchronize];
+            
+            // show success toast
+            [ZEUtility showToastWithText:NSLocalizedString(@"Deck saved to My Decks", nil) duration:2.0];
+            
             if (![iRate sharedInstance].declinedThisVersion && ![iRate sharedInstance].ratedThisVersion) {
                 [[iRate sharedInstance] promptIfNetworkAvailable];
             }

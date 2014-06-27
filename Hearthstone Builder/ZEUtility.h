@@ -21,6 +21,15 @@
 + (UIColor *)basicColor;
 + (BOOL)remoteNotificationEnabled;
 + (void)registerForRemoteNotifications;
-+ (NSDictionary *)toastOptionsWithText:(NSString *)saveText;
++ (void)showToastWithText:(NSString *)text duration:(CGFloat)duration;
++ (UIColor *)colorForQuality:(NSString *)quality;
++ (NSMutableArray *)cardDataFromCardNames:(NSArray *)cardNames fromDataBase:(NSArray *)allCards;
++ (NSArray *)classNames;
+
+// CRUD userdefaults
++ (NSUInteger)createDeckToUserDefaults:(NSDictionary *)deck;
++ (NSMutableDictionary *)readDeckFromUserDefaultsAtIndex:(NSInteger)index;
++ (void)updateDeckUserDefaults:(NSDictionary *)deck atIndex:(NSInteger)index;
++ (void)deleteDeckUserDefaultsAtIndex:(NSInteger)index;
 
 @end

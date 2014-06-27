@@ -24,6 +24,9 @@
     [super viewDidLoad];
     self.myDeckButton.titleLabel.font = [ZEUtility myStandardFont];
     self.otherDecksButton.titleLabel.font = [ZEUtility myStandardFont];
+    self.otherDecksButton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.otherDecksButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self.otherDecksButton setTitle:NSLocalizedString(@"Other\nDecks", nil) forState:UIControlStateNormal];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -35,7 +38,7 @@
         [images addObject:[UIImage imageNamed:imageName]];
     }
     [images shuffle];
-    self.imageView.image = [images lastObject];;
+    self.imageView.image = [images lastObject];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

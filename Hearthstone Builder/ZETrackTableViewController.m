@@ -8,6 +8,7 @@
 
 #import "ZETrackTableViewController.h"
 #import "ZETrackTableViewCell.h"
+#import "ZERecordStatsViewController.h"
 
 @interface ZETrackTableViewController ()
 @property (nonatomic, strong) NSArray *dataSource;
@@ -21,8 +22,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.inSet = [NSCountedSet setWithSet:self.deck];
+    NSDictionary *deck = [ZEUtility readDeckFromUserDefaultsAtIndex:self.selectedDeckNumber];
+    NSArray *cards = deck[@"deck"];
+    NSArray *cardData = [ZEUtility cardDataFromCardNames:cards fromDataBase:[ZEDataManager sharedInstance].cards];
+    self.inSet = [NSCountedSet setWithArray:cardData];
     self.outSet = [NSCountedSet set];
     [self updateDataSource];
     [self updateDrawChance];
@@ -83,6 +86,7 @@
     NSDictionary *card = data[indexPath.row];
     cell.nameLabel.text = card[@"name"];
     cell.manaLabel.text = [NSString stringWithFormat:@"%@", card[@"mana"]];
+    cell.nameLabel.textColor = [ZEUtility colorForQuality:card[@"quality"]];
     NSInteger count = 0;
     if (indexPath.section == 0) {
         count = [self.inSet countForObject:card];
@@ -114,6 +118,14 @@
     [self updateDataSource];
     [self updateDrawChance];
     [tableView reloadData];
+}
+
+#pragma mark - Actions
+
+- (IBAction)saveTouched:(id)sender {
+    ZERecordStatsViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"RecordStatsViewController"];
+    vc.selectedDeckNumber = self.selectedDeckNumber;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

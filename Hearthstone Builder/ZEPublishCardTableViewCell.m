@@ -47,7 +47,9 @@
     for (NSDictionary *cardDict in cards) {
         NSString *cardName = cardDict[@"name"];
         if ([cardName isEqualToString:compareTo]) {
-            return cardDict[@"flavour_text"];
+            if (cardDict[@"flavour_text"]) {
+                return cardDict[@"flavour_text"];
+            }
         }
     }
     return NSLocalizedString(@"Why did you pick this card", nil);

@@ -27,6 +27,20 @@
     return [[set allObjects] mutableCopy];
 }
 
++ (UIColor *)colorForQuality:(NSString *)quality {
+    if ([quality isEqualToString:@"legendary"]) {
+        return [ZEUtility legendaryColor];
+    } else if ([quality isEqualToString:@"epic"]) {
+         return [ZEUtility epicColor];
+    } else if ([quality isEqualToString:@"rare"]) {
+        return [ZEUtility rareColor];
+    } else if ([quality isEqualToString:@"common"]) {
+        return [ZEUtility commonColor];
+    } else {
+        return [ZEUtility basicColor];
+    }
+}
+
 + (UIColor *)legendaryColor {
     return UIColorFromRGB(0xe9591f);
 }
@@ -75,20 +89,80 @@
 #endif
 }
 
-+ (NSDictionary *)toastOptionsWithText:(NSString *)saveText {
-    NSDictionary *options = @{
-                              kCRToastTextKey : saveText,
-                              kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
-                              kCRToastBackgroundColorKey : [UIColor grayColor],
-                              kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
-                              kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
-                              kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionBottom),
-                              kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionTop),
-                              kCRToastFontKey : [ZEUtility myStandardFont],
-                              kCRToastTimeIntervalKey : @(0.3),
-                              kCRToastTextColorKey : [UIColor blackColor]
-                              };
-    return options;
+static BOOL toastVisible = NO;
++ (void)showToastWithText:(NSString *)text duration:(CGFloat)duration {
+    if (!toastVisible) {
+        NSDictionary *options = @{
+                                  kCRToastTextKey : text,
+                                  kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                                  kCRToastBackgroundColorKey : [UIColor grayColor],
+                                  kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                                  kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+                                  kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionBottom),
+                                  kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionTop),
+                                  kCRToastFontKey : [ZEUtility myStandardFont],
+                                  kCRToastTimeIntervalKey : @(duration),
+                                  kCRToastTextColorKey : [UIColor blackColor]
+                                  };
+        toastVisible = YES;
+        [CRToastManager showNotificationWithOptions:options completionBlock:^{
+            toastVisible = NO;
+        }];
+    }
+}
+
++ (NSMutableArray *)cardDataFromCardNames:(NSArray *)cardNames fromDataBase:(NSArray *)allCards {
+    NSMutableArray *cardData = [NSMutableArray array];
+    for (NSString *cardName in cardNames) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", cardName];
+        NSArray *searchResults = [allCards filteredArrayUsingPredicate:predicate];
+        
+        if (searchResults.count > 0) {
+            [cardData addObject:searchResults[0]];
+        }
+    }
+    return cardData;
+}
+
++ (NSUInteger)createDeckToUserDefaults:(NSDictionary *)deck {
+    NSMutableArray *decks = [[[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY] mutableCopy];
+    if (decks == nil) {
+        decks = [NSMutableArray array];
+    }
+    [decks addObject:deck];
+    [[NSUserDefaults standardUserDefaults] setObject:decks forKey:USER_DECKS_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    return decks.count;
+}
+
++ (NSMutableDictionary *)readDeckFromUserDefaultsAtIndex:(NSInteger)index {
+    NSArray *decks = [[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY];
+    NSAssert(decks.count > index, @"Userdefaults does not contain a deck at this index");
+    return [decks[index] mutableCopy];
+}
+
++ (void)updateDeckUserDefaults:(NSDictionary *)deck atIndex:(NSInteger)index {
+    NSMutableArray *decks = [[[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY] mutableCopy];
+    if (decks == nil) {
+        [ZEUtility createDeckToUserDefaults:deck];
+    } else {
+        NSAssert(decks.count > index, @"Userdefaults does not contain a deck at this index");
+        [decks replaceObjectAtIndex:index withObject:deck];
+        [[NSUserDefaults standardUserDefaults] setObject:decks forKey:USER_DECKS_KEY];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
++ (void)deleteDeckUserDefaultsAtIndex:(NSInteger)index {
+    NSMutableArray *decks = [[[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY] mutableCopy];
+    NSAssert(decks.count > index, @"Userdefaults does not contain a deck at this index");
+    [decks removeObjectAtIndex:index];
+    [[NSUserDefaults standardUserDefaults] setObject:decks forKey:USER_DECKS_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (NSArray *)classNames {
+    return @[@"warrior", @"shaman", @"rogue", @"paladin", @"hunter", @"druid", @"warlock", @"mage", @"priest"];
 }
 
 @end

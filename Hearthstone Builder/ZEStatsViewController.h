@@ -1,5 +1,5 @@
 //
-//  ZETrackTableViewController.h
+//  ZEStatsViewController.h
 //  Hearthstone Builder
 //
 //  Created by Hanno Bruns on 26.06.14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZETrackTableViewController : UITableViewController
-@property (nonatomic, assign) NSInteger selectedDeckNumber;
+@interface ZEStatsViewController : UIViewController
+@property (nonatomic, strong) NSDictionary *deckFromUserDefaults;
 @end

@@ -22,7 +22,8 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.dataSource = @[@"warrior", @"shaman", @"rogue", @"paladin", @"hunter", @"druid", @"warlock", @"mage", @"priest"];
+    self.dataSource = [ZEUtility classNames];
+    self.navigationItem.title = NSLocalizedString(@"Pick Class", nil);
 }
 
 #pragma mark - UITableViewDataSource
@@ -47,6 +48,7 @@
         viewController.hero = self.dataSource[indexPath.row];
         viewController.selectedDeckNumber = -1; // new deck
         viewController.viewDeckMode = NO;
+        viewController.editable = YES;
         [self.navigationController pushViewController:viewController animated:YES];
     } else {
         ZEOtherDecksTableViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"OtherDecksTableViewController"];

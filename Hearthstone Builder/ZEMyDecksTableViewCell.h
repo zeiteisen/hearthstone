@@ -11,4 +11,5 @@
 @interface ZEMyDecksTableViewCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UILabel *label;
 @property (nonatomic, weak) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UIImageView *completedIconImageView;
 @end
