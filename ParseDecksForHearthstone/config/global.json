@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Hearthstone Builder": {
+            "applicationId": "z7byvGtx1x90ufW3Ee2bJQKMv7AVr8HEMMepLPtH", 
+            "masterKey": "SjQL9eyBXZceCDxxTrkrGbmlzpkB2JDSjXY3OHEF"
+        }, 
+        "_default": {
+            "link": "Hearthstone Builder"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.18"
+    }
+}

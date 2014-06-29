@@ -16,7 +16,7 @@
 #import "AHKActionSheet.h"
 #import "iRate.h"
 #import "ZEDrawSimulatorViewController.h"
-#import "CRToast.h"
+#import <Social/Social.h>
 
 @interface ZEViewController () <UITableViewDataSource, UITableViewDelegate, ZECardTableViewCellDelegate, JBBarChartViewDataSource, JBBarChartViewDelegate, UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -172,6 +172,19 @@
         }
     }
     return count;
+}
+
+- (NSString *)getObjectId {
+    if (self.deckObject.objectId) {
+        return self.deckObject.objectId;
+    } else if (self.selectedDeckNumber != -1) {
+        NSDictionary *deck = [ZEUtility readDeckFromUserDefaultsAtIndex:self.selectedDeckNumber];
+        NSString *theId = deck[@"objectId"];
+        if (theId.length > 0) {
+            return theId;
+        }
+    }
+    return nil;
 }
 
 - (void)saveDeck {
@@ -443,6 +456,42 @@
     return myLikes;
 }
 
+- (void)shareOnNetwork:(NSString *)type {
+    SLComposeViewController *composeViewController = [SLComposeViewController composeViewControllerForServiceType:type];
+    NSString *title = self.deckObject[@"title"];
+    if (title.length == 0 && self.selectedDeckNumber != -1) {
+        NSDictionary *deck = [ZEUtility readDeckFromUserDefaultsAtIndex:self.selectedDeckNumber];
+        title = deck[@"title"];
+    }
+    
+//    NSString *objectId = [self getObjectId]; // isn't working
+    NSString *urlString = [NSString stringWithFormat:@"https://itunes.apple.com/us/app/decks-for-hearthstone/id882681595"];
+    urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+    
+    if ([type isEqualToString:SLServiceTypeTwitter]) {
+        NSString *shortenedTitle = [title substringToIndex:MIN(100, title.length)];
+        NSString *other = NSLocalizedString(@"#Hearthstone", nil);
+        [composeViewController setInitialText:[NSString stringWithFormat:@"%@ %@", shortenedTitle, other]];
+    } else {
+        NSString *other = NSLocalizedString(@"Decks for Hearthstone iOS", nil);
+        [composeViewController setInitialText:[NSString stringWithFormat:@"%@ @ %@", title, other]];
+    }
+    [composeViewController addURL:[NSURL URLWithString:urlString]];
+    composeViewController.completionHandler = ^(SLComposeViewControllerResult result) {
+        switch(result){
+            case SLComposeViewControllerResultCancelled: {
+                [ZEUtility showToastWithText:NSLocalizedString(@"Share Cancelled", nil) duration:1];
+                break;
+            }
+            default: {
+                [ZEUtility showToastWithText:NSLocalizedString(@"Share Succeeded", nil) duration:2];
+                break;
+            }
+        }
+    };
+    [self presentViewController:composeViewController animated:YES completion:nil];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
@@ -653,6 +702,20 @@
             [self.navigationController pushViewController:drawSimulator animated:YES];
         }];
     }
+    NSString *objectId = [self getObjectId];
+    if ([self deckComplete] && objectId.length > 0) {
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+            [actionSheet addButtonWithTitle:NSLocalizedString(@"Post Deck on Facebook", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+                [self shareOnNetwork:SLServiceTypeFacebook];
+            }];
+        }
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+            [actionSheet addButtonWithTitle:NSLocalizedString(@"Tweet the Deck", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+                [self shareOnNetwork:SLServiceTypeTwitter];
+            }];
+        }
+    }
+    
     if (![self liked] && !self.editable) {
         [actionSheet addButtonWithTitle:NSLocalizedString(@"Like and Save to My Decks", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
             [self.deckObject incrementKey:@"likes"];

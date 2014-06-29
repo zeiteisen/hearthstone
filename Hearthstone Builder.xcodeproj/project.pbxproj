@@ -57,7 +57,7 @@
 		8FA18C0F192B50B800FF3F71 /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C0C192B50B800FF3F71 /* JBLineChartView.m */; };
 		8FA18C12192B5EA500FF3F71 /* ZEPickClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C11192B5EA500FF3F71 /* ZEPickClassViewController.m */; };
 		8FA18C15192B62EE00FF3F71 /* ZEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C14192B62EE00FF3F71 /* ZEUtility.m */; };
-		8FB6EAC9192CE57E00973F8F /* NSString+Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC6192CE57E00973F8F /* NSString+Score.m */; };
+		8FB6EAC9192CE57E00973F8F /* NSString+Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC6192CE57E00973F8F /* NSString+Score.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		8FB6EACA192CE57E00973F8F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC7192CE57E00973F8F /* README.md */; };
 		FC1900E0195D68760058677F /* complete-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC1900DF195D68760058677F /* complete-icon.png */; };
 		FC22119E195424D5001D7251 /* ZEPublishTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC22119D195424D5001D7251 /* ZEPublishTextTableViewCell.m */; };
@@ -86,6 +86,7 @@
 		FC98AFB5195B24E200CBCC65 /* Baron Rivendare.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA7195B24E200CBCC65 /* Baron Rivendare.jpg */; };
 		FC98AFB6195B24E200CBCC65 /* Avenge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA8195B24E200CBCC65 /* Avenge.jpg */; };
 		FC98AFB7195B24E200CBCC65 /* Anub'ar Ambusher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA9195B24E200CBCC65 /* Anub'ar Ambusher.jpg */; };
+		FC9B092C1960A50B004ED4BA /* XYPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9B092B1960A50B004ED4BA /* XYPieChart.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		FCAB8D2C19215A640072DC59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2B19215A640072DC59 /* Foundation.framework */; };
 		FCAB8D2E19215A640072DC59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */; };
 		FCAB8D3019215A640072DC59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2F19215A640072DC59 /* UIKit.framework */; };
@@ -500,9 +501,6 @@
 		FCED4D2A195C070600A33DF6 /* ZETrackTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCED4D29195C070600A33DF6 /* ZETrackTableViewController.m */; };
 		FCED4D2D195C15EC00A33DF6 /* ZETrackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCED4D2C195C15EC00A33DF6 /* ZETrackTableViewCell.m */; };
 		FCED4D30195C599400A33DF6 /* ZERecordStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCED4D2F195C599400A33DF6 /* ZERecordStatsViewController.m */; };
-		FCED4D39195C667900A33DF6 /* NSMutableArray+pieEx.m in Sources */ = {isa = PBXBuildFile; fileRef = FCED4D34195C667800A33DF6 /* NSMutableArray+pieEx.m */; };
-		FCED4D3A195C667900A33DF6 /* PieElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FCED4D36195C667900A33DF6 /* PieElement.m */; };
-		FCED4D3B195C667900A33DF6 /* PieLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCED4D38195C667900A33DF6 /* PieLayer.m */; };
 		FCED4D3E195C66D200A33DF6 /* ZEStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCED4D3D195C66D200A33DF6 /* ZEStatsViewController.m */; };
 		FCEDD26719520396001758C0 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCEDD26619520396001758C0 /* iAd.framework */; };
 		FCEDD26A195211F1001758C0 /* UINavigationController+Progress.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEDD269195211F1001758C0 /* UINavigationController+Progress.m */; };
@@ -645,6 +643,8 @@
 		FC98AFA7195B24E200CBCC65 /* Baron Rivendare.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Baron Rivendare.jpg"; sourceTree = "<group>"; };
 		FC98AFA8195B24E200CBCC65 /* Avenge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Avenge.jpg; sourceTree = "<group>"; };
 		FC98AFA9195B24E200CBCC65 /* Anub'ar Ambusher.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Anub'ar Ambusher.jpg"; sourceTree = "<group>"; };
+		FC9B092A1960A50B004ED4BA /* XYPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPieChart.h; sourceTree = "<group>"; };
+		FC9B092B1960A50B004ED4BA /* XYPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPieChart.m; sourceTree = "<group>"; };
 		FCAB8D2819215A640072DC59 /* Decks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Decks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAB8D2B19215A640072DC59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1074,13 +1074,6 @@
 		FCED4D2C195C15EC00A33DF6 /* ZETrackTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZETrackTableViewCell.m; sourceTree = "<group>"; };
 		FCED4D2E195C599400A33DF6 /* ZERecordStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZERecordStatsViewController.h; path = ../ZERecordStatsViewController.h; sourceTree = "<group>"; };
 		FCED4D2F195C599400A33DF6 /* ZERecordStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZERecordStatsViewController.m; path = ../ZERecordStatsViewController.m; sourceTree = "<group>"; };
-		FCED4D32195C667800A33DF6 /* MagicPieLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicPieLayer.h; sourceTree = "<group>"; };
-		FCED4D33195C667800A33DF6 /* NSMutableArray+pieEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+pieEx.h"; sourceTree = "<group>"; };
-		FCED4D34195C667800A33DF6 /* NSMutableArray+pieEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+pieEx.m"; sourceTree = "<group>"; };
-		FCED4D35195C667800A33DF6 /* PieElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieElement.h; sourceTree = "<group>"; };
-		FCED4D36195C667900A33DF6 /* PieElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieElement.m; sourceTree = "<group>"; };
-		FCED4D37195C667900A33DF6 /* PieLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieLayer.h; sourceTree = "<group>"; };
-		FCED4D38195C667900A33DF6 /* PieLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieLayer.m; sourceTree = "<group>"; };
 		FCED4D3C195C66D200A33DF6 /* ZEStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEStatsViewController.h; sourceTree = "<group>"; };
 		FCED4D3D195C66D200A33DF6 /* ZEStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEStatsViewController.m; sourceTree = "<group>"; };
 		FCEDD26619520396001758C0 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -1255,6 +1248,15 @@
 				FC90BA3C195358BE00AD5262 /* SZTextView.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		FC9B09291960A50B004ED4BA /* XYPieChart */ = {
+			isa = PBXGroup;
+			children = (
+				FC9B092A1960A50B004ED4BA /* XYPieChart.h */,
+				FC9B092B1960A50B004ED4BA /* XYPieChart.m */,
+			);
+			path = XYPieChart;
 			sourceTree = "<group>";
 		};
 		FCAB8D1F19215A640072DC59 = {
@@ -1831,7 +1833,7 @@
 		FCAB965D1924158A0072DC59 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				FCED4D31195C667800A33DF6 /* MagicPieLayer */,
+				FC9B09291960A50B004ED4BA /* XYPieChart */,
 				FCEAB173195B7047002D1874 /* CRToast */,
 				FC90BA3A195358BE00AD5262 /* Classes */,
 				8F0A69E51938B09F009AC664 /* Parse-NSCoding */,
@@ -1861,20 +1863,6 @@
 				FCEAB175195B7047002D1874 /* CRToast.m */,
 			);
 			path = CRToast;
-			sourceTree = "<group>";
-		};
-		FCED4D31195C667800A33DF6 /* MagicPieLayer */ = {
-			isa = PBXGroup;
-			children = (
-				FCED4D32195C667800A33DF6 /* MagicPieLayer.h */,
-				FCED4D33195C667800A33DF6 /* NSMutableArray+pieEx.h */,
-				FCED4D34195C667800A33DF6 /* NSMutableArray+pieEx.m */,
-				FCED4D35195C667800A33DF6 /* PieElement.h */,
-				FCED4D36195C667900A33DF6 /* PieElement.m */,
-				FCED4D37195C667900A33DF6 /* PieLayer.h */,
-				FCED4D38195C667900A33DF6 /* PieLayer.m */,
-			);
-			path = MagicPieLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2464,6 +2452,7 @@
 				8F0A69FB1938B09F009AC664 /* PFObject+NSCoding.m in Sources */,
 				FC90BA301953049C00AD5262 /* ZEPublishTitleTableViewCell.m in Sources */,
 				8F6CAA0E19338A810078EE65 /* UIImage+AHKAdditions.m in Sources */,
+				FC9B092C1960A50B004ED4BA /* XYPieChart.m in Sources */,
 				FCF361141931DDEC0044B85E /* ZEPublishTableViewController.m in Sources */,
 				8FA18C12192B5EA500FF3F71 /* ZEPickClassViewController.m in Sources */,
 				8FA18C15192B62EE00FF3F71 /* ZEUtility.m in Sources */,
@@ -2477,10 +2466,8 @@
 				8F0A69E019387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m in Sources */,
 				8F6CAA0C19338A810078EE65 /* AHKActionSheet.m in Sources */,
 				8F0A69F61938B09F009AC664 /* NSObject+Properties.m in Sources */,
-				FCED4D3B195C667900A33DF6 /* PieLayer.m in Sources */,
 				FC33F26A193775CE008FDB87 /* iRate.m in Sources */,
 				8FA18C00192A3BB300FF3F71 /* ZEPickedTableDataSource.m in Sources */,
-				FCED4D3A195C667900A33DF6 /* PieElement.m in Sources */,
 				8FB6EAC9192CE57E00973F8F /* NSString+Score.m in Sources */,
 				8FA18C05192B3DC400FF3F71 /* ZEPickedTableViewCell.m in Sources */,
 				8FA18C0E192B50B800FF3F71 /* JBChartView.m in Sources */,
@@ -2494,7 +2481,6 @@
 				FCED4D30195C599400A33DF6 /* ZERecordStatsViewController.m in Sources */,
 				8FA18BFA192A32B700FF3F71 /* ZEDataManager.m in Sources */,
 				FC71726A19366D110062B3E1 /* ZEOtherDeckTableViewCell.m in Sources */,
-				FCED4D39195C667900A33DF6 /* NSMutableArray+pieEx.m in Sources */,
 				FC409C431931153C0086215F /* ZEStartViewController.m in Sources */,
 				FCEA53F41958B72000BF8CD4 /* ZECardCollectionViewCell.m in Sources */,
 				FC90BA3D195358BE00AD5262 /* SZTextView.m in Sources */,

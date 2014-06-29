@@ -98,6 +98,7 @@
         mStats[@"losses"] = @(losses);
     }
     [stats replaceObjectAtIndex:changeIndex withObject:mStats];
+    deck[@"stats"] = stats;
     
     [ZEUtility updateDeckUserDefaults:deck atIndex:self.selectedDeckNumber];
     [ZEUtility showAlertWithTitle:NSLocalizedString(@"Success", nil) message:NSLocalizedString(@"Successfully saved", nil)];

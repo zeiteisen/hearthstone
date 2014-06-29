@@ -132,7 +132,7 @@ static BOOL toastVisible = NO;
     [decks addObject:deck];
     [[NSUserDefaults standardUserDefaults] setObject:decks forKey:USER_DECKS_KEY];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    return decks.count;
+    return decks.count - 1;
 }
 
 + (NSMutableDictionary *)readDeckFromUserDefaultsAtIndex:(NSInteger)index {
