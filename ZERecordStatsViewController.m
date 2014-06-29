@@ -84,7 +84,7 @@
         }
         [deck setObject:stats forKey:@"stats"];
     }
-    
+
     // update data
     NSInteger changeIndex = [self indexOfClass:opponent fromStatsArray:stats];
     NSMutableDictionary *mStats = [stats[changeIndex] mutableCopy];

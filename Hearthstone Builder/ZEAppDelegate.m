@@ -68,6 +68,14 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     NSLog(@"source %@", sourceApplication);
     NSLog(@"url %@", url);
+    NSString *surl = url.absoluteString;
+    surl = [surl stringByReplacingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+    surl = [surl stringByReplacingOccurrencesOfString:@"hsdeck://default/?al_applink_data=" withString:@""];
+    NSData *data = [surl dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    NSString *targetURL = json[@"target_url"];
+    NSArray *sep = [targetURL componentsSeparatedByString:@"="];
+    [ZEUtility showAlertWithTitle:@"Test" message:[NSString stringWithFormat:@"ObjectId: %@", sep[1]]];
     return YES;
 }
 

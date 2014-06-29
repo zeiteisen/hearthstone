@@ -464,15 +464,17 @@
         title = deck[@"title"];
     }
     
-//    NSString *objectId = [self getObjectId]; // isn't working
-    NSString *urlString = [NSString stringWithFormat:@"https://itunes.apple.com/us/app/decks-for-hearthstone/id882681595"];
+    NSString *urlString;
     urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
     
     if ([type isEqualToString:SLServiceTypeTwitter]) {
+        urlString = [NSString stringWithFormat:@"https://itunes.apple.com/us/app/decks-for-hearthstone/id882681595"];
         NSString *shortenedTitle = [title substringToIndex:MIN(100, title.length)];
         NSString *other = NSLocalizedString(@"#Hearthstone", nil);
         [composeViewController setInitialText:[NSString stringWithFormat:@"%@ %@", shortenedTitle, other]];
     } else {
+        NSString *objectId = [self getObjectId];
+        urlString = [NSString stringWithFormat:@"http://dfh.parseapp.com/links?extras=%@", objectId];
         NSString *other = NSLocalizedString(@"Decks for Hearthstone iOS", nil);
         [composeViewController setInitialText:[NSString stringWithFormat:@"%@ @ %@", title, other]];
     }
