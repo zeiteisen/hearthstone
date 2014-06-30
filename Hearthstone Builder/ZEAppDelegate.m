@@ -11,6 +11,8 @@
 #import "AHKActionSheet.h"
 #import <Crashlytics/Crashlytics.h>
 #import <iAd/iAd.h>
+#import "ZEViewController.h"
+#import "UINavigationController+Progress.h"
 
 @interface ZEAppDelegate ()
 
@@ -70,12 +72,31 @@
     NSLog(@"url %@", url);
     NSString *surl = url.absoluteString;
     surl = [surl stringByReplacingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
-    surl = [surl stringByReplacingOccurrencesOfString:@"hsdeck://default/?al_applink_data=" withString:@""];
+    surl = [surl stringByReplacingOccurrencesOfString:@"hsdeck://graph.facebook.com/?al_applink_data=" withString:@""];
     NSData *data = [surl dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     NSString *targetURL = json[@"target_url"];
     NSArray *sep = [targetURL componentsSeparatedByString:@"="];
-    [ZEUtility showAlertWithTitle:@"Test" message:[NSString stringWithFormat:@"ObjectId: %@", sep[1]]];
+    if (sep.count >= 2) {
+        NSString *objectId = sep[1];
+        UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+        [navigationController popToRootViewControllerAnimated:NO];
+        PFObject *emptyObject = [PFObject objectWithoutDataWithClassName:@"Deck" objectId:objectId];
+        [navigationController hb_showProgress];
+        [emptyObject fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            [navigationController hb_hideProgress];
+            if (error) {
+                NSLog(@"error %@", error);
+            } else {
+                ZEViewController *viewController = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"CreateViewController"];
+                viewController.hero = object[@"hero"];
+                viewController.deckObject = object;
+                viewController.editable = NO;
+                viewController.viewDeckMode = YES;
+                [navigationController pushViewController:viewController animated:YES];
+            }
+        }];
+    }
     return YES;
 }
 
