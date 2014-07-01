@@ -101,7 +101,7 @@
     deck[@"stats"] = stats;
     
     [ZEUtility updateDeckUserDefaults:deck atIndex:self.selectedDeckNumber];
-    [ZEUtility showAlertWithTitle:NSLocalizedString(@"Success", nil) message:NSLocalizedString(@"Successfully saved", nil)];
+    [ZEUtility showToastWithText:NSLocalizedString(@"Successfully saved", nil) duration:3];
     [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:YES];
 }
 

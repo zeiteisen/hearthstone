@@ -135,7 +135,6 @@
 }
 
 - (void)saveDeck {
-//    self.deck[@"objectId"] = @"M1tbZ5xe8u";
     if (!self.deckObject) {
         [ZEUtility updateDeckUserDefaults:self.deck atIndex:self.selectedDeckNumber];
         [ZEUtility showToastWithText:NSLocalizedString(@"Setting saved", nil) duration:0.3];
