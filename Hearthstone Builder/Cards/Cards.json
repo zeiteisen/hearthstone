@@ -1,67 +1,5 @@
 { "results": [
 	{
-        "attack": 5,
-        "category": "minion",
-        "collectible": true,
-        "createdAt": "2014-06-25T14:46:44.772Z",
-        "description": "Deathrattle: Return a friendly minion to your hand",
-        "effect_list": [
-            {
-                "effect": "deathrattle",
-                "extra": "Return a friendly minion to your hand"
-            }
-        ],
-        "flavour_text": " ",
-        "health": 5,
-        "hero": "rogue",
-        "mana": 4,
-        "name": "Anub'ar Ambusher",
-        "objectId": "I1eLH1TONf",
-        "quality": "common",
-        "race": "none",
-        "set": "curse of naxxramas",
-        "updatedAt": "2014-06-25T15:19:41.994Z"
-    },
-	{
-        "category": "spell",
-        "collectible": true,
-        "createdAt": "2014-06-25T14:51:08.309Z",
-        "description": "Secret: When one of your minions dies, give a friendly minion +3/+2",
-        "effect_list": [
-            {
-                "effect": "secret",
-                "extra": "When one of your minions dies, give a friendly minion +3/+2"
-            }
-        ],
-        "flavour_text": " ",
-        "hero": "paladin",
-        "mana": 1,
-        "name": "Avenge",
-        "objectId": "V0qK8SfnGE",
-        "quality": "common",
-        "race": "none",
-        "set": "curse of naxxramas",
-        "updatedAt": "2014-06-25T15:19:40.331Z"
-    },
-	{
-        "attack": 1,
-        "category": "minion",
-        "collectible": true,
-        "createdAt": "2014-06-25T14:58:51.420Z",
-        "description": "Your minions trigger their Deathrattles twice.",
-        "effect_list": [],
-        "flavour_text": " ",
-        "health": 7,
-        "hero": "neutral",
-        "mana": 4,
-        "name": "Baron Rivendare",
-        "objectId": "83qFdneopi",
-        "quality": "legendary",
-        "race": "none",
-        "set": "curse of naxxramas",
-        "updatedAt": "2014-06-25T15:19:39.481Z"
-    },
-	{
         "attack": 4,
         "category": "minion",
         "collectible": true,
@@ -73,7 +11,7 @@
                 "extra": "Your opponent draws a card"
             }
         ],
-        "flavour_text": " ",
+        "flavour_text": "They like to dance to reggae.",
         "health": 4,
         "hero": "neutral",
         "mana": 3,
@@ -82,51 +20,7 @@
         "quality": "common",
         "race": "none",
         "set": "curse of naxxramas",
-        "updatedAt": "2014-06-25T15:19:38.071Z"
-    },
-	{
-        "category": "spell",
-        "collectible": true,
-        "createdAt": "2014-06-25T15:08:30.251Z",
-        "description": "Secret: When a friendly minion dies, put 2 copies of it into your hand.",
-        "effect_list": [
-            {
-                "effect": "secret",
-                "extra": "When a friendly minion dies, put 2 copies of it into your hand."
-            }
-        ],
-        "flavour_text": " ",
-        "hero": "mage",
-        "mana": 3,
-        "name": "Duplicate",
-        "objectId": "rcswtCPp2i",
-        "quality": "common",
-        "race": "none",
-        "set": "curse of naxxramas",
-        "updatedAt": "2014-06-25T15:19:35.400Z"
-    },
-	{
-        "attack": 0,
-        "category": "minion",
-        "collectible": true,
-        "createdAt": "2014-06-25T15:10:21.721Z",
-        "description": "Deathrattle: Summon a 4/4 Nerubian.",
-        "effect_list": [
-            {
-                "effect": "deathrattle",
-                "extra": "Summon a 4/4 Nerubian."
-            }
-        ],
-        "flavour_text": " ",
-        "health": 2,
-        "hero": "neutral",
-        "mana": 2,
-        "name": "Nerubian Egg",
-        "objectId": "YrdfRCCKkF",
-        "quality": "rare",
-        "race": "none",
-        "set": "curse of naxxramas",
-        "updatedAt": "2014-06-25T15:19:34.498Z"
+        "updatedAt": "2014-07-22T08:50:06.667Z"
     },
 	{
         "category": "spell",
@@ -134,7 +28,7 @@
         "createdAt": "2014-06-25T15:12:24.471Z",
         "description": "Destroy all minions and summon 2/2 Treants to replace them.",
         "effect_list": [],
-        "flavour_text": " ",
+        "flavour_text": "\"Poisonseed Bagel\" is the least popular bagel at McTiggin's Druidic Bagel Emporium.",
         "hero": "druid",
         "mana": 4,
         "name": "Poison Seeds",
@@ -142,131 +36,162 @@
         "quality": "common",
         "race": "none",
         "set": "curse of naxxramas",
-        "updatedAt": "2014-06-25T15:19:33.446Z"
-    },
-	{
-        "category": "spell",
-        "collectible": true,
-        "createdAt": "2014-06-25T15:14:02.478Z",
-        "description": "Destroy a minion, then return it to life with full Health.",
-        "effect_list": [],
-        "flavour_text": " ",
-        "hero": "shaman",
-        "mana": 2,
-        "name": "Rebirth",
-        "objectId": "LIHvLMqB6W",
-        "quality": "common",
-        "race": "none",
-        "set": "curse of naxxramas",
-        "updatedAt": "2014-06-25T15:19:32.518Z"
-    },
-	{
-        "attack": 2,
-        "category": "minion",
-        "collectible": true,
-        "createdAt": "2014-06-25T15:15:19.885Z",
-        "description": "Stealth. At the start of your turn, gain +1/+1",
-        "effect_list": [
-            {
-                "effect": "stealth",
-                "extra": ""
-            }
-        ],
-        "flavour_text": " ",
-        "health": 2,
-        "hero": "neutral",
-        "mana": 3,
-        "name": "Shade of Naxxramas",
-        "objectId": "Qu2JDX6Bmo",
-        "quality": "epic",
-        "race": "none",
-        "set": "curse of naxxramas",
-        "updatedAt": "2014-06-25T15:19:31.477Z"
+        "updatedAt": "2014-07-22T08:58:55.396Z"
     },
 	{
         "attack": 4,
-        "category": "weapon",
+        "category": "minion",
         "collectible": true,
-        "createdAt": "2014-06-25T15:06:28.997Z",
-        "description": "Dearthrattle: Deal 1 damage to all minions.",
+        "createdAt": "2014-07-22T08:16:08.998Z",
+        "description": "Deathrattle: If Stalagg also died this game, summon Thaddius.",
         "effect_list": [
             {
                 "effect": "deathrattle",
-                "extra": "Deal 1 damage to all minions"
+                "extra": "If Stalagg also died this game, summon Thaddius"
             }
         ],
-        "flavour_text": " ",
-        "health": 2,
-        "hero": "warrior",
-        "mana": 4,
-        "name": "Death's Bite",
-        "objectId": "zUQ6y3gxSS",
-        "quality": "common",
+        "flavour_text": "Feugen is sad because everyone likes Stalagg better.",
+        "health": 7,
+        "hero": "neutral",
+        "mana": 5,
+        "name": "Feugen",
+        "objectId": "lhDXmJlh6y",
+        "quality": "legendary",
         "race": "none",
         "set": "curse of naxxramas",
-        "updatedAt": "2014-06-25T15:19:36.257Z"
+        "updatedAt": "2014-07-22T08:18:45.592Z"
     },
 	{
-        "attack": 1,
+        "attack": 6,
         "category": "minion",
         "collectible": true,
-        "createdAt": "2014-06-25T15:18:41.437Z",
-        "description": "Whenever you summon a minion with Deathrattle, gain +1/+1.",
+        "createdAt": "2014-07-22T08:20:46.542Z",
+        "description": "At the end of each turn, summon all friendly minions that died this turn.",
         "effect_list": [],
-        "flavour_text": " ",
-        "health": 2,
+        "flavour_text": "Kel'Thuzad could not resist the call of the Lich King. Even when it's just a robo-call extolling the Lich King's virtues.",
+        "health": 8,
         "hero": "neutral",
-        "mana": 1,
-        "name": "Undertaker",
-        "objectId": "ub3qLiETFQ",
-        "quality": "common",
+        "mana": 8,
+        "name": "Kel'Thuzad",
+        "objectId": "008o98a25q",
+        "quality": "legendary",
         "race": "none",
         "set": "curse of naxxramas",
-        "updatedAt": "2014-06-25T15:20:10.726Z"
+        "updatedAt": "2014-07-22T08:28:19.696Z"
     },
 	{
         "attack": 3,
         "category": "minion",
         "collectible": true,
-        "createdAt": "2014-06-25T15:20:49.669Z",
-        "description": "Deathrattle: Put a Demon from your hand into the battlefield.",
+        "createdAt": "2014-07-22T08:44:05.916Z",
+        "description": "Taunt. Deathrattle: Summon a 1/2 Slime with Taunt.",
         "effect_list": [
             {
-                "effect": "deathrattle",
-                "extra": "Put a Demon from your hand into the battlefield."
+                "effect": "taunt",
+                "extra": ""
+            },
+            {
+                "effect": "Deathrattle",
+                "extra": "Summon a 1/2 Slime with Taunt."
             }
         ],
-        "health": 4,
-        "hero": "warlock",
-        "mana": 4,
-        "name": "Voidcaller",
-        "objectId": "Qg28wxPXUx",
-        "quality": "common",
-        "race": "demon",
+        "flavour_text": "DO NOT GIVE HIM A ROOT BEER.",
+        "health": 5,
+        "hero": "neutral",
+        "mana": 5,
+        "name": "Sludge Belcher",
+        "objectId": "mGw3GNxQbE",
+        "quality": "rare",
+        "race": "none",
         "set": "curse of naxxramas",
-        "updatedAt": "2014-06-25T15:22:13.634Z"
+        "updatedAt": "2014-07-22T08:46:05.597Z"
+    },
+	{
+        "attack": 3,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-07-22T08:46:46.682Z",
+        "description": "Battlecry: Silence your other minions.",
+        "effect_list": [
+            {
+                "effect": "battlecry",
+                "extra": "Silence your other minions."
+            }
+        ],
+        "flavour_text": "This soul just wails on you. Dang, soul, let up already.",
+        "health": 5,
+        "hero": "neutral",
+        "mana": 4,
+        "name": "Wailing Soul",
+        "objectId": "YaXkVxFyAA",
+        "quality": "rare",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T08:48:03.934Z"
     },
 	{
         "attack": 1,
         "category": "minion",
         "collectible": true,
-        "createdAt": "2014-06-25T15:22:25.813Z",
-        "description": "Deathrattle: Draw a random Beast card.",
+        "createdAt": "2014-07-22T08:51:49.081Z",
+        "description": "Deathrattle: Summon two 1/1 Spectral Spiders.",
         "effect_list": [
             {
                 "effect": "deathrattle",
-                "extra": "Draw a random Beast card."
+                "extra": "Summon two 1/1 Spectral Spiders."
             }
         ],
-        "health": 1,
-        "hero": "hunter",
-        "mana": 1,
-        "name": "Webspinner",
-        "objectId": "vkQq2O8QSc",
+        "flavour_text": "Arachnafauxbia: Fear of fake spiders.",
+        "health": 2,
+        "hero": "neutral",
+        "mana": 2,
+        "name": "Haunted Creeper",
+        "objectId": "UDUUU4mCX3",
         "quality": "common",
         "race": "beast",
         "set": "curse of naxxramas",
-        "updatedAt": "2014-06-25T15:23:34.409Z"
+        "updatedAt": "2014-07-22T08:55:11.037Z"
+    },
+	{
+        "attack": 1,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-07-22T08:57:13.821Z",
+        "description": "Minions with Battlecry cost (2) more.",
+        "effect_list": [],
+        "flavour_text": "Weblords spend all day making giant trampoline parks.",
+        "health": 4,
+        "hero": "neutral",
+        "mana": 2,
+        "name": "Nerub'ar Weblord",
+        "objectId": "dz5hcED4Bg",
+        "quality": "common",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T08:58:21.540Z"
+    },
+	{
+        "attack": 2,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-07-22T12:23:27.843Z",
+        "description": "Deathrattle: Restore 5 Health to the enemy hero.",
+        "effect_list": [
+            {
+                "effect": "deathrattle",
+                "extra": "Restore 5 Health to the enemy hero."
+            }
+        ],
+        "flavour_text": "Zombie. It's what's for dinner.",
+        "health": 3,
+        "hero": "neutral",
+        "mana": 1,
+        "name": "Zombie Chow",
+        "objectId": "YIxC9Mbs81",
+        "quality": "common",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T12:24:42.556Z"
     },
 	{
         "attack": 4,
@@ -784,6 +709,42 @@
         "updatedAt": "2014-05-15T10:21:02.970Z"
     },
 	{
+        "attack": 4,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-07-22T09:00:50.565Z",
+        "description": "Can't be targeted by spells or Hero Powers.",
+        "effect_list": [],
+        "flavour_text": "What do Faerie Dragons and Spectral Knights have in common? They both love pasta!",
+        "health": 6,
+        "hero": "neutral",
+        "mana": 5,
+        "name": "Spectral Knight",
+        "objectId": "ncF8ZJZite",
+        "quality": "common",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T09:01:51.023Z"
+    },
+	{
+        "attack": 1,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-07-22T09:02:15.301Z",
+        "description": "At the start of your turn, restore this minion to full health.",
+        "effect_list": [],
+        "flavour_text": "Stoneskin Gargoyles love freeze tag.",
+        "health": 4,
+        "hero": "neutral",
+        "mana": 3,
+        "name": "Stoneskin Gargoyle",
+        "objectId": "ObTtYegQp1",
+        "quality": "common",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T09:03:26.471Z"
+    },
+	{
         "attack": 3,
         "category": "minion",
         "collectible": true,
@@ -923,7 +884,7 @@
         "category": "weapon",
         "collectible": true,
         "createdAt": "2014-05-14T17:18:39.261Z",
-        "description": "Whenever a Secret is revealed, gain +1 Durability.",
+        "description": "Whenever a friendly Secret is revealed, gain +1 Durability.",
         "effect_list": [],
         "flavour_text": "First Lesson: Put the pointy end in the other guy.",
         "health": 2,
@@ -8764,6 +8725,29 @@
         "updatedAt": "2014-05-15T13:02:57.397Z"
     },
 	{
+        "attack": 4,
+        "category": "weapon",
+        "collectible": true,
+        "createdAt": "2014-06-25T15:06:28.997Z",
+        "description": "Dearthrattle: Deal 1 damage to all minions.",
+        "effect_list": [
+            {
+                "effect": "deathrattle",
+                "extra": "Deal 1 damage to all minions"
+            }
+        ],
+        "flavour_text": "\"Take a bite outta Death.\" - McScruff the Deathlord",
+        "health": 2,
+        "hero": "warrior",
+        "mana": 4,
+        "name": "Death's Bite",
+        "objectId": "zUQ6y3gxSS",
+        "quality": "common",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T08:50:57.614Z"
+    },
+	{
         "attack": 3,
         "category": "minion",
         "collectible": true,
@@ -8775,7 +8759,7 @@
                 "extra": "Give a friendly minion +3 Health"
             }
         ],
-        "flavour_text": " ",
+        "flavour_text": "The Cult of the Damned has found it's best not to mention their name when recruiting new cultists.",
         "health": 4,
         "hero": "priest",
         "mana": 3,
@@ -8784,6 +8768,379 @@
         "quality": "common",
         "race": "none",
         "set": "curse of naxxramas",
-        "updatedAt": "2014-06-25T15:19:37.094Z"
+        "updatedAt": "2014-07-22T08:50:31.383Z"
+    },
+	{
+        "attack": 1,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-06-25T14:58:51.420Z",
+        "description": "Your minions trigger their Deathrattles twice.",
+        "effect_list": [],
+        "flavour_text": "Lady Blaumeux is a little hurt that they don't call themselves \"The Four Horsepeople\".",
+        "health": 7,
+        "hero": "neutral",
+        "mana": 4,
+        "name": "Baron Rivendare",
+        "objectId": "83qFdneopi",
+        "quality": "legendary",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T08:19:51.209Z"
+    },
+	{
+        "attack": 5,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-07-22T08:23:56.805Z",
+        "description": "Battlecry: Enemy spells cost (5) more next turn.",
+        "effect_list": [
+            {
+                "effect": "battlecry",
+                "extra": "Enemy spells cost (5) more next turn."
+            }
+        ],
+        "flavour_text": "Loatheb used to be a simple Bog Beast. This is why we need stricter regulations on mining and agriculture.",
+        "health": 5,
+        "hero": "neutral",
+        "mana": 5,
+        "name": "Loatheb",
+        "objectId": "icK4W9qvSc",
+        "quality": "legendary",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T08:26:10.478Z"
+    },
+	{
+        "attack": 2,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-07-22T08:27:02.374Z",
+        "description": "Destroy any minion damaged by this minion.",
+        "effect_list": [],
+        "flavour_text": "Maexxna gets pissed when people introduce her as \"Maxina\" or \"Maxxy\".",
+        "health": 8,
+        "hero": "neutral",
+        "mana": 6,
+        "name": "Maexxna",
+        "objectId": "qOjCvgVCIu",
+        "quality": "legendary",
+        "race": "beast",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T08:31:05.793Z"
+    },
+	{
+        "attack": 7,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-07-22T08:30:39.820Z",
+        "description": "Deathrattle: If Feugen also died this game, summon Thaddius.",
+        "effect_list": [
+            {
+                "effect": "deathrattle",
+                "extra": "If Feugen also died this game, summon Thaddius."
+            }
+        ],
+        "flavour_text": "Stalagg want to write own flavor text. \"STALAGG AWESOME!\"",
+        "health": 4,
+        "hero": "neutral",
+        "mana": 5,
+        "name": "Stalagg",
+        "objectId": "ksIA1Lmv0V",
+        "quality": "legendary",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T08:32:39.668Z"
+    },
+	{
+        "attack": 1,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-07-22T08:33:55.825Z",
+        "description": "Battlecry: Summon an exact copt of this minion at the end of the turn.",
+        "effect_list": [
+            {
+                "effect": "battlecry",
+                "extra": "Summon an exact copy of this minion at the end of the turn."
+            }
+        ],
+        "flavour_text": "OOZE... Ooze... Ooze... (ooze...)",
+        "health": 2,
+        "hero": "neutral",
+        "mana": 2,
+        "name": "Echoing Ooze",
+        "objectId": "nxE6KDLgMH",
+        "quality": "epic",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T08:36:00.525Z"
+    },
+	{
+        "attack": 2,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-06-25T15:15:19.885Z",
+        "description": "Stealth. At the start of your turn, gain +1/+1",
+        "effect_list": [
+            {
+                "effect": "stealth",
+                "extra": ""
+            }
+        ],
+        "flavour_text": "The Shades of Naxxramas hate the living. They even have a slur they use to refer them: Livers.",
+        "health": 2,
+        "hero": "neutral",
+        "mana": 3,
+        "name": "Shade of Naxxramas",
+        "objectId": "Qu2JDX6Bmo",
+        "quality": "epic",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T08:37:49.425Z"
+    },
+	{
+        "attack": 2,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-07-22T08:39:06.404Z",
+        "description": "Taunt. Deathrattle: Your opponent puts a minion from their deck into the battlefield.",
+        "effect_list": [
+            {
+                "effect": "taunt",
+                "extra": ""
+            },
+            {
+                "effect": "Deathrattle",
+                "extra": "Your opponent puts a minion from their deck into the battlefield."
+            }
+        ],
+        "flavour_text": "\"Rise from your grave!\" - Kel'Thuzad",
+        "health": 8,
+        "hero": "neutral",
+        "mana": 3,
+        "name": "Deathlord",
+        "objectId": "ey5XgqGVUZ",
+        "quality": "rare",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T08:44:58.143Z"
+    },
+	{
+        "attack": 0,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-06-25T15:10:21.721Z",
+        "description": "Deathrattle: Summon a 4/4 Nerubian.",
+        "effect_list": [
+            {
+                "effect": "deathrattle",
+                "extra": "Summon a 4/4 Nerubian."
+            }
+        ],
+        "flavour_text": "Eggs are a good source of protein and Nerubians.",
+        "health": 2,
+        "hero": "neutral",
+        "mana": 2,
+        "name": "Nerubian Egg",
+        "objectId": "YrdfRCCKkF",
+        "quality": "rare",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T08:43:10.517Z"
+    },
+	{
+        "attack": 5,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-06-25T14:46:44.772Z",
+        "description": "Deathrattle: Return a friendly minion to your hand",
+        "effect_list": [
+            {
+                "effect": "deathrattle",
+                "extra": "Return a friendly minion to your hand"
+            }
+        ],
+        "flavour_text": "Originally he was called \"Anub'ar Guy who bounces a guy back to your hand\", but it lacked a certain zing.",
+        "health": 5,
+        "hero": "rogue",
+        "mana": 4,
+        "name": "Anub'ar Ambusher",
+        "objectId": "I1eLH1TONf",
+        "quality": "common",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T08:49:10.259Z"
+    },
+	{
+        "category": "spell",
+        "collectible": true,
+        "createdAt": "2014-06-25T14:51:08.309Z",
+        "description": "Secret: When one of your minions dies, give a friendly minion +3/+2",
+        "effect_list": [
+            {
+                "effect": "secret",
+                "extra": "When one of your minions dies, give a friendly minion +3/+2"
+            }
+        ],
+        "flavour_text": "Several paladins have joined together to deliver justice under the name \"Justice Force\". Their lawyer talked them out of calling themselves the Justice League.",
+        "hero": "paladin",
+        "mana": 1,
+        "name": "Avenge",
+        "objectId": "V0qK8SfnGE",
+        "quality": "common",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T08:49:51.762Z"
+    },
+	{
+        "category": "spell",
+        "collectible": true,
+        "createdAt": "2014-06-25T15:08:30.251Z",
+        "description": "Secret: When a friendly minion dies, put 2 copies of it into your hand.",
+        "effect_list": [
+            {
+                "effect": "secret",
+                "extra": "When a friendly minion dies, put 2 copies of it into your hand."
+            }
+        ],
+        "flavour_text": "The one time when duping cards won't get your account banned!",
+        "hero": "mage",
+        "mana": 3,
+        "name": "Duplicate",
+        "objectId": "rcswtCPp2i",
+        "quality": "common",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T08:51:15.198Z"
+    },
+	{
+        "attack": 2,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-07-22T08:53:51.856Z",
+        "description": "Deathrattle: Put a Secret from your deck into the battlefield.",
+        "effect_list": [
+            {
+                "effect": "deathrattle",
+                "extra": "Put a Secret from your deck into the battlefield."
+            }
+        ],
+        "flavour_text": "His mother wanted him to be a mage or a warlock, but noooooooo, he had to go and be a scientist like his father.",
+        "health": 2,
+        "hero": "neutral",
+        "mana": 2,
+        "name": "Mad Scientist",
+        "objectId": "nDzWUgGJRH",
+        "quality": "common",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T08:56:23.223Z"
+    },
+	{
+        "category": "spell",
+        "collectible": true,
+        "createdAt": "2014-06-25T15:14:02.478Z",
+        "description": "Destroy a minion, then return it to life with full Health.",
+        "effect_list": [],
+        "flavour_text": "It's like birth, except you're an adult and you were just dead a second ago.",
+        "hero": "shaman",
+        "mana": 2,
+        "name": "Reincarnate",
+        "objectId": "LIHvLMqB6W",
+        "quality": "common",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T09:00:01.652Z"
+    },
+	{
+        "attack": 1,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-07-22T12:19:23.758Z",
+        "description": "Taunt. Deathrattle: Deal 1 damage to all minions.",
+        "effect_list": [
+            {
+                "effect": "taunt",
+                "extra": ""
+            },
+            {
+                "effect": "Deathrattle",
+                "extra": "Deal 1 damage to all minions."
+            }
+        ],
+        "flavour_text": "Filling your Ghouls with Rocket Fuel is all the rage at Necromancer school.",
+        "health": 3,
+        "hero": "neutral",
+        "mana": 2,
+        "name": "Unstable Ghoul",
+        "objectId": "JI0GOlxd8Z",
+        "quality": "common",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T12:20:41.431Z"
+    },
+	{
+        "attack": 3,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-06-25T15:20:49.669Z",
+        "description": "Deathrattle: Put a Demon from your hand into the battlefield.",
+        "effect_list": [
+            {
+                "effect": "deathrattle",
+                "extra": "Put a Demon from your hand into the battlefield."
+            }
+        ],
+        "flavour_text": "\"Void! Here, void! Here, buddy!\"",
+        "health": 4,
+        "hero": "warlock",
+        "mana": 4,
+        "name": "Voidcaller",
+        "objectId": "Qg28wxPXUx",
+        "quality": "common",
+        "race": "demon",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T12:21:42.623Z"
+    },
+	{
+        "attack": 1,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-06-25T15:22:25.813Z",
+        "description": "Deathrattle: Draw a random Beast card.",
+        "effect_list": [
+            {
+                "effect": "deathrattle",
+                "extra": "Draw a random Beast card."
+            }
+        ],
+        "flavour_text": "Spider cocoons are like little piñatas!",
+        "health": 1,
+        "hero": "hunter",
+        "mana": 1,
+        "name": "Webspinner",
+        "objectId": "vkQq2O8QSc",
+        "quality": "common",
+        "race": "beast",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T12:22:15.551Z"
+    },
+	{
+        "attack": 1,
+        "category": "minion",
+        "collectible": true,
+        "createdAt": "2014-06-25T15:18:41.437Z",
+        "description": "Whenever you summon a minion with Deathrattle, gain +1/+1.",
+        "effect_list": [],
+        "flavour_text": "In a world where you can run to a spirit healer and resurrect yourself, Undertakers do pretty light business.",
+        "health": 2,
+        "hero": "neutral",
+        "mana": 1,
+        "name": "Undertaker",
+        "objectId": "ub3qLiETFQ",
+        "quality": "common",
+        "race": "none",
+        "set": "curse of naxxramas",
+        "updatedAt": "2014-07-22T12:22:45.786Z"
     }
 ] }

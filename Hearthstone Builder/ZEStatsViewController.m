@@ -133,7 +133,7 @@
     NSNumber *number = self.barChartViewDataSource[index];
     NSArray *classNames = [ZEUtility classNames];
     NSString *className = classNames[index];
-    self.classWinsLabel.text = [NSString stringWithFormat:@"%@: %i%% wins", className, number.integerValue];
+    self.classWinsLabel.text = [NSString stringWithFormat:@"%@: %li%% wins", className, (long)number.integerValue];
 }
 
 @end

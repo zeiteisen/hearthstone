@@ -97,15 +97,15 @@
     } else {
         count = [self.outSet countForObject:card];
     }
-    cell.countLabel.text = [NSString stringWithFormat:@"%i", count];
+    cell.countLabel.text = [NSString stringWithFormat:@"%li", (long)count];
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0) {
-        return [NSString stringWithFormat:@"%@ (%i)", NSLocalizedString(@"Available Cards", nil), [self countCardsInSet]];
+        return [NSString stringWithFormat:@"%@ (%li)", NSLocalizedString(@"Available Cards", nil), (long)[self countCardsInSet]];
     } else {
-        return [NSString stringWithFormat:@"%@ (%i)", NSLocalizedString(@"Discarded Cards", nil), [self countCardsOutSet]];
+        return [NSString stringWithFormat:@"%@ (%li)", NSLocalizedString(@"Discarded Cards", nil), (long)[self countCardsOutSet]];
     }
 }
 
