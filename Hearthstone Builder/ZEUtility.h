@@ -19,6 +19,8 @@
 + (UIColor *)rareColor;
 + (UIColor *)commonColor;
 + (UIColor *)basicColor;
++ (UIColor *)featuredColor;
++ (UIColor *)newDeckColor;
 + (BOOL)remoteNotificationEnabled;
 + (void)registerForRemoteNotifications;
 + (void)showToastWithText:(NSString *)text duration:(CGFloat)duration;

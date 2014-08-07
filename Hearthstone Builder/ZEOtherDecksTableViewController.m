@@ -59,7 +59,7 @@
 - (PFQuery *)defaultQuery {
     PFQuery *query = [PFQuery queryWithClassName:@"Deck"];
     [query whereKey:@"hero" equalTo:self.hero];
-    [query selectKeys:@[@"title", @"likes", @"dust", @"hero", @"minions", @"spells", @"weapons", @"views"]];
+    [query selectKeys:@[@"title", @"likes", @"dust", @"hero", @"minions", @"spells", @"weapons", @"views", @"featured"]];
     return query;
 }
 
@@ -74,6 +74,13 @@
             [self.tableView reloadData];
         }
     }];
+}
+
+- (NSInteger)hoursBetween:(NSDate *)firstDate and:(NSDate *)secondDate {
+    NSUInteger unitFlags = NSHourCalendarUnit;
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *components = [calendar components:unitFlags fromDate:firstDate toDate:secondDate options:0];
+    return [components hour];
 }
 
 #pragma mark - Table view data source
@@ -95,7 +102,6 @@
     
     PFObject *deck = self.dataSource[indexPath.row];
     cell.deckNameLabel.text = deck[@"title"];
-    
     NSString *string = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Dust: ", nil), deck[@"dust"]];
     cell.dustLabel.text = string;
     
@@ -128,7 +134,17 @@
     
     string = [NSString stringWithFormat:@"%@ %@", deck[@"weapons"], NSLocalizedString(@"Weapons", nil)];
     cell.weaponsLabel.text = string;
-    
+
+    if ([deck[@"featured"] boolValue]) {
+        cell.highlightImageView.image = [UIImage imageNamed:@"ico_star"];
+        cell.highlightImageView.hidden = NO;
+    } else if ([self hoursBetween:deck.createdAt and:[NSDate date]] < 24) {
+        cell.highlightImageView.image = [UIImage imageNamed:@"ico_new"];
+        cell.highlightImageView.hidden = NO;
+    } else {
+        cell.highlightImageView.hidden = YES;
+    }
+
     return cell;
 }
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ZEOtherDeckTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *highlightImageView;
 @property (weak, nonatomic) IBOutlet UILabel *deckNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *likesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dustLabel;

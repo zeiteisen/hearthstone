@@ -61,6 +61,14 @@
     return [UIColor blackColor];
 }
 
++ (UIColor *)newDeckColor {
+    return UIColorFromRGB(0x9cc148);
+}
+
++ (UIColor *)featuredColor {
+    return UIColorFromRGB(0xffff45);
+}
+
 + (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:NSLocalizedString(@"Cancel", nil) otherButtonTitles:nil];
     [alert show];

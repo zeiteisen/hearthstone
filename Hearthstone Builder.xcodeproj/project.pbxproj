@@ -533,6 +533,8 @@
 		FCF3612619322CF50044B85E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3612519322CF50044B85E /* StoreKit.framework */; };
 		FCF3612819322CFF0044B85E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3612719322CFF0044B85E /* SystemConfiguration.framework */; };
 		FCF3612B193236D30044B85E /* ZEOtherDecksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF3612A193236D30044B85E /* ZEOtherDecksTableViewController.m */; };
+		FCF69C0F199420FF009028F7 /* ico_star.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF69C0E199420FF009028F7 /* ico_star.png */; };
+		FCF69C1119942464009028F7 /* ico_new in Resources */ = {isa = PBXBuildFile; fileRef = FCF69C1019942464009028F7 /* ico_new */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1127,6 +1129,8 @@
 		FCF3612719322CFF0044B85E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FCF36129193236D30044B85E /* ZEOtherDecksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEOtherDecksTableViewController.h; sourceTree = "<group>"; };
 		FCF3612A193236D30044B85E /* ZEOtherDecksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEOtherDecksTableViewController.m; sourceTree = "<group>"; };
+		FCF69C0E199420FF009028F7 /* ico_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_star.png; sourceTree = "<group>"; };
+		FCF69C1019942464009028F7 /* ico_new */ = {isa = PBXFileReference; lastKnownFileType = file; path = ico_new; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1420,6 +1424,8 @@
 		FCAB8D6019215AB30072DC59 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FCF69C1019942464009028F7 /* ico_new */,
+				FCF69C0E199420FF009028F7 /* ico_star.png */,
 				FC1900DF195D68760058677F /* complete-icon.png */,
 				8F0A69E319389E9A009AC664 /* view-512.png */,
 				8F0A69E119388DC9009AC664 /* Dark_Green_Arrow_Up.png */,
@@ -2219,6 +2225,7 @@
 				FCAB95B219240F610072DC59 /* Magma Rager.jpg in Resources */,
 				FCAB957F19240F610072DC59 /* Hellfire.jpg in Resources */,
 				FC6D88F8197EBB8A000A4076 /* Mad Scientist.jpg in Resources */,
+				FCF69C0F199420FF009028F7 /* ico_star.png in Resources */,
 				FCAB965919240F610072DC59 /* Youthful Brewmaster.jpg in Resources */,
 				FCAB957D19240F610072DC59 /* Headcrack.jpg in Resources */,
 				FCAB962919240F610072DC59 /* Stranglethorn Tiger.jpg in Resources */,
@@ -2312,6 +2319,7 @@
 				FCAB952319240F610072DC59 /* Claw.jpg in Resources */,
 				FCAB960219240F610072DC59 /* Shadow Madness.jpg in Resources */,
 				FCAB956F19240F610072DC59 /* Gadgetzan Auctioneer.jpg in Resources */,
+				FCF69C1119942464009028F7 /* ico_new in Resources */,
 				FCAB953519240F610072DC59 /* Deadly Poison.jpg in Resources */,
 				FCAB958619240F610072DC59 /* Holy Smite.jpg in Resources */,
 				8F6CAA6519363DD90078EE65 /* mage.jpg in Resources */,
