@@ -8,6 +8,8 @@
 
 #import "ZEUtility.h"
 #import "CRToast.h"
+#import <MessageUI/MessageUI.h>
+#import "ZEAppDelegate.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -103,7 +105,7 @@ static BOOL toastVisible = NO;
         NSDictionary *options = @{
                                   kCRToastTextKey : text,
                                   kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
-                                  kCRToastBackgroundColorKey : [UIColor grayColor],
+                                  kCRToastBackgroundColorKey : [UIColor whiteColor],
                                   kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
                                   kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
                                   kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionBottom),
@@ -117,6 +119,31 @@ static BOOL toastVisible = NO;
             toastVisible = NO;
         }];
     }
+}
+
++ (NSString *)bundleVersion {
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+}
+
++ (void)showEmailFormWithBodyText:(NSString *)bodyText {
+    MFMailComposeViewController *mainController = [[MFMailComposeViewController alloc] init];
+    ZEAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    UIViewController<MFMailComposeViewControllerDelegate> *presentingViewController = (UIViewController<MFMailComposeViewControllerDelegate> *)appDelegate.window.rootViewController;
+    mainController.mailComposeDelegate = presentingViewController;
+    [mainController setToRecipients:@[@"zeiteisen9@gmail.com"]];
+    NSString *versionString = NSLocalizedString(@"Version", nil);
+    NSString *version = [NSString stringWithFormat:@"%@ %@", versionString, [ZEUtility bundleVersion]];
+    NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+    
+    NSMutableString *string = [NSMutableString string];
+    if (bodyText) {
+        [string appendString:bodyText];
+    }
+    [string appendString:@"\n\n\n__________________\n"];
+    [string appendFormat:@"%@ %@", [UIDevice currentDevice].systemName, [UIDevice currentDevice].systemVersion];
+    [mainController setSubject:[NSString stringWithFormat:@"%@ %@", appName, version]];
+    [mainController setMessageBody:string isHTML:NO];
+    [presentingViewController presentViewController:mainController animated:YES completion:nil];
 }
 
 + (NSMutableArray *)cardDataFromCardNames:(NSArray *)cardNames fromDataBase:(NSArray *)allCards {

@@ -20,10 +20,10 @@
     ZELeftFilterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     cell.label.font = [ZEUtility myStandardFont];
     cell.label.font = [UIFont fontWithName:cell.label.font.fontName size:20];
-    if (indexPath.row > 7) {
+    if (indexPath.row == 0) {
         cell.label.text = @"A";
     } else {
-        cell.label.text = [NSString stringWithFormat:@"%li", (long)indexPath.row];
+        cell.label.text = [NSString stringWithFormat:@"%li", (long)indexPath.row - 1];
     }
     return cell;
 }

@@ -62,4 +62,8 @@
     ZELegalViewController *vc = [ZEUtility instanciateViewControllerFromStoryboardIdentifier:@"LegalViewController"];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+- (IBAction)contactTouched:(id)sender {
+    [ZEUtility showEmailFormWithBodyText:@""];
+}
 @end

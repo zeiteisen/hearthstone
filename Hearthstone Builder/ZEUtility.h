@@ -27,6 +27,7 @@
 + (UIColor *)colorForQuality:(NSString *)quality;
 + (NSMutableArray *)cardDataFromCardNames:(NSArray *)cardNames fromDataBase:(NSArray *)allCards;
 + (NSArray *)classNames;
++ (void)showEmailFormWithBodyText:(NSString *)bodyText;
 
 // CRUD userdefaults
 + (NSUInteger)createDeckToUserDefaults:(NSDictionary *)deck;

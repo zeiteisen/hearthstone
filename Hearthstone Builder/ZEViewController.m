@@ -18,13 +18,18 @@
 #import "ZEDrawSimulatorViewController.h"
 #import <Social/Social.h>
 
+// todo: sort by card set
+// todo: highlight sorted list
+
 @interface ZEViewController () <UITableViewDataSource, UITableViewDelegate, ZECardTableViewCellDelegate, JBBarChartViewDataSource, JBBarChartViewDelegate, UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *toggleClassButton;
 @property (nonatomic, strong) NSArray *dataSource;
 @property (nonatomic, strong) NSMutableArray *deckData;
 @property (nonatomic, strong) NSCountedSet *countedDeckData;
 @property (nonatomic, strong) NSMutableArray *deckDataWithoutDuplicates;
 @property (nonatomic, strong) NSArray *cards;
+@property (nonatomic, strong) NSArray *allPickableCards;
 @property (weak, nonatomic) IBOutlet UITableView *filterTableView;
 @property (weak, nonatomic) IBOutlet UITableView *pickedTableView;
 @property (nonatomic, strong) ZEFilterTableDataSource *filterTableDataSource;
@@ -34,6 +39,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomContraint;
 @property (nonatomic, strong) IBOutlet UILabel *deckCountLabel;
 @property (nonatomic, strong) NSMutableArray *deckSave;
+@property (nonatomic, assign) BOOL filteredByClass;
 @end
 
 @implementation ZEViewController
@@ -55,6 +61,31 @@
     [self.chartView reloadData];
 }
 
+- (void)filterOnlyClass {
+    self.filteredByClass = YES;
+    [self filterAndSortAllPickableCardsWithType:self.hero];
+}
+
+- (void)filterOnlyNeutral {
+    self.filteredByClass = NO;
+    [self filterAndSortAllPickableCardsWithType:@"neutral"];
+}
+
+- (void)filterAndSortAllPickableCardsWithType:(NSString *)type {
+    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
+        NSString *hero = evaluatedObject[@"hero"];
+        if ([hero isEqualToString:type]) {
+            return YES;
+        }
+        return NO;
+    }];
+    self.cards = [self.allPickableCards filteredArrayUsingPredicate:predicate];
+}
+
+- (NSString *)classImageName {
+    return [NSString stringWithFormat:@"ico_%@", self.hero];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -64,7 +95,8 @@
     self.countedDeckData = [NSCountedSet setWithCapacity:30];
     self.deckDataWithoutDuplicates = [NSMutableArray array];
     
-    self.cards = [ZEDataManager sharedInstance].cards;
+    
+    self.allPickableCards = [ZEDataManager sharedInstance].cards;
     NSPredicate *classPredicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
         NSString *hero = evaluatedObject[@"hero"];
         if ([hero isEqualToString:self.hero] || [hero isEqualToString:@"neutral"]) {
@@ -72,9 +104,17 @@
         }
         return NO;
     }];
-    self.cards = [self.cards filteredArrayUsingPredicate:classPredicate];
-    [self filterCardsWithMana:0];
-    [self.tableView reloadData];
+    self.allPickableCards = [self.allPickableCards filteredArrayUsingPredicate:classPredicate];
+    NSArray *sortedArray;
+    sortedArray = [self.allPickableCards sortedArrayUsingComparator:^NSComparisonResult(NSDictionary *cardA, NSDictionary *cardB) {
+        NSNumber *manaA = cardA[@"mana"];
+        NSNumber *manaB = cardB[@"mana"];
+        return [manaA compare:manaB];
+    }];
+    self.allPickableCards = sortedArray;
+    
+    
+    [self filterOnlyClass];
     self.tableView.scrollsToTop = YES;
     
     self.filterTableView.scrollsToTop = NO;
@@ -104,8 +144,6 @@
     self.searchBar.delegate = self;
     self.searchBar.placeholder = NSLocalizedString(@"eg. taunt, onyxia", nil);
     
-    [self scrollToTop];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
@@ -118,10 +156,11 @@
         cardNamesToLoad = deckToLoad[@"deck"];
     }
     if (cardNamesToLoad) {
-        self.deckData = [ZEUtility cardDataFromCardNames:cardNamesToLoad fromDataBase:self.cards];
+        self.deckData = [ZEUtility cardDataFromCardNames:cardNamesToLoad fromDataBase:self.allPickableCards];
         [self updateDeckDataArrays];
         if (self.deckObject) {
-            self.cards = self.deckDataWithoutDuplicates;
+            self.allPickableCards = self.deckDataWithoutDuplicates;
+            self.cards = self.allPickableCards;
         }
     }
     [self.pickedTableView reloadData];
@@ -134,6 +173,15 @@
     if (self.deckData.count == 0) {
         self.navigationItem.rightBarButtonItem.enabled = NO;
     }
+    [self filterCardsWithMana:8 withDataSource:self.cards];
+    NSString *classImageName = [self classImageName];
+    [self.toggleClassButton setImage:[UIImage imageNamed:classImageName] forState:UIControlStateNormal];
+    [self.toggleClassButton.imageView setContentMode:UIViewContentModeScaleAspectFit];
+    if (self.deckObject == nil) {
+        [self selectFilterAllCardsCell];
+    }
+    
+    [self scrollToTop];
 }
 
 - (NSDictionary *)getUserDeck {
@@ -238,7 +286,7 @@
     [self removeFilterSelection];
     text = [text lowercaseString];
     NSMutableArray *searchResult = [NSMutableArray array];
-    for (NSDictionary *card in self.cards) {
+    for (NSDictionary *card in self.allPickableCards) {
         // search for name
         NSString *name = [card[@"name"] lowercaseString];
         CGFloat nameResult = [name scoreAgainst:text];
@@ -295,10 +343,11 @@
     [self.tableView reloadData];
 }
 
-- (void)filterCardsWithMana:(NSInteger)mana {
+- (void)filterCardsWithMana:(NSInteger)mana withDataSource:(NSArray *)dataSource {
     self.viewDeckMode = NO;
+    self.searchBar.text = @"";
     if (mana > 7) {
-        self.dataSource = self.cards;
+        self.dataSource = dataSource;
         [self.tableView reloadData];
         return;
     }
@@ -315,20 +364,7 @@
         }
         return NO;
     }];
-    self.dataSource = [self.cards filteredArrayUsingPredicate:predicate];
-    NSMutableArray *heroCards = [NSMutableArray array];
-    NSMutableArray *nonHeroCards = [NSMutableArray array];
-    for (NSDictionary *card in self.dataSource) {
-        if ([card[@"hero"] isEqualToString:self.hero]) {
-            [heroCards addObject:card];
-        } else {
-            [nonHeroCards addObject:card];
-        }
-    }
-    NSMutableArray *sortedArray = [NSMutableArray array];
-    [sortedArray addObjectsFromArray:heroCards];
-    [sortedArray addObjectsFromArray:nonHeroCards];
-    self.dataSource = sortedArray;
+    self.dataSource = [dataSource filteredArrayUsingPredicate:predicate];
     [self.tableView reloadData];
 }
 
@@ -571,15 +607,33 @@
     } else if (tableView == self.pickedTableView) {
         // show the picked card
         [self setViewDeckMode:YES];
+        [self deselectAllFilterCells];
         NSDictionary *card = self.deckDataWithoutDuplicates[indexPath.row];
         NSInteger firstOccurance = [self.dataSource indexOfObject:card];
         [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:firstOccurance inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
-    } else {
-        [self filterCardsWithMana:indexPath.row];
-        if (self.dataSource.count > 0) {
-            [self scrollToTop];
+    } else { // filter
+        if (indexPath.row == 0) { // show all
+            [self filterCardsWithMana:8 withDataSource:self.cards];
+        } else { // show by mana cost
+            [self filterCardsWithMana:indexPath.row-1 withDataSource:self.cards];
+            if (self.dataSource.count > 0) {
+                [self scrollToTop];
+            }
         }
+        
+        [self deselectAllFilterCells];
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        cell.selected = !cell.selected;
+        
+        
         [self removePickedSelection];
+    }
+}
+
+- (void)deselectAllFilterCells {
+    NSArray *visibleCells = [self.filterTableView visibleCells];
+    for (UITableViewCell *cell in visibleCells) {
+        cell.selected = NO;
     }
 }
 
@@ -591,6 +645,12 @@
         }
     }
     return NO;
+}
+
+- (void)selectFilterAllCardsCell {
+    NSIndexPath *allFilterIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    UITableViewCell *cell = [self.filterTableView cellForRowAtIndexPath:allFilterIndexPath];
+    [cell setSelected:YES animated:YES];
 }
 
 #pragma mark - ZECardTableViewCellDelegate
@@ -659,7 +719,7 @@
 }
 
 - (void)barChartView:(JBBarChartView *)barChartView didSelectBarAtIndex:(NSUInteger)index {
-    [self filterCardsWithMana:index];
+    [self filterCardsWithMana:index withDataSource:self.allPickableCards];
 }
 
 - (NSUInteger)barPaddingForBarChartView:(JBBarChartView *)barChartView {
@@ -774,5 +834,18 @@
     [actionSheet show];
 }
 
+- (IBAction)toggleClass:(UIButton *)sender {
+    [self deselectAllFilterCells];
+    [self selectFilterAllCardsCell];
+    if (self.filteredByClass) {
+        [self filterOnlyNeutral];
+        [sender setImage:[UIImage imageNamed:@"ico_neutral"] forState:UIControlStateNormal];
+    } else {
+        [self filterOnlyClass];
+        NSString *imageName = [self classImageName];
+        [sender setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    }
+    [self filterCardsWithMana:8 withDataSource:self.cards];
+}
 
 @end

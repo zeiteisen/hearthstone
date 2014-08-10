@@ -59,6 +59,8 @@
 		8FA18C15192B62EE00FF3F71 /* ZEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C14192B62EE00FF3F71 /* ZEUtility.m */; };
 		8FB6EAC9192CE57E00973F8F /* NSString+Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC6192CE57E00973F8F /* NSString+Score.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		8FB6EACA192CE57E00973F8F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC7192CE57E00973F8F /* README.md */; };
+		FC0DC1F61997740500EBC4A4 /* ZENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0DC1F51997740500EBC4A4 /* ZENavigationController.m */; };
+		FC0DC1FE1997AA9500EBC4A4 /* ico_neutral.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0DC1FD1997AA9500EBC4A4 /* ico_neutral.png */; };
 		FC1900E0195D68760058677F /* complete-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC1900DF195D68760058677F /* complete-icon.png */; };
 		FC22119E195424D5001D7251 /* ZEPublishTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC22119D195424D5001D7251 /* ZEPublishTextTableViewCell.m */; };
 		FC33F269193775CE008FDB87 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC33F266193775CD008FDB87 /* iRate.bundle */; };
@@ -624,6 +626,9 @@
 		8FB6EAC5192CE57E00973F8F /* NSString+Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Score.h"; sourceTree = "<group>"; };
 		8FB6EAC6192CE57E00973F8F /* NSString+Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Score.m"; sourceTree = "<group>"; };
 		8FB6EAC7192CE57E00973F8F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		FC0DC1F41997740500EBC4A4 /* ZENavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENavigationController.h; sourceTree = "<group>"; };
+		FC0DC1F51997740500EBC4A4 /* ZENavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENavigationController.m; sourceTree = "<group>"; };
+		FC0DC1FD1997AA9500EBC4A4 /* ico_neutral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_neutral.png; sourceTree = "<group>"; };
 		FC1900DF195D68760058677F /* complete-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "complete-icon.png"; sourceTree = "<group>"; };
 		FC22119C195424D5001D7251 /* ZEPublishTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEPublishTextTableViewCell.h; sourceTree = "<group>"; };
 		FC22119D195424D5001D7251 /* ZEPublishTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPublishTextTableViewCell.m; sourceTree = "<group>"; };
@@ -1352,6 +1357,8 @@
 				FCAB8D3D19215A640072DC59 /* Main.storyboard */,
 				FCED4D2E195C599400A33DF6 /* ZERecordStatsViewController.h */,
 				FCED4D2F195C599400A33DF6 /* ZERecordStatsViewController.m */,
+				FC0DC1F41997740500EBC4A4 /* ZENavigationController.h */,
+				FC0DC1F51997740500EBC4A4 /* ZENavigationController.m */,
 				FCED4D3C195C66D200A33DF6 /* ZEStatsViewController.h */,
 				FCED4D3D195C66D200A33DF6 /* ZEStatsViewController.m */,
 				FCED4D28195C070600A33DF6 /* ZETrackTableViewController.h */,
@@ -1424,6 +1431,7 @@
 		FCAB8D6019215AB30072DC59 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FC0DC1FD1997AA9500EBC4A4 /* ico_neutral.png */,
 				FCF69C1019942464009028F7 /* ico_new */,
 				FCF69C0E199420FF009028F7 /* ico_star.png */,
 				FC1900DF195D68760058677F /* complete-icon.png */,
@@ -2233,6 +2241,7 @@
 				FCAB955019240F610072DC59 /* Ethereal Arcanist.jpg in Resources */,
 				8F6CAA6219363DD90078EE65 /* ico_shaman.png in Resources */,
 				FCAB95B019240F610072DC59 /* Lorewalker Cho.jpg in Resources */,
+				FC0DC1FE1997AA9500EBC4A4 /* ico_neutral.png in Resources */,
 				FCAB94FA19240F610072DC59 /* Argent Protector.jpg in Resources */,
 				FCE007091937AA7300645355 /* bg3.jpg in Resources */,
 				8F6CAA5819363DD90078EE65 /* priest.jpg in Resources */,
@@ -2565,6 +2574,7 @@
 				FCEAB176195B7047002D1874 /* CRToast.m in Sources */,
 				FCAB8D3819215A640072DC59 /* main.m in Sources */,
 				FC22119E195424D5001D7251 /* ZEPublishTextTableViewCell.m in Sources */,
+				FC0DC1F61997740500EBC4A4 /* ZENavigationController.m in Sources */,
 				8F6CAA3C1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m in Sources */,
 				8F0A69FA1938B09F009AC664 /* PFGeoPoint+NSCoding.m in Sources */,
 				FCED4D3E195C66D200A33DF6 /* ZEStatsViewController.m in Sources */,
