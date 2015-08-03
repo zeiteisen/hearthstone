@@ -63,18 +63,34 @@
 
 - (void)filterOnlyClass {
     self.filteredByClass = YES;
-    [self filterAndSortAllPickableCardsWithType:self.hero];
+//    [self filterAndSortAllPickableCardsWithType:self.hero];
+    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
+        NSString *hero = [evaluatedObject[@"playerClass"] lowercaseString];
+        if ([hero isEqualToString:self.hero]) {
+            return YES;
+        }
+        return NO;
+    }];
+    self.cards = [self.allPickableCards filteredArrayUsingPredicate:predicate];
 }
 
 - (void)filterOnlyNeutral {
     self.filteredByClass = NO;
-    [self filterAndSortAllPickableCardsWithType:@"neutral"];
+//    [self filterAndSortAllPickableCardsWithType:nil];
+    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
+        NSString *hero = evaluatedObject[@"playerClass"];
+        if (hero == nil) {
+            return YES;
+        }
+        return NO;
+    }];
+    self.cards = [self.allPickableCards filteredArrayUsingPredicate:predicate];
 }
 
 - (void)filterAndSortAllPickableCardsWithType:(NSString *)type {
     NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
-        NSString *hero = evaluatedObject[@"hero"];
-        if ([hero isEqualToString:type]) {
+        NSString *hero = evaluatedObject[@"playerClass"];
+        if ([hero isEqualToString:type] || hero == nil) {
             return YES;
         }
         return NO;
@@ -98,17 +114,59 @@
     
     self.allPickableCards = [ZEDataManager sharedInstance].cards;
     NSPredicate *classPredicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
-        NSString *hero = evaluatedObject[@"hero"];
-        if ([hero isEqualToString:self.hero] || [hero isEqualToString:@"neutral"]) {
+        NSString *hero = [evaluatedObject[@"playerClass"] lowercaseString];
+        if ([hero isEqualToString:self.hero] || hero == nil) {
             return YES;
         }
         return NO;
     }];
+    /*
+     {
+     artist = "Chris Rahn";
+     attack = 3;
+     collectible = 1;
+     cost = 2;
+     faction = Alliance;
+     flavor = "Oozes love Flamenco.  Don't ask.";
+     health = 2;
+     howToGetGold = "Unlocked at Rogue Level 57.";
+     id = "EX1_066";
+     mechanics =     (
+     Battlecry
+     );
+     name = "Acidic Swamp Ooze";
+     rarity = Common;
+     text = "<b>Battlecry:</b> Destroy your opponent's weapon.";
+     type = Minion;
+     },
+     
+     {
+     artist = "Trevor Jacobs";
+     collectible = 1;
+     cost = 1;
+     faction = Neutral;
+     flavor = "Rogues guard the secrets to poison-making carefully, lest magi start incorporating poison into their spells.  Poisonbolt? Rain of Poison?  Poison Elemental?  Nobody wants that.";
+     howToGet = "Unlocked at Level 1.";
+     howToGetGold = "Unlocked at Level 43.";
+     id = "CS2_074";
+     name = "Deadly Poison";
+     playerClass = Rogue;
+     rarity = Free;
+     text = "Give your weapon +2 Attack.";
+     type = Spell;
+     },
+     */
     self.allPickableCards = [self.allPickableCards filteredArrayUsingPredicate:classPredicate];
     NSArray *sortedArray;
     sortedArray = [self.allPickableCards sortedArrayUsingComparator:^NSComparisonResult(NSDictionary *cardA, NSDictionary *cardB) {
-        NSNumber *manaA = cardA[@"mana"];
-        NSNumber *manaB = cardB[@"mana"];
+        NSNumber *manaA = @0;
+        NSNumber *manaB = @0;
+        if (cardA[@"cost"] != nil) {
+            manaA = cardA[@"cost"];
+        }
+        if (cardB[@"cost"] != nil) {
+            manaB = cardB[@"cost"];
+        }
         return [manaA compare:manaB];
     }];
     self.allPickableCards = sortedArray;
@@ -192,19 +250,19 @@
 - (NSInteger)calcDustCost {
     NSInteger cost = 0;
     for (NSDictionary *card in self.deckData) {
-        NSString *quality = card[@"quality"];
+        NSString *quality = card[@"rarity"];
         NSString *set = card[@"set"];
         if (![set isEqualToString:@"basic"]) {
-            if ([quality isEqualToString:@"legendary"]) {
+            if ([quality isEqualToString:@"Legendary"]) {
                 cost += 1600;
             }
-            if ([quality isEqualToString:@"epic"]) {
+            if ([quality isEqualToString:@"Epic"]) {
                 cost += 400;
             }
-            if ([quality isEqualToString:@"rare"]) {
+            if ([quality isEqualToString:@"Rare"]) {
                 cost += 100;
             }
-            if ([quality isEqualToString:@"common"]) {
+            if ([quality isEqualToString:@"Common"]) {
                 cost += 40;
             }
         }
@@ -253,7 +311,7 @@
         [saveCardNames addObject:name];
     }
     [saveDeck setObject:saveCardNames forKey:@"deck"];
-    [saveDeck setObject:self.hero forKey:@"hero"];
+    [saveDeck setObject:self.hero forKey:@"playerClass"];
     [saveDeck setObject:@([self calcDustCost]) forKey:@"dust"];
     [saveDeck setObject:@([self countCategory:@"minion"]) forKey:@"minions"];
     [saveDeck setObject:@([self countCategory:@"spell"]) forKey:@"spells"];
@@ -292,11 +350,10 @@
         CGFloat nameResult = [name scoreAgainst:text];
         
         // search for effect
-        NSArray *effectList = card[@"effect_list"];
+        NSArray *effectList = card[@"mechanics"];
         CGFloat effectResult = 0;
-        for (NSDictionary *effect in effectList) {
-            NSString *effectName = effect[@"effect"];
-            CGFloat newEffectResult = [effectName scoreAgainst:text];
+        for (NSString *effect in effectList) {
+            CGFloat newEffectResult = [effect scoreAgainst:text];
             if (newEffectResult > effectResult) {
                 effectResult = newEffectResult;
             }
@@ -307,7 +364,7 @@
         CGFloat raceResult = [race scoreAgainst:text];
         
         // search for quality
-        NSString *quality = card[@"quality"];
+        NSString *quality = card[@"rarity"];
         CGFloat qualitiyResult = [quality scoreAgainst:text];
         
         CGFloat resultList[4] = {nameResult, effectResult, raceResult, qualitiyResult};
@@ -353,7 +410,7 @@
     }
     
     NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
-        NSNumber *number = evaluatedObject[@"mana"];
+        NSNumber *number = evaluatedObject[@"cost"];
         if (number.integerValue == mana) {
             return YES;
         }
@@ -371,7 +428,7 @@
 - (void)updateDeckDataArrays {
     self.countedDeckData = [NSCountedSet setWithArray:self.deckData];
     self.deckDataWithoutDuplicates = [[self.countedDeckData allObjects] mutableCopy];
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"mana" ascending:YES];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"cost" ascending:YES];
     [self.deckDataWithoutDuplicates sortUsingDescriptors:@[sort]];
     self.pickedTableDataSource.countedDataSource = self.countedDeckData;
     self.pickedTableDataSource.deckDataWithoutDuplicates = self.deckDataWithoutDuplicates;
@@ -550,6 +607,7 @@
     ZECardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     cell.delegate = self;
     NSDictionary *card = self.dataSource[indexPath.row];
+    NSLog(@"card to show %@", card);
     cell.cardData = card;
     NSString *cardName = [NSString stringWithFormat:@"%@.jpg", card[@"name"]];
     cell.image.image = [UIImage imageNamed:cardName];
@@ -705,7 +763,7 @@
 - (CGFloat)barChartView:(JBBarChartView *)barChartView heightForBarViewAtAtIndex:(NSUInteger)index {
     CGFloat count = 0;
     for (NSDictionary *card in self.deckData) {
-        NSNumber *mana = card[@"mana"];
+        NSNumber *mana = card[@"cost"];
         if (index == 7) {
             if (mana.integerValue >= index) {
                 count++;

@@ -27,7 +27,28 @@
         NSData *data = [NSData dataWithContentsOfFile:cardDataPath];
         NSError *error;
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-        self.cards = dict[@"results"];
+        NSArray *basicCards = dict[@"Basic"];
+        NSArray *gvgCards = dict[@"Goblins vs Gnomes"];
+        NSArray *naxxramas = dict[@"Curse of Naxxramas"];
+        NSArray *blackrockCards = dict[@"Blackrock Mountain"];
+        NSMutableArray *merge = [NSMutableArray array];
+        [merge addObjectsFromArray:basicCards];
+        [merge addObjectsFromArray:naxxramas];
+        [merge addObjectsFromArray:gvgCards];
+        [merge addObjectsFromArray:blackrockCards];
+        NSMutableArray *onlyCollectibles = [NSMutableArray array];
+        for (NSDictionary *card in merge) {
+            if (card[@"collectible"] != nil) {
+                NSNumber *collectible = card[@"collectible"];
+                NSString *type = card[@"type"];
+                if (collectible.boolValue) {
+                    if (type != nil && ![type isEqualToString:@"Hero"]) {
+                        [onlyCollectibles addObject:card];
+                    }
+                }
+            }
+        }
+        self.cards = onlyCollectibles;
         NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
         self.cards = [self.cards sortedArrayUsingDescriptors:[NSArray arrayWithObjects:descriptor,nil]];
         if (error) {
