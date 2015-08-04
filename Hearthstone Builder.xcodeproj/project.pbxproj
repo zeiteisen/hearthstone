@@ -230,6 +230,8 @@
 		FC98AFB6195B24E200CBCC65 /* Avenge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA8195B24E200CBCC65 /* Avenge.jpg */; };
 		FC98AFB7195B24E200CBCC65 /* Anub'ar Ambusher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA9195B24E200CBCC65 /* Anub'ar Ambusher.jpg */; };
 		FC9B092C1960A50B004ED4BA /* XYPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9B092B1960A50B004ED4BA /* XYPieChart.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		FCA1ECF11B7158E800CE7823 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA1ECF01B7158E800CE7823 /* Bolts.framework */; };
+		FCA1ECF31B7158FD00CE7823 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA1ECF21B7158FD00CE7823 /* libsqlite3.dylib */; };
 		FCAB8D2C19215A640072DC59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2B19215A640072DC59 /* Foundation.framework */; };
 		FCAB8D2E19215A640072DC59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */; };
 		FCAB8D3019215A640072DC59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2F19215A640072DC59 /* UIKit.framework */; };
@@ -965,6 +967,8 @@
 		FC98AFA9195B24E200CBCC65 /* Anub'ar Ambusher.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Anub'ar Ambusher.jpg"; sourceTree = "<group>"; };
 		FC9B092A1960A50B004ED4BA /* XYPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPieChart.h; sourceTree = "<group>"; };
 		FC9B092B1960A50B004ED4BA /* XYPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPieChart.m; sourceTree = "<group>"; };
+		FCA1ECF01B7158E800CE7823 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		FCA1ECF21B7158FD00CE7823 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		FCAB8D2819215A640072DC59 /* Decks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Decks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAB8D2B19215A640072DC59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1453,6 +1457,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCA1ECF31B7158FD00CE7823 /* libsqlite3.dylib in Frameworks */,
 				FCEDD26719520396001758C0 /* iAd.framework in Frameworks */,
 				8F6CAA1B19347DED0078EE65 /* CoreData.framework in Frameworks */,
 				8F6CAA1919347DE60078EE65 /* AVFoundation.framework in Frameworks */,
@@ -1468,6 +1473,7 @@
 				FCF3611C19322C250044B85E /* CoreLocation.framework in Frameworks */,
 				FCF3611A19322C180044B85E /* CFNetwork.framework in Frameworks */,
 				FCF3611819322C0D0044B85E /* AudioToolbox.framework in Frameworks */,
+				FCA1ECF11B7158E800CE7823 /* Bolts.framework in Frameworks */,
 				FCAB8D2E19215A640072DC59 /* CoreGraphics.framework in Frameworks */,
 				FCAB8D3019215A640072DC59 /* UIKit.framework in Frameworks */,
 				FCF3611619322BEC0044B85E /* Parse.framework in Frameworks */,
@@ -1634,6 +1640,7 @@
 		FCAB8D2A19215A640072DC59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCA1ECF21B7158FD00CE7823 /* libsqlite3.dylib */,
 				FCEDD26619520396001758C0 /* iAd.framework */,
 				8F995B611938C9D8009EB207 /* Crashlytics.framework */,
 				8F6CAA1A19347DED0078EE65 /* CoreData.framework */,
@@ -1646,6 +1653,7 @@
 				FCF3612119322CE20044B85E /* QuartzCore.framework */,
 				FCF3611F19322CD70044B85E /* MobileCoreServices.framework */,
 				FCF3611D19322C2E0044B85E /* libz.dylib */,
+				FCA1ECF01B7158E800CE7823 /* Bolts.framework */,
 				FCF3611B19322C250044B85E /* CoreLocation.framework */,
 				FCF3611919322C180044B85E /* CFNetwork.framework */,
 				FCF3611719322C0D0044B85E /* AudioToolbox.framework */,
