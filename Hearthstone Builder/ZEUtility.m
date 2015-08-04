@@ -30,6 +30,7 @@
 }
 
 + (UIColor *)colorForQuality:(NSString *)quality {
+    quality = [quality lowercaseString];
     if ([quality isEqualToString:@"legendary"]) {
         return [ZEUtility legendaryColor];
     } else if ([quality isEqualToString:@"epic"]) {

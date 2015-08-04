@@ -26,12 +26,7 @@
     } else {
         cell.label.text = cardName;
     }
-    NSString *set = card[@"set"];
-    if ([set isEqualToString:@"basic"]) {
-        cell.label.textColor = [ZEUtility basicColor];
-    } else {
-        cell.label.textColor = [ZEUtility colorForQuality:card[@"quality"]];
-    }
+    cell.label.textColor = [ZEUtility colorForQuality:card[@"rarity"]];
     return cell;
 }
 

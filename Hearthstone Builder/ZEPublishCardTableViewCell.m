@@ -47,8 +47,8 @@
     for (NSDictionary *cardDict in cards) {
         NSString *cardName = cardDict[@"name"];
         if ([cardName isEqualToString:compareTo]) {
-            if (cardDict[@"flavour_text"]) {
-                return cardDict[@"flavour_text"];
+            if (cardDict[@"flavor"]) {
+                return cardDict[@"flavor"];
             }
         }
     }

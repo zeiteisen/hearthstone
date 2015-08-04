@@ -28,15 +28,18 @@
         NSError *error;
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         NSArray *basicCards = dict[@"Basic"];
+        NSArray *classic = dict[@"Classic"];
         NSArray *gvgCards = dict[@"Goblins vs Gnomes"];
         NSArray *naxxramas = dict[@"Curse of Naxxramas"];
         NSArray *blackrockCards = dict[@"Blackrock Mountain"];
         NSMutableArray *merge = [NSMutableArray array];
         [merge addObjectsFromArray:basicCards];
+        [merge addObjectsFromArray:classic];
         [merge addObjectsFromArray:naxxramas];
         [merge addObjectsFromArray:gvgCards];
         [merge addObjectsFromArray:blackrockCards];
         NSMutableArray *onlyCollectibles = [NSMutableArray array];
+        
         for (NSDictionary *card in merge) {
             if (card[@"collectible"] != nil) {
                 NSNumber *collectible = card[@"collectible"];

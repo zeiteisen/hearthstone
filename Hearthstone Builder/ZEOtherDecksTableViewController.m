@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadRecent];
+    [self loadNewest];
     UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", self.hero]];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     imageView.height = 150;
@@ -47,6 +47,12 @@
 - (void)loadRecent {
     PFQuery *query = [self defaultQuery];
     [query orderByDescending:@"updatedAt"];
+    [self loadDecksWithQuery:query];
+}
+
+- (void)loadNewest {
+    PFQuery *query = [self defaultQuery];
+    [query orderByDescending:@"createdAt"];
     [self loadDecksWithQuery:query];
 }
 
@@ -172,6 +178,9 @@
 
 - (IBAction)filterTouched:(id)sender {
     AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:nil];
+    [actionSheet addButtonWithTitle:NSLocalizedString(@"Newest", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+        [self loadNewest];
+    }];
     [actionSheet addButtonWithTitle:NSLocalizedString(@"Recent", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
         [self loadRecent];
     }];

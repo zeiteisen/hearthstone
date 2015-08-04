@@ -1037,13 +1037,13 @@ ALL OTHER TRADEMARKS ARE THE PROPERTY OF THEIR RESPECTIVE OWNERS.
                         <viewControllerLayoutGuide type="bottom" id="gmH-8S-nCZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FUf-PC-RvA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jPe-8m-PCX">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPe-8m-PCX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1d7-rQ-IqS">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1d7-rQ-IqS">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s9P-za-LTo" customClass="XYPieChart">
@@ -1113,9 +1113,10 @@ ALL OTHER TRADEMARKS ARE THE PROPERTY OF THEIR RESPECTIVE OWNERS.
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="1d7-rQ-IqS" secondAttribute="bottom" constant="-432" id="1iu-Nw-DfU"/>
+                                    <constraint firstAttribute="bottom" secondItem="1d7-rQ-IqS" secondAttribute="bottom" constant="-200" id="ERj-F5-1tQ"/>
                                     <constraint firstAttribute="trailing" secondItem="1d7-rQ-IqS" secondAttribute="trailing" id="bgW-KC-1gJ"/>
                                     <constraint firstItem="1d7-rQ-IqS" firstAttribute="leading" secondItem="jPe-8m-PCX" secondAttribute="leading" id="fsI-hJ-d1i"/>
+                                    <constraint firstAttribute="centerX" secondItem="1d7-rQ-IqS" secondAttribute="centerX" id="iNK-lm-P3g"/>
                                     <constraint firstItem="1d7-rQ-IqS" firstAttribute="top" secondItem="jPe-8m-PCX" secondAttribute="top" id="kED-UE-FtR"/>
                                 </constraints>
                             </scrollView>
@@ -1128,6 +1129,8 @@ ALL OTHER TRADEMARKS ARE THE PROPERTY OF THEIR RESPECTIVE OWNERS.
                             <constraint firstItem="jPe-8m-PCX" firstAttribute="top" secondItem="FUf-PC-RvA" secondAttribute="top" id="tzC-t8-lEf"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="800"/>
                     <connections>
                         <outlet property="barChartView" destination="zu6-q3-a0i" id="ckK-sn-iox"/>
                         <outlet property="classBarView" destination="CNq-7P-M8w" id="dgN-ID-HG1"/>

@@ -115,7 +115,7 @@
     self.allPickableCards = [ZEDataManager sharedInstance].cards;
     NSPredicate *classPredicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
         NSString *hero = [evaluatedObject[@"playerClass"] lowercaseString];
-        if ([hero isEqualToString:self.hero] || hero == nil) {
+        if ([[hero lowercaseString] isEqualToString:self.hero] || hero == nil) {
             return YES;
         }
         return NO;
@@ -156,7 +156,7 @@
      type = Spell;
      },
      */
-    self.allPickableCards = [self.allPickableCards filteredArrayUsingPredicate:classPredicate];
+    self.allPickableCards = [self.allPickableCards filteredArrayUsingPredicate:classPredicate]; // losing some cards here. dunno why
     NSArray *sortedArray;
     sortedArray = [self.allPickableCards sortedArrayUsingComparator:^NSComparisonResult(NSDictionary *cardA, NSDictionary *cardB) {
         NSNumber *manaA = @0;
@@ -250,19 +250,19 @@
 - (NSInteger)calcDustCost {
     NSInteger cost = 0;
     for (NSDictionary *card in self.deckData) {
-        NSString *quality = card[@"rarity"];
+        NSString *quality = [card[@"rarity"] lowercaseString];
         NSString *set = card[@"set"];
         if (![set isEqualToString:@"basic"]) {
-            if ([quality isEqualToString:@"Legendary"]) {
+            if ([quality isEqualToString:@"legendary"]) {
                 cost += 1600;
             }
-            if ([quality isEqualToString:@"Epic"]) {
+            if ([quality isEqualToString:@"epic"]) {
                 cost += 400;
             }
-            if ([quality isEqualToString:@"Rare"]) {
+            if ([quality isEqualToString:@"rare"]) {
                 cost += 100;
             }
-            if ([quality isEqualToString:@"Common"]) {
+            if ([quality isEqualToString:@"common"]) {
                 cost += 40;
             }
         }
@@ -273,7 +273,8 @@
 - (NSInteger)countCategory:(NSString *)category {
     NSInteger count = 0;
     for (NSDictionary *card in self.deckData) {
-        if ([card[@"category"] isEqualToString:category]) {
+        NSString *type = [card[@"type"] lowercaseString];
+        if ([type isEqualToString:category]) {
             count++;
         }
     }
@@ -311,7 +312,7 @@
         [saveCardNames addObject:name];
     }
     [saveDeck setObject:saveCardNames forKey:@"deck"];
-    [saveDeck setObject:self.hero forKey:@"playerClass"];
+    [saveDeck setObject:self.hero forKey:@"hero"];
     [saveDeck setObject:@([self calcDustCost]) forKey:@"dust"];
     [saveDeck setObject:@([self countCategory:@"minion"]) forKey:@"minions"];
     [saveDeck setObject:@([self countCategory:@"spell"]) forKey:@"spells"];
@@ -353,7 +354,7 @@
         NSArray *effectList = card[@"mechanics"];
         CGFloat effectResult = 0;
         for (NSString *effect in effectList) {
-            CGFloat newEffectResult = [effect scoreAgainst:text];
+            CGFloat newEffectResult = [[effect lowercaseString] scoreAgainst:text];
             if (newEffectResult > effectResult) {
                 effectResult = newEffectResult;
             }
@@ -361,11 +362,11 @@
         
         // search for race
         NSString *race = card[@"race"];
-        CGFloat raceResult = [race scoreAgainst:text];
+        CGFloat raceResult = [[race lowercaseString] scoreAgainst:text];
         
         // search for quality
         NSString *quality = card[@"rarity"];
-        CGFloat qualitiyResult = [quality scoreAgainst:text];
+        CGFloat qualitiyResult = [[quality lowercaseString] scoreAgainst:text];
         
         CGFloat resultList[4] = {nameResult, effectResult, raceResult, qualitiyResult};
         CGFloat score = 0;
@@ -486,7 +487,7 @@
 
 - (NSUInteger)maxAllowedInDeckOfCard:(NSDictionary *)card {
     NSUInteger maxCardsAllowed = 2;
-    if ([card[@"quality"] isEqualToString:@"legendary"]) {
+    if ([[card[@"rarity"] lowercaseString] isEqualToString:@"legendary"]) {
         maxCardsAllowed = 1;
     }
     return maxCardsAllowed;
