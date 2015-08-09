@@ -250,18 +250,27 @@ ALL OTHER TRADEMARKS ARE THE PROPERTY OF THEIR RESPECTIVE OWNERS.
                                 <state key="normal" image="Jeeves.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="secondTouched:" destination="zoH-4r-fRs" eventType="touchUpInside" id="oSy-bj-2qG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vL7-Nc-7C0" customClass="SmartButton" customModule="Decks" customModuleProvider="target">
                                 <rect key="frame" x="405" y="64" width="195" height="236"/>
                                 <state key="normal" image="Jeeves.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="thirdTouched:" destination="zoH-4r-fRs" eventType="touchUpInside" id="lql-AL-gkf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tD7-aI-ane" customClass="SmartButton" customModule="Decks" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="195" height="236"/>
                                 <state key="normal" image="Jeeves.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="firstTouched:" destination="zoH-4r-fRs" eventType="touchUpInside" id="R5j-lx-Z8t"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -284,6 +293,11 @@ ALL OTHER TRADEMARKS ARE THE PROPERTY OF THEIR RESPECTIVE OWNERS.
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="320"/>
+                    <connections>
+                        <outlet property="firstCardButton" destination="tD7-aI-ane" id="gWg-KW-ALI"/>
+                        <outlet property="secondCardButton" destination="2cC-4G-6fC" id="r0b-XM-eXS"/>
+                        <outlet property="thirdCardButton" destination="vL7-Nc-7C0" id="BVh-Gg-zan"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8yF-E3-6AX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

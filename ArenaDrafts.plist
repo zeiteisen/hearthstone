@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>draftDate</key>
+		<string></string>
+		<key>title</key>
+		<string>Test1</string>
+		<key>source</key>
+		<string>http://m.youtube.com/trumpsc/</string>
+		<key>draft</key>
+		<array>
+			<dict>
+				<key>1</key>
+				<string>Moonfire</string>
+				<key>2</key>
+				<string>Arcane Shot</string>
+				<key>3</key>
+				<string>Call Pet</string>
+				<key>pick</key>
+				<string>Arcane Shot</string>
+			</dict>
+			<dict>
+				<key>1</key>
+				<string>Cogmaster</string>
+				<key>2</key>
+				<string>Hungry Crab</string>
+				<key>3</key>
+				<string>Secretkeeper</string>
+				<key>pick</key>
+				<string>Cogmaster</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

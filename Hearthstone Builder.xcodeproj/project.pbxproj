@@ -642,6 +642,7 @@
 		FCE0070B1937AA7300645355 /* bg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCE007061937AA7300645355 /* bg1.jpg */; };
 		FCE0070E1937B52800645355 /* ZELegalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE0070D1937B52700645355 /* ZELegalViewController.m */; };
 		FCE0070F1937BC1A00645355 /* Belwe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAA1019338FA30078EE65 /* Belwe.ttf */; };
+		FCE2C97D1B7790E6007A05C8 /* ArenaDrafts.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCE2C97C1B7790E6007A05C8 /* ArenaDrafts.plist */; };
 		FCEA53F11958A08800BF8CD4 /* ZEDrawSimulatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEA53F01958A08800BF8CD4 /* ZEDrawSimulatorViewController.m */; };
 		FCEA53F41958B72000BF8CD4 /* ZECardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEA53F31958B72000BF8CD4 /* ZECardCollectionViewCell.m */; };
 		FCEAB176195B7047002D1874 /* CRToast.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEAB175195B7047002D1874 /* CRToast.m */; };
@@ -1391,6 +1392,7 @@
 		FCE007061937AA7300645355 /* bg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1.jpg; sourceTree = "<group>"; };
 		FCE0070C1937B52700645355 /* ZELegalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZELegalViewController.h; sourceTree = "<group>"; };
 		FCE0070D1937B52700645355 /* ZELegalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZELegalViewController.m; sourceTree = "<group>"; };
+		FCE2C97C1B7790E6007A05C8 /* ArenaDrafts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ArenaDrafts.plist; sourceTree = "<group>"; };
 		FCEA53EF1958A08800BF8CD4 /* ZEDrawSimulatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEDrawSimulatorViewController.h; sourceTree = "<group>"; };
 		FCEA53F01958A08800BF8CD4 /* ZEDrawSimulatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEDrawSimulatorViewController.m; sourceTree = "<group>"; };
 		FCEA53F21958B72000BF8CD4 /* ZECardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZECardCollectionViewCell.h; sourceTree = "<group>"; };
@@ -1626,6 +1628,7 @@
 		FCAB8D1F19215A640072DC59 = {
 			isa = PBXGroup;
 			children = (
+				FCE2C97C1B7790E6007A05C8 /* ArenaDrafts.plist */,
 				FCAB8D3119215A640072DC59 /* Hearthstone Builder */,
 				FCAB8D5019215A640072DC59 /* Hearthstone BuilderTests */,
 				FCAB8D2A19215A640072DC59 /* Frameworks */,
@@ -2704,6 +2707,7 @@
 				FCAB964D19240F610072DC59 /* Whirlwind.jpg in Resources */,
 				FC1C6F521B70236D00464041 /* Call Pet.jpg in Resources */,
 				FCAB952E19240F610072DC59 /* Counterspell.jpg in Resources */,
+				FCE2C97D1B7790E6007A05C8 /* ArenaDrafts.plist in Resources */,
 				FCAB8D3619215A640072DC59 /* InfoPlist.strings in Resources */,
 				FCAB950919240F610072DC59 /* Bite.jpg in Resources */,
 				FC1C6F491B70236D00464041 /* Annoy-o-Tron.jpg in Resources */,
