@@ -11,5 +11,6 @@
 @interface ZEAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property () BOOL onlyPortrait;
 
 @end

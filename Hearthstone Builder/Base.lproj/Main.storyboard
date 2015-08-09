@@ -38,6 +38,21 @@
                                     <action selector="myDecksTouched:" destination="ItN-I6-AfE" eventType="touchUpInside" id="nsL-VG-B5b"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFs-nq-tne">
+                                <rect key="frame" x="20" y="84" width="120" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="KpL-go-acQ"/>
+                                    <constraint firstAttribute="width" constant="120" id="ZIc-ye-T2G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Quiz" backgroundImage="hero_frame.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zoH-4r-fRs" kind="push" id="a9q-PQ-N3a"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Af-Vv-UmD">
                                 <rect key="frame" x="180" y="335" width="120" height="100"/>
                                 <constraints>
@@ -84,6 +99,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eFs-nq-tne" firstAttribute="leading" secondItem="dTT-QT-lDd" secondAttribute="leading" constant="20" id="05p-su-yOS"/>
+                            <constraint firstItem="eFs-nq-tne" firstAttribute="top" secondItem="nne-gU-D8B" secondAttribute="bottom" constant="20" id="3p8-5u-hda"/>
                             <constraint firstItem="3Af-Vv-UmD" firstAttribute="leading" secondItem="9fz-8Q-96N" secondAttribute="trailing" constant="40" id="4eI-XG-gn6"/>
                             <constraint firstItem="DPq-LZ-sZK" firstAttribute="top" secondItem="9fz-8Q-96N" secondAttribute="bottom" constant="8" id="75M-hM-rp5"/>
                             <constraint firstAttribute="trailing" secondItem="7K1-hy-2F6" secondAttribute="trailing" constant="28" id="PKd-8A-KtZ"/>
@@ -215,6 +232,62 @@ ALL OTHER TRADEMARKS ARE THE PROPERTY OF THEIR RESPECTIVE OWNERS.
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ep1-P8-Esm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2617" y="200"/>
+        </scene>
+        <!--Arena Pick View Controller-->
+        <scene sceneID="ofA-pN-cj5">
+            <objects>
+                <viewController id="zoH-4r-fRs" customClass="ZEArenaPickViewController" customModule="Decks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eSe-4r-GOO"/>
+                        <viewControllerLayoutGuide type="bottom" id="3hg-Dl-zuh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CjL-zI-0wU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cC-4G-6fC" customClass="SmartButton" customModule="Decks" customModuleProvider="target">
+                                <rect key="frame" x="203" y="64" width="194" height="236"/>
+                                <state key="normal" image="Jeeves.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vL7-Nc-7C0" customClass="SmartButton" customModule="Decks" customModuleProvider="target">
+                                <rect key="frame" x="405" y="64" width="195" height="236"/>
+                                <state key="normal" image="Jeeves.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tD7-aI-ane" customClass="SmartButton" customModule="Decks" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="195" height="236"/>
+                                <state key="normal" image="Jeeves.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vL7-Nc-7C0" firstAttribute="width" secondItem="2cC-4G-6fC" secondAttribute="width" id="3bQ-kv-ffQ"/>
+                            <constraint firstItem="2cC-4G-6fC" firstAttribute="leading" secondItem="tD7-aI-ane" secondAttribute="trailing" constant="8" id="GFt-ug-FDT"/>
+                            <constraint firstItem="vL7-Nc-7C0" firstAttribute="top" secondItem="2cC-4G-6fC" secondAttribute="top" id="I90-eI-ZAd"/>
+                            <constraint firstItem="tD7-aI-ane" firstAttribute="leading" secondItem="CjL-zI-0wU" secondAttribute="leading" id="KhT-0O-zMR"/>
+                            <constraint firstItem="vL7-Nc-7C0" firstAttribute="bottom" secondItem="2cC-4G-6fC" secondAttribute="bottom" id="WaA-97-SsC"/>
+                            <constraint firstAttribute="trailing" secondItem="vL7-Nc-7C0" secondAttribute="trailing" id="ZbN-3L-UCT"/>
+                            <constraint firstItem="3hg-Dl-zuh" firstAttribute="top" secondItem="tD7-aI-ane" secondAttribute="bottom" constant="20" id="cTl-Vd-roP"/>
+                            <constraint firstItem="vL7-Nc-7C0" firstAttribute="leading" secondItem="2cC-4G-6fC" secondAttribute="trailing" constant="8" id="dpw-Pj-ZGY"/>
+                            <constraint firstItem="tD7-aI-ane" firstAttribute="bottom" secondItem="2cC-4G-6fC" secondAttribute="bottom" id="jtK-eY-gM3"/>
+                            <constraint firstItem="tD7-aI-ane" firstAttribute="top" secondItem="2cC-4G-6fC" secondAttribute="top" id="pbn-dM-O6s"/>
+                            <constraint firstItem="tD7-aI-ane" firstAttribute="top" secondItem="eSe-4r-GOO" secondAttribute="bottom" id="qag-Jy-nF6"/>
+                            <constraint firstItem="tD7-aI-ane" firstAttribute="width" secondItem="2cC-4G-6fC" secondAttribute="width" id="x6I-82-eSP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nCd-he-Qfa"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="320"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8yF-E3-6AX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2389" y="-216"/>
         </scene>
         <!--Pick Class View Controller-->
         <scene sceneID="Ojs-Mr-UPh">
@@ -1164,6 +1237,7 @@ ALL OTHER TRADEMARKS ARE THE PROPERTY OF THEIR RESPECTIVE OWNERS.
     </scenes>
     <resources>
         <image name="Dark_Green_Arrow_Up.png" width="100" height="100"/>
+        <image name="Jeeves.jpg" width="286" height="395"/>
         <image name="complete-icon.png" width="165" height="165"/>
         <image name="deletered.png" width="128" height="128"/>
         <image name="hero_frame.png" width="256" height="206"/>

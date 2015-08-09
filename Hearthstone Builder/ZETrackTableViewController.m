@@ -89,8 +89,8 @@
     ZETrackTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     NSDictionary *card = data[indexPath.row];
     cell.nameLabel.text = card[@"name"];
-    cell.manaLabel.text = [NSString stringWithFormat:@"%@", card[@"mana"]];
-    cell.nameLabel.textColor = [ZEUtility colorForQuality:card[@"quality"]];
+    cell.manaLabel.text = [NSString stringWithFormat:@"%@", card[@"cost"]];
+    cell.nameLabel.textColor = [ZEUtility colorForQuality:card[@"rarity"]];
     NSInteger count = 0;
     if (indexPath.section == 0) {
         count = [self.inSet countForObject:card];
