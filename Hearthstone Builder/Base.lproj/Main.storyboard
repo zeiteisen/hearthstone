@@ -38,7 +38,7 @@
                                     <action selector="myDecksTouched:" destination="ItN-I6-AfE" eventType="touchUpInside" id="nsL-VG-B5b"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFs-nq-tne">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFs-nq-tne">
                                 <rect key="frame" x="20" y="84" width="120" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="KpL-go-acQ"/>
