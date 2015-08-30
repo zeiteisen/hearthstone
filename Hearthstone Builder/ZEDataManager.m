@@ -33,6 +33,8 @@
         NSArray *naxxramas = dict[@"Curse of Naxxramas"];
         NSArray *blackrockCards = dict[@"Blackrock Mountain"];
         NSArray *tgtCards = dict[@"The Grand Tournament"];
+//        NSArray *promo = dict[@"Promotion"];
+        NSArray *reward = dict[@"Reward"];
         NSMutableArray *merge = [NSMutableArray array];
         [merge addObjectsFromArray:basicCards];
         [merge addObjectsFromArray:classic];
@@ -40,6 +42,8 @@
         [merge addObjectsFromArray:gvgCards];
         [merge addObjectsFromArray:blackrockCards];
         [merge addObjectsFromArray:tgtCards];
+        [merge addObjectsFromArray:reward];
+//        [merge addObjectsFromArray:promo];
         NSMutableArray *onlyCollectibles = [NSMutableArray array];
         
         for (NSDictionary *card in merge) {

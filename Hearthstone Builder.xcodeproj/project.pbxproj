@@ -106,7 +106,7 @@
 		FC17FC8C1B87B14000AE9304 /* Pit Fighter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC17FC081B87B13F00AE9304 /* Pit Fighter.jpg */; };
 		FC17FC8D1B87B14000AE9304 /* North Sea Kraken.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC17FC091B87B13F00AE9304 /* North Sea Kraken.jpg */; };
 		FC17FC8E1B87B14000AE9304 /* Orgrimmar Aspirant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC17FC0A1B87B13F00AE9304 /* Orgrimmar Aspirant.jpg */; };
-		FC17FC8F1B87B14000AE9304 /* Nexus Champion Saraad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC17FC0B1B87B13F00AE9304 /* Nexus Champion Saraad.jpg */; };
+		FC17FC8F1B87B14000AE9304 /* Nexus-Champion Saraad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC17FC0B1B87B13F00AE9304 /* Nexus-Champion Saraad.jpg */; };
 		FC17FC901B87B14000AE9304 /* Murloc Knight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC17FC0C1B87B13F00AE9304 /* Murloc Knight.jpg */; };
 		FC17FC911B87B14000AE9304 /* Mysterious Challenger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC17FC0D1B87B13F00AE9304 /* Mysterious Challenger.jpg */; };
 		FC17FC921B87B14000AE9304 /* Mulch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC17FC0E1B87B13F00AE9304 /* Mulch.jpg */; };
@@ -966,7 +966,7 @@
 		FC17FC081B87B13F00AE9304 /* Pit Fighter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Pit Fighter.jpg"; sourceTree = "<group>"; };
 		FC17FC091B87B13F00AE9304 /* North Sea Kraken.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "North Sea Kraken.jpg"; sourceTree = "<group>"; };
 		FC17FC0A1B87B13F00AE9304 /* Orgrimmar Aspirant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Orgrimmar Aspirant.jpg"; sourceTree = "<group>"; };
-		FC17FC0B1B87B13F00AE9304 /* Nexus Champion Saraad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Nexus Champion Saraad.jpg"; sourceTree = "<group>"; };
+		FC17FC0B1B87B13F00AE9304 /* Nexus-Champion Saraad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Nexus-Champion Saraad.jpg"; sourceTree = "<group>"; };
 		FC17FC0C1B87B13F00AE9304 /* Murloc Knight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Murloc Knight.jpg"; sourceTree = "<group>"; };
 		FC17FC0D1B87B13F00AE9304 /* Mysterious Challenger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Mysterious Challenger.jpg"; sourceTree = "<group>"; };
 		FC17FC0E1B87B13F00AE9304 /* Mulch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mulch.jpg; sourceTree = "<group>"; };
@@ -2115,7 +2115,7 @@
 				FC17FC081B87B13F00AE9304 /* Pit Fighter.jpg */,
 				FC17FC091B87B13F00AE9304 /* North Sea Kraken.jpg */,
 				FC17FC0A1B87B13F00AE9304 /* Orgrimmar Aspirant.jpg */,
-				FC17FC0B1B87B13F00AE9304 /* Nexus Champion Saraad.jpg */,
+				FC17FC0B1B87B13F00AE9304 /* Nexus-Champion Saraad.jpg */,
 				FC17FC0C1B87B13F00AE9304 /* Murloc Knight.jpg */,
 				FC17FC0D1B87B13F00AE9304 /* Mysterious Challenger.jpg */,
 				FC17FC0E1B87B13F00AE9304 /* Mulch.jpg */,
@@ -3110,7 +3110,7 @@
 				FC1C6F841B70236D00464041 /* Lil' Exorcist.jpg in Resources */,
 				FCAB95F819240F610072DC59 /* Savage Roar.jpg in Resources */,
 				FC1C6F9B1B70236D00464041 /* Powermace.jpg in Resources */,
-				FC17FC8F1B87B14000AE9304 /* Nexus Champion Saraad.jpg in Resources */,
+				FC17FC8F1B87B14000AE9304 /* Nexus-Champion Saraad.jpg in Resources */,
 				FCAB951E19240F610072DC59 /* Captain's Parrot.jpg in Resources */,
 				FCAB956119240F610072DC59 /* Flamestrike.jpg in Resources */,
 				FCAB951C19240F610072DC59 /* Cairne Bloodhoof.jpg in Resources */,
