@@ -21,6 +21,8 @@
             continueAfterRunningActions = "No"
             symbolName = "warnParseOperationOnMainThread"
             moduleName = "">
+            <Locations>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

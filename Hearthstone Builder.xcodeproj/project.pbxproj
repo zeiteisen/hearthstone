@@ -61,6 +61,8 @@
 		8FB6EACA192CE57E00973F8F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC7192CE57E00973F8F /* README.md */; };
 		FC0DC1F61997740500EBC4A4 /* ZENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0DC1F51997740500EBC4A4 /* ZENavigationController.m */; };
 		FC0DC1FE1997AA9500EBC4A4 /* ico_neutral.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0DC1FD1997AA9500EBC4A4 /* ico_neutral.png */; };
+		FC1044841BDBD4190069D355 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1044821BDBD4190069D355 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
+		FC1044851BDBD4190069D355 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1044831BDBD4190069D355 /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
 		FC17FBDE1B87AF4600AE9304 /* Cards.json in Resources */ = {isa = PBXBuildFile; fileRef = FC17FBDD1B87AF4600AE9304 /* Cards.json */; };
 		FC17FC631B87B14000AE9304 /* Wyrmrest Agent.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC17FBDF1B87B13E00AE9304 /* Wyrmrest Agent.jpg */; };
 		FC17FC641B87B14000AE9304 /* Wrathguard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC17FBE01B87B13E00AE9304 /* Wrathguard.jpg */; };
@@ -363,7 +365,6 @@
 		FC98AFB6195B24E200CBCC65 /* Avenge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA8195B24E200CBCC65 /* Avenge.jpg */; };
 		FC98AFB7195B24E200CBCC65 /* Anub'ar Ambusher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC98AFA9195B24E200CBCC65 /* Anub'ar Ambusher.jpg */; };
 		FC9B092C1960A50B004ED4BA /* XYPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9B092B1960A50B004ED4BA /* XYPieChart.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		FCA1ECF11B7158E800CE7823 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA1ECF01B7158E800CE7823 /* Bolts.framework */; };
 		FCA1ECF31B7158FD00CE7823 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA1ECF21B7158FD00CE7823 /* libsqlite3.dylib */; };
 		FCAB8D2C19215A640072DC59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2B19215A640072DC59 /* Foundation.framework */; };
 		FCAB8D2E19215A640072DC59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */; };
@@ -816,7 +817,6 @@
 		FCF157011B713DCC00AE9841 /* Volcanic Drake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCF156E21B713DCC00AE9841 /* Volcanic Drake.jpg */; };
 		FCF157021B713DCC00AE9841 /* Volcanic Lumberer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCF156E31B713DCC00AE9841 /* Volcanic Lumberer.jpg */; };
 		FCF361141931DDEC0044B85E /* ZEPublishTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF361131931DDEC0044B85E /* ZEPublishTableViewController.m */; };
-		FCF3611619322BEC0044B85E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3611519322BEC0044B85E /* Parse.framework */; };
 		FCF3611819322C0D0044B85E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3611719322C0D0044B85E /* AudioToolbox.framework */; };
 		FCF3611A19322C180044B85E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3611919322C180044B85E /* CFNetwork.framework */; };
 		FCF3611C19322C250044B85E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF3611B19322C250044B85E /* CoreLocation.framework */; };
@@ -921,6 +921,8 @@
 		FC0DC1F41997740500EBC4A4 /* ZENavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENavigationController.h; sourceTree = "<group>"; };
 		FC0DC1F51997740500EBC4A4 /* ZENavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENavigationController.m; sourceTree = "<group>"; };
 		FC0DC1FD1997AA9500EBC4A4 /* ico_neutral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_neutral.png; sourceTree = "<group>"; };
+		FC1044821BDBD4190069D355 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		FC1044831BDBD4190069D355 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		FC17FBDD1B87AF4600AE9304 /* Cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cards.json; sourceTree = "<group>"; };
 		FC17FBDF1B87B13E00AE9304 /* Wyrmrest Agent.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Wyrmrest Agent.jpg"; sourceTree = "<group>"; };
 		FC17FBE01B87B13E00AE9304 /* Wrathguard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wrathguard.jpg; sourceTree = "<group>"; };
@@ -1235,7 +1237,6 @@
 		FC98AFA9195B24E200CBCC65 /* Anub'ar Ambusher.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Anub'ar Ambusher.jpg"; sourceTree = "<group>"; };
 		FC9B092A1960A50B004ED4BA /* XYPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPieChart.h; sourceTree = "<group>"; };
 		FC9B092B1960A50B004ED4BA /* XYPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPieChart.m; sourceTree = "<group>"; };
-		FCA1ECF01B7158E800CE7823 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		FCA1ECF21B7158FD00CE7823 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		FCAB8D2819215A640072DC59 /* Decks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Decks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAB8D2B19215A640072DC59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1707,7 +1708,6 @@
 		FCF156E31B713DCC00AE9841 /* Volcanic Lumberer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Volcanic Lumberer.jpg"; sourceTree = "<group>"; };
 		FCF361121931DDEC0044B85E /* ZEPublishTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEPublishTableViewController.h; sourceTree = "<group>"; };
 		FCF361131931DDEC0044B85E /* ZEPublishTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEPublishTableViewController.m; sourceTree = "<group>"; };
-		FCF3611519322BEC0044B85E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		FCF3611719322C0D0044B85E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FCF3611919322C180044B85E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		FCF3611B19322C250044B85E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -1738,16 +1738,16 @@
 				FCF3612819322CFF0044B85E /* SystemConfiguration.framework in Frameworks */,
 				FCF3612619322CF50044B85E /* StoreKit.framework in Frameworks */,
 				FCF3612419322CEB0044B85E /* Security.framework in Frameworks */,
+				FC1044851BDBD4190069D355 /* Parse.framework in Frameworks */,
 				FCF3612219322CE20044B85E /* QuartzCore.framework in Frameworks */,
 				FCF3612019322CD70044B85E /* MobileCoreServices.framework in Frameworks */,
 				FCF3611E19322C2E0044B85E /* libz.dylib in Frameworks */,
 				FCF3611C19322C250044B85E /* CoreLocation.framework in Frameworks */,
 				FCF3611A19322C180044B85E /* CFNetwork.framework in Frameworks */,
+				FC1044841BDBD4190069D355 /* Bolts.framework in Frameworks */,
 				FCF3611819322C0D0044B85E /* AudioToolbox.framework in Frameworks */,
-				FCA1ECF11B7158E800CE7823 /* Bolts.framework in Frameworks */,
 				FCAB8D2E19215A640072DC59 /* CoreGraphics.framework in Frameworks */,
 				FCAB8D3019215A640072DC59 /* UIKit.framework in Frameworks */,
-				FCF3611619322BEC0044B85E /* Parse.framework in Frameworks */,
 				FCAB8D2C19215A640072DC59 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1912,6 +1912,8 @@
 		FCAB8D2A19215A640072DC59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC1044821BDBD4190069D355 /* Bolts.framework */,
+				FC1044831BDBD4190069D355 /* Parse.framework */,
 				FCA1ECF21B7158FD00CE7823 /* libsqlite3.dylib */,
 				FCEDD26619520396001758C0 /* iAd.framework */,
 				8F995B611938C9D8009EB207 /* Crashlytics.framework */,
@@ -1925,11 +1927,9 @@
 				FCF3612119322CE20044B85E /* QuartzCore.framework */,
 				FCF3611F19322CD70044B85E /* MobileCoreServices.framework */,
 				FCF3611D19322C2E0044B85E /* libz.dylib */,
-				FCA1ECF01B7158E800CE7823 /* Bolts.framework */,
 				FCF3611B19322C250044B85E /* CoreLocation.framework */,
 				FCF3611919322C180044B85E /* CFNetwork.framework */,
 				FCF3611719322C0D0044B85E /* AudioToolbox.framework */,
-				FCF3611519322BEC0044B85E /* Parse.framework */,
 				FCAB8D2B19215A640072DC59 /* Foundation.framework */,
 				FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */,
 				FCAB8D2F19215A640072DC59 /* UIKit.framework */,
@@ -2855,6 +2855,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ZE;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = zeiteisens;
 				TargetAttributes = {
@@ -3862,9 +3863,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/Parse.framework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hearthstone Builder/Hearthstone Builder-Prefix.pch";
@@ -3888,9 +3891,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hanno Bruns (4J9U9M79Y8)";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/Parse.framework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hearthstone Builder/Hearthstone Builder-Prefix.pch";
