@@ -33,7 +33,7 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
     NSMutableArray *images = [NSMutableArray array];
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 7; i++) {
         NSString *imageName = [NSString stringWithFormat:@"bg%i.jpg", i];
         [images addObject:[UIImage imageNamed:imageName]];
     }

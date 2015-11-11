@@ -65,8 +65,12 @@
 	if (self) {
 		
 		//Deserialize Parse timestamps
-		self.createdAt = [aDecoder decodeObjectForKey:kPFObjectCreatedAtKey];
-		self.updatedAt = [aDecoder decodeObjectForKey:kPFObjectUpdatedAtKey];
+        if ([self respondsToSelector:@selector(setCreatedAt:)]) {
+            self.createdAt = [aDecoder decodeObjectForKey:kPFObjectCreatedAtKey];
+        }
+        if ([self respondsToSelector:@selector(setUpdatedAt:)]) {
+            self.updatedAt = [aDecoder decodeObjectForKey:kPFObjectUpdatedAtKey];
+        }
 		
 		//Deserialize all non-nil Parse properties
 		for (NSString* key in allKeys) {

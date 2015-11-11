@@ -38,7 +38,7 @@
 
 /*!
  A controller class that implements default behavior for a BFAppLinkReturnToRefererView, including
- the ability to display the view above the navigation bar for navigation-based apps.
+ the ability to display the view above the navigation bar for navigation-bsaed apps.
  */
 @interface BFAppLinkReturnToRefererController : NSObject <BFAppLinkReturnToRefererViewDelegate>
 
