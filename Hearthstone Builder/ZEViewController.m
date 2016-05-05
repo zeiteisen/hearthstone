@@ -200,7 +200,7 @@
     self.chartView.dataSource = self;
     
     self.searchBar.delegate = self;
-    self.searchBar.placeholder = NSLocalizedString(@"eg. taunt, onyxia", nil);
+    self.searchBar.placeholder = NSLocalizedString(@"eg. og, onyxia", nil);
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -350,6 +350,10 @@
         NSString *name = [card[@"name"] lowercaseString];
         CGFloat nameResult = [name scoreAgainst:text];
         
+        // search for set
+        NSString *set = [card[@"set"] lowercaseString];
+        CGFloat setResult = [set scoreAgainst:text];
+        
         // search for effect
         NSArray *effectList = card[@"mechanics"];
         CGFloat effectResult = 0;
@@ -368,9 +372,9 @@
         NSString *quality = card[@"rarity"];
         CGFloat qualitiyResult = [[quality lowercaseString] scoreAgainst:text];
         
-        CGFloat resultList[4] = {nameResult, effectResult, raceResult, qualitiyResult};
+        CGFloat resultList[5] = {nameResult, setResult, effectResult, raceResult, qualitiyResult};
         CGFloat score = 0;
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             CGFloat value = resultList[i];
             if (value > score) {
                 score = value;

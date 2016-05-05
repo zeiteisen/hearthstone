@@ -13,6 +13,7 @@
 #import <iAd/iAd.h>
 #import "ZEViewController.h"
 #import "UINavigationController+Progress.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @interface ZEAppDelegate ()
 
@@ -47,7 +48,8 @@
     if ([ZEUtility remoteNotificationEnabled]) {
         [ZEUtility registerForRemoteNotifications];
     }
-    
+    [[FBSDKApplicationDelegate sharedInstance] application:application
+                             didFinishLaunchingWithOptions:launchOptions];
     return YES;
 }
 
@@ -98,7 +100,11 @@
             }
         }];
     }
-    return YES;
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation
+            ];
 }
 
 -(NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
@@ -129,6 +135,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     [UIApplication sharedApplication].keyWindow.tintColor = [UIColor redColor];
+    [FBSDKAppEvents activateApp];
     
     // Begin a user session. Must not be dependent on user actions or any prior network requests.
     // Must be called every time your app becomes active.
