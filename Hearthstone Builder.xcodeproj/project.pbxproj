@@ -78,7 +78,7 @@
 		FC033DA11BF34F780031BD6B /* Ethereal Conjurer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC033D741BF34F770031BD6B /* Ethereal Conjurer.jpg */; };
 		FC033DA21BF34F780031BD6B /* Everyfin is Awesome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC033D751BF34F770031BD6B /* Everyfin is Awesome.jpg */; };
 		FC033DA31BF34F780031BD6B /* Excavated Evil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC033D761BF34F770031BD6B /* Excavated Evil.jpg */; };
-		FC033DA41BF34F780031BD6B /* Explorers Hat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC033D771BF34F770031BD6B /* Explorers Hat.jpg */; };
+		FC033DA41BF34F780031BD6B /* Explorer's Hat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC033D771BF34F770031BD6B /* Explorer's Hat.jpg */; };
 		FC033DA51BF34F780031BD6B /* Fierce Monkey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC033D781BF34F770031BD6B /* Fierce Monkey.jpg */; };
 		FC033DA61BF34F780031BD6B /* Forgotten Torch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC033D791BF34F770031BD6B /* Forgotten Torch.jpg */; };
 		FC033DA71BF34F780031BD6B /* Fossilized Devilsaur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC033D7A1BF34F770031BD6B /* Fossilized Devilsaur.jpg */; };
@@ -1121,7 +1121,7 @@
 		FC033D741BF34F770031BD6B /* Ethereal Conjurer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ethereal Conjurer.jpg"; sourceTree = "<group>"; };
 		FC033D751BF34F770031BD6B /* Everyfin is Awesome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Everyfin is Awesome.jpg"; sourceTree = "<group>"; };
 		FC033D761BF34F770031BD6B /* Excavated Evil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Excavated Evil.jpg"; sourceTree = "<group>"; };
-		FC033D771BF34F770031BD6B /* Explorers Hat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Explorers Hat.jpg"; sourceTree = "<group>"; };
+		FC033D771BF34F770031BD6B /* Explorer's Hat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Explorer's Hat.jpg"; sourceTree = "<group>"; };
 		FC033D781BF34F770031BD6B /* Fierce Monkey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Fierce Monkey.jpg"; sourceTree = "<group>"; };
 		FC033D791BF34F770031BD6B /* Forgotten Torch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Forgotten Torch.jpg"; sourceTree = "<group>"; };
 		FC033D7A1BF34F770031BD6B /* Fossilized Devilsaur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Fossilized Devilsaur.jpg"; sourceTree = "<group>"; };
@@ -2600,7 +2600,7 @@
 				FC033D741BF34F770031BD6B /* Ethereal Conjurer.jpg */,
 				FC033D751BF34F770031BD6B /* Everyfin is Awesome.jpg */,
 				FC033D761BF34F770031BD6B /* Excavated Evil.jpg */,
-				FC033D771BF34F770031BD6B /* Explorers Hat.jpg */,
+				FC033D771BF34F770031BD6B /* Explorer's Hat.jpg */,
 				FC033D781BF34F770031BD6B /* Fierce Monkey.jpg */,
 				FC033D791BF34F770031BD6B /* Forgotten Torch.jpg */,
 				FC033D7A1BF34F770031BD6B /* Fossilized Devilsaur.jpg */,
@@ -3871,7 +3871,7 @@
 				FC4C58B91CDB5B6300B4AD3A /* Bilefin Tidehunter.jpg in Resources */,
 				FC17FC8B1B87B14000AE9304 /* Polymorph: Boar.jpg in Resources */,
 				FC4C58E11CDB5B6300B4AD3A /* Faceless Behemoth.jpg in Resources */,
-				FC033DA41BF34F780031BD6B /* Explorers Hat.jpg in Resources */,
+				FC033DA41BF34F780031BD6B /* Explorer's Hat.jpg in Resources */,
 				FCF69C0F199420FF009028F7 /* ico_star.png in Resources */,
 				FCAB965919240F610072DC59 /* Youthful Brewmaster.jpg in Resources */,
 				FC033DA81BF34F780031BD6B /* Gorillabot A-3.jpg in Resources */,
