@@ -949,6 +949,51 @@
 		FCAB965A19240F610072DC59 /* Ysera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCAB94DC19240F610072DC59 /* Ysera.jpg */; };
 		FCAB9661192415930072DC59 /* ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAB9660192415930072DC59 /* ViewUtils.m */; };
 		FCC355471B77732C00AE2359 /* ZEArenaPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC355461B77732C00AE2359 /* ZEArenaPickViewController.swift */; };
+		FCC3B7111D5B6ADD009382D4 /* Arcane Anomaly.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6E41D5B6ADC009382D4 /* Arcane Anomaly.jpg */; };
+		FCC3B7121D5B6ADD009382D4 /* Arcane Giant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6E51D5B6ADC009382D4 /* Arcane Giant.jpg */; };
+		FCC3B7131D5B6ADD009382D4 /* Arcanosmith.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6E61D5B6ADC009382D4 /* Arcanosmith.jpg */; };
+		FCC3B7141D5B6ADD009382D4 /* Avian Watcher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6E71D5B6ADC009382D4 /* Avian Watcher.jpg */; };
+		FCC3B7151D5B6ADD009382D4 /* Babbling Book.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6E81D5B6ADC009382D4 /* Babbling Book.jpg */; };
+		FCC3B7161D5B6ADD009382D4 /* Barnes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6E91D5B6ADC009382D4 /* Barnes.jpg */; };
+		FCC3B7171D5B6ADD009382D4 /* Book Wyrm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6EA1D5B6ADC009382D4 /* Book Wyrm.jpg */; };
+		FCC3B7181D5B6ADD009382D4 /* Cat Trick.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6EB1D5B6ADC009382D4 /* Cat Trick.jpg */; };
+		FCC3B7191D5B6ADD009382D4 /* Cloaked Huntress.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6EC1D5B6ADC009382D4 /* Cloaked Huntress.jpg */; };
+		FCC3B71A1D5B6ADD009382D4 /* Deadly Fork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6ED1D5B6ADC009382D4 /* Deadly Fork.jpg */; };
+		FCC3B71B1D5B6ADD009382D4 /* Enchanted Raven.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6EE1D5B6ADC009382D4 /* Enchanted Raven.jpg */; };
+		FCC3B71C1D5B6ADD009382D4 /* Ethereal Peddler.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6EF1D5B6ADC009382D4 /* Ethereal Peddler.jpg */; };
+		FCC3B71D1D5B6ADD009382D4 /* Firelands Portal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6F01D5B6ADC009382D4 /* Firelands Portal.jpg */; };
+		FCC3B71E1D5B6ADD009382D4 /* Fool's Bane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6F11D5B6ADC009382D4 /* Fool's Bane.jpg */; };
+		FCC3B71F1D5B6ADD009382D4 /* Ironforge Portal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6F21D5B6ADC009382D4 /* Ironforge Portal.jpg */; };
+		FCC3B7201D5B6ADD009382D4 /* Ivory Knight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6F31D5B6ADC009382D4 /* Ivory Knight.jpg */; };
+		FCC3B7211D5B6ADD009382D4 /* Kara Kazham!.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6F41D5B6ADC009382D4 /* Kara Kazham!.jpg */; };
+		FCC3B7221D5B6ADD009382D4 /* Kindly Grandmother.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6F51D5B6ADC009382D4 /* Kindly Grandmother.jpg */; };
+		FCC3B7231D5B6ADD009382D4 /* Maelstrom Portal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6F61D5B6ADC009382D4 /* Maelstrom Portal.jpg */; };
+		FCC3B7241D5B6ADD009382D4 /* Malchezaar's Imp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6F71D5B6ADC009382D4 /* Malchezaar's Imp.jpg */; };
+		FCC3B7251D5B6ADD009382D4 /* Medivh, the Guardian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6F81D5B6ADC009382D4 /* Medivh, the Guardian.jpg */; };
+		FCC3B7261D5B6ADD009382D4 /* Medivh's Valet.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6F91D5B6ADC009382D4 /* Medivh's Valet.jpg */; };
+		FCC3B7271D5B6ADD009382D4 /* Menagerie Magician.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6FA1D5B6ADC009382D4 /* Menagerie Magician.jpg */; };
+		FCC3B7281D5B6ADD009382D4 /* Menagerie Warden.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6FB1D5B6ADC009382D4 /* Menagerie Warden.jpg */; };
+		FCC3B7291D5B6ADD009382D4 /* Moat Lurker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6FC1D5B6ADC009382D4 /* Moat Lurker.jpg */; };
+		FCC3B72A1D5B6ADD009382D4 /* Moonglade Portal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6FD1D5B6ADC009382D4 /* Moonglade Portal.jpg */; };
+		FCC3B72B1D5B6ADD009382D4 /* Moroes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6FE1D5B6ADC009382D4 /* Moroes.jpg */; };
+		FCC3B72C1D5B6ADD009382D4 /* Netherspite Historian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6FF1D5B6ADC009382D4 /* Netherspite Historian.jpg */; };
+		FCC3B72D1D5B6ADD009382D4 /* Nightbane Templar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B7001D5B6ADC009382D4 /* Nightbane Templar.jpg */; };
+		FCC3B72E1D5B6ADD009382D4 /* Onyx Bishop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B7011D5B6ADC009382D4 /* Onyx Bishop.jpg */; };
+		FCC3B72F1D5B6ADD009382D4 /* Pantry Spider.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B7021D5B6ADC009382D4 /* Pantry Spider.jpg */; };
+		FCC3B7301D5B6ADD009382D4 /* Pompous Thespian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B7031D5B6ADC009382D4 /* Pompous Thespian.jpg */; };
+		FCC3B7311D5B6ADD009382D4 /* Priest of the Feast.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B7041D5B6ADC009382D4 /* Priest of the Feast.jpg */; };
+		FCC3B7321D5B6ADD009382D4 /* Prince Malchezaar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B7051D5B6ADC009382D4 /* Prince Malchezaar.jpg */; };
+		FCC3B7331D5B6ADD009382D4 /* Protect the King!.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B7061D5B6ADC009382D4 /* Protect the King!.jpg */; };
+		FCC3B7341D5B6ADD009382D4 /* Purify.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B7071D5B6ADC009382D4 /* Purify.jpg */; };
+		FCC3B7351D5B6ADD009382D4 /* Runic Egg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B7081D5B6ADC009382D4 /* Runic Egg.jpg */; };
+		FCC3B7361D5B6ADD009382D4 /* Silvermoon Portal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B7091D5B6ADC009382D4 /* Silvermoon Portal.jpg */; };
+		FCC3B7371D5B6ADD009382D4 /* Silverware Golem.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B70A1D5B6ADC009382D4 /* Silverware Golem.jpg */; };
+		FCC3B7381D5B6ADD009382D4 /* Spirit Claws.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B70B1D5B6ADD009382D4 /* Spirit Claws.jpg */; };
+		FCC3B7391D5B6ADD009382D4 /* Swashburglar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B70C1D5B6ADD009382D4 /* Swashburglar.jpg */; };
+		FCC3B73A1D5B6ADD009382D4 /* The Curator.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B70D1D5B6ADD009382D4 /* The Curator.jpg */; };
+		FCC3B73B1D5B6ADD009382D4 /* Violet Illusionist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B70E1D5B6ADD009382D4 /* Violet Illusionist.jpg */; };
+		FCC3B73C1D5B6ADD009382D4 /* Wicked Witchdoctor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B70F1D5B6ADD009382D4 /* Wicked Witchdoctor.jpg */; };
+		FCC3B73D1D5B6ADD009382D4 /* Zoobot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B7101D5B6ADD009382D4 /* Zoobot.jpg */; };
 		FCE006F31937960900645355 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE006F21937960900645355 /* NSMutableArray+Shuffle.m */; };
 		FCE006FF1937A10F00645355 /* hero_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE006FE1937A10F00645355 /* hero_frame.png */; };
 		FCE007011937A5AA00645355 /* bg0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCE007001937A5AA00645355 /* bg0.jpg */; };
@@ -2014,6 +2059,51 @@
 		FCAB9660192415930072DC59 /* ViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewUtils.m; sourceTree = "<group>"; };
 		FCC355451B77732B00AE2359 /* Hearthstone Builder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hearthstone Builder-Bridging-Header.h"; sourceTree = "<group>"; };
 		FCC355461B77732C00AE2359 /* ZEArenaPickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZEArenaPickViewController.swift; sourceTree = "<group>"; };
+		FCC3B6E41D5B6ADC009382D4 /* Arcane Anomaly.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Arcane Anomaly.jpg"; sourceTree = "<group>"; };
+		FCC3B6E51D5B6ADC009382D4 /* Arcane Giant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Arcane Giant.jpg"; sourceTree = "<group>"; };
+		FCC3B6E61D5B6ADC009382D4 /* Arcanosmith.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Arcanosmith.jpg; sourceTree = "<group>"; };
+		FCC3B6E71D5B6ADC009382D4 /* Avian Watcher.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Avian Watcher.jpg"; sourceTree = "<group>"; };
+		FCC3B6E81D5B6ADC009382D4 /* Babbling Book.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Babbling Book.jpg"; sourceTree = "<group>"; };
+		FCC3B6E91D5B6ADC009382D4 /* Barnes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Barnes.jpg; sourceTree = "<group>"; };
+		FCC3B6EA1D5B6ADC009382D4 /* Book Wyrm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Book Wyrm.jpg"; sourceTree = "<group>"; };
+		FCC3B6EB1D5B6ADC009382D4 /* Cat Trick.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cat Trick.jpg"; sourceTree = "<group>"; };
+		FCC3B6EC1D5B6ADC009382D4 /* Cloaked Huntress.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cloaked Huntress.jpg"; sourceTree = "<group>"; };
+		FCC3B6ED1D5B6ADC009382D4 /* Deadly Fork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Deadly Fork.jpg"; sourceTree = "<group>"; };
+		FCC3B6EE1D5B6ADC009382D4 /* Enchanted Raven.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Enchanted Raven.jpg"; sourceTree = "<group>"; };
+		FCC3B6EF1D5B6ADC009382D4 /* Ethereal Peddler.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ethereal Peddler.jpg"; sourceTree = "<group>"; };
+		FCC3B6F01D5B6ADC009382D4 /* Firelands Portal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Firelands Portal.jpg"; sourceTree = "<group>"; };
+		FCC3B6F11D5B6ADC009382D4 /* Fool's Bane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Fool's Bane.jpg"; sourceTree = "<group>"; };
+		FCC3B6F21D5B6ADC009382D4 /* Ironforge Portal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ironforge Portal.jpg"; sourceTree = "<group>"; };
+		FCC3B6F31D5B6ADC009382D4 /* Ivory Knight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ivory Knight.jpg"; sourceTree = "<group>"; };
+		FCC3B6F41D5B6ADC009382D4 /* Kara Kazham!.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Kara Kazham!.jpg"; sourceTree = "<group>"; };
+		FCC3B6F51D5B6ADC009382D4 /* Kindly Grandmother.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Kindly Grandmother.jpg"; sourceTree = "<group>"; };
+		FCC3B6F61D5B6ADC009382D4 /* Maelstrom Portal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Maelstrom Portal.jpg"; sourceTree = "<group>"; };
+		FCC3B6F71D5B6ADC009382D4 /* Malchezaar's Imp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Malchezaar's Imp.jpg"; sourceTree = "<group>"; };
+		FCC3B6F81D5B6ADC009382D4 /* Medivh, the Guardian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Medivh, the Guardian.jpg"; sourceTree = "<group>"; };
+		FCC3B6F91D5B6ADC009382D4 /* Medivh's Valet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Medivh's Valet.jpg"; sourceTree = "<group>"; };
+		FCC3B6FA1D5B6ADC009382D4 /* Menagerie Magician.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Menagerie Magician.jpg"; sourceTree = "<group>"; };
+		FCC3B6FB1D5B6ADC009382D4 /* Menagerie Warden.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Menagerie Warden.jpg"; sourceTree = "<group>"; };
+		FCC3B6FC1D5B6ADC009382D4 /* Moat Lurker.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Moat Lurker.jpg"; sourceTree = "<group>"; };
+		FCC3B6FD1D5B6ADC009382D4 /* Moonglade Portal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Moonglade Portal.jpg"; sourceTree = "<group>"; };
+		FCC3B6FE1D5B6ADC009382D4 /* Moroes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Moroes.jpg; sourceTree = "<group>"; };
+		FCC3B6FF1D5B6ADC009382D4 /* Netherspite Historian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Netherspite Historian.jpg"; sourceTree = "<group>"; };
+		FCC3B7001D5B6ADC009382D4 /* Nightbane Templar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Nightbane Templar.jpg"; sourceTree = "<group>"; };
+		FCC3B7011D5B6ADC009382D4 /* Onyx Bishop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Onyx Bishop.jpg"; sourceTree = "<group>"; };
+		FCC3B7021D5B6ADC009382D4 /* Pantry Spider.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Pantry Spider.jpg"; sourceTree = "<group>"; };
+		FCC3B7031D5B6ADC009382D4 /* Pompous Thespian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Pompous Thespian.jpg"; sourceTree = "<group>"; };
+		FCC3B7041D5B6ADC009382D4 /* Priest of the Feast.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Priest of the Feast.jpg"; sourceTree = "<group>"; };
+		FCC3B7051D5B6ADC009382D4 /* Prince Malchezaar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Prince Malchezaar.jpg"; sourceTree = "<group>"; };
+		FCC3B7061D5B6ADC009382D4 /* Protect the King!.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Protect the King!.jpg"; sourceTree = "<group>"; };
+		FCC3B7071D5B6ADC009382D4 /* Purify.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Purify.jpg; sourceTree = "<group>"; };
+		FCC3B7081D5B6ADC009382D4 /* Runic Egg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Runic Egg.jpg"; sourceTree = "<group>"; };
+		FCC3B7091D5B6ADC009382D4 /* Silvermoon Portal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Silvermoon Portal.jpg"; sourceTree = "<group>"; };
+		FCC3B70A1D5B6ADC009382D4 /* Silverware Golem.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Silverware Golem.jpg"; sourceTree = "<group>"; };
+		FCC3B70B1D5B6ADD009382D4 /* Spirit Claws.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Spirit Claws.jpg"; sourceTree = "<group>"; };
+		FCC3B70C1D5B6ADD009382D4 /* Swashburglar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Swashburglar.jpg; sourceTree = "<group>"; };
+		FCC3B70D1D5B6ADD009382D4 /* The Curator.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Curator.jpg"; sourceTree = "<group>"; };
+		FCC3B70E1D5B6ADD009382D4 /* Violet Illusionist.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Violet Illusionist.jpg"; sourceTree = "<group>"; };
+		FCC3B70F1D5B6ADD009382D4 /* Wicked Witchdoctor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Wicked Witchdoctor.jpg"; sourceTree = "<group>"; };
+		FCC3B7101D5B6ADD009382D4 /* Zoobot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Zoobot.jpg; sourceTree = "<group>"; };
 		FCE006F11937960900645355 /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
 		FCE006F21937960900645355 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
 		FCE006FE1937A10F00645355 /* hero_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hero_frame.png; sourceTree = "<group>"; };
@@ -2448,6 +2538,51 @@
 		FCAB935E19240F5F0072DC59 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				FCC3B6E41D5B6ADC009382D4 /* Arcane Anomaly.jpg */,
+				FCC3B6E51D5B6ADC009382D4 /* Arcane Giant.jpg */,
+				FCC3B6E61D5B6ADC009382D4 /* Arcanosmith.jpg */,
+				FCC3B6E71D5B6ADC009382D4 /* Avian Watcher.jpg */,
+				FCC3B6E81D5B6ADC009382D4 /* Babbling Book.jpg */,
+				FCC3B6E91D5B6ADC009382D4 /* Barnes.jpg */,
+				FCC3B6EA1D5B6ADC009382D4 /* Book Wyrm.jpg */,
+				FCC3B6EB1D5B6ADC009382D4 /* Cat Trick.jpg */,
+				FCC3B6EC1D5B6ADC009382D4 /* Cloaked Huntress.jpg */,
+				FCC3B6ED1D5B6ADC009382D4 /* Deadly Fork.jpg */,
+				FCC3B6EE1D5B6ADC009382D4 /* Enchanted Raven.jpg */,
+				FCC3B6EF1D5B6ADC009382D4 /* Ethereal Peddler.jpg */,
+				FCC3B6F01D5B6ADC009382D4 /* Firelands Portal.jpg */,
+				FCC3B6F11D5B6ADC009382D4 /* Fool's Bane.jpg */,
+				FCC3B6F21D5B6ADC009382D4 /* Ironforge Portal.jpg */,
+				FCC3B6F31D5B6ADC009382D4 /* Ivory Knight.jpg */,
+				FCC3B6F41D5B6ADC009382D4 /* Kara Kazham!.jpg */,
+				FCC3B6F51D5B6ADC009382D4 /* Kindly Grandmother.jpg */,
+				FCC3B6F61D5B6ADC009382D4 /* Maelstrom Portal.jpg */,
+				FCC3B6F71D5B6ADC009382D4 /* Malchezaar's Imp.jpg */,
+				FCC3B6F81D5B6ADC009382D4 /* Medivh, the Guardian.jpg */,
+				FCC3B6F91D5B6ADC009382D4 /* Medivh's Valet.jpg */,
+				FCC3B6FA1D5B6ADC009382D4 /* Menagerie Magician.jpg */,
+				FCC3B6FB1D5B6ADC009382D4 /* Menagerie Warden.jpg */,
+				FCC3B6FC1D5B6ADC009382D4 /* Moat Lurker.jpg */,
+				FCC3B6FD1D5B6ADC009382D4 /* Moonglade Portal.jpg */,
+				FCC3B6FE1D5B6ADC009382D4 /* Moroes.jpg */,
+				FCC3B6FF1D5B6ADC009382D4 /* Netherspite Historian.jpg */,
+				FCC3B7001D5B6ADC009382D4 /* Nightbane Templar.jpg */,
+				FCC3B7011D5B6ADC009382D4 /* Onyx Bishop.jpg */,
+				FCC3B7021D5B6ADC009382D4 /* Pantry Spider.jpg */,
+				FCC3B7031D5B6ADC009382D4 /* Pompous Thespian.jpg */,
+				FCC3B7041D5B6ADC009382D4 /* Priest of the Feast.jpg */,
+				FCC3B7051D5B6ADC009382D4 /* Prince Malchezaar.jpg */,
+				FCC3B7061D5B6ADC009382D4 /* Protect the King!.jpg */,
+				FCC3B7071D5B6ADC009382D4 /* Purify.jpg */,
+				FCC3B7081D5B6ADC009382D4 /* Runic Egg.jpg */,
+				FCC3B7091D5B6ADC009382D4 /* Silvermoon Portal.jpg */,
+				FCC3B70A1D5B6ADC009382D4 /* Silverware Golem.jpg */,
+				FCC3B70B1D5B6ADD009382D4 /* Spirit Claws.jpg */,
+				FCC3B70C1D5B6ADD009382D4 /* Swashburglar.jpg */,
+				FCC3B70D1D5B6ADD009382D4 /* The Curator.jpg */,
+				FCC3B70E1D5B6ADD009382D4 /* Violet Illusionist.jpg */,
+				FCC3B70F1D5B6ADD009382D4 /* Wicked Witchdoctor.jpg */,
+				FCC3B7101D5B6ADD009382D4 /* Zoobot.jpg */,
 				FC4C582B1CDB5B6200B4AD3A /* A Light in the Darkness.jpg */,
 				FC4C582C1CDB5B6200B4AD3A /* Aberrant Berserker.jpg */,
 				FC4C582D1CDB5B6200B4AD3A /* Addled Grizzly.jpg */,
@@ -3510,6 +3645,7 @@
 				FCAB94FB19240F610072DC59 /* Argent Squire.jpg in Resources */,
 				FCAB95C419240F610072DC59 /* Mirror Image.jpg in Resources */,
 				FC1C6F4A1B70236D00464041 /* Anodized Robo Cub.jpg in Resources */,
+				FCC3B7181D5B6ADD009382D4 /* Cat Trick.jpg in Resources */,
 				FC17FC731B87B14000AE9304 /* The Skeleton Knight.jpg in Resources */,
 				FCAB957019240F610072DC59 /* Gladiator's Longbow.jpg in Resources */,
 				FC4C58D71CDB5B6300B4AD3A /* Divine Strength.jpg in Resources */,
@@ -3529,9 +3665,11 @@
 				FC033DA61BF34F780031BD6B /* Forgotten Torch.jpg in Resources */,
 				FC17FCB71B87B14000AE9304 /* Fallen Hero.jpg in Resources */,
 				FC1C6F541B70236D00464041 /* Clockwork Gnome.jpg in Resources */,
+				FCC3B7331D5B6ADD009382D4 /* Protect the King!.jpg in Resources */,
 				FC1C6F791B70236D00464041 /* Hobgoblin.jpg in Resources */,
 				FCAB95CE19240F610072DC59 /* Murloc Tidecaller.jpg in Resources */,
 				FC17FC7A1B87B14000AE9304 /* Silver Hand Regent.jpg in Resources */,
+				FCC3B73A1D5B6ADD009382D4 /* The Curator.jpg in Resources */,
 				FC98AFB0195B24E200CBCC65 /* Nerubian Egg.jpg in Resources */,
 				FC1C6F731B70236D00464041 /* Gnomish Experimenter.jpg in Resources */,
 				FCAB95DB19240F610072DC59 /* Old Murk-Eye.jpg in Resources */,
@@ -3545,6 +3683,7 @@
 				FCAB963E19240F610072DC59 /* Twilight Drake.jpg in Resources */,
 				FCAB958F19240F610072DC59 /* Illidan Stormrage.jpg in Resources */,
 				FC1C6F5A1B70236D00464041 /* Crackle.jpg in Resources */,
+				FCC3B7391D5B6ADD009382D4 /* Swashburglar.jpg in Resources */,
 				FC17FCCB1B87B14000AE9304 /* Competitive Spirit.jpg in Resources */,
 				FC4C58B41CDB5B6300B4AD3A /* Am'gam Rager.jpg in Resources */,
 				FCAB95BB19240F610072DC59 /* Master of Disguise.jpg in Resources */,
@@ -3591,6 +3730,7 @@
 				FC17FC9C1B87B14000AE9304 /* Lance Carrier.jpg in Resources */,
 				FCAB95EF19240F610072DC59 /* Razorfen Hunter.jpg in Resources */,
 				FC17FC7D1B87B14000AE9304 /* Shady Dealer.jpg in Resources */,
+				FCC3B72A1D5B6ADD009382D4 /* Moonglade Portal.jpg in Resources */,
 				FCAB954619240F610072DC59 /* Druid of the Claw.jpg in Resources */,
 				FC4C58D61CDB5B6300B4AD3A /* Disciple of C'Thun.jpg in Resources */,
 				FCAB959919240F610072DC59 /* Jungle Panther.jpg in Resources */,
@@ -3619,6 +3759,8 @@
 				FC17FCB81B87B14000AE9304 /* Evil Heckler.jpg in Resources */,
 				FCAB956619240F610072DC59 /* Forked Lightning.jpg in Resources */,
 				FC4C58DB1CDB5B6300B4AD3A /* Eater of Secrets.jpg in Resources */,
+				FCC3B7111D5B6ADD009382D4 /* Arcane Anomaly.jpg in Resources */,
+				FCC3B71E1D5B6ADD009382D4 /* Fool's Bane.jpg in Resources */,
 				FC17FCE01B87B14000AE9304 /* Argent Horserider.jpg in Resources */,
 				FC1C6F911B70236D00464041 /* Mistress of Pain.jpg in Resources */,
 				FC17FCC21B87B14000AE9304 /* Draenei Totemcarver.jpg in Resources */,
@@ -3628,6 +3770,7 @@
 				FC17FCA51B87B14000AE9304 /* Ice Rager.jpg in Resources */,
 				FC17FC901B87B14000AE9304 /* Murloc Knight.jpg in Resources */,
 				FC1C6F671B70236D00464041 /* Fel Reaver.jpg in Resources */,
+				FCC3B71B1D5B6ADD009382D4 /* Enchanted Raven.jpg in Resources */,
 				FCAB961E19240F610072DC59 /* Spiteful Smith.jpg in Resources */,
 				FCE007011937A5AA00645355 /* bg0.jpg in Resources */,
 				FCAB960119240F610072DC59 /* Shadow Bolt.jpg in Resources */,
@@ -3651,16 +3794,19 @@
 				FCAB94FE19240F610072DC59 /* Assassinate.jpg in Resources */,
 				FCAB964B19240F610072DC59 /* Warsong Commander.jpg in Resources */,
 				FC033DB51BF34F780031BD6B /* Reno Jackson.jpg in Resources */,
+				FCC3B72E1D5B6ADD009382D4 /* Onyx Bishop.jpg in Resources */,
 				FCAB964E19240F610072DC59 /* Wild Growth.jpg in Resources */,
 				FC4C59291CDB5B6300B4AD3A /* Twilight Flamecaller.jpg in Resources */,
 				FC1C6FB71B70236D00464041 /* Trade Prince Gallywix.jpg in Resources */,
 				FC17FCDF1B87B14000AE9304 /* Argent Watchman.jpg in Resources */,
 				FCAB95E719240F610072DC59 /* Prophet Velen.jpg in Resources */,
 				FC1C6FA01B70236D00464041 /* Sabotage.jpg in Resources */,
+				FCC3B7191D5B6ADD009382D4 /* Cloaked Huntress.jpg in Resources */,
 				FC6D88FA197EBB8A000A4076 /* Kel'Thuzad.jpg in Resources */,
 				FCAB962819240F610072DC59 /* Stormwind Knight.jpg in Resources */,
 				FC1C6F601B70236D00464041 /* Druid of the Fang.jpg in Resources */,
 				FC4C58BD1CDB5B6300B4AD3A /* Blood of The Ancient One.jpg in Resources */,
+				FCC3B7201D5B6ADD009382D4 /* Ivory Knight.jpg in Resources */,
 				FC17FC941B87B14000AE9304 /* Mukla's Champion.jpg in Resources */,
 				FCAB964519240F610072DC59 /* Venture Co. Mercenary.jpg in Resources */,
 				FCAB962619240F610072DC59 /* Stormpike Commando.jpg in Resources */,
@@ -3670,6 +3816,7 @@
 				FC98AFB6195B24E200CBCC65 /* Avenge.jpg in Resources */,
 				FCAB961119240F610072DC59 /* Silvermoon Guardian.jpg in Resources */,
 				FC1C6FC01B70236D00464041 /* Wee Spellstopper.jpg in Resources */,
+				FCC3B71C1D5B6ADD009382D4 /* Ethereal Peddler.jpg in Resources */,
 				FCAB950C19240F610072DC59 /* Blessing of Kings.jpg in Resources */,
 				FC033DA91BF34F780031BD6B /* Huge Toad.jpg in Resources */,
 				FCAB952419240F610072DC59 /* Cleave.jpg in Resources */,
@@ -3697,6 +3844,7 @@
 				FCAB963219240F610072DC59 /* Temple Enforcer.jpg in Resources */,
 				FC1C6FAE1B70236D00464041 /* Sneed's Old Shredder.jpg in Resources */,
 				FCAB957819240F610072DC59 /* Gurubashi Berserker.jpg in Resources */,
+				FCC3B73B1D5B6ADD009382D4 /* Violet Illusionist.jpg in Resources */,
 				FCAB953B19240F610072DC59 /* Demonfire.jpg in Resources */,
 				FCAB958319240F610072DC59 /* Holy Fire.jpg in Resources */,
 				FC1C6F841B70236D00464041 /* Lil' Exorcist.jpg in Resources */,
@@ -3733,11 +3881,13 @@
 				FC98AFB5195B24E200CBCC65 /* Baron Rivendare.jpg in Resources */,
 				FCF156E51B713DCC00AE9841 /* Blackwing Corruptor.jpg in Resources */,
 				FC1C6F9C1B70236D00464041 /* Puddlestomper.jpg in Resources */,
+				FCC3B7251D5B6ADD009382D4 /* Medivh, the Guardian.jpg in Resources */,
 				FC1C6F761B70236D00464041 /* Goblin Sapper.jpg in Resources */,
 				FCAB95D219240F610072DC59 /* Naturalize.jpg in Resources */,
 				FC033D941BF34F780031BD6B /* Anubisath Sentinel.jpg in Resources */,
 				FCAB964D19240F610072DC59 /* Whirlwind.jpg in Resources */,
 				FC17FCD91B87B14000AE9304 /* Bear Trap.jpg in Resources */,
+				FCC3B7161D5B6ADD009382D4 /* Barnes.jpg in Resources */,
 				FC1C6F521B70236D00464041 /* Call Pet.jpg in Resources */,
 				FC17FCD71B87B14000AE9304 /* Beneath the Grounds.jpg in Resources */,
 				FCAB952E19240F610072DC59 /* Counterspell.jpg in Resources */,
@@ -3775,12 +3925,15 @@
 				FC17FCA91B87B14000AE9304 /* Healing Wave.jpg in Resources */,
 				FCAB95CB19240F610072DC59 /* Mountain Giant.jpg in Resources */,
 				FC1C6F851B70236D00464041 /* Lost Tallstrider.jpg in Resources */,
+				FCC3B72C1D5B6ADD009382D4 /* Netherspite Historian.jpg in Resources */,
 				FCAB95E319240F610072DC59 /* Power Overwhelming.jpg in Resources */,
+				FCC3B7221D5B6ADD009382D4 /* Kindly Grandmother.jpg in Resources */,
 				FCF156EF1B713DCC00AE9841 /* Drakonid Crusher.jpg in Resources */,
 				FC4C58DA1CDB5B6300B4AD3A /* Duskboar.jpg in Resources */,
 				FC17FC691B87B14000AE9304 /* Void Crusher.jpg in Resources */,
 				FC4C59361CDB5B6300B4AD3A /* Zealous Initiate.jpg in Resources */,
 				FCAB95E619240F610072DC59 /* Priestess of Elune.jpg in Resources */,
+				FCC3B7311D5B6ADD009382D4 /* Priest of the Feast.jpg in Resources */,
 				FCAB963519240F610072DC59 /* Thoughtsteal.jpg in Resources */,
 				FCAB8D3F19215A640072DC59 /* Main.storyboard in Resources */,
 				FC1C6FAA1B70236D00464041 /* Showchugger.jpg in Resources */,
@@ -3844,6 +3997,7 @@
 				FCF156F71B713DCC00AE9841 /* Imp Gang Boss.jpg in Resources */,
 				8F0A69E219388DC9009AC664 /* Dark_Green_Arrow_Up.png in Resources */,
 				FC033DB91BF34F780031BD6B /* Summoning Stone.jpg in Resources */,
+				FCC3B7321D5B6ADD009382D4 /* Prince Malchezaar.jpg in Resources */,
 				FC6D88F1197EBB8A000A4076 /* Unstable Ghoul.jpg in Resources */,
 				FCAB94F319240F610072DC59 /* Arcane Intellect.jpg in Resources */,
 				FCF156E91B713DCC00AE9841 /* Dark Iron Skulker.jpg in Resources */,
@@ -3864,6 +4018,7 @@
 				FCAB95B219240F610072DC59 /* Magma Rager.jpg in Resources */,
 				FCAB957F19240F610072DC59 /* Hellfire.jpg in Resources */,
 				FC6D88F8197EBB8A000A4076 /* Mad Scientist.jpg in Resources */,
+				FCC3B7121D5B6ADD009382D4 /* Arcane Giant.jpg in Resources */,
 				FC17FCBA1B87B14000AE9304 /* Enter the Coliseum.jpg in Resources */,
 				FC4C591F1CDB5B6300B4AD3A /* Stand Against Darkness.jpg in Resources */,
 				FC17FCAB1B87B14000AE9304 /* Gadgetzan Jouster.jpg in Resources */,
@@ -3896,13 +4051,16 @@
 				FC4C58BF1CDB5B6300B4AD3A /* Blood Warriors.jpg in Resources */,
 				FCAB94FA19240F610072DC59 /* Argent Protector.jpg in Resources */,
 				FCE007091937AA7300645355 /* bg3.jpg in Resources */,
+				FCC3B7291D5B6ADD009382D4 /* Moat Lurker.jpg in Resources */,
 				FC17FCD51B87B14000AE9304 /* Boneguard Lieutenant.jpg in Resources */,
+				FCC3B71A1D5B6ADD009382D4 /* Deadly Fork.jpg in Resources */,
 				FC17FC7F1B87B14000AE9304 /* Shadowfiend.jpg in Resources */,
 				8F6CAA5819363DD90078EE65 /* priest.jpg in Resources */,
 				FCAB953A19240F610072DC59 /* Demolisher.jpg in Resources */,
 				FC4C58EC1CDB5B6300B4AD3A /* Forbidden Shaping.jpg in Resources */,
 				FC1C6FB61B70236D00464041 /* Toshley.jpg in Resources */,
 				FCAB956D19240F610072DC59 /* Frostwolf Warlord.jpg in Resources */,
+				FCC3B7151D5B6ADD009382D4 /* Babbling Book.jpg in Resources */,
 				FCAB94DF19240F610072DC59 /* Acidic Swamp Ooze.jpg in Resources */,
 				FCAB958119240F610072DC59 /* Hex.jpg in Resources */,
 				FC17FC771B87B14000AE9304 /* Sparring Partner.jpg in Resources */,
@@ -3921,6 +4079,7 @@
 				FCAB95D319240F610072DC59 /* Nightblade.jpg in Resources */,
 				FC1C6F871B70236D00464041 /* Mal'Ganis.jpg in Resources */,
 				FC17FCCE1B87B14000AE9304 /* Coldarra Drake.jpg in Resources */,
+				FCC3B7381D5B6ADD009382D4 /* Spirit Claws.jpg in Resources */,
 				FCAB964619240F610072DC59 /* Violet Teacher.jpg in Resources */,
 				FCAB960719240F610072DC59 /* Shadowstep.jpg in Resources */,
 				FCAB963819240F610072DC59 /* Tinkmaster Overspark.jpg in Resources */,
@@ -3932,6 +4091,7 @@
 				FC1C6F8B1B70236D00464041 /* Mechwarper.jpg in Resources */,
 				FCAB963F19240F610072DC59 /* Twisting Nether.jpg in Resources */,
 				FCAB95C619240F610072DC59 /* Mogu'shan Warden.jpg in Resources */,
+				FCC3B71F1D5B6ADD009382D4 /* Ironforge Portal.jpg in Resources */,
 				FC1C6F641B70236D00464041 /* Explosive Sheep.jpg in Resources */,
 				FCAB965319240F610072DC59 /* Wisp.jpg in Resources */,
 				FC1C6F941B70236D00464041 /* Neptulon.jpg in Resources */,
@@ -3955,6 +4115,7 @@
 				FC17FCC71B87B14000AE9304 /* Convert.jpg in Resources */,
 				FCAB964A19240F610072DC59 /* War Golem.jpg in Resources */,
 				FC17FC991B87B14000AE9304 /* Lock and Load.jpg in Resources */,
+				FCC3B7241D5B6ADD009382D4 /* Malchezaar's Imp.jpg in Resources */,
 				FC033DBA1BF34F780031BD6B /* Tomb Pillager.jpg in Resources */,
 				FCAB963919240F610072DC59 /* Tirion Fordring.jpg in Resources */,
 				FC4C58E91CDB5B6300B4AD3A /* Forbidden Flame.jpg in Resources */,
@@ -3968,6 +4129,7 @@
 				FC6D88EF197EBB8A000A4076 /* Wailing Soul.jpg in Resources */,
 				FCAB95AF19240F610072DC59 /* Lord of the Arena.jpg in Resources */,
 				FC4C58EA1CDB5B6300B4AD3A /* Forbidden Healing.jpg in Resources */,
+				FCC3B7301D5B6ADD009382D4 /* Pompous Thespian.jpg in Resources */,
 				FC4C590B1CDB5B6300B4AD3A /* Ragnaros, Lightlord.jpg in Resources */,
 				FCAB954119240F610072DC59 /* Doomsayer.jpg in Resources */,
 				FCAB957119240F610072DC59 /* Gnomish Inventor.jpg in Resources */,
@@ -4002,6 +4164,7 @@
 				FCAB94F519240F610072DC59 /* Arcane Shot.jpg in Resources */,
 				FCAB963619240F610072DC59 /* Thrallmar Farseer.jpg in Resources */,
 				FC1C6F751B70236D00464041 /* Goblin Blastmage.jpg in Resources */,
+				FCC3B73D1D5B6ADD009382D4 /* Zoobot.jpg in Resources */,
 				FC4C59301CDB5B6300B4AD3A /* Validated Doomsayer.jpg in Resources */,
 				FC1C6F631B70236D00464041 /* Enhance-o Mechano.jpg in Resources */,
 				FCAB95D419240F610072DC59 /* Noble Sacrifice.jpg in Resources */,
@@ -4112,6 +4275,7 @@
 				FCE006FF1937A10F00645355 /* hero_frame.png in Resources */,
 				8FB6EACA192CE57E00973F8F /* README.md in Resources */,
 				FCAB965A19240F610072DC59 /* Ysera.jpg in Resources */,
+				FCC3B7141D5B6ADD009382D4 /* Avian Watcher.jpg in Resources */,
 				FC4C58D91CDB5B6300B4AD3A /* Doomcaller.jpg in Resources */,
 				8FA18BF2192A315F00FF3F71 /* card_choose_bg.png in Resources */,
 				FC1C6F891B70236D00464041 /* Mech-Bear-Cat.jpg in Resources */,
@@ -4128,6 +4292,7 @@
 				FCAB954B19240F610072DC59 /* Earthen Ring Farseer.jpg in Resources */,
 				FC4C59081CDB5B6300B4AD3A /* Primal Fusion.jpg in Resources */,
 				FCAB951319240F610072DC59 /* Bloodlust.jpg in Resources */,
+				FCC3B7371D5B6ADD009382D4 /* Silverware Golem.jpg in Resources */,
 				FCAB95AE19240F610072DC59 /* Lord Jaraxxus.jpg in Resources */,
 				FCF156F01B713DCC00AE9841 /* Druid of the Flame.jpg in Resources */,
 				FCAB960F19240F610072DC59 /* Silver Hand Knight.jpg in Resources */,
@@ -4147,9 +4312,12 @@
 				FC17FC761B87B14000AE9304 /* Spellslinger.jpg in Resources */,
 				FC033D921BF34F780031BD6B /* Ancient Shade.jpg in Resources */,
 				FC1C6F781B70236D00464041 /* Hemet Nesingwary.jpg in Resources */,
+				FCC3B7171D5B6ADD009382D4 /* Book Wyrm.jpg in Resources */,
 				FCAB959119240F610072DC59 /* Injured Blademaster.jpg in Resources */,
+				FCC3B7341D5B6ADD009382D4 /* Purify.jpg in Resources */,
 				FC17FC6D1B87B14000AE9304 /* Tuskarr Jouster.jpg in Resources */,
 				FC17FCAE1B87B14000AE9304 /* Flash Heal.jpg in Resources */,
+				FCC3B7261D5B6ADD009382D4 /* Medivh's Valet.jpg in Resources */,
 				FCAB95CD19240F610072DC59 /* Murloc Raider.jpg in Resources */,
 				FCAB960619240F610072DC59 /* Shadowform.jpg in Resources */,
 				8F6CAA4419360E620078EE65 /* deletered.png in Resources */,
@@ -4160,6 +4328,7 @@
 				FC1C6F4D1B70236D00464041 /* Blingtron 3000.jpg in Resources */,
 				FC1C6F4C1B70236D00464041 /* Arcane Nullifier X-21.jpg in Resources */,
 				FC4C58C41CDB5B6300B4AD3A /* C'Thun's Chosen.jpg in Resources */,
+				FCC3B7281D5B6ADD009382D4 /* Menagerie Warden.jpg in Resources */,
 				FCAB953819240F610072DC59 /* Defender of Argus.jpg in Resources */,
 				FC033DA21BF34F780031BD6B /* Everyfin is Awesome.jpg in Resources */,
 				FCAB961319240F610072DC59 /* Siphon Soul.jpg in Resources */,
@@ -4226,6 +4395,8 @@
 				FCAB95D119240F610072DC59 /* Nat Pagle.jpg in Resources */,
 				FCAB954C19240F610072DC59 /* Edwin VanCleef.jpg in Resources */,
 				FC6D88FF197EBB8A000A4076 /* Deathlord.jpg in Resources */,
+				FCC3B7271D5B6ADD009382D4 /* Menagerie Magician.jpg in Resources */,
+				FCC3B71D1D5B6ADD009382D4 /* Firelands Portal.jpg in Resources */,
 				FCAB954019240F610072DC59 /* Doomhammer.jpg in Resources */,
 				FC1C6F6C1B70236D00464041 /* Foe Reaper 4000.jpg in Resources */,
 				FCAB956A19240F610072DC59 /* Frost Shock.jpg in Resources */,
@@ -4246,6 +4417,7 @@
 				FC033DB81BF34F780031BD6B /* Sir Finley Mrrgglton.jpg in Resources */,
 				FCAB957619240F610072DC59 /* Gruul.jpg in Resources */,
 				FCAB95ED19240F610072DC59 /* Rampage.jpg in Resources */,
+				FCC3B7131D5B6ADD009382D4 /* Arcanosmith.jpg in Resources */,
 				FCAB95FB19240F610072DC59 /* Scarlet Crusader.jpg in Resources */,
 				8F6CAA6919363DD90078EE65 /* paladin.jpg in Resources */,
 				FC4C58EB1CDB5B6300B4AD3A /* Forbidden Ritual.jpg in Resources */,
@@ -4268,6 +4440,7 @@
 				FC1C6F7E1B70236D00464041 /* Jeeves.jpg in Resources */,
 				FCAB94F919240F610072DC59 /* Argent Commander.jpg in Resources */,
 				FC1C6F701B70236D00464041 /* Gilblin Stalker.jpg in Resources */,
+				FCC3B72B1D5B6ADD009382D4 /* Moroes.jpg in Resources */,
 				FC4C58B51CDB5B6300B4AD3A /* Ancient Harbinger.jpg in Resources */,
 				FCAB95A519240F610072DC59 /* Leeroy Jenkins.jpg in Resources */,
 				FC17FC841B87B14000AE9304 /* Refreshment Vendor.jpg in Resources */,
@@ -4287,7 +4460,9 @@
 				FC17FCB61B87B14000AE9304 /* Eydis Darkbane.jpg in Resources */,
 				FC17FCD01B87B14000AE9304 /* Captured Jormungar.jpg in Resources */,
 				FCAB960C19240F610072DC59 /* Shiv.jpg in Resources */,
+				FCC3B7361D5B6ADD009382D4 /* Silvermoon Portal.jpg in Resources */,
 				FCF156FA1B713DCC00AE9841 /* Nefarian.jpg in Resources */,
+				FCC3B7351D5B6ADD009382D4 /* Runic Egg.jpg in Resources */,
 				FC17FC701B87B14000AE9304 /* Totem Golem.jpg in Resources */,
 				FCAB94FD19240F610072DC59 /* Assassin's Blade.jpg in Resources */,
 				FC1C6F8C1B70236D00464041 /* Mekgineer Thermaplugg.jpg in Resources */,
@@ -4330,6 +4505,7 @@
 				FCF156F31B713DCC00AE9841 /* Flamewaker.jpg in Resources */,
 				FCAB95B119240F610072DC59 /* Mad Bomber.jpg in Resources */,
 				FC4C58B21CDB5B6300B4AD3A /* Aberrant Berserker.jpg in Resources */,
+				FCC3B72D1D5B6ADD009382D4 /* Nightbane Templar.jpg in Resources */,
 				FCAB959819240F610072DC59 /* Ironfur Grizzly.jpg in Resources */,
 				FCAB955F19240F610072DC59 /* Fireball.jpg in Resources */,
 				FCAB961719240F610072DC59 /* Sorcerer's Apprentice.jpg in Resources */,
@@ -4337,14 +4513,17 @@
 				FCAB959E19240F610072DC59 /* King Mukla.jpg in Resources */,
 				FC1C6FC11B70236D00464041 /* Whirling Zap-o-matic.jpg in Resources */,
 				FCAB958D19240F610072DC59 /* Ice Block.jpg in Resources */,
+				FCC3B7211D5B6ADD009382D4 /* Kara Kazham!.jpg in Resources */,
 				FC033DA51BF34F780031BD6B /* Fierce Monkey.jpg in Resources */,
 				FC98AFAA195B24E200CBCC65 /* Webspinner.jpg in Resources */,
 				FCAB95FD19240F610072DC59 /* Sea Giant.jpg in Resources */,
 				8F6CAA5F19363DD90078EE65 /* ico_paladin.png in Resources */,
 				FC17FCB21B87B14000AE9304 /* Fjola Lightbane.jpg in Resources */,
 				FCE0070A1937AA7300645355 /* bg2.jpg in Resources */,
+				FCC3B72F1D5B6ADD009382D4 /* Pantry Spider.jpg in Resources */,
 				FCAB95D619240F610072DC59 /* Nourish.jpg in Resources */,
 				FC17FC6C1B87B14000AE9304 /* Twilight Guardian.jpg in Resources */,
+				FCC3B73C1D5B6ADD009382D4 /* Wicked Witchdoctor.jpg in Resources */,
 				FC17FC6A1B87B14000AE9304 /* Undercity Valiant.jpg in Resources */,
 				FCF156F61B713DCC00AE9841 /* Hungry Dragon.jpg in Resources */,
 				FC98AFB1195B24E200CBCC65 /* Duplicate.jpg in Resources */,
@@ -4400,6 +4579,7 @@
 				FCAB965419240F610072DC59 /* Wolfrider.jpg in Resources */,
 				FC17FC921B87B14000AE9304 /* Mulch.jpg in Resources */,
 				FC1C6FB81B70236D00464041 /* Tree of Life.jpg in Resources */,
+				FCC3B7231D5B6ADD009382D4 /* Maelstrom Portal.jpg in Resources */,
 				FC1C6F7C1B70236D00464041 /* Iron Juggernaut.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4640,7 +4820,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = Decks;
-				PROVISIONING_PROFILE = "604b5ea2-97d1-43c6-a9e8-b5e04a08ac1b";
+				PROVISIONING_PROFILE = "b41f9f73-bc46-4763-811b-60f448a2f490";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hearthstone Builder/Hearthstone Builder-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
