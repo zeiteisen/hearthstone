@@ -13,15 +13,15 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <Parse/Parse.h>
     #import "ViewUtils.h"
     #import "ZEDataManager.h"
     #import "ZEUtility.h"
-    #import <Parse/Parse.h>
 #endif
 
 
 #define     USER_DECKS_KEY          @"user_deck"
-#define MyLikesUserDefaultsKey      @"MyLikesKey"
+#define MyLikesUserDefaultsKey      @"MyLikesKeyOnlyIds"
 
 
 #define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)

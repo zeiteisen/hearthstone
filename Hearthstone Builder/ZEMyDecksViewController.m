@@ -38,14 +38,14 @@
 - (void)updateDataSource {
     self.dataSource = [NSMutableArray array];
     NSMutableArray *myDecks = [[NSArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:USER_DECKS_KEY]] mutableCopy];
-    NSMutableArray *likedDecks = [NSMutableArray array];
-    NSArray *likedDecksData = [[NSUserDefaults standardUserDefaults] objectForKey:MyLikesUserDefaultsKey];
-    for (NSData *deckData in likedDecksData) {
-        PFObject *deckObject = [NSKeyedUnarchiver unarchiveObjectWithData:deckData];
-        [likedDecks addObject:deckObject];
-    }
+//    NSMutableArray *likedDecks = [NSMutableArray array];
+//    NSArray *likedDecksData = [[NSUserDefaults standardUserDefaults] objectForKey:MyLikesUserDefaultsKey];
+//    for (NSData *deckData in likedDecksData) {
+//        PFObject *deckObject = [NSKeyedUnarchiver unarchiveObjectWithData:deckData];
+//        [likedDecks addObject:deckObject];
+//    }
     [self.dataSource addObject:myDecks];
-    [self.dataSource addObject:likedDecks];
+//    [self.dataSource addObject:likedDecks];
 }
 
 - (IBAction)newDeckTouched:(id)sender {

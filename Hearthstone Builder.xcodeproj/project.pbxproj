@@ -10,11 +10,6 @@
 		8F0A69E019387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A69DF19387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		8F0A69E219388DC9009AC664 /* Dark_Green_Arrow_Up.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0A69E119388DC9009AC664 /* Dark_Green_Arrow_Up.png */; };
 		8F0A69E419389E9A009AC664 /* view-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0A69E319389E9A009AC664 /* view-512.png */; };
-		8F0A69F61938B09F009AC664 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A69E91938B09F009AC664 /* NSObject+Properties.m */; };
-		8F0A69F81938B09F009AC664 /* PFACL+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A69EC1938B09F009AC664 /* PFACL+NSCoding.m */; };
-		8F0A69F91938B09F009AC664 /* PFFile+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A69EE1938B09F009AC664 /* PFFile+NSCoding.m */; };
-		8F0A69FA1938B09F009AC664 /* PFGeoPoint+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A69F01938B09F009AC664 /* PFGeoPoint+NSCoding.m */; };
-		8F0A69FB1938B09F009AC664 /* PFObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A69F21938B09F009AC664 /* PFObject+NSCoding.m */; };
 		8F6CAA0C19338A810078EE65 /* AHKActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA0519338A810078EE65 /* AHKActionSheet.m */; };
 		8F6CAA0D19338A810078EE65 /* AHKActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA0719338A810078EE65 /* AHKActionSheetViewController.m */; };
 		8F6CAA0E19338A810078EE65 /* UIImage+AHKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAA0919338A810078EE65 /* UIImage+AHKAdditions.m */; };
@@ -59,6 +54,8 @@
 		8FA18C15192B62EE00FF3F71 /* ZEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA18C14192B62EE00FF3F71 /* ZEUtility.m */; };
 		8FB6EAC9192CE57E00973F8F /* NSString+Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC6192CE57E00973F8F /* NSString+Score.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		8FB6EACA192CE57E00973F8F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8FB6EAC7192CE57E00973F8F /* README.md */; };
+		ABAA70E6A4A231E9642995DC /* libPods-Hearthstone BuilderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD053E3214ACD6B23B372CF /* libPods-Hearthstone BuilderTests.a */; };
+		BAE55142C4CB3A254886E002 /* libPods-Hearthstone Builder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBEECC1A3C0E01464CDA63A /* libPods-Hearthstone Builder.a */; };
 		FC033D641BF3444A0031BD6B /* Snowchugger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC033D631BF3444A0031BD6B /* Snowchugger.jpg */; };
 		FC033D921BF34F780031BD6B /* Ancient Shade.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC033D651BF34F770031BD6B /* Ancient Shade.jpg */; };
 		FC033D931BF34F780031BD6B /* Animated Armor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC033D661BF34F770031BD6B /* Animated Armor.jpg */; };
@@ -108,7 +105,6 @@
 		FC033DC01BF3523A0031BD6B /* bg6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC033DBF1BF3523A0031BD6B /* bg6.jpg */; };
 		FC0DC1F61997740500EBC4A4 /* ZENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0DC1F51997740500EBC4A4 /* ZENavigationController.m */; };
 		FC0DC1FE1997AA9500EBC4A4 /* ico_neutral.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0DC1FD1997AA9500EBC4A4 /* ico_neutral.png */; };
-		FC1044851BDBD4190069D355 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1044831BDBD4190069D355 /* Parse.framework */; };
 		FC17FC631B87B14000AE9304 /* Wyrmrest Agent.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC17FBDF1B87B13E00AE9304 /* Wyrmrest Agent.jpg */; };
 		FC17FC641B87B14000AE9304 /* Wrathguard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC17FBE01B87B13E00AE9304 /* Wrathguard.jpg */; };
 		FC17FC651B87B14000AE9304 /* Wildwalker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC17FBE11B87B13E00AE9304 /* Wildwalker.jpg */; };
@@ -506,10 +502,6 @@
 		FC4C59351CDB5B6300B4AD3A /* Yogg-Saron, Hope's End.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC4C58AF1CDB5B6300B4AD3A /* Yogg-Saron, Hope's End.jpg */; };
 		FC4C59361CDB5B6300B4AD3A /* Zealous Initiate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC4C58B01CDB5B6300B4AD3A /* Zealous Initiate.jpg */; };
 		FC4C59391CDB65CF00B4AD3A /* ZEQuickSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4C59381CDB65CF00B4AD3A /* ZEQuickSearchTableViewCell.m */; };
-		FC4C593C1CDBA0F900B4AD3A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4C593A1CDBA0F900B4AD3A /* Bolts.framework */; };
-		FC4C593D1CDBA0F900B4AD3A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4C593B1CDBA0F900B4AD3A /* FBSDKCoreKit.framework */; };
-		FC4C593F1CDBA2A800B4AD3A /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4C593E1CDBA2A800B4AD3A /* FBSDKShareKit.framework */; };
-		FC4C59411CDBA53900B4AD3A /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4C59401CDBA53900B4AD3A /* FBAudienceNetwork.framework */; };
 		FC5C669D1CDB43F40085946A /* Cards.json in Resources */ = {isa = PBXBuildFile; fileRef = FC5C669C1CDB43F40085946A /* Cards.json */; };
 		FC609B921937316B001806A6 /* number_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FC609B911937316B001806A6 /* number_bg.png */; };
 		FC6D88EE197EBB8A000A4076 /* Zombie Chow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC6D88DC197EBB89000A4076 /* Zombie Chow.jpg */; };
@@ -1071,22 +1063,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CBEECC1A3C0E01464CDA63A /* libPods-Hearthstone Builder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hearthstone Builder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		147CA6585779A4E8BABC764F /* Pods-Hearthstone Builder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone Builder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hearthstone Builder/Pods-Hearthstone Builder.debug.xcconfig"; sourceTree = "<group>"; };
+		242D92F302900F9C289CD105 /* Pods-Hearthstone BuilderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone BuilderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hearthstone BuilderTests/Pods-Hearthstone BuilderTests.release.xcconfig"; sourceTree = "<group>"; };
+		623B5E4038B0B8A5DF91F128 /* Pods-Hearthstone BuilderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone BuilderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hearthstone BuilderTests/Pods-Hearthstone BuilderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F0A69DE19387EDD009AC664 /* UINavigationController+M13ProgressViewBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+M13ProgressViewBar.h"; sourceTree = "<group>"; };
 		8F0A69DF19387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+M13ProgressViewBar.m"; sourceTree = "<group>"; };
 		8F0A69E119388DC9009AC664 /* Dark_Green_Arrow_Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dark_Green_Arrow_Up.png; sourceTree = "<group>"; };
 		8F0A69E319389E9A009AC664 /* view-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "view-512.png"; sourceTree = "<group>"; };
-		8F0A69E71938B09F009AC664 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		8F0A69E81938B09F009AC664 /* NSObject+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Properties.h"; sourceTree = "<group>"; };
-		8F0A69E91938B09F009AC664 /* NSObject+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Properties.m"; sourceTree = "<group>"; };
-		8F0A69EB1938B09F009AC664 /* PFACL+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFACL+NSCoding.h"; sourceTree = "<group>"; };
-		8F0A69EC1938B09F009AC664 /* PFACL+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFACL+NSCoding.m"; sourceTree = "<group>"; };
-		8F0A69ED1938B09F009AC664 /* PFFile+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFFile+NSCoding.h"; sourceTree = "<group>"; };
-		8F0A69EE1938B09F009AC664 /* PFFile+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFFile+NSCoding.m"; sourceTree = "<group>"; };
-		8F0A69EF1938B09F009AC664 /* PFGeoPoint+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFGeoPoint+NSCoding.h"; sourceTree = "<group>"; };
-		8F0A69F01938B09F009AC664 /* PFGeoPoint+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFGeoPoint+NSCoding.m"; sourceTree = "<group>"; };
-		8F0A69F11938B09F009AC664 /* PFObject+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFObject+NSCoding.h"; sourceTree = "<group>"; };
-		8F0A69F21938B09F009AC664 /* PFObject+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFObject+NSCoding.m"; sourceTree = "<group>"; };
-		8F0A69F31938B09F009AC664 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		8F6CAA0419338A810078EE65 /* AHKActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKActionSheet.h; sourceTree = "<group>"; };
 		8F6CAA0519338A810078EE65 /* AHKActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHKActionSheet.m; sourceTree = "<group>"; };
 		8F6CAA0619338A810078EE65 /* AHKActionSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKActionSheetViewController.h; sourceTree = "<group>"; };
@@ -1147,6 +1131,8 @@
 		8FB6EAC5192CE57E00973F8F /* NSString+Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Score.h"; sourceTree = "<group>"; };
 		8FB6EAC6192CE57E00973F8F /* NSString+Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Score.m"; sourceTree = "<group>"; };
 		8FB6EAC7192CE57E00973F8F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		9CD053E3214ACD6B23B372CF /* libPods-Hearthstone BuilderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hearthstone BuilderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A132978C2EDD55C4B3458642 /* Pods-Hearthstone Builder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone Builder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hearthstone Builder/Pods-Hearthstone Builder.release.xcconfig"; sourceTree = "<group>"; };
 		FC033D631BF3444A0031BD6B /* Snowchugger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Snowchugger.jpg; path = ../Snowchugger.jpg; sourceTree = "<group>"; };
 		FC033D651BF34F770031BD6B /* Ancient Shade.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ancient Shade.jpg"; sourceTree = "<group>"; };
 		FC033D661BF34F770031BD6B /* Animated Armor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Animated Armor.jpg"; sourceTree = "<group>"; };
@@ -1197,7 +1183,6 @@
 		FC0DC1F41997740500EBC4A4 /* ZENavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENavigationController.h; sourceTree = "<group>"; };
 		FC0DC1F51997740500EBC4A4 /* ZENavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENavigationController.m; sourceTree = "<group>"; };
 		FC0DC1FD1997AA9500EBC4A4 /* ico_neutral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_neutral.png; sourceTree = "<group>"; };
-		FC1044831BDBD4190069D355 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		FC17FBDF1B87B13E00AE9304 /* Wyrmrest Agent.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Wyrmrest Agent.jpg"; sourceTree = "<group>"; };
 		FC17FBE01B87B13E00AE9304 /* Wrathguard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wrathguard.jpg; sourceTree = "<group>"; };
 		FC17FBE11B87B13E00AE9304 /* Wildwalker.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wildwalker.jpg; sourceTree = "<group>"; };
@@ -1600,10 +1585,7 @@
 		FC4C58B01CDB5B6300B4AD3A /* Zealous Initiate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Zealous Initiate.jpg"; sourceTree = "<group>"; };
 		FC4C59371CDB65CF00B4AD3A /* ZEQuickSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEQuickSearchTableViewCell.h; sourceTree = "<group>"; };
 		FC4C59381CDB65CF00B4AD3A /* ZEQuickSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEQuickSearchTableViewCell.m; sourceTree = "<group>"; };
-		FC4C593A1CDBA0F900B4AD3A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		FC4C593B1CDBA0F900B4AD3A /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		FC4C593E1CDBA2A800B4AD3A /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
-		FC4C59401CDBA53900B4AD3A /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		FC57DD5B1D60808300304A90 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FC5C669C1CDB43F40085946A /* Cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cards.json; sourceTree = "<group>"; };
 		FC609B911937316B001806A6 /* number_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = number_bg.png; sourceTree = "<group>"; };
 		FC6D88DC197EBB89000A4076 /* Zombie Chow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Zombie Chow.jpg"; sourceTree = "<group>"; };
@@ -2189,19 +2171,14 @@
 				FCA1ECF31B7158FD00CE7823 /* libsqlite3.dylib in Frameworks */,
 				FCEDD26719520396001758C0 /* iAd.framework in Frameworks */,
 				8F6CAA1B19347DED0078EE65 /* CoreData.framework in Frameworks */,
-				FC4C593D1CDBA0F900B4AD3A /* FBSDKCoreKit.framework in Frameworks */,
 				8F6CAA1919347DE60078EE65 /* AVFoundation.framework in Frameworks */,
 				8F995B621938C9D8009EB207 /* Crashlytics.framework in Frameworks */,
 				8F6CAA1719347DDE0078EE65 /* CoreMedia.framework in Frameworks */,
-				FC4C593F1CDBA2A800B4AD3A /* FBSDKShareKit.framework in Frameworks */,
-				FC4C593C1CDBA0F900B4AD3A /* Bolts.framework in Frameworks */,
 				8F6CAA1519347DD20078EE65 /* AdSupport.framework in Frameworks */,
 				FCF3612819322CFF0044B85E /* SystemConfiguration.framework in Frameworks */,
 				FCF3612619322CF50044B85E /* StoreKit.framework in Frameworks */,
 				FCF3612419322CEB0044B85E /* Security.framework in Frameworks */,
-				FC1044851BDBD4190069D355 /* Parse.framework in Frameworks */,
 				FCF3612219322CE20044B85E /* QuartzCore.framework in Frameworks */,
-				FC4C59411CDBA53900B4AD3A /* FBAudienceNetwork.framework in Frameworks */,
 				FCF3612019322CD70044B85E /* MobileCoreServices.framework in Frameworks */,
 				FCF3611E19322C2E0044B85E /* libz.dylib in Frameworks */,
 				FCF3611C19322C250044B85E /* CoreLocation.framework in Frameworks */,
@@ -2210,6 +2187,7 @@
 				FCAB8D2E19215A640072DC59 /* CoreGraphics.framework in Frameworks */,
 				FCAB8D3019215A640072DC59 /* UIKit.framework in Frameworks */,
 				FCAB8D2C19215A640072DC59 /* Foundation.framework in Frameworks */,
+				BAE55142C4CB3A254886E002 /* libPods-Hearthstone Builder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2220,6 +2198,7 @@
 				FCAB8D4B19215A640072DC59 /* XCTest.framework in Frameworks */,
 				FCAB8D4D19215A640072DC59 /* UIKit.framework in Frameworks */,
 				FCAB8D4C19215A640072DC59 /* Foundation.framework in Frameworks */,
+				ABAA70E6A4A231E9642995DC /* libPods-Hearthstone BuilderTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2233,25 +2212,6 @@
 				8F0A69DF19387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m */,
 			);
 			path = NavigationController;
-			sourceTree = "<group>";
-		};
-		8F0A69E51938B09F009AC664 /* Parse-NSCoding */ = {
-			isa = PBXGroup;
-			children = (
-				8F0A69E71938B09F009AC664 /* LICENSE */,
-				8F0A69E81938B09F009AC664 /* NSObject+Properties.h */,
-				8F0A69E91938B09F009AC664 /* NSObject+Properties.m */,
-				8F0A69EB1938B09F009AC664 /* PFACL+NSCoding.h */,
-				8F0A69EC1938B09F009AC664 /* PFACL+NSCoding.m */,
-				8F0A69ED1938B09F009AC664 /* PFFile+NSCoding.h */,
-				8F0A69EE1938B09F009AC664 /* PFFile+NSCoding.m */,
-				8F0A69EF1938B09F009AC664 /* PFGeoPoint+NSCoding.h */,
-				8F0A69F01938B09F009AC664 /* PFGeoPoint+NSCoding.m */,
-				8F0A69F11938B09F009AC664 /* PFObject+NSCoding.h */,
-				8F0A69F21938B09F009AC664 /* PFObject+NSCoding.m */,
-				8F0A69F31938B09F009AC664 /* README.md */,
-			);
-			path = "Parse-NSCoding";
 			sourceTree = "<group>";
 		};
 		8F6CAA0319338A810078EE65 /* AHKActionSheet */ = {
@@ -2290,6 +2250,17 @@
 				8FB6EAC7192CE57E00973F8F /* README.md */,
 			);
 			path = StringScore;
+			sourceTree = "<group>";
+		};
+		D93CB5971F4BA81D1B9E7AF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				147CA6585779A4E8BABC764F /* Pods-Hearthstone Builder.debug.xcconfig */,
+				A132978C2EDD55C4B3458642 /* Pods-Hearthstone Builder.release.xcconfig */,
+				623B5E4038B0B8A5DF91F128 /* Pods-Hearthstone BuilderTests.debug.xcconfig */,
+				242D92F302900F9C289CD105 /* Pods-Hearthstone BuilderTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		FC33F265193775CD008FDB87 /* iRate */ = {
@@ -2355,11 +2326,13 @@
 		FCAB8D1F19215A640072DC59 = {
 			isa = PBXGroup;
 			children = (
+				FC57DD5B1D60808300304A90 /* Podfile */,
 				FCE2C97C1B7790E6007A05C8 /* ArenaDrafts.plist */,
 				FCAB8D3119215A640072DC59 /* Hearthstone Builder */,
 				FCAB8D5019215A640072DC59 /* Hearthstone BuilderTests */,
 				FCAB8D2A19215A640072DC59 /* Frameworks */,
 				FCAB8D2919215A640072DC59 /* Products */,
+				D93CB5971F4BA81D1B9E7AF2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2375,11 +2348,6 @@
 		FCAB8D2A19215A640072DC59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FC4C59401CDBA53900B4AD3A /* FBAudienceNetwork.framework */,
-				FC4C593E1CDBA2A800B4AD3A /* FBSDKShareKit.framework */,
-				FC4C593A1CDBA0F900B4AD3A /* Bolts.framework */,
-				FC4C593B1CDBA0F900B4AD3A /* FBSDKCoreKit.framework */,
-				FC1044831BDBD4190069D355 /* Parse.framework */,
 				FCA1ECF21B7158FD00CE7823 /* libsqlite3.dylib */,
 				FCEDD26619520396001758C0 /* iAd.framework */,
 				8F995B611938C9D8009EB207 /* Crashlytics.framework */,
@@ -2400,6 +2368,8 @@
 				FCAB8D2D19215A640072DC59 /* CoreGraphics.framework */,
 				FCAB8D2F19215A640072DC59 /* UIKit.framework */,
 				FCAB8D4A19215A640072DC59 /* XCTest.framework */,
+				0CBEECC1A3C0E01464CDA63A /* libPods-Hearthstone Builder.a */,
+				9CD053E3214ACD6B23B372CF /* libPods-Hearthstone BuilderTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -3471,7 +3441,6 @@
 				FC9B09291960A50B004ED4BA /* XYPieChart */,
 				FCEAB173195B7047002D1874 /* CRToast */,
 				FC90BA3A195358BE00AD5262 /* Classes */,
-				8F0A69E51938B09F009AC664 /* Parse-NSCoding */,
 				8F0A69DD19387EDC009AC664 /* NavigationController */,
 				FC33F265193775CD008FDB87 /* iRate */,
 				8F6CAA0319338A810078EE65 /* AHKActionSheet */,
@@ -3507,9 +3476,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCAB8D5A19215A650072DC59 /* Build configuration list for PBXNativeTarget "Hearthstone Builder" */;
 			buildPhases = (
+				85FD8324FA5D6524EECFEDA7 /* Check Pods Manifest.lock */,
 				FCAB8D2419215A640072DC59 /* Sources */,
 				FCAB8D2519215A640072DC59 /* Frameworks */,
 				FCAB8D2619215A640072DC59 /* Resources */,
+				6037693818B77817981858AD /* Embed Pods Frameworks */,
+				AC58D34C0F3B2265A9D8DEA4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -3524,9 +3496,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCAB8D5D19215A650072DC59 /* Build configuration list for PBXNativeTarget "Hearthstone BuilderTests" */;
 			buildPhases = (
+				6000378C4F6F8327C7285989 /* Check Pods Manifest.lock */,
 				FCAB8D4519215A640072DC59 /* Sources */,
 				FCAB8D4619215A640072DC59 /* Frameworks */,
 				FCAB8D4719215A640072DC59 /* Resources */,
+				D2790AEB3CFBD67A2F9AB3F1 /* Embed Pods Frameworks */,
+				1CF4FA19F4B5B2D9E3299A77 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -3546,7 +3521,7 @@
 			attributes = {
 				CLASSPREFIX = ZE;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = zeiteisens;
 				TargetAttributes = {
 					FCAB8D2719215A640072DC59 = {
@@ -4594,6 +4569,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CF4FA19F4B5B2D9E3299A77 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hearthstone BuilderTests/Pods-Hearthstone BuilderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6000378C4F6F8327C7285989 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6037693818B77817981858AD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hearthstone Builder/Pods-Hearthstone Builder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85FD8324FA5D6524EECFEDA7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AC58D34C0F3B2265A9D8DEA4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hearthstone Builder/Pods-Hearthstone Builder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2790AEB3CFBD67A2F9AB3F1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hearthstone BuilderTests/Pods-Hearthstone BuilderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FCAB8D2419215A640072DC59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -4601,7 +4669,6 @@
 			files = (
 				FC409C46193116CE0086215F /* ZEMyDecksViewController.m in Sources */,
 				FC71726719365CF30062B3E1 /* ZEPickClassTableViewCell.m in Sources */,
-				8F0A69FB1938B09F009AC664 /* PFObject+NSCoding.m in Sources */,
 				FC90BA301953049C00AD5262 /* ZEPublishTitleTableViewCell.m in Sources */,
 				8F6CAA0E19338A810078EE65 /* UIImage+AHKAdditions.m in Sources */,
 				FC9B092C1960A50B004ED4BA /* XYPieChart.m in Sources */,
@@ -4618,14 +4685,12 @@
 				8FA18C0D192B50B800FF3F71 /* JBBarChartView.m in Sources */,
 				8F0A69E019387EDD009AC664 /* UINavigationController+M13ProgressViewBar.m in Sources */,
 				8F6CAA0C19338A810078EE65 /* AHKActionSheet.m in Sources */,
-				8F0A69F61938B09F009AC664 /* NSObject+Properties.m in Sources */,
 				FC33F26A193775CE008FDB87 /* iRate.m in Sources */,
 				8FA18C00192A3BB300FF3F71 /* ZEPickedTableDataSource.m in Sources */,
 				FC4C59391CDB65CF00B4AD3A /* ZEQuickSearchTableViewCell.m in Sources */,
 				8FB6EAC9192CE57E00973F8F /* NSString+Score.m in Sources */,
 				8FA18C05192B3DC400FF3F71 /* ZEPickedTableViewCell.m in Sources */,
 				8FA18C0E192B50B800FF3F71 /* JBChartView.m in Sources */,
-				8F0A69F91938B09F009AC664 /* PFFile+NSCoding.m in Sources */,
 				FCAB9661192415930072DC59 /* ViewUtils.m in Sources */,
 				8F6CAA0D19338A810078EE65 /* AHKActionSheetViewController.m in Sources */,
 				FCE0070E1937B52800645355 /* ZELegalViewController.m in Sources */,
@@ -4645,11 +4710,9 @@
 				FC22119E195424D5001D7251 /* ZEPublishTextTableViewCell.m in Sources */,
 				FC0DC1F61997740500EBC4A4 /* ZENavigationController.m in Sources */,
 				8F6CAA3C1935CEDF0078EE65 /* ZELeftFilterTableViewCell.m in Sources */,
-				8F0A69FA1938B09F009AC664 /* PFGeoPoint+NSCoding.m in Sources */,
 				FCED4D3E195C66D200A33DF6 /* ZEStatsViewController.m in Sources */,
 				FCED4D2D195C15EC00A33DF6 /* ZETrackTableViewCell.m in Sources */,
 				8F6CAA0F19338A810078EE65 /* UIWindow+AHKAdditions.m in Sources */,
-				8F0A69F81938B09F009AC664 /* PFACL+NSCoding.m in Sources */,
 				FCAB8D3C19215A640072DC59 /* ZEAppDelegate.m in Sources */,
 				FC48D1541B7779B9009C0404 /* SmartButton.swift in Sources */,
 			);
@@ -4719,6 +4782,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -4773,26 +4837,27 @@
 		};
 		FCAB8D5B19215A650072DC59 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 147CA6585779A4E8BABC764F /* Pods-Hearthstone Builder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"\"$(SRCROOT)/Parse.framework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hearthstone Builder/Hearthstone Builder-Prefix.pch";
 				INFOPLIST_FILE = "Hearthstone Builder/Hearthstone Builder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zeiteisens.Hearthstone-Builder";
 				PRODUCT_NAME = Decks;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1b6183e1-c34f-4ae1-9b61-1cb138a31c79";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hearthstone Builder/Hearthstone Builder-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
@@ -4801,6 +4866,7 @@
 		};
 		FCAB8D5C19215A650072DC59 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A132978C2EDD55C4B3458642 /* Pods-Hearthstone Builder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -4811,14 +4877,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"\"$(SRCROOT)/Parse.framework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hearthstone Builder/Hearthstone Builder-Prefix.pch";
 				INFOPLIST_FILE = "Hearthstone Builder/Hearthstone Builder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zeiteisens.Hearthstone-Builder";
 				PRODUCT_NAME = Decks;
 				PROVISIONING_PROFILE = "b41f9f73-bc46-4763-811b-60f448a2f490";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hearthstone Builder/Hearthstone Builder-Bridging-Header.h";
@@ -4828,6 +4894,7 @@
 		};
 		FCAB8D5E19215A650072DC59 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 623B5E4038B0B8A5DF91F128 /* Pods-Hearthstone BuilderTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hearthstone Builder.app/Hearthstone Builder";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -4842,7 +4909,8 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Hearthstone BuilderTests/Hearthstone BuilderTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zeiteisens.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "Hearthstone BuilderTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -4850,6 +4918,7 @@
 		};
 		FCAB8D5F19215A650072DC59 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 242D92F302900F9C289CD105 /* Pods-Hearthstone BuilderTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hearthstone Builder.app/Hearthstone Builder";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -4860,7 +4929,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hearthstone Builder/Hearthstone Builder-Prefix.pch";
 				INFOPLIST_FILE = "Hearthstone BuilderTests/Hearthstone BuilderTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zeiteisens.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "Hearthstone BuilderTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

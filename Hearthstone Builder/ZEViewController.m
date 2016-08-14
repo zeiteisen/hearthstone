@@ -18,6 +18,8 @@
 #import "ZEDrawSimulatorViewController.h"
 #import <Social/Social.h>
 
+#define NEUTRAL_KEYWORD @"neutral"
+
 // todo: sort by card set
 // todo: highlight sorted list
 
@@ -79,7 +81,7 @@
 //    [self filterAndSortAllPickableCardsWithType:nil];
     NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
         NSString *hero = evaluatedObject[@"playerClass"];
-        if (hero == nil) {
+        if ([hero.lowercaseString isEqualToString:NEUTRAL_KEYWORD]) {
             return YES;
         }
         return NO;
@@ -87,16 +89,16 @@
     self.cards = [self.allPickableCards filteredArrayUsingPredicate:predicate];
 }
 
-- (void)filterAndSortAllPickableCardsWithType:(NSString *)type {
-    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
-        NSString *hero = evaluatedObject[@"playerClass"];
-        if ([hero isEqualToString:type] || hero == nil) {
-            return YES;
-        }
-        return NO;
-    }];
-    self.cards = [self.allPickableCards filteredArrayUsingPredicate:predicate];
-}
+//- (void)filterAndSortAllPickableCardsWithType:(NSString *)type {
+//    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
+//        NSString *hero = evaluatedObject[@"playerClass"];
+//        if ([hero isEqualToString:type]) {
+//            return YES;
+//        }
+//        return NO;
+//    }];
+//    self.cards = [self.allPickableCards filteredArrayUsingPredicate:predicate];
+//}
 
 - (NSString *)classImageName {
     return [NSString stringWithFormat:@"ico_%@", self.hero];
@@ -113,9 +115,10 @@
     
     
     self.allPickableCards = [ZEDataManager sharedInstance].cards;
+//    NSLog(@"allpickablecards %@", self.allPickableCards);
     NSPredicate *classPredicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
         NSString *hero = [evaluatedObject[@"playerClass"] lowercaseString];
-        if ([[hero lowercaseString] isEqualToString:self.hero] || hero == nil) {
+        if ([[hero lowercaseString] isEqualToString:self.hero] || [[hero lowercaseString] isEqualToString:@"neutral"]) {
             return YES;
         }
         return NO;
@@ -157,6 +160,7 @@
      },
      */
     self.allPickableCards = [self.allPickableCards filteredArrayUsingPredicate:classPredicate]; // losing some cards here. dunno why
+//    NSLog(@"allpickablecards after sort %@", self.allPickableCards);
     NSArray *sortedArray;
     sortedArray = [self.allPickableCards sortedArrayUsingComparator:^NSComparisonResult(NSDictionary *cardA, NSDictionary *cardB) {
         NSNumber *manaA = @0;
@@ -701,9 +705,8 @@
 }
 
 - (BOOL)myLikes:(NSArray *)myLikes containsObjectId:(NSString *)objectId {
-    for (NSData *deckData in myLikes) {
-        PFObject *deck = [NSKeyedUnarchiver unarchiveObjectWithData:deckData];
-        if ([deck.objectId isEqualToString:objectId]) {
+    for (NSString *likedDeckId in myLikes) {
+        if ([likedDeckId isEqualToString:objectId]) {
             return YES;
         }
     }
@@ -842,18 +845,17 @@
     }
     
     if (![self liked] && !self.editable) {
-        [actionSheet addButtonWithTitle:NSLocalizedString(@"Like and Save to My Decks", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+        [actionSheet addButtonWithTitle:NSLocalizedString(@"Like", nil) type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
             [self.deckObject incrementKey:@"likes"];
             [self.deckObject saveInBackground];
             
-            NSData *deckData = [NSKeyedArchiver archivedDataWithRootObject:self.deckObject];
             NSMutableArray *myLikes = [self persistentLikes];
-            [myLikes addObject:deckData];
+            [myLikes addObject:self.deckObject.objectId];
             [[NSUserDefaults standardUserDefaults] setObject:myLikes forKey:MyLikesUserDefaultsKey];
             [[NSUserDefaults standardUserDefaults] synchronize];
             
             // show success toast
-            [ZEUtility showToastWithText:NSLocalizedString(@"Deck saved to My Decks", nil) duration:2.0];
+            [ZEUtility showToastWithText:NSLocalizedString(@"You like that 👊", nil) duration:2.0];
             
             if (![iRate sharedInstance].declinedThisVersion && ![iRate sharedInstance].ratedThisVersion) {
                 [[iRate sharedInstance] promptIfNetworkAvailable];
