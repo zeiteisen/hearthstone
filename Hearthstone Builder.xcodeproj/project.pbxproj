@@ -984,7 +984,6 @@
 		FCC3B73B1D5B6ADD009382D4 /* Violet Illusionist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B70E1D5B6ADD009382D4 /* Violet Illusionist.jpg */; };
 		FCC3B73C1D5B6ADD009382D4 /* Wicked Witchdoctor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B70F1D5B6ADD009382D4 /* Wicked Witchdoctor.jpg */; };
 		FCC3B73D1D5B6ADD009382D4 /* Zoobot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B7101D5B6ADD009382D4 /* Zoobot.jpg */; };
-		FCDA84F21EF920E3007D3E8C /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = FCDA84F11EF920E3007D3E8C /* .travis.yml */; };
 		FCE006F31937960900645355 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE006F21937960900645355 /* NSMutableArray+Shuffle.m */; };
 		FCE006FF1937A10F00645355 /* hero_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE006FE1937A10F00645355 /* hero_frame.png */; };
 		FCE007011937A5AA00645355 /* bg0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCE007001937A5AA00645355 /* bg0.jpg */; };
@@ -3477,12 +3476,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCAB8D5A19215A650072DC59 /* Build configuration list for PBXNativeTarget "Hearthstone Builder" */;
 			buildPhases = (
-				85FD8324FA5D6524EECFEDA7 /* Check Pods Manifest.lock */,
+				85FD8324FA5D6524EECFEDA7 /* [CP] Check Pods Manifest.lock */,
 				FCAB8D2419215A640072DC59 /* Sources */,
 				FCAB8D2519215A640072DC59 /* Frameworks */,
 				FCAB8D2619215A640072DC59 /* Resources */,
-				6037693818B77817981858AD /* Embed Pods Frameworks */,
-				AC58D34C0F3B2265A9D8DEA4 /* Copy Pods Resources */,
+				6037693818B77817981858AD /* [CP] Embed Pods Frameworks */,
+				AC58D34C0F3B2265A9D8DEA4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -3497,12 +3496,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCAB8D5D19215A650072DC59 /* Build configuration list for PBXNativeTarget "Hearthstone BuilderTests" */;
 			buildPhases = (
-				6000378C4F6F8327C7285989 /* Check Pods Manifest.lock */,
+				6000378C4F6F8327C7285989 /* [CP] Check Pods Manifest.lock */,
 				FCAB8D4519215A640072DC59 /* Sources */,
 				FCAB8D4619215A640072DC59 /* Frameworks */,
 				FCAB8D4719215A640072DC59 /* Resources */,
-				D2790AEB3CFBD67A2F9AB3F1 /* Embed Pods Frameworks */,
-				1CF4FA19F4B5B2D9E3299A77 /* Copy Pods Resources */,
+				D2790AEB3CFBD67A2F9AB3F1 /* [CP] Embed Pods Frameworks */,
+				1CF4FA19F4B5B2D9E3299A77 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -3526,10 +3525,11 @@
 				ORGANIZATIONNAME = zeiteisens;
 				TargetAttributes = {
 					FCAB8D2719215A640072DC59 = {
-						DevelopmentTeam = 4J9U9M79Y8;
+						DevelopmentTeam = BNUL3H5GX4;
 						ProvisioningStyle = Automatic;
 					};
 					FCAB8D4819215A640072DC59 = {
+						DevelopmentTeam = BNUL3H5GX4;
 						TestTargetID = FCAB8D2719215A640072DC59;
 					};
 				};
@@ -3899,7 +3899,6 @@
 				FC98AFAF195B24E200CBCC65 /* Poison Seeds.jpg in Resources */,
 				FCF156FF1B713DCC00AE9841 /* Solemn Vigil.jpg in Resources */,
 				FCAB953019240F610072DC59 /* Cruel Taskmaster.jpg in Resources */,
-				FCDA84F21EF920E3007D3E8C /* .travis.yml in Resources */,
 				FC17FCA91B87B14000AE9304 /* Healing Wave.jpg in Resources */,
 				FCAB95CB19240F610072DC59 /* Mountain Giant.jpg in Resources */,
 				FC1C6F851B70236D00464041 /* Lost Tallstrider.jpg in Resources */,
@@ -4573,14 +4572,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1CF4FA19F4B5B2D9E3299A77 /* Copy Pods Resources */ = {
+		1CF4FA19F4B5B2D9E3299A77 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4588,29 +4587,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hearthstone BuilderTests/Pods-Hearthstone BuilderTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6000378C4F6F8327C7285989 /* Check Pods Manifest.lock */ = {
+		6000378C4F6F8327C7285989 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		6037693818B77817981858AD /* Embed Pods Frameworks */ = {
+		6037693818B77817981858AD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4618,29 +4617,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hearthstone Builder/Pods-Hearthstone Builder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		85FD8324FA5D6524EECFEDA7 /* Check Pods Manifest.lock */ = {
+		85FD8324FA5D6524EECFEDA7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		AC58D34C0F3B2265A9D8DEA4 /* Copy Pods Resources */ = {
+		AC58D34C0F3B2265A9D8DEA4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4648,14 +4647,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hearthstone Builder/Pods-Hearthstone Builder-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D2790AEB3CFBD67A2F9AB3F1 /* Embed Pods Frameworks */ = {
+		D2790AEB3CFBD67A2F9AB3F1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4845,7 +4844,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BNUL3H5GX4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4854,7 +4853,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hearthstone Builder/Hearthstone Builder-Prefix.pch";
 				INFOPLIST_FILE = "Hearthstone Builder/Hearthstone Builder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zeiteisens.Hearthstone-Builder";
@@ -4876,7 +4875,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BNUL3H5GX4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4885,7 +4884,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hearthstone Builder/Hearthstone Builder-Prefix.pch";
 				INFOPLIST_FILE = "Hearthstone Builder/Hearthstone Builder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zeiteisens.Hearthstone-Builder";
@@ -4901,12 +4900,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 623B5E4038B0B8A5DF91F128 /* Pods-Hearthstone BuilderTests.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hearthstone Builder.app/Hearthstone Builder";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = BNUL3H5GX4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hearthstone Builder/Hearthstone Builder-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4914,9 +4909,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Hearthstone BuilderTests/Hearthstone BuilderTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zeiteisens.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Hearthstone BuilderTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Decks.app/Decks";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -4925,18 +4921,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 242D92F302900F9C289CD105 /* Pods-Hearthstone BuilderTests.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hearthstone Builder.app/Hearthstone Builder";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = BNUL3H5GX4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hearthstone Builder/Hearthstone Builder-Prefix.pch";
 				INFOPLIST_FILE = "Hearthstone BuilderTests/Hearthstone BuilderTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zeiteisens.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Hearthstone BuilderTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Decks.app/Decks";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
