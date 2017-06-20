@@ -366,7 +366,6 @@
 		FC33F26A193775CE008FDB87 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC33F268193775CD008FDB87 /* iRate.m */; };
 		FC409C431931153C0086215F /* ZEStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC409C421931153C0086215F /* ZEStartViewController.m */; };
 		FC409C46193116CE0086215F /* ZEMyDecksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC409C45193116CE0086215F /* ZEMyDecksViewController.m */; };
-		FC48D1541B7779B9009C0404 /* SmartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC48D1531B7779B9009C0404 /* SmartButton.swift */; };
 		FC4C58B11CDB5B6300B4AD3A /* A Light in the Darkness.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC4C582B1CDB5B6200B4AD3A /* A Light in the Darkness.jpg */; };
 		FC4C58B21CDB5B6300B4AD3A /* Aberrant Berserker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC4C582C1CDB5B6200B4AD3A /* Aberrant Berserker.jpg */; };
 		FC4C58B31CDB5B6300B4AD3A /* Addled Grizzly.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC4C582D1CDB5B6200B4AD3A /* Addled Grizzly.jpg */; };
@@ -940,7 +939,6 @@
 		FCAB965919240F610072DC59 /* Youthful Brewmaster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCAB94DB19240F610072DC59 /* Youthful Brewmaster.jpg */; };
 		FCAB965A19240F610072DC59 /* Ysera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCAB94DC19240F610072DC59 /* Ysera.jpg */; };
 		FCAB9661192415930072DC59 /* ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAB9660192415930072DC59 /* ViewUtils.m */; };
-		FCC355471B77732C00AE2359 /* ZEArenaPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC355461B77732C00AE2359 /* ZEArenaPickViewController.swift */; };
 		FCC3B7111D5B6ADD009382D4 /* Arcane Anomaly.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6E41D5B6ADC009382D4 /* Arcane Anomaly.jpg */; };
 		FCC3B7121D5B6ADD009382D4 /* Arcane Giant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6E51D5B6ADC009382D4 /* Arcane Giant.jpg */; };
 		FCC3B7131D5B6ADD009382D4 /* Arcanosmith.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B6E61D5B6ADC009382D4 /* Arcanosmith.jpg */; };
@@ -986,6 +984,7 @@
 		FCC3B73B1D5B6ADD009382D4 /* Violet Illusionist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B70E1D5B6ADD009382D4 /* Violet Illusionist.jpg */; };
 		FCC3B73C1D5B6ADD009382D4 /* Wicked Witchdoctor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B70F1D5B6ADD009382D4 /* Wicked Witchdoctor.jpg */; };
 		FCC3B73D1D5B6ADD009382D4 /* Zoobot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC3B7101D5B6ADD009382D4 /* Zoobot.jpg */; };
+		FCDA84F21EF920E3007D3E8C /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = FCDA84F11EF920E3007D3E8C /* .travis.yml */; };
 		FCE006F31937960900645355 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE006F21937960900645355 /* NSMutableArray+Shuffle.m */; };
 		FCE006FF1937A10F00645355 /* hero_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE006FE1937A10F00645355 /* hero_frame.png */; };
 		FCE007011937A5AA00645355 /* bg0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCE007001937A5AA00645355 /* bg0.jpg */; };
@@ -2086,6 +2085,7 @@
 		FCC3B70E1D5B6ADD009382D4 /* Violet Illusionist.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Violet Illusionist.jpg"; sourceTree = "<group>"; };
 		FCC3B70F1D5B6ADD009382D4 /* Wicked Witchdoctor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Wicked Witchdoctor.jpg"; sourceTree = "<group>"; };
 		FCC3B7101D5B6ADD009382D4 /* Zoobot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Zoobot.jpg; sourceTree = "<group>"; };
+		FCDA84F11EF920E3007D3E8C /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		FCE006F11937960900645355 /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
 		FCE006F21937960900645355 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
 		FCE006FE1937A10F00645355 /* hero_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hero_frame.png; sourceTree = "<group>"; };
@@ -2326,6 +2326,7 @@
 		FCAB8D1F19215A640072DC59 = {
 			isa = PBXGroup;
 			children = (
+				FCDA84F11EF920E3007D3E8C /* .travis.yml */,
 				FC57DD5B1D60808300304A90 /* Podfile */,
 				FCE2C97C1B7790E6007A05C8 /* ArenaDrafts.plist */,
 				FCAB8D3119215A640072DC59 /* Hearthstone Builder */,
@@ -3526,6 +3527,7 @@
 				TargetAttributes = {
 					FCAB8D2719215A640072DC59 = {
 						DevelopmentTeam = 4J9U9M79Y8;
+						ProvisioningStyle = Automatic;
 					};
 					FCAB8D4819215A640072DC59 = {
 						TestTargetID = FCAB8D2719215A640072DC59;
@@ -3897,6 +3899,7 @@
 				FC98AFAF195B24E200CBCC65 /* Poison Seeds.jpg in Resources */,
 				FCF156FF1B713DCC00AE9841 /* Solemn Vigil.jpg in Resources */,
 				FCAB953019240F610072DC59 /* Cruel Taskmaster.jpg in Resources */,
+				FCDA84F21EF920E3007D3E8C /* .travis.yml in Resources */,
 				FC17FCA91B87B14000AE9304 /* Healing Wave.jpg in Resources */,
 				FCAB95CB19240F610072DC59 /* Mountain Giant.jpg in Resources */,
 				FC1C6F851B70236D00464041 /* Lost Tallstrider.jpg in Resources */,
@@ -4677,7 +4680,6 @@
 				8FA18C15192B62EE00FF3F71 /* ZEUtility.m in Sources */,
 				FC717264193659F50062B3E1 /* ZEMyDecksTableViewCell.m in Sources */,
 				FCAB90601922A93A0072DC59 /* ZECardTableViewCell.m in Sources */,
-				FCC355471B77732C00AE2359 /* ZEArenaPickViewController.swift in Sources */,
 				FCF3612B193236D30044B85E /* ZEOtherDecksTableViewController.m in Sources */,
 				FCEDD26A195211F1001758C0 /* UINavigationController+Progress.m in Sources */,
 				FCE006F31937960900645355 /* NSMutableArray+Shuffle.m in Sources */,
@@ -4714,7 +4716,6 @@
 				FCED4D2D195C15EC00A33DF6 /* ZETrackTableViewCell.m in Sources */,
 				8F6CAA0F19338A810078EE65 /* UIWindow+AHKAdditions.m in Sources */,
 				FCAB8D3C19215A640072DC59 /* ZEAppDelegate.m in Sources */,
-				FC48D1541B7779B9009C0404 /* SmartButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4843,7 +4844,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4857,7 +4859,8 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zeiteisens.Hearthstone-Builder";
 				PRODUCT_NAME = Decks;
-				PROVISIONING_PROFILE = "1b6183e1-c34f-4ae1-9b61-1cb138a31c79";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hearthstone Builder/Hearthstone Builder-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
@@ -4872,7 +4875,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hanno Bruns (4J9U9M79Y8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4886,7 +4890,8 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zeiteisens.Hearthstone-Builder";
 				PRODUCT_NAME = Decks;
-				PROVISIONING_PROFILE = "b41f9f73-bc46-4763-811b-60f448a2f490";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hearthstone Builder/Hearthstone Builder-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};

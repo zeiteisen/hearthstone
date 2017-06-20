@@ -1,0 +1,4 @@
+osx_image: xcode8.3
+language: objective-c
+xcode_workspace: Hearthstone Builder.xcworkspace
+xcode_scheme: Hearthstone Builder
